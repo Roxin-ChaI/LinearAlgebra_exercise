@@ -1,0 +1,318 @@
+\documentclass[14pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{caption}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{libertinus}
+\usepackage{amsmath} % Required for \text{} in math environments
+\usepackage{tikz}
+\usetikzlibrary{calc,angles,quotes}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+
+\title{\textbf{Gilbert Strang - A First Course in Calculus} \\ \Large Chapters 1 - 7}
+\author{}
+\date{}
+
+\begin{document}
+\bfseries
+\maketitle
+\vspace{-2.5cm}
+
+\section{Chapter 1: Introduction to Vectors}
+
+\subsection{Vectors and Linear Combinations}
+\noindent Problems 1-9 are about addition of vectors and linear combinations. 
+
+\begin{enumerate}
+    \item Describe geometrically (line, plane, or all of $R^3$) all linear combinations of
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} and \begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix}$
+            \item $\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} and \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix}$
+            \item $\begin{bmatrix} 2 \\ 0 \\ 0 \end{bmatrix} and \begin{bmatrix} 0 \\ 2 \\ 2 \end{bmatrix} and \begin{bmatrix} 2 \\ 2 \\ 3 \end{bmatrix}$
+        \end{multicols}  
+    \end{enumerate}  
+    \item Draw $\boldsymbol{v}=\begin{bmatrix} 4 \\ 1 \end{bmatrix}$ and $\boldsymbol{w}=\begin{bmatrix} -2\\ 2 \end{bmatrix} $ and $\boldsymbol{v}+\boldsymbol{w}$ and $\boldsymbol{v}-\boldsymbol{w}$ in a single $xy$ plane.   
+    \item If $\boldsymbol{v} + \boldsymbol{w} = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$ and $\boldsymbol{v} - \boldsymbol{w} = \begin{bmatrix} 1 \\ 5 \end{bmatrix}$, compute and draw the vectors $\boldsymbol{v}$ and $\boldsymbol{w}$.
+    \item From $\boldsymbol{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ and $\boldsymbol{w} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$, find the components of $3\boldsymbol{v} + \boldsymbol{w}$ and $c\boldsymbol{v} + d\boldsymbol{w}$.
+    \item Compute $\boldsymbol{u} + \boldsymbol{v} + \boldsymbol{w}$ and $2\boldsymbol{u} + 2\boldsymbol{v} + \boldsymbol{w}$. How do you know $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ lie in a plane?
+    \begin{multicols}{3}
+        These lie in a plane because 
+        \\$\boldsymbol{w} = c\boldsymbol{u} + d\boldsymbol{v}$. Find $c$ and $d$
+        \columnbreak 
+        $$
+        \boldsymbol{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad \boldsymbol{v} = \begin{bmatrix} -3 \\ 1 \\ -2 \end{bmatrix}, \quad \boldsymbol{w} = \begin{bmatrix} 2 \\ -3 \\ -1 \end{bmatrix}.
+        $$
+    \end{multicols}
+    \item Every combination of $\boldsymbol{v} = (1, -2, 1)$ and $\boldsymbol{w} = (0, 1, -1)$ has components that add to \underline{\hspace{1cm}}.
+    \\Find $c$ and $d$ so that $c\boldsymbol{v} + d\boldsymbol{w} = (3, 3, -6)$. Why is $(3, 3, 6)$ impossible?
+
+    \item In the $xy$ plane mark all nine of these linear combinations:
+    $$
+    c\begin{bmatrix} 2 \\ 1 \end{bmatrix} + d\begin{bmatrix} 0 \\ 1 \end{bmatrix} \quad \text{with} \quad c = 0,1,2 \quad \text{and} \quad d = 0,1,2.
+    $$
+
+    \item The parallelogram in Figure 1.1 has diagonal $\boldsymbol{v} + \boldsymbol{w}$. What is its other diagonal? What is the sum of the two diagonals? Draw that vector sum.
+
+    \item If three corners of a parallelogram are $(1,1), (4,2)$, and $(1,3)$, what are all three of the possible fourth corners? Draw two of them.
+\end{enumerate}
+
+\noindent Problems 10--14 are about special vectors on cubes and clocks in Figure 1.4.
+
+\begin{enumerate}[resume]
+    \item Which point of the cube is $\boldsymbol{i} + \boldsymbol{j}$? Which point is the vector sum of $\boldsymbol{i} = (1,0,0)$ and $\boldsymbol{j} = (0,1,0)$ and $\boldsymbol{k} = (0,0,1)$? Describe all points $(x,y,z)$ in the cube.
+
+    \item Four corners of this unit cube are $(0,0,0), (1,0,0), (0,1,0), (0,0,1)$. What are the other four corners? Find the coordinates of the center point of the cube. The center points of the six faces are \underline{\hspace{2cm}}. The cube has how many edges?
+
+    \item Review Question. In $xyz$ space, where is the plane of all linear combinations of $\boldsymbol{i} = (1,0,0)$ and $\boldsymbol{i} + \boldsymbol{j} = (1,1,0)$?
+    \newpage
+    \item 
+    \begin{enumerate}
+        \item What is the sum $V$ of the twelve vectors that go from the center of a clock to the hours 1:00, 2:00, \dots, 12:00?
+        \item If the 2:00 vector is removed, why do the 11 remaining vectors add to 8:00?
+        \item What are the $x, y$ components of that 2:00 vector $\boldsymbol{v} = (\cos\theta, \sin\theta)$?
+    \end{enumerate}
+    \item Suppose the twelve vectors start from 6:00 at the bottom instead of $(0,0)$ at the center. The vector to 12:00 is doubled to $(0,2)$. The new twelve vectors add to \underline{\hspace{2cm}}.
+\end{enumerate}
+
+    \begin{figure}[htbp] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
+        \centering % 图片居中
+        \includegraphics[width=0.8\textwidth]{pic/Figure1.4.png} % 插入图片，指定宽度为文本宽度的 80%
+        \renewcommand{\thefigure}{1.4}% 强行将当前的图片编号改为 1.4
+        \caption{ Unit cube from i,j, k and twelve clock vectors.}
+        \label{fig:my_label} % 标签，用于交叉引用（可选）
+    \end{figure}
+
+\noindent Problems 15--19 go further with linear combinations of $\boldsymbol{v}$ and $\boldsymbol{w}$ (Figure 1.5a).
+
+\begin{enumerate}[resume]
+
+    \item Figure 1.5a shows $\frac{1}{2}\,\boldsymbol{v} + \frac{1}{2}\,\boldsymbol{w}$. Mark the points $\frac{3}{4}\,\boldsymbol{v} + \frac{1}{4}\,\boldsymbol{w}$ and $\frac{1}{4}\,\boldsymbol{v} + \frac{3}{4}\,\boldsymbol{w}$ and $\boldsymbol{v} + \boldsymbol{w}$.
+
+    \item Mark the point $-\boldsymbol{v} + 2\boldsymbol{w}$ and any other combination $c\boldsymbol{v} + d\boldsymbol{w}$ with $c + d = 1$. Draw the line of all combinations that have $c + d = 1$.
+
+    \item Locate $\frac{1}{3}\,\boldsymbol{v} + \frac{1}{3}\,\boldsymbol{w}$ and $\frac{2}{3}\,\boldsymbol{v} + \frac{2}{3}\,\boldsymbol{w}$. The combinations $c\boldsymbol{v} + c\boldsymbol{w}$ fill out what line?
+
+    \item Restricted by $0 \le c \le 1$ and $0 \le d \le 1$, shade in all combinations $c\boldsymbol{v} + d\boldsymbol{w}$.
+
+    \item Restricted only by $c \ge 0$ and $d \ge 0$ draw the ``cone'' of all combinations $c\boldsymbol{v} + d\boldsymbol{w}$. 
+\end{enumerate}
+
+    \begin{figure}[htbp] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
+        \centering % 图片居中
+        \includegraphics[width=0.8\textwidth]{pic/Figure1.5.png} % 插入图片，指定宽度为文本宽度的 80%
+        \renewcommand{\thefigure}{1.5}% 强行将当前的图片编号改为 1.5
+        \caption{  Problems 15-19 in a plane \quad\quad\quad\quad  Problems 20-25 in 3-dimensional space}
+        \label{fig:my_label} % 标签，用于交叉引用（可选）
+    \end{figure}
+
+\noindent Problems 20-25 deal with $u$, $v$, $w$ in three-dimensional space (see Figure 1.5b). 
+
+\begin{enumerate}[resume]
+    \item Locate $\frac{1}{2}\,\boldsymbol{v} + \frac{1}{2}\,\boldsymbol{w} + \frac{1}{2}\,\boldsymbol{v}$ and $\frac{1}{2}\,\boldsymbol{v} + \frac{1}{2}\,\boldsymbol{w} + \frac{1}{2}\,\boldsymbol{w}$ in Figure 1.5b. Challenge problem: Under what restrictions on $c, d, e$, will the combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w}$ fill in the dashed triangle? To stay in the triangle, one requirement is $c \ge 0, d \ge 0, e \ge 0$.
+
+    \item The three sides of the dashed triangle are $\boldsymbol{v} - \boldsymbol{u}$ and $\boldsymbol{w} - \boldsymbol{v}$ and $\boldsymbol{u} - \boldsymbol{w}$. Their sum is \underline{\hspace{2cm}}. Draw the head-to-tail addition around a plane triangle of $(3,1)$ plus $(-1,1)$ plus $(-2,-2)$.
+
+    \item Shade in the pyramid of combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w}$ with $c \ge 0$, $d \ge 0$, $e \ge 0$ and $c + d + e \le 1$. Mark the vector $\frac{1}{2}(\boldsymbol{u} + \boldsymbol{v} + \boldsymbol{w})$ as inside or outside this pyramid.
+
+    \item If you look at all combinations of those $\boldsymbol{u}, \boldsymbol{v},$ and $\boldsymbol{w}$, is there any vector that can't be produced from $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w}$? Different answer if $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ are all in \underline{\hspace{2cm}}.
+
+    \item Which vectors are combinations of $\boldsymbol{u}$ and $\boldsymbol{v}$, and also combinations of $\boldsymbol{v}$ and $\boldsymbol{w}$?
+
+    \item Draw vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w}$ fill only a line. Find vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w}$ fill only a plane.
+
+    \item What combination $c\begin{bmatrix} 2 \\ 1 \end{bmatrix} + d\begin{bmatrix} 3 \\ 1 \end{bmatrix}$ produces $\begin{bmatrix} 14 \\ 8 \end{bmatrix}$? Express this question as two equations for the coefficients $c$ and $d$ in the linear combination.
+\end{enumerate}
+
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item How many corners does a cube have in 4 dimensions? How many 3D faces? How many edges? A typical corner is $(0,0,1,0)$. A typical edge goes to $(0,1,0,0)$.
+
+    \item Find vectors $\boldsymbol{v}$ and $\boldsymbol{w}$ so that $\boldsymbol{v} + \boldsymbol{w} = (4,5,6)$ and $\boldsymbol{v} - \boldsymbol{w} = (2,5,8)$. This is a question with \underline{\hspace{2cm}} unknown numbers, and an equal number of equations to find those numbers.
+
+    \item Find two different combinations of the three vectors $\boldsymbol{u} = (1,3)$ and $\boldsymbol{v} = (2,7)$ and $\boldsymbol{w} = (1,5)$ that produce $\boldsymbol{b} = (0,1)$. Slightly delicate question: If I take any three vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ in the plane, will there always be two different combinations that produce $\boldsymbol{b} = (0,1)$?
+
+    \item The linear combinations of $\boldsymbol{v} = (a,b)$ and $\boldsymbol{w} = (c,d)$ fill the plane unless \underline{\hspace{4cm}}.
+
+    \item Find four vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}, \boldsymbol{z}$ with four components each so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} + f\boldsymbol{z}$ produce all vectors $(b_1, b_2, b_3, b_4)$ in four-dimensional space.
+
+    \item Write down three equations for $c, d, e$ so that $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} = \boldsymbol{b}$. Can you somehow find $c, d, e$ for $\boldsymbol{b}$?
+    \[
+    \boldsymbol{u} = \begin{bmatrix} 2 \\ -1 \\ 0 \end{bmatrix}, \quad
+    \boldsymbol{v} = \begin{bmatrix} -1 \\ 2 \\ -1 \end{bmatrix}, \quad
+    \boldsymbol{w} = \begin{bmatrix} 0 \\ -1 \\ 2 \end{bmatrix}, \quad
+    \boldsymbol{b} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}.
+    \]
+\end{enumerate}
+
+\subsection{Lengths and Dot Products}
+
+\noindent 
+
+\paragraph{Challenge Problems}
+
+\subsection{Matrices}
+\noindent
+
+\paragraph{Challenge Problems}
+
+\newpage
+
+\section{Chapter 2: Solving Linear Equations }
+
+\subsection{Vectors and Linear Equations}
+\paragraph{Challenge Problems}
+
+\subsection{The Idea of Elimination}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Elimination Using Matrices}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+\subsection{Rules for Matrix Operations}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Inverse Matrices}
+\paragraph{Challenge Problems}
+
+
+\subsection{Elimination = Factorization: $A=LU$}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Transposes and Permutations}
+\noindent 
+\paragraph{Challenge Problems}
+
+\newpage
+
+\section{Chapter 3: Vector Spaces and Subspaces}
+
+\subsection{Spaces of Vectors}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}
+
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{The Complete Solution to $Ax=b$}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Independence, Basis and Dimension}
+\paragraph{Challenge Problems}
+
+\subsection{Dimensions of the Four Subspaces}
+\paragraph{Challenge Problems}
+
+%\addtocounter{subsection}{-1} % 将计数器减 1
+\newpage
+
+\section{Chapter 4: Orthogonality}
+
+\subsection{Orthogonality of the Four Subspaces}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Projections}
+\paragraph{Challenge Problems}
+
+
+\subsection{Least Squares Approximations}
+\noindent
+\paragraph{Challenge Problems}
+
+
+
+\subsection{Orthonormal Bases and Gram-Schmidt}
+\noindent
+\paragraph{Challenge Problems}
+
+
+
+\newpage
+
+\section{Chapter 5: Determinants}
+\subsection{The Properties of Determinants}
+\noindent
+\paragraph{Challenge Problems}
+
+\subsection{Permutations and Cofactors }
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Cramer's Rule, Inverses, and Volumes}
+\paragraph{Challenge Problems}
+
+
+
+\newpage
+
+\section{Chapter 6: Eigenvalues and Eigenvectors}
+
+\subsection{Introduction to Eigenvalues}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Diagonalizing a Matrix}
+
+\paragraph{Challenge Problems}
+
+\subsection{Systems of Differential Equations}
+\paragraph{Challenge Problems}
+
+\subsection{Symmetric Matrices}
+\noindent 
+\paragraph{Challenge Problems}
+
+\subsection{Positive Definite Matrices}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+
+\newpage
+
+\section{Chapter 7: The Singular Value Decomposition (SVD)}
+
+\subsection{Image Processing by Linear Algebra}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+
+\subsection{Bases and Matrices in the SVD}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+
+\subsection{Principal Component Analysis (PCA by the SVD)}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+
+\subsection{The Geometry of the SVD}
+\noindent 
+\paragraph{Challenge Problems}
+
+
+
+
+\newpage
+
+
+
+
+\end{document}
