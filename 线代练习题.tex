@@ -83,7 +83,7 @@
         \includegraphics[width=0.8\textwidth]{pic/Figure1.4.png} % 插入图片，指定宽度为文本宽度的 80%
         \renewcommand{\thefigure}{1.4}% 强行将当前的图片编号改为 1.4
         \caption{ Unit cube from i,j, k and twelve clock vectors.}
-        \label{fig:my_label} % 标签，用于交叉引用（可选）
+        %\label{fig:my_label} % 标签，用于交叉引用（可选）
     \end{figure}
 
 \noindent Problems 15--19 go further with linear combinations of $\boldsymbol{v}$ and $\boldsymbol{w}$ (Figure 1.5a).
@@ -136,9 +136,7 @@
 
     \item Find two different combinations of the three vectors $\boldsymbol{u} = (1,3)$ and $\boldsymbol{v} = (2,7)$ and $\boldsymbol{w} = (1,5)$ that produce $\boldsymbol{b} = (0,1)$. Slightly delicate question: If I take any three vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ in the plane, will there always be two different combinations that produce $\boldsymbol{b} = (0,1)$?
 
-    \item The linear combinations of $\boldsymbol{v} = (a,b)$ and $\boldsymbol{w} = (c,d)$ fill the plane unless \underline{\hspace{4cm}}.
-
-    \item Find four vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}, \boldsymbol{z}$ with four components each so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} + f\boldsymbol{z}$ produce all vectors $(b_1, b_2, b_3, b_4)$ in four-dimensional space.
+    \item The linear combinations of $\boldsymbol{v} = (a,b)$ and $\boldsymbol{w} = (c,d)$ fill the plane unless \underline{\hspace{2cm}}. \\Find four vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}, \boldsymbol{z}$ with four components each so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} + f\boldsymbol{z}$ produce all vectors $(b_1, b_2, b_3, b_4)$ in four-dimensional space.
 
     \item Write down three equations for $c, d, e$ so that $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} = \boldsymbol{b}$. Can you somehow find $c, d, e$ for $\boldsymbol{b}$?
     \[
@@ -150,16 +148,339 @@
 \end{enumerate}
 
 \subsection{Lengths and Dot Products}
+\begin{enumerate}
+    \item Calculate the dot products $\boldsymbol{u} \cdot \boldsymbol{v}$ and $\boldsymbol{u} \cdot \boldsymbol{w}$ and $\boldsymbol{u} \cdot (\boldsymbol{v} + \boldsymbol{w})$ and $\boldsymbol{w} \cdot \boldsymbol{v}$:
+    \[
+    \boldsymbol{u} = \begin{bmatrix} -.6 \\ .8 \end{bmatrix}, \qquad
+    \boldsymbol{v} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}, \qquad
+    \boldsymbol{w} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+    \]
 
-\noindent 
+    \item Compute the lengths $\|\boldsymbol{u}\|$ and $\|\boldsymbol{v}\|$ and $\|\boldsymbol{w}\|$ of those vectors. Check the Schwarz inequalities $|\boldsymbol{u} \cdot \boldsymbol{v}| \le \|\boldsymbol{u}\| \, \|\boldsymbol{v}\|$ and $\boldsymbol{v} \cdot \boldsymbol{w} \le \|\boldsymbol{v}\| \, \|\boldsymbol{w}\|$.
+
+    \item Find unit vectors in the directions of $\boldsymbol{v}$ and $\boldsymbol{w}$ in Problem 1, and the cosine of the angle $\theta$. Choose vectors $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ that make $0^\circ$, $90^\circ$, and $180^\circ$ angles with $\boldsymbol{w}$.
+
+    \item For any \emph{unit} vectors $\boldsymbol{v}$ and $\boldsymbol{w}$, find the dot products (actual numbers) of  
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\boldsymbol{v}$ and $-\boldsymbol{v}$  
+            \item $\boldsymbol{v} + \boldsymbol{w}$ and $\boldsymbol{v} - \boldsymbol{w}$  
+            \item $\boldsymbol{v} - 2\boldsymbol{w}$ and $\boldsymbol{v} + 2\boldsymbol{w}$
+        \end{multicols}
+    \end{enumerate}
+
+    \item Find unit vectors $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$ in the directions of $\boldsymbol{v} = (1,3)$ and $\boldsymbol{w} = (2,1,2)$. Find unit vectors $\boldsymbol{U}_1$ and $\boldsymbol{U}_2$ that are perpendicular to $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$.
+
+    \item 
+    \begin{enumerate}
+        \item Describe every vector $\boldsymbol{w} = (w_1, w_2)$ that is perpendicular to $\boldsymbol{v} = (2, -1)$.
+        \item All vectors perpendicular to $\boldsymbol{V} = (1,1,1)$ lie on a \underline{\hspace{2cm}} in 3 dimensions.
+        \item The vectors perpendicular to both $(1,1,1)$ and $(1,2,3)$ lie on a \underline{\hspace{2cm}}.
+    \end{enumerate}
+
+    \item Find the angle $\theta$ (from its cosine) between these pairs of vectors:
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$
+            \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 2 \\ 2 \\ -1 \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} 2 \\ -1 \\ 2 \end{bmatrix}$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} -1 \\ \sqrt{3} \end{bmatrix}$
+            \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} -1 \\ -2 \end{bmatrix}$
+        \end{multicols}
+    \end{enumerate}
+
+    \item True or false (give a reason if true or find a counterexample if false):
+    \begin{enumerate}
+        \item If $\boldsymbol{u} = (1,1,1)$ is perpendicular to $\boldsymbol{v}$ and $\boldsymbol{w}$, then $\boldsymbol{v}$ is parallel to $\boldsymbol{w}$.
+        \item If $\boldsymbol{u}$ is perpendicular to $\boldsymbol{v}$ and $\boldsymbol{w}$, then $\boldsymbol{u}$ is perpendicular to $\boldsymbol{v} + 2\boldsymbol{w}$.
+        \item If $\boldsymbol{u}$ and $\boldsymbol{v}$ are perpendicular unit vectors then $\|\boldsymbol{u} - \boldsymbol{v}\| = \sqrt{2}$. Yes!
+    \end{enumerate}
+
+    \item The slopes of the arrows from $(0,0)$ to $(v_1,v_2)$ and $(w_1,w_2)$ are $v_2/v_1$ and $w_2/w_1$. Suppose the product $v_2 w_2 / v_1 w_1$ of those slopes is $-1$. Show that $\boldsymbol{v} \cdot \boldsymbol{w} = 0$ and the vectors are perpendicular. (The line $y = 4x$ is perpendicular to $y = -\frac{1}{4}x$.)
+
+    \item Draw arrows from $(0,0)$ to the points $\boldsymbol{v} = (1,2)$ and $\boldsymbol{w} = (-2,1)$. Multiply their slopes. That answer is a signal that $\boldsymbol{v} \cdot \boldsymbol{w} = 0$ and the arrows are \underline{\hspace{2cm}}.
+
+    \item If $\boldsymbol{v} \cdot \boldsymbol{w}$ is negative, what does this say about the angle between $\boldsymbol{v}$ and $\boldsymbol{w}$? Draw a 3-dimensional vector $\boldsymbol{v}$ (an arrow), and show where to find all $\boldsymbol{w}$'s with $\boldsymbol{v} \cdot \boldsymbol{w} < 0$.
+
+    \item With $\boldsymbol{v} = (1,1)$ and $\boldsymbol{w} = (1,5)$ choose a number $c$ so that $\boldsymbol{w} - c\boldsymbol{v}$ is perpendicular to $\boldsymbol{v}$. Then find the formula for $c$ starting from any nonzero $\boldsymbol{v}$ and $\boldsymbol{w}$.
+
+    \item Find nonzero vectors $\boldsymbol{v}$ and $\boldsymbol{w}$ that are perpendicular to $(1,0,1)$ and to each other.
+
+    \item Find nonzero vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ that are perpendicular to $(1,1,1)$ and to each other.
+
+    \item The geometric mean of $x = 2$ and $y = 8$ is $\sqrt{xy} = 4$. The arithmetic mean is larger: $\frac{1}{2}(x + y) = \underline{\hspace{2cm}}$. This would come in Example 6 from the Schwarz inequality for $\boldsymbol{v} = (\sqrt{2}, \sqrt{8})$ and $\boldsymbol{w} = (\sqrt{8}, \sqrt{2})$. Find $\cos\theta$ for this $\boldsymbol{v}$ and $\boldsymbol{w}$.
+
+    \item How long is the vector $\boldsymbol{v} = (1,1,\dots,1)$ in 9 dimensions? Find a unit vector $\boldsymbol{u}$ in the same direction as $\boldsymbol{v}$ and a unit vector $\boldsymbol{w}$ that is perpendicular to $\boldsymbol{v}$.
+
+    \item What are the cosines of the angles $\alpha, \beta, \theta$ between the vector $(1,0,-1)$ and the unit vectors $\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ along the axes? Check the formula $\cos^2\alpha + \cos^2\beta + \cos^2\theta = 1$.
+\end{enumerate}
+
+\noindent Problems 18-28 lead to the main facts about lengths and angles in triangles. 
+\begin{enumerate}[resume]
+    \item The parallelogram with sides $\boldsymbol{v} = (4,2)$ and $\boldsymbol{w} = (-1,2)$ is a rectangle. Check the Pythagoras formula $a^2 + b^2 = c^2$ which is for \emph{right triangles only}:
+    \[
+    \boxed{(\text{length of } \boldsymbol{v})^2 + (\text{length of } \boldsymbol{w})^2 = (\text{length of } \boldsymbol{v} + \boldsymbol{w})^2.}
+    \]
+
+    \item (Rules for dot products) These equations are simple but useful:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\boldsymbol{v} \cdot \boldsymbol{w} = \boldsymbol{w} \cdot \boldsymbol{v}$
+            \item $\boldsymbol{u} \cdot (\boldsymbol{v} + \boldsymbol{w}) = \boldsymbol{u} \cdot \boldsymbol{v} + \boldsymbol{u} \cdot \boldsymbol{w}$
+            \item $(c\boldsymbol{v}) \cdot \boldsymbol{w} = c(\boldsymbol{v} \cdot \boldsymbol{w})$    
+        \end{multicols}
+    \end{enumerate}
+    Use (2) with $\boldsymbol{u} = \boldsymbol{v} + \boldsymbol{w}$ to prove 
+    $\|\boldsymbol{v} + \boldsymbol{w}\|^2 = \boldsymbol{v} \cdot \boldsymbol{v} + 2\boldsymbol{v} \cdot \boldsymbol{w} + \boldsymbol{w} \cdot \boldsymbol{w}.$
+
+    \item The ``Law of Cosines'' comes from $(\boldsymbol{v} - \boldsymbol{w}) \cdot (\boldsymbol{v} - \boldsymbol{w}) = \boldsymbol{v} \cdot \boldsymbol{v} - 2\boldsymbol{v} \cdot \boldsymbol{w} + \boldsymbol{w} \cdot \boldsymbol{w}$:
+    \[
+    \textbf{Cosine Law} \qquad \|\boldsymbol{v} - \boldsymbol{w}\|^2 = \|\boldsymbol{v}\|^2 - 2\|\boldsymbol{v}\|\,\|\boldsymbol{w}\|\cos\theta + \|\boldsymbol{w}\|^2.
+    \]
+    Draw a triangle with sides $\boldsymbol{v}$ and $\boldsymbol{w}$ and $\boldsymbol{v} - \boldsymbol{w}$. Which of the angles is $\theta$?
+    \newpage
+    \item The \textbf{triangle inequality} says: (length of $\boldsymbol{v} + \boldsymbol{w}$) $\le$ (length of $\boldsymbol{v}$) + (length of $\boldsymbol{w}$).  
+    \\Problem 19 found $\|\boldsymbol{v} + \boldsymbol{w}\|^2 = \|\boldsymbol{v}\|^2 + 2\boldsymbol{v} \cdot \boldsymbol{w} + \|\boldsymbol{w}\|^2$. 
+    \\Increase by $\|\boldsymbol{v}\|\,\|\boldsymbol{w}\|$ to show that $\boldsymbol{v} \cdot \boldsymbol{w}$ can not exceed $\|\boldsymbol{v}\|\,\|\boldsymbol{w}\|$:  
+    \begin{multicols}{4}
+        \textbf{Triangle inequality}
+        \columnbreak
+        $$
+        \|\boldsymbol{v} + \boldsymbol{w}\|^2 \le (\|\boldsymbol{v}\| + \|\boldsymbol{w}\|)^2 
+        \quad \text{or} \quad 
+        \boxed{\|\boldsymbol{v} + \boldsymbol{w}\| \le \|\boldsymbol{v}\| + \|\boldsymbol{w}\|}.
+        $$
+    \end{multicols}
+    \begin{figure}[htbp] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
+        \centering % 图片居中
+        \includegraphics[width=0.8\textwidth]{pic/Figure_21.png} % 插入图片，指定宽度为文本宽度的 80%
+        %\renewcommand{\thefigure}{1.5}% 强行将当前的图片编号改为 1.5
+        %\caption{ }%标题
+        %\label{fig:my_label} % 标签，用于交叉引用（可选）
+    \end{figure}
+
+    \item The Schwarz inequality $|\boldsymbol{v} \cdot \boldsymbol{w}| \le \|\boldsymbol{v}\| \, \|\boldsymbol{w}\|$ by algebra instead of trigonometry:
+    \begin{enumerate}
+        \item Multiply out both sides of $(v_1 w_1 + v_2 w_2)^2 \le (v_1^2 + v_2^2)(w_1^2 + w_2^2)$.
+        \item Show that the difference between those two sides equals $(v_1 w_2 - v_2 w_1)^2$. This cannot be negative since it is a square---so the inequality is true.
+    \end{enumerate}
+
+    \item The figure shows that $\cos\alpha = v_1/\|\boldsymbol{v}\|$ and $\sin\alpha = v_2/\|\boldsymbol{v}\|$. Similarly $\cos\beta$ is \underline{\hspace{1cm}} and $\sin\beta$ is \underline{\hspace{1cm}}. The angle $\theta$ is $\beta - \alpha$. Substitute into the trigonometry formula $\cos\beta \cos\alpha + \sin\beta \sin\alpha$ for $\cos(\beta - \alpha)$ to find 
+    $
+    \cos\theta = \boldsymbol{v} \cdot \boldsymbol{w} / \|\boldsymbol{v}\| \, \|\boldsymbol{w}\|.
+    $
+
+    \item One-line proof of the inequality $|\boldsymbol{u} \cdot \boldsymbol{U}| \le 1$ for unit vectors $(u_1, u_2)$ and $(U_1, U_2)$:
+    \[
+    |\boldsymbol{u} \cdot \boldsymbol{U}| 
+    \le |u_1||U_1| + |u_2||U_2| 
+    \le \frac{u_1^2 + U_1^2}{2} + \frac{u_2^2 + U_2^2}{2} = 1.
+    \]
+    Put $(u_1, u_2) = (.6, .8)$ and $(U_1, U_2) = (.8, .6)$ in that whole line and find $\cos\theta$.
+
+    \item Why is $|\cos\theta|$ never greater than 1 in the first place?
+
+    \item (Recommended) Draw a parallelogram.
+
+    \item Parallelogram with two sides $\boldsymbol{v}$ and $\boldsymbol{w}$. Show that the squared diagonal lengths $\|\boldsymbol{v} + \boldsymbol{w}\|^2 + \|\boldsymbol{v} - \boldsymbol{w}\|^2$ add to the sum of four squared side lengths $2\|\boldsymbol{v}\|^2 + 2\|\boldsymbol{w}\|^2$.
+
+    \item If $\boldsymbol{v} = (1,2)$ draw all vectors $\boldsymbol{w} = (x,y)$ in the $xy$-plane with $\boldsymbol{v} \cdot \boldsymbol{w} = x + 2y = 5$. Why do those $\boldsymbol{w}$'s lie along a line? Which is the shortest $\boldsymbol{w}$?
+
+    \item (Recommended) If $\|\boldsymbol{v}\| = 5$ and $\|\boldsymbol{w}\| = 3$, what are the smallest and largest possible values of $\|\boldsymbol{v} - \boldsymbol{w}\|$? What are the smallest and largest possible values of $\boldsymbol{v} \cdot \boldsymbol{w}$?
+\end{enumerate}
 
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Can three vectors in the $xy$-plane have $\boldsymbol{u} \cdot \boldsymbol{v} < 0$ and $\boldsymbol{v} \cdot \boldsymbol{w} < 0$ and $\boldsymbol{u} \cdot \boldsymbol{w} < 0$? \\
+    I don't know how many vectors in $xyz$ space can have all negative dot products. (Four of those vectors in the plane would certainly be impossible\dots.)
+
+    \item Pick any numbers that add to $x + y + z = 0$. Find the angle between your vector $\boldsymbol{v} = (x, y, z)$ and the vector $\boldsymbol{w} = (z, x, y)$. Challenge question: Explain why 
+    $
+    \boldsymbol{v} \cdot \boldsymbol{w} / \|\boldsymbol{v}\| \, \|\boldsymbol{w}\| \text{ is always } -\frac{1}{2}.
+    $
+
+    \item How could you prove $\sqrt[3]{xyz} \le \frac{1}{3}(x + y + z)$ (geometric mean $\le$ arithmetic mean)?
+
+    \item Find 4 perpendicular unit vectors of the form $\left(\pm \tfrac{1}{2}, \pm \tfrac{1}{2}, \pm \tfrac{1}{2}, \pm \tfrac{1}{2}\right)$: Choose $+$ or $-$.
+
+    \item Using $\boldsymbol{v} = \texttt{randn}(3,1)$ in MATLAB, create a random unit vector $\boldsymbol{u} = \boldsymbol{v}/\|\boldsymbol{v}\|$.
+    \\ Using $\boldsymbol{V} = \texttt{randn}(3,30)$ create 30 more random unit vectors $\boldsymbol{U}_j$.
+    \\ What is the average size of the dot products $|\boldsymbol{u} \cdot \boldsymbol{U}_j|$? 
+    \\ In calculus, the average is $\displaystyle \int_0^\pi |\cos\theta| \,{d\theta}/{\pi} = {2}/{\pi}$.
+\end{enumerate}
+
 
 \subsection{Matrices}
-\noindent
+\begin{enumerate}
+    \item Find the linear combination $3\boldsymbol{s}_1 + 4\boldsymbol{s}_2 + 5\boldsymbol{s}_3 = \boldsymbol{b}$. Then write $\boldsymbol{b}$ as a matrix-vector multiplication $S\boldsymbol{x}$, with $3,4,5$ in $\boldsymbol{x}$. Compute the three dot products (row of $S$) $\cdot \boldsymbol{x}$:
+    \[
+    \boldsymbol{s}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \quad
+    \boldsymbol{s}_2 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
+    \boldsymbol{s}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+    \quad \text{go into the columns of } S.
+    \]
 
+    \item Solve these equations $S\boldsymbol{y} = \boldsymbol{b}$ with $\boldsymbol{s}_1, \boldsymbol{s}_2, \boldsymbol{s}_3$ in the columns of $S$:
+    \[
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+    =
+    \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+    \quad \text{and} \quad
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+    =
+    \begin{bmatrix} 1 \\ 4 \\ 9 \end{bmatrix}.
+    \]
+    $S$ is a sum matrix. The sum of the first 3 odd numbers is \underline{\hspace{2cm}}.
+
+    \item Solve these three equations for $y_1, y_2, y_3$ in terms of $c_1, c_2, c_3$:
+    \[
+    S\boldsymbol{y} = \boldsymbol{c} \qquad
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1 & 1 & 1
+    \end{bmatrix}
+    \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+    =
+    \begin{bmatrix} c_1 \\ c_2 \\ c_3 \end{bmatrix}.
+    \]
+    Write the solution $\boldsymbol{y}$ as a matrix $\boldsymbol{A} = S^{-1}$ times the vector $\boldsymbol{c}$. Are the columns of $S$ independent or dependent?
+
+    \item Find a combination $x_1\boldsymbol{w}_1 + x_2\boldsymbol{w}_2 + x_3\boldsymbol{w}_3$ that gives the zero vector with $x_1 = 1$:
+    \[
+    \boldsymbol{w}_1 = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \quad\quad
+    \boldsymbol{w}_2 = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} \quad\quad
+    \boldsymbol{w}_3 = \begin{bmatrix} 7 \\ 8 \\ 9 \end{bmatrix}
+    \]
+    Those vectors are (independent) (dependent). The three vectors lie in a \underline{\hspace{2cm}}. The matrix $W$ with those three columns is not invertible.
+
+    \item The rows of that matrix $W$ produce three vectors ($I$ write them as columns):
+    \[
+    \boldsymbol{r}_1 = \begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} \quad\quad
+    \boldsymbol{r}_2 = \begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} \quad\quad
+    \boldsymbol{r}_3 = \begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix}
+    \]
+    Linear algebra says that these vectors must also lie in a plane. There must be many combinations with $y_1\boldsymbol{r}_1 + y_2\boldsymbol{r}_2 + y_3\boldsymbol{r}_3 = \boldsymbol{0}$. Find two sets of $y$'s.
+
+    \item Which numbers $c$ give dependent columns so a combination of columns equals zero?
+    \[
+    \begin{bmatrix}
+        1 & 1 & 0 \\  3 & 2 & 1 \\  7 & 4 & c
+    \end{bmatrix}
+    \quad
+    \begin{bmatrix}
+        1 & 0 & c \\ 1 & 1 & 0 \\  0 & 1 & 1
+    \end{bmatrix}
+    \quad
+    \begin{bmatrix}
+        c & c & c \\  2 & 1 & 5 \\ 3 & 3 & 6
+    \end{bmatrix}
+    \quad
+    \begin{tabular}{l}
+        maybe \\
+        always \\
+        independent for $c \ne 0$
+    \end{tabular}
+    \]
+
+    \item If the columns combine into $A\boldsymbol{x} = \boldsymbol{0}$, then each of the rows has $\boldsymbol{r} \cdot \boldsymbol{x} = 0$:
+    \[
+    \begin{bmatrix}
+    a_1 & a_2 & a_3
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0 \\ 0 \\ 0
+    \end{bmatrix}
+    \quad \text{By rows} \quad
+    \begin{bmatrix}
+    \boldsymbol{r}_1 \cdot \boldsymbol{x} \\
+    \boldsymbol{r}_2 \cdot \boldsymbol{x} \\
+    \boldsymbol{r}_3 \cdot \boldsymbol{x}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0 \\ 0 \\ 0
+    \end{bmatrix}.
+    \]
+    The three rows also lie in a plane. Why is that plane perpendicular to $\boldsymbol{x}$?
+
+    \item Moving to a $4 \times 4$ difference equation $A\boldsymbol{x} = \boldsymbol{b}$, find the four components $x_1, x_2, x_3, x_4$. Then write this solution as $\boldsymbol{x} = A^{-1}\boldsymbol{b}$ to find the inverse matrix:
+    \[
+    A\boldsymbol{x} =
+    \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    -1 & 1 & 0 & 0 \\
+    0 & -1 & 1 & 0 \\
+    0 & 0 & -1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    b_1 \\ b_2 \\ b_3 \\ b_4
+    \end{bmatrix}
+    = \boldsymbol{b}.
+    \]
+
+    \item What is the cyclic $4$ by $4$ difference matrix $C$? It will have $1$ and $-1$ in each row and each column. Find all solutions $\boldsymbol{x} = (x_1, x_2, x_3, x_4)$ to $C\boldsymbol{x} = \boldsymbol{0}$. The four columns of $C$ lie in a ``three-dimensional hyperplane'' inside four-dimensional space.
+
+    \item A forward difference matrix $\Delta$ is upper triangular:
+    \[
+    \Delta \boldsymbol{z} =
+    \begin{bmatrix}
+    -1 & 1 & 0 \\
+    0 & -1 & 1 \\
+    0 & 0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+    z_1 \\ z_2 \\ z_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    z_2 - z_1 \\ z_3 - z_2 \\ 0 - z_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    b_1 \\ b_2 \\ b_3
+    \end{bmatrix}
+    = \boldsymbol{b}.
+    \]
+    Find $z_1, z_2, z_3$ from $b_1, b_2, b_3$. What is the inverse matrix in $\boldsymbol{z} = \Delta^{-1}\boldsymbol{b}$?
+
+    \item Show that the forward differences $(t+1)^2 - t^2$ are $2t+1 =$ odd numbers. As in calculus, the difference $(t+1)^n - t^n$ will begin with the derivative of $t^n$, which is \underline{\hspace{3cm}}.
+
+    \item The last lines of the Worked Example say that the $4 \times 4$ centered difference matrix in (16) is invertible. Solve $C\boldsymbol{x} = ( b_1, b_2, b_3, b_4) $ to find its inverse in $\boldsymbol{x} = C^{-1}\boldsymbol{b}$.
+\end{enumerate}
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item The very last words say that the $5 \times 5$ centered difference matrix is \textbf{not invertible}. Write down the 5 equations $C\boldsymbol{x} = \boldsymbol{b}$. Find a combination of left sides that gives zero. What combination of $b_1, b_2, b_3, b_4, b_5$ must be zero? (The 5 columns lie on a ``4-dimensional hyperplane'' in 5-dimensional space. Hard to visualize.)
 
+    \item If $(a,b)$ is a multiple of $(c,d)$ with $abcd \ne 0$, show that $(a,c)$ is a multiple of $(b,d)$. This is surprisingly important: two columns are falling on one line. You could use numbers first to see how $a, b, c, d$ are related. The question will lead to:
+    \[
+    \text{If }
+    \begin{bmatrix}
+    a & b \\
+    c & d
+    \end{bmatrix}
+    \text{ has dependent rows, then it also has dependent columns.}
+    \]
+\end{enumerate}
 \newpage
 
 \section{Chapter 2: Solving Linear Equations }

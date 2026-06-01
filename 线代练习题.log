@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  1 JUN 2026 15:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  1 JUN 2026 16:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/LinearAlgebra_exercise/线代练习题.tex
-(d:/LinearAlgebra_exercise/线代练习题.tex
+**d:/GitHub/LinearAlgebra_exercise/线代练习题.tex
+(d:/GitHub/LinearAlgebra_exercise/线代练习题.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (e:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -464,11 +464,7 @@ File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-(./线代练习题.aux
-
-LaTeX Warning: Label `fig:my_label' multiply defined.
-
-)
+(./线代练习题.aux)
 \openout1 = `线代练习题.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -572,39 +568,49 @@ File: pic/Figure1.4.png Graphic file (type png)
 <use pic/Figure1.4.png>
 Package pdftex.def Info: pic/Figure1.4.png  used on input line 83.
 (pdftex.def)             Requested size: 364.19667pt x 139.11125pt.
-<pic/Figure1.5.png.png, id=19, 803.0pt x 321.2pt>
-File: pic/Figure1.5.png.png Graphic file (type png)
-<use pic/Figure1.5.png.png>
-Package pdftex.def Info: pic/Figure1.5.png.png  used on input line 106.
+<pic/Figure1.5.png, id=19, 803.0pt x 321.2pt>
+File: pic/Figure1.5.png Graphic file (type png)
+<use pic/Figure1.5.png>
+Package pdftex.def Info: pic/Figure1.5.png  used on input line 106.
 (pdftex.def)             Requested size: 364.19667pt x 145.68062pt.
- [2 <./pic/Figure1.4.png> <./pic/Figure1.5.png.png>]
-Overfull \hbox (3.18402pt too wide) in paragraph at lines 139--140
-[]\OT1/LibertinusSerif-TLF/b/n/10 The lin-ear com-bi-na-tions of $[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 )$ \OT1/LibertinusSerif-TLF/b/n/10 and $[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 c; d\OT1/cmr/m/n/10 )$ \OT1/LibertinusSerif-TLF/b/n/10 fill the plane un-less $[]$. 
+ [2 <./pic/Figure1.4.png> <./pic/Figure1.5.png>]
+LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/b/it' will be
+(Font)              scaled to size 10.0pt on input line 163.
+ [3{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_m5c6xi.enc}] [4]
+Overfull \hbox (141.2415pt too wide) detected at line 253
+\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 + []\OMS/cmsy/m/n/10 k[] ^^T \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 k[]k \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 k[]k\OT1/cmr/m/n/10 )[] [] []\OML/cmm/m/it/10 :
  []
 
-[3] [4] [5] [6] [7] [8] [9] (./线代练习题.aux)
+<pic/Figure_21.png, id=33, 702.625pt x 200.75pt>
+File: pic/Figure_21.png Graphic file (type png)
+<use pic/Figure_21.png>
+Package pdftex.def Info: pic/Figure_21.png  used on input line 257.
+(pdftex.def)             Requested size: 364.19667pt x 104.05977pt.
+LaTeX Font Info:    Trying to load font information for OT1+LibertinusMono-TLF on input line 307.
+(e:/texlive/2026/texmf-dist/tex/latex/libertinus-type1/OT1LibertinusMono-TLF.fd
+File: OT1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for OT1/LibertinusMono-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/b/n' will be
+(Font)              scaled to size 8.50006pt on input line 307.
+ [5{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_wbnhrd.enc} <./pic/Figure_21.png>] [6] [7] [8] [9] [10] [11] [12] [13] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 15949 strings out of 467348
- 321045 string characters out of 5419842
- 722796 words of memory out of 5000000
- 44755 multiletter control sequences out of 15000+600000
- 645793 words of font info for 72 fonts, out of 8000000 for 9000
+ 16000 strings out of 467348
+ 322600 string characters out of 5419842
+ 738759 words of memory out of 5000000
+ 44798 multiletter control sequences out of 15000+600000
+ 647819 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,8n,107p,544b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 线代练习题.pdf (9 pages, 349874 bytes).
+ 102i,11n,107p,551b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on 线代练习题.pdf (13 pages, 521327 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
