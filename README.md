@@ -1,4 +1,4 @@
-# 📘 Serge Lang - A First Course in Calculus（习题整理）
+# 📘 Introduction to Linear Algebra（习题整理）
 
 ## ✨ 项目初衷
 
