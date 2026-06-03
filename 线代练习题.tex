@@ -1011,18 +1011,595 @@
 
 
 \subsection{Elimination Using Matrices}
-\noindent 
+\noindent Problems 1--15 are about elimination matrices.
+
+\begin{enumerate}
+    \item Write down the $3$ by $3$ matrices that produce these elimination steps:
+    \begin{enumerate}
+        \item $E_{21}$ subtracts $5$ times row $1$ from row $2$.
+        \item $E_{32}$ subtracts $-7$ times row $2$ from row $3$.
+        \item $P$ exchanges rows $1$ and $2$, then rows $2$ and $3$.
+    \end{enumerate}
+
+    \item In Problem 1, applying $E_{21}$ and then $E_{32}$ to $\boldsymbol{b} = (1,0,0)$ gives $E_{32}E_{21}\boldsymbol{b} = \underline{\hspace{3em}}$. Applying $E_{32}$ before $E_{21}$ gives $E_{21}E_{32}\boldsymbol{b} = \underline{\hspace{3em}}$. When $E_{32}$ comes first, row \underline{\hspace{2em}} feels no effect from row \underline{\hspace{2em}}.
+
+    \item Which three matrices $E_{21}, E_{31}, E_{32}$ put $A$ into triangular form $U$?
+    \[
+    A = \begin{bmatrix}
+        1 & 1 & 0 \\
+        4 & 6 & 1 \\
+       -2 & 2 & 0
+    \end{bmatrix}
+    \quad \text{and} \quad
+    E_{32}E_{31}E_{21}A = U.
+    \]
+    Multiply those $E$'s to get one matrix $M$ that does elimination: $MA = U$.
+
+    \item Include $\boldsymbol{b} = (1,0,0)$ as a fourth column in Problem 3 to produce $[A\mid\boldsymbol{b}]$. Carry out the elimination steps on this augmented matrix to solve $A\boldsymbol{x} = \boldsymbol{b}$.
+
+    \item Suppose $a_{33} = 7$ and the third pivot is $5$. If you change $a_{33}$ to $11$, the third pivot is \underline{\hspace{3em}}. If you change $a_{33}$ to \underline{\hspace{3em}}, there is no third pivot.
+
+    \item If every column of $A$ is a multiple of $(1,1,1)$, then $A\boldsymbol{x}$ is always a multiple of $(1,1,1)$. Do a $3$ by $3$ example. How many pivots are produced by elimination?
+
+    \item Suppose $E$ subtracts $7$ times row $1$ from row $3$.
+    \begin{enumerate}
+        \item To invert that step you should \underline{\hspace{2em}} $7$ times row \underline{\hspace{2em}} to row \underline{\hspace{2em}}.
+        \item What ``inverse matrix'' $E^{-1}$ takes that reverse step (so $E^{-1}E = I$)?
+        \item If the reverse step is applied first (and then $E$) show that $EE^{-1} = I$.
+    \end{enumerate}
+
+    \item The \textbf{determinant} of $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is $\det M = ad - bc$. Subtract $\ell$ times row $1$ from row $2$ to produce a new $M^*$. Show that $\det M^* = \det M$ for every $\ell$. When $\ell = c/a$, the product of pivots equals the determinant: $(a)(d - \ell b)$ equals $ad - bc$.
+
+    \item 
+    \begin{enumerate}
+        \item $E_{21}$ subtracts row $1$ from row $2$ and then $P_{23}$ exchanges rows $2$ and $3$. What matrix $M = P_{23}E_{21}$ does both steps at once?
+        \item $P_{23}$ exchanges rows $2$ and $3$ and then $E_{31}$ subtracts row $1$ from row $3$. What matrix $M = E_{31}P_{23}$ does both steps at once? Explain why the $M$'s are the same but the $E$'s are different.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item What $3$ by $3$ matrix $E_{13}$ will add row $3$ to row $1$?
+        \item What matrix adds row $1$ to row $3$ and \textit{at the same time} row $3$ to row $1$?
+        \item What matrix adds row $1$ to row $3$ and \textit{then} adds row $3$ to row $1$?
+    \end{enumerate}
+
+    \item Create a matrix that has $a_{11} = a_{22} = a_{33} = 1$ but elimination produces two negative pivots without row exchanges. (The first pivot is $1$.)
+
+    \item Multiply these matrices:
+    \[
+    \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 0
+    \end{bmatrix}
+    \quad\text{and}\quad
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+       -1 & 1 & 0 \\
+       -1 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 2 & 3 \\
+        1 & 3 & 1 \\
+        1 & 4 & 0
+    \end{bmatrix}.
+    \]
+
+    \item Explain these facts. If the third column of $B$ is all zero, the third column of $EB$ is all zero (for any $E$). If the third row of $B$ is all zero, the third row of $EB$ might \textit{not} be zero.
+
+    \item This $4$ by $4$ matrix will need elimination matrices $E_{21}$ and $E_{32}$ and $E_{43}$. What are those matrices?
+    \[
+    A = \begin{bmatrix}
+        2 & -1 & 0 & 0 \\
+       -1 & 2 & -1 & 0 \\
+        0 & -1 & 2 & -1 \\
+        0 & 0 & -1 & 2
+    \end{bmatrix}.
+    \]
+
+    \item Write down the $3$ by $3$ matrix that has $a_{ij} = 2i - 3j$. This matrix has $a_{32} = 0$, but elimination still needs $E_{32}$ to produce a zero in the $(3,2)$ position. Which previous step destroys the original zero and what is $E_{32}$?
+
+\end{enumerate}
+
+\noindent Problems 16--23 are about creating and multiplying matrices.
+
+\begin{enumerate}[resume]
+    \item Write these ancient problems in a $2$ by $2$ matrix form $A\boldsymbol{x} = \boldsymbol{b}$ and solve them:
+    \begin{enumerate}
+        \item $X$ is twice as old as $Y$ and their ages add to $33$.
+        \item $(x,y) = (2,5)$ and $(3,7)$ lie on the line $y = mx + c$. Find $m$ and $c$.
+    \end{enumerate}
+
+    \item The parabola $y = a + bx + cx^2$ goes through the points $(x,y) = (1,4)$ and $(2,8)$ and $(3,14)$. Find and solve a matrix equation for the unknowns $(a,b,c)$.
+
+    \item Multiply these matrices in the orders $EF$ and $FE$:
+    \[
+    E = \begin{bmatrix}
+        1 & 0 & 0 \\
+        a & 1 & 0 \\
+        b & 0 & 1
+    \end{bmatrix},
+    \qquad
+    F = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & c & 1
+    \end{bmatrix}.
+    \]
+    Also compute $E^2 = EE$ and $F^3 = FFF$. You can guess $P^{100}$.
+
+
+    \item Multiply these row exchange matrices in the orders $PQ$ and $QP$ and $P^2$:
+    \[
+    P = \begin{bmatrix}
+        0 & 1 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}
+    \quad\text{and}\quad
+    Q = \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 0
+    \end{bmatrix}.
+    \]
+    Find another non-diagonal matrix whose square is $M^2 = I$.
+
+    \item 
+    \begin{enumerate}
+        \item Suppose all columns of $B$ are the same. Then all columns of $EB$ are the same, because each one is $E$ times \underline{\hspace{3em}}.
+        \item Suppose all rows of $B$ are $[\,1\;\;2\;\;4\,]$. Show by example that all rows of $EB$ are \textit{not} $[\,1\;\;2\;\;4\,]$. It is true that those rows are \underline{\hspace{4em}}.
+    \end{enumerate}
+
+    \item If $E$ adds row 1 to row 2 and $F$ adds row 2 to row 1, does $EF$ equal $FE$?
+
+    \item The entries of $A$ and $\boldsymbol{x}$ are $a_{ij}$ and $x_j$. So the first component of $A\boldsymbol{x}$ is $\sum a_{1j}x_j = a_{11}x_1 + \cdots + a_{1n}x_n$. If $E_{21}$ subtracts row 1 from row 2, write a formula for
+    \begin{enumerate}
+        \item the third component of $E_{21}A\boldsymbol{x}$
+        \item the $(2,1)$ entry of $E_{21}A$
+        \item the $(2,1)$ entry of $E_{21}(E_{21}A)$
+        \item the first component of $(E_{21}E_{21})A\boldsymbol{x}$
+    \end{enumerate}
+
+    \item The elimination matrix $E = \begin{bmatrix} -2 & 0 \\ 0 & 1 \end{bmatrix}$ subtracts 2 times row 1 of $A$ from row 2 of $A$. The result is $EA$. What is the effect of $E(AE)$? In the opposite order $AE$, we are subtracting 2 times \underline{\hspace{2em}} of $A$ from \underline{\hspace{2em}}. (Do examples.)
+
+\end{enumerate}
+
+\noindent Problems 24--27 include the column $\boldsymbol{b}$ in the augmented matrix $[\,A \mid \boldsymbol{b}\,]$.
+
+
+\begin{enumerate}[resume]
 
 
 
+    \item Apply elimination to the $2$ by $3$ augmented matrix $[\,A \mid \boldsymbol{b}\,]$. What is the triangular system $U\boldsymbol{x} = \boldsymbol{c}$? What is the solution $\boldsymbol{x}$?
+    \[
+    A\boldsymbol{x} = 
+    \begin{bmatrix}
+        2 & 3 \\
+        4 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1 \\ x_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 \\ 17
+    \end{bmatrix}.
+    \]
+
+    \item Apply elimination to the $3$ by $4$ augmented matrix $[\,A \mid \boldsymbol{b}\,]$. How do you know this system has no solution? Change the last number $6$ so there is a solution.
+    \[
+    A\boldsymbol{x} = 
+    \begin{bmatrix}
+        1 & 2 & 3 \\
+        2 & 3 & 4 \\
+        3 & 5 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\ y \\ z
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 \\ 2 \\ 6
+    \end{bmatrix}.
+    \]
+
+    \item The equations $A\boldsymbol{x} = \boldsymbol{b}$ and $A\boldsymbol{x}^* = \boldsymbol{b}^*$ have the same matrix $A$. What double augmented matrix should you use in elimination to solve both equations at once? Solve both of these equations by working on a $2$ by $4$ matrix:
+    \[
+    \begin{bmatrix}
+        1 & 4 \\
+        2 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\ y
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 \\ 0
+    \end{bmatrix}
+    \quad\text{and}\quad
+    \begin{bmatrix}
+        1 & 4 \\
+        2 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        u \\ v
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix}.
+    \]
+
+    \item Choose the numbers $a,b,c,d$ in this augmented matrix so that there is (a) no solution (b) infinitely many solutions.
+    \[
+    [A\mid\boldsymbol{b}] = 
+    \begin{bmatrix}
+        1 & 2 & 3 & a \\
+        0 & 4 & 5 & b \\
+        0 & 0 & d & c
+    \end{bmatrix}.
+    \]
+    Which of the numbers $a,b,c,$ or $d$ have no effect on the solvability?
+
+    \item If $AB = I$ and $BC = I$ use the associative law to prove $A = C$.
+\end{enumerate}
 
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Find the triangular matrix $E$ that reduces ``Pascal's matrix'' to a smaller Pascal:
+    \[
+    \text{Elimination on column 1}\quad
+    E\begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        1 & 1 & 0 & 0 \\
+        1 & 2 & 1 & 0 \\
+        1 & 3 & 3 & 1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 0 \\
+        0 & 1 & 2 & 1
+    \end{bmatrix}.
+    \]
+    Which matrix $M$ (multiplying several $E$'s) reduces Pascal all the way to $I$? Pascal's triangular matrix is exceptional, all of its multipliers are $\ell_{ij}=1$.
 
+    \item Write $M = \begin{bmatrix} 3 & 4 \\ 6 & 7 \end{bmatrix}$ as a product of many factors $A = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}$ and $B = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$.
+    \begin{enumerate}
+        \item What matrix $E$ subtracts row 1 from row 2 to make row 2 of $EM$ smaller?
+        \item What matrix $F$ subtracts row 2 of $EM$ from row 1 to reduce row 1 of $FEM$?
+        \item Continue $E$'s and $F$'s until (many $E$'s and $F$'s times) $M$ is ($A$ or $B$).
+        \item $E$ and $F$ are the inverses of $A$ and $B$! Moving all $E$'s and $F$'s to the right side will give you the desired result $M = \text{product of } A\text{'s and } B\text{'s}$.
+        This is possible for integer matrices $M = \begin{bmatrix} a & b \\ c & d \end{bmatrix} > 0$ that have $ad - bc = 1$.
+    \end{enumerate}
+
+    \item Find elimination matrices $E_{21}$ then $E_{32}$ then $E_{43}$ to change $K$ into $U$:
+    \[
+    E_{43}\,E_{32}\,E_{21}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        -a & 1 & 0 & 0 \\
+        0 & -b & 1 & 0 \\
+        0 & 0 & -c & 1
+    \end{bmatrix}
+    = I.
+    \]
+    Apply those three steps to the identity matrix $I$, to multiply $E_{43}E_{32}E_{21}$.
+\end{enumerate}
 
 \subsection{Rules for Matrix Operations}
-\noindent 
-\paragraph{Challenge Problems}
+\noindent Problems 1--16 are about the laws of matrix multiplication.
 
+\begin{enumerate}
+    \item $A$ is $3$ by $5$, $B$ is $5$ by $3$, $C$ is $5$ by $1$, and $D$ is $3$ by $1$. All entries are $1$. Which of these matrix operations are allowed, and what are the results?
+    \[
+    BA \qquad AB \qquad ABD \qquad DC \qquad A(B+C).
+    \]
+
+    \item What rows or columns or matrices do you multiply to find
+    \begin{enumerate}
+        \item the second column of $AB$?
+        \item the first row of $AB$?
+        \item the entry in row $3$, column $5$ of $AB$?
+        \item the entry in row $1$, column $1$ of $CDE$?
+    \end{enumerate}
+
+    \item Add $AB$ to $AC$ and compare with $A(B+C)$:
+    \[
+    A = \begin{bmatrix} 1 & 5 \\ 2 & 3 \end{bmatrix}
+    \quad\text{and}\quad
+    B = \begin{bmatrix} 0 & 2 \\ 0 & 1 \end{bmatrix}
+    \quad\text{and}\quad
+    C = \begin{bmatrix} 3 & 1 \\ 0 & 0 \end{bmatrix}.
+    \]
+
+    \item In Problem 3, multiply $A$ times $BC$. Then multiply $AB$ times $C$.
+
+    \item Compute $A^2$ and $A^3$. Make a prediction for $A^5$ and $A^n$:
+    \[
+    A = \begin{bmatrix} 1 & b \\ 0 & 1 \end{bmatrix}
+    \quad\text{and}\quad
+    A = \begin{bmatrix} 2 & 2 \\ 0 & 0 \end{bmatrix}.
+    \]
+
+    \item Show that $(A+B)^2$ is different from $A^2 + 2AB + B^2$, when
+    \[
+    A = \begin{bmatrix} 1 & 2 \\ 0 & 0 \end{bmatrix}
+    \quad\text{and}\quad
+    B = \begin{bmatrix} 1 & 0 \\ 3 & 0 \end{bmatrix}.
+    \]
+    Write down the correct rule for $(A+B)(A+B) = A^2 + \underline{\hspace{3em}} + B^2$.
+
+    \item True or false. Give a specific example when false:
+    \begin{enumerate}
+        \item If columns 1 and 3 of $B$ are the same, so are columns 1 and 3 of $AB$.
+        \item If rows 1 and 3 of $B$ are the same, so are rows 1 and 3 of $AB$.
+        \item If rows 1 and 3 of $A$ are the same, so are rows 1 and 3 of $ABC$.
+        \item $(AB)^2 = A^2 B^2$.
+    \end{enumerate}
+
+    \item How is each row of $DA$ and $EA$ related to the rows of $A$, when
+    \[
+    D = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}
+    \quad\text{and}\quad
+    E = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}
+    \quad\text{and}\quad
+    A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}?
+    \]
+    How is each column of $AD$ and $AE$ related to the columns of $A$?
+
+    \item Row 1 of $A$ is added to row 2. This gives $EA$ below. Then column 1 of $EA$ is added to column 2 to produce $(EA)F$:
+    \[
+    EA = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}
+    \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+    = \begin{bmatrix} a & b \\ a+c & b+d \end{bmatrix},
+    \quad
+    (EA)F = (EA)\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}
+    = \begin{bmatrix} a & a+b \\ a+c & a+c+b+d \end{bmatrix}.
+    \]
+    \begin{enumerate}
+        \item Do those steps in the opposite order. First add column 1 of $A$ to column 2 by $AF$, then add row 1 of $AF$ to row 2 by $E(AF)$.
+        \item Compare with $(EA)F$. What law is obeyed by matrix multiplication?
+    \end{enumerate}
+
+    \item Row 1 of $A$ is again added to row 2 to produce $EA$. Then $F$ adds row 2 of $EA$ to row 1. The result is $F(EA)$:
+    \[
+    F(EA) = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}
+    \begin{bmatrix} a & b \\ a+c & b+d \end{bmatrix}
+    = \begin{bmatrix} 2a+c & 2b+d \\ a+c & b+d \end{bmatrix}.
+    \]
+    \begin{enumerate}
+        \item Do those steps in the opposite order: first add row 2 to row 1 by $FA$, then add row 1 of $FA$ to row 2.
+        \item What law is or is not obeyed by matrix multiplication?
+    \end{enumerate}
+
+    \item This fact still amazes me. If you do a row operation on $A$ and then a column operation, the result is the same as if you did the column operation first. (Try it.) Why is this true?
+
+    \item (3 by 3 matrices) Choose the only $B$ so that for every matrix $A$
+    \begin{enumerate}
+        \item $BA = 4A$
+        \item $BA = 4B$
+        \item $BA$ has rows 1 and 3 of $A$ reversed and row 2 unchanged
+        \item All rows of $BA$ are the same as row 1 of $A$.
+    \end{enumerate}
+
+    \item Suppose $AB = BA$ and $AC = CA$ for these two particular matrices $B$ and $C$:
+    \[
+    A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+    \quad\text{commutes with}\quad
+    B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
+    \quad\text{and}\quad
+    C = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}.
+    \]
+    Prove that $a = d$ and $b = c = 0$. Then $A$ is a multiple of $I$. The only matrices that commute with $B$ and $C$ and all other 2 by 2 matrices are $A =$ multiple of $I$.
+
+    \item Which of the following matrices are guaranteed to equal $(A-B)^2$: \quad $A^2 - B^2$, \quad $(B-A)^2$, \quad $A^2 - 2AB + B^2$, \quad $A(A-B) - B(A-B)$, \quad $A^2 - AB - BA + B^2$?
+
+    \item True or false:
+    \begin{enumerate}
+        \item If $A^2$ is defined then $A$ is necessarily square.
+        \item If $AB$ and $BA$ are defined then $A$ and $B$ are square.
+        \item If $AB$ and $BA$ are defined then $AB$ and $BA$ are square.
+        \item If $AB = B$ then $A = I$.
+    \end{enumerate}
+
+    \item If $A$ is $m$ by $n$, how many separate multiplications are involved when
+    \begin{enumerate}
+        \item $A$ multiplies a vector $\boldsymbol{x}$ with $n$ components?
+        \item $A$ multiplies an $n$ by $p$ matrix $B$?
+        \item $A$ multiplies itself to produce $A^2$? Here $m = n$.
+    \end{enumerate}
+
+    \item For $A = \begin{bmatrix} 2 & -1 \\ 3 & -2 \end{bmatrix}$ and $B = \begin{bmatrix} 1 & 0 & 4 \\ 0 & 6 & 0 \end{bmatrix}$, compute these answers \textit{and nothing more}:
+    \begin{enumerate}
+        \item column 2 of $AB$
+        \item row 2 of $AB$
+        \item row 2 of $AA = A^2$
+        \item row 2 of $AAA = A^3$.
+    \end{enumerate}
+\end{enumerate}
+
+\noindent Problems 18--20 use $a_{ij}$ for the entry in row $i$, column $j$ of $A$.
+
+\begin{enumerate}[resume]
+    
+    \item Write down the 3 by 3 matrix $A$ whose entries are
+    \begin{enumerate}
+        \item $a_{ij} = \min$ of $i$ and $j$
+        \item $a_{ij} = (-1)^{i+j}$
+        \item $a_{ij} = i/j$.
+    \end{enumerate}
+
+    \item What words would you use to describe each of these classes of matrices? Give a 3 by 3 example in each class. Which matrix belongs to all four classes?
+    \begin{enumerate}
+        \item $a_{ij} = 0$ if $i \ne j$
+        \item $a_{ij} = 0$ if $i < j$
+        \item $a_{ij} = a_{ji}$
+        \item $a_{ij} = a_{1j}$.
+    \end{enumerate}
+
+    \item The entries of $A$ are $a_{ij}$. Assuming that zeros don't appear, what is
+    \begin{enumerate}
+        \item the first pivot?
+        \item the multiplier $\ell_{31}$ of row 1 to be subtracted from row 3?
+        \item the new entry that replaces $a_{32}$ after that subtraction?
+        \item the second pivot?
+    \end{enumerate}
+\end{enumerate}
+
+\noindent  Problems 21--24 involve powers of $A$.
+
+\begin{enumerate}[resume]
+    
+    \item Compute $A^2$, $A^3$, $A^4$ and also $A\boldsymbol{v}$, $A^2\boldsymbol{v}$, $A^3\boldsymbol{v}$, $A^4\boldsymbol{v}$ for
+    \[
+    A = \begin{bmatrix}
+        0 & 2 & 0 & 0 \\
+        0 & 0 & 2 & 0 \\
+        0 & 0 & 0 & 2 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+    \quad\text{and}\quad
+    \boldsymbol{v} = \begin{bmatrix} x \\ y \\ z \\ t \end{bmatrix}.
+    \]
+
+    \item By trial and error find real nonzero 2 by 2 matrices such that
+    \[
+    A^2 = -I \qquad BC = 0 \qquad DE = -ED \quad\text{(not allowing } DE = 0\text{)}.
+    \]
+
+    \item 
+    \begin{enumerate}
+        \item Find a nonzero matrix $A$ for which $A^2 = 0$.
+        \item Find a matrix that has $A^2 \ne 0$ but $A^3 = 0$.
+    \end{enumerate}
+
+    \item By experiment with $n=2$ and $n=3$ predict $A^n$ for these matrices:
+    \[
+    A_1 = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}
+    \quad\text{and}\quad
+    A_2 = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
+    \quad\text{and}\quad
+    A_3 = \begin{bmatrix} a & b \\ 0 & 0 \end{bmatrix}.
+    \]
+\end{enumerate}
+
+\noindent Problems 25--31 use column-row multiplication and block multiplication.
+
+\begin{enumerate}[resume]
+    
+    \item Multiply $A$ times $I$ using columns of $A$ ($3$ by $3$) times rows of $I$.
+
+    \item Multiply $AB$ using columns times rows:
+    \[
+    AB = \begin{bmatrix} 1 & 0 \\ 2 & 4 \\ 2 & 1 \end{bmatrix}
+    \begin{bmatrix} 3 & 3 & 0 \\ 1 & 2 & 1 \end{bmatrix}
+    = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}
+    \begin{bmatrix} 3 & 3 & 0 \end{bmatrix}
+    + \underline{\hspace{3em}} = \underline{\hspace{3em}}.
+    \]
+
+    \item Show that the product of upper triangular matrices is always upper triangular:
+    \[
+    AB = \begin{bmatrix} x & x & x \\ 0 & x & x \\ 0 & 0 & x \end{bmatrix}
+    \begin{bmatrix} x & x & x \\ 0 & x & x \\ 0 & 0 & x \end{bmatrix}
+    = \begin{bmatrix} \underline{\hspace{2em}} & \underline{\hspace{2em}} & \underline{\hspace{2em}} \\
+                0 & \underline{\hspace{2em}} & \underline{\hspace{2em}} \\
+                0 & 0 & \underline{\hspace{2em}} \end{bmatrix}.
+    \]
+    Proof using dot products (Row times column) \quad (Row 2 of $A$) $\cdot$ (column 1 of $B$) $= 0$. Which other dot products give zeros?\\
+    Proof using full matrices (Column times row) \quad Draw $x$'s and $0$'s in (column 2 of $A$) times (row 2 of $B$). Also show (column 3 of $A$) times (row 3 of $B$).
+
+    \item Draw the cuts in $A$ ($2$ by $3$) and $B$ ($3$ by $4$) and $AB$ to show how each of the four multiplication rules is really a block multiplication:
+    \begin{center}
+    \begin{tabular}{lcl}
+        (1) Matrix $A$ times columns of $B$ & \quad & Columns of $AB$ \\
+        (2) Rows of $A$ times the matrix $B$ & \quad & Rows of $AB$ \\
+        (3) Rows of $A$ times columns of $B$ & \quad & Inner products (numbers in $AB$) \\
+        (4) Columns of $A$ times rows of $B$ & \quad & Outer products (matrices add to $AB$)
+    \end{tabular}
+    \end{center}
+
+    \item Which matrices $E_{21}$ and $E_{31}$ produce zeros in the $(2,1)$ and $(3,1)$ positions of $E_{21}A$ and $E_{31}A$?
+    \[
+    A = \begin{bmatrix} 2 & 1 & 0 \\ -2 & 0 & 1 \\ 8 & 5 & 3 \end{bmatrix}.
+    \]
+    Find the single matrix $E = E_{31}E_{21}$ that produces both zeros at once. Multiply $EA$.
+
+    \item Block multiplication says that column 1 is eliminated by
+    \[
+    EA = \begin{bmatrix} 1 & 0 \\ -c/a & I \end{bmatrix}
+    \begin{bmatrix} a & b \\ c & D \end{bmatrix}
+    = \begin{bmatrix} a & b \\ 0 & D - cb/a \end{bmatrix}.
+    \]
+    In Problem 29, what numbers go into $c$ and $D$ and what is $D - cb/a$?
+
+    \item With $i^2 = -1$, the product of $(A + iB)$ and $(x + iy)$ is $Ax + iBx + iAy - By$. Use blocks to separate the real part without $i$ from the imaginary part that multiplies $i$:
+    \[
+    \begin{bmatrix} A & -B \\ ? & ? \end{bmatrix}
+    \begin{bmatrix} x \\ y \end{bmatrix}
+    = \begin{bmatrix} Ax - By \\ ? \end{bmatrix}
+    \quad
+    \begin{matrix}
+        \text{real part} \\ \text{imaginary part}
+    \end{matrix}
+    \]
+    (Fill in the ?'s.)
+
+    
+    \item (Very important) Suppose you solve $A\boldsymbol{x} = \boldsymbol{b}$ for three special right sides $\boldsymbol{b}$:
+    \[
+    A\boldsymbol{x}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+    \quad\text{and}\quad
+    A\boldsymbol{x}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+    \quad\text{and}\quad
+    A\boldsymbol{x}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}.
+    \]
+    If the three solutions $\boldsymbol{x}_1, \boldsymbol{x}_2, \boldsymbol{x}_3$ are the columns of a matrix $X$, what is $A$ times $X$?
+
+    \item If the three solutions in Question 32 are $\boldsymbol{x}_1 = (1,1,1)$ and $\boldsymbol{x}_2 = (0,1,1)$ and $\boldsymbol{x}_3 = (0,0,1)$, solve $A\boldsymbol{x} = \boldsymbol{b}$ when $\boldsymbol{b} = (3,5,8)$. Challenge problem: What is $A$?
+
+    \item Find all matrices $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ that satisfy $A\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}A$.
+
+    \item Suppose a ``circle graph'' has 4 nodes connected (in both directions) by edges around a circle. What is its adjacency matrix $S$ from Worked Example 2.4 A? What is $S^2$? Find all the 2-step paths predicted by $S^2$.
+
+
+
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Practical question\quad Suppose $A$ is $m$ by $n$, $B$ is $n$ by $p$, and $C$ is $p$ by $q$. Then the multiplication count is $mnp$ for $AB + mpq$ for $(AB)C$. The same matrix comes from $A$ times $BC$ with $mnq + npq$ separate multiplications. Notice $npq$ for $BC$.
+    \begin{enumerate}
+        \item If $A$ is 2 by 4, $B$ is 4 by 7, and $C$ is 7 by 10, do you prefer $(AB)C$ or $A(BC)$?
+        \item With $N$-component vectors, would you choose $(\boldsymbol{u}^T\boldsymbol{v})\boldsymbol{w}^T$ or $\boldsymbol{u}^T(\boldsymbol{v}\boldsymbol{w}^T)$?
+        \item Divide by $mnp$ to show that $(AB)C$ is faster when $n^{-1} + q^{-1} < m^{-1} + p^{-1}$.
+    \end{enumerate}
+
+    \item To prove that $(AB)C = A(BC)$, use the column vectors $\boldsymbol{b}_1,\dots,\boldsymbol{b}_n$ of $B$. First suppose that $C$ has only one column $\boldsymbol{c}_1,\dots,\boldsymbol{c}_n$. \\
+    $AB$ has columns $A\boldsymbol{b}_1,\dots,A\boldsymbol{b}_n$ and then $(AB)C$ equals $c_1A\boldsymbol{b}_1+\cdots+c_nA\boldsymbol{b}_n$. \\
+    $BC$ has one column $c_1\boldsymbol{b}_1+\cdots+c_n\boldsymbol{b}_n$ and then $A(BC)$ equals $A(c_1\boldsymbol{b}_1+\cdots+c_n\boldsymbol{b}_n)$. \\
+    Linearity gives equality of those two sums. This proves $(AB)C = A(BC)$. The same is true for all other \underline{\hspace{3em}} of $C$. Therefore $(AB)C = A(BC)$. Apply to inverses: If $BA = I$ and $AC = I$, prove that the left-inverse $B$ equals the right-inverse $C$.
+
+    \item 
+    \begin{enumerate}
+        \item Suppose $A$ has rows $\boldsymbol{a}_1^T,\dots,\boldsymbol{a}_m^T$. Why does $A^TA$ equal $\boldsymbol{a}_1\boldsymbol{a}_1^T + \cdots + \boldsymbol{a}_m\boldsymbol{a}_m^T$?
+        \item If $C$ is a diagonal matrix with $c_1,\dots,c_m$ on its diagonal, find a similar sum of columns times rows for $A^TCA$. First do an example with $m = n = 2$.
+    \end{enumerate}
+\end{enumerate}
 \subsection{Inverse Matrices}
 \paragraph{Challenge Problems}
 
