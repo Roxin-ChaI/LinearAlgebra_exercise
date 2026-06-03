@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  1 JUN 2026 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  2 JUN 2026 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -592,25 +592,50 @@ File: OT1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for OT1/Li
 )
 LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/b/n' will be
 (Font)              scaled to size 8.50006pt on input line 307.
- [5{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_wbnhrd.enc} <./pic/Figure_21.png>] [6] [7] [8] [9] [10] [11] [12] [13] (./线代练习题.aux)
+ [5{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_wbnhrd.enc} <./pic/Figure_21.png>] [6] [7]
+Overfull \hbox (11.06587pt too wide) in paragraph at lines 548--549
+\OT1/LibertinusSerif-TLF/b/n/10 vec-tors in 4-dimensional space can com-bine to pro-duce $[]$. What com-bi-na-tion of $\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$\OT1/LibertinusSerif-TLF/b/n/10 , $\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$\OT1/LibertinusSerif-TLF/b/n/10 ,
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
+
+ []
+
+[9]
+Overfull \hbox (5.38228pt too wide) in paragraph at lines 683--684
+[]\OT1/LibertinusSerif-TLF/b/n/10 For four lin-ear equa-tions in two un-knowns $\OML/cmm/m/it/10 x$ \OT1/LibertinusSerif-TLF/b/n/10 and $\OML/cmm/m/it/10 y$\OT1/LibertinusSerif-TLF/b/n/10 , the row pic-ture shows four $[]$.
+ []
+
+
+Overfull \hbox (16.95337pt too wide) detected at line 699
+[][] \OT1/cmr/m/n/10 = [] [] = [] \OML/cmm/m/it/10 ;  [][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[][] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ;  [][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[][] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 :
+ []
+
+[10] [11] [12] [13]
+Overfull \hbox (28.81908pt too wide) in paragraph at lines 993--994
+[]\OT1/LibertinusSerif-TLF/b/n/10 Find ex-per-i-men-tally the av-er-age 1st and 2nd and 3rd pivot sizes from MAT-LAB's \OT1/LibertinusMono-TLF/b/n/10 [L,U] = lu(rand(3))\OT1/LibertinusSerif-TLF/b/n/10 .
+ []
+
+[14] [15] [16] [17] [18] [19] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16000 strings out of 467348
- 322600 string characters out of 5419842
+ 16007 strings out of 467348
+ 322786 string characters out of 5419842
  738759 words of memory out of 5000000
- 44798 multiletter control sequences out of 15000+600000
+ 44805 multiletter control sequences out of 15000+600000
  647819 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,107p,551b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,16n,107p,551b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 线代练习题.pdf (13 pages, 521327 bytes).
+Output written on 线代练习题.pdf (19 pages, 570572 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

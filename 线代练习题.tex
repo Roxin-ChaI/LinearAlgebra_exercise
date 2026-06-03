@@ -486,14 +486,536 @@
 \section{Chapter 2: Solving Linear Equations }
 
 \subsection{Vectors and Linear Equations}
+\begin{enumerate}
+    \item With $A = I$ (the identity matrix) draw the planes in the row picture. Three sides of a box meet at the solution $\boldsymbol{x} = (x, y, z) = (2, 3, 4)$:
+    \[
+    \begin{aligned}
+    1x + 0y + 0z &= 2 \\
+    0x + 1y + 0z &= 3 \\
+    0x + 0y + 1z &= 4
+    \end{aligned}
+    \quad \text{or} \quad
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+    =
+    \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix}.
+    \]
+    Draw the vectors in the column picture. Two times column 1 plus three times column 2 plus four times column 3 equals the right side $\boldsymbol{b}$.
+
+    \item If the equations in Problem 1 are multiplied by $2, 3, 4$ they become $D\boldsymbol{x} = \boldsymbol{B}$:
+    \[
+    \begin{aligned}
+    2x + 0y + 0z &= 4 \\
+    0x + 3y + 0z &= 9 \\
+    0x + 0y + 4z &= 16
+    \end{aligned}
+    \quad \text{or} \quad
+    D\boldsymbol{x} =
+    \begin{bmatrix}
+    2 & 0 & 0 \\
+    0 & 3 & 0 \\
+    0 & 0 & 4
+    \end{bmatrix}
+    \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+    =
+    \begin{bmatrix} 4 \\ 9 \\ 16 \end{bmatrix}
+    = \boldsymbol{B}.
+    \]
+    Why is the row picture the same? Is the solution $\boldsymbol{X}$ the same as $\boldsymbol{x}$? What is changed in the column picture—the columns or the right combination to give $\boldsymbol{B}$?
+
+    \item If equation 1 is added to equation 2, which of these are changed: the planes in the row picture, the vectors in the column picture, the coefficient matrix, the solution? The new equations in Problem 1 would be $x = 2$, $x + y = 5$, $z = 4$.
+
+    \item Find a point with $z = 2$ on the intersection line of the planes $x + 3z = 6$ and $x - y + z = 4$. Find the point with $z = 0$. Find a third point halfway between.
+
+    \item The first of these equations plus the second equals the third:
+    \[
+    \begin{aligned}
+    x + y + z &= 2 \\
+    x + 2y + z &= 3 \\
+    2x + 3y + 2z &= 5.
+    \end{aligned}
+    \]
+    The first two planes meet along a line. The third plane contains that line, because if $x, y, z$ satisfy the first two equations then they also \underline{\hspace{3cm}}. The equations have infinitely many solutions (the whole line $L$). Find three solutions on $L$.
+
+    \item Move the third plane in Problem 5 to a parallel plane $2x + 3y + 2z = 9$. Now the three equations have no solution—why not? The first two planes meet along the line $L$, but the third plane doesn’t \underline{\hspace{3cm}} that line.
+
+    \item In Problem 5 the columns are $(1,1,2)$ and $(1,2,3)$ and $(1,1,2)$. This is a ``singular case'' because the third column is \underline{\hspace{3cm}}. Find two combinations of the columns that give $\boldsymbol{b} = (2,3,5)$. This is only possible for $\boldsymbol{b} = (4,6,c)$ if $c = $ \underline{\hspace{2cm}}.
+
+    \item Normally 4 ``planes'' in 4-dimensional space meet at a \underline{\hspace{3cm}}. Normally 4 column vectors in 4-dimensional space can combine to produce $\boldsymbol{b}$. What combination of $(1,0,0,0)$, $(1,1,0,0)$, $(1,1,1,0)$, $(1,1,1,1)$ produces $\boldsymbol{b} = (3,3,3,2)$? What 4 equations for $x, y, z, t$ are you solving?
+
+\end{enumerate}
+
+\noindent Problems 9--14 are about multiplying matrices and vectors.
+
+\begin{enumerate}[resume]
+    \item Compute each $A\boldsymbol{x}$ by dot products of the rows with the column vector:
+    \[
+    \text{(a)}\;
+    \begin{bmatrix}
+    1 & 2 & 4 \\
+    -2 & 3 & 1 \\
+    -4 & 1 & 2
+    \end{bmatrix}
+    \begin{bmatrix} 2 \\ 2 \\ 3 \end{bmatrix}
+    \qquad
+    \text{(b)}\;
+    \begin{bmatrix}
+    2 & 1 & 0 & 0 \\
+    1 & 2 & 1 & 0 \\
+    0 & 1 & 2 & 1 \\
+    0 & 0 & 1 & 2
+    \end{bmatrix}
+    \begin{bmatrix} 1 \\ 1 \\ 1 \\ 2 \end{bmatrix}.
+    \]
+
+    \item Compute each $A\boldsymbol{x}$ in Problem 9 as a combination of the columns:
+    \[
+    9\text{(a) becomes}\quad
+    A\boldsymbol{x} = 
+    2\begin{bmatrix} 1 \\ -2 \\ -4 \end{bmatrix}
+    + 2\begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix}
+    + 3\begin{bmatrix} 4 \\ 1 \\ 2 \end{bmatrix}
+    = \begin{bmatrix} \; \\ \; \\ \; \end{bmatrix}.
+    \]
+    How many separate multiplications for $A\boldsymbol{x}$, when the matrix is ``3 by 3''?
+
+    \item Find the two components of $A\boldsymbol{x}$ by rows or by columns:
+    \[
+    \begin{bmatrix} 2 & 3 \\ 5 & 1 \end{bmatrix}
+    \begin{bmatrix} 4 \\ 2 \end{bmatrix},
+    \qquad
+    \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}
+    \begin{bmatrix} 2 \\ -1 \end{bmatrix},
+    \qquad
+    \begin{bmatrix} 1 & 2 & 4 \\ 2 & 0 & 1 \end{bmatrix}
+    \begin{bmatrix} 3 \\ 1 \\ 1 \end{bmatrix}.
+    \]
+
+    \item Multiply $A$ times $\boldsymbol{x}$ to find three components of $A\boldsymbol{x}$:
+    \[
+    \begin{bmatrix}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix} x \\ y \\ z \end{bmatrix},
+    \qquad
+    \begin{bmatrix}
+    2 & 1 & 3 \\
+    1 & 2 & 3 \\
+    3 & 3 & 6
+    \end{bmatrix}
+    \begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix},
+    \qquad
+    \begin{bmatrix}
+    2 & 1 \\
+    1 & 2 \\
+    3 & 3
+    \end{bmatrix}
+    \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+    \]
+
+    \item 
+    \begin{enumerate}
+        \item[(a)] A matrix with $m$ rows and $n$ columns multiplies a vector with \underline{\hspace{2cm}} components to produce a vector with \underline{\hspace{2cm}} components.
+        \item[(b)] The planes from the $m$ equations $A\boldsymbol{x} = \boldsymbol{b}$ are in \underline{\hspace{2cm}}-dimensional space. The combination of the columns of $A$ is in \underline{\hspace{2cm}}-dimensional space.
+    \end{enumerate}
+
+    \item Write $2x + 3y + z + 5t = 8$ as a matrix $A$ (how many rows?) multiplying the column vector $\boldsymbol{x} = (x, y, z, t)$ to produce $\boldsymbol{b}$. The solutions $\boldsymbol{x}$ fill a plane or a ``hyperplane'' in 4-dimensional space. The plane is 3-dimensional with no 4D volume.
+\end{enumerate}
+
+\noindent Problems 15--22 ask for matrices that act in special ways on vectors.
+
+\begin{enumerate}[resume]
+    \item 
+    \begin{enumerate}
+        \item[(a)] What is the $2 \times 2$ identity matrix? $I$ times $\begin{bmatrix} x \\ y \end{bmatrix}$ equals $\begin{bmatrix} x \\ y \end{bmatrix}$.
+        \item[(b)] What is the $2 \times 2$ exchange matrix? $P$ times $\begin{bmatrix} x \\ y \end{bmatrix}$ equals $\begin{bmatrix} y \\ x \end{bmatrix}$.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item[(a)] What $2 \times 2$ matrix $R$ rotates every vector by $90^\circ$? $R$ times $\begin{bmatrix} x \\ y \end{bmatrix}$ is $\begin{bmatrix} -y \\ x \end{bmatrix}$.
+        \item[(b)] What $2 \times 2$ matrix $R^2$ rotates every vector by $180^\circ$?
+    \end{enumerate}
+
+    \item Find the matrix $P$ that multiplies $(x, y, z)$ to give $(y, x, z)$. Find the matrix $Q$ that multiplies $(y, x, z)$ to bring back $(x, y, z)$.
+
+    \item What $2 \times 2$ matrix $E$ subtracts the first component from the second component? \\
+    What $3 \times 3$ matrix does the same? \\
+    \[
+    E \begin{bmatrix} 3 \\ 5 \end{bmatrix} = \begin{bmatrix} 3 \\ 2 \end{bmatrix}
+    \quad \text{and} \quad
+    E \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix} = \begin{bmatrix} 3 \\ 2 \\ 7 \end{bmatrix}.
+    \]
+
+    \item What $3 \times 3$ matrix $E$ multiplies $(x, y, z)$ to give $(x, y, z + x)$? What matrix $E^{-1}$ multiplies $(x, y, z)$ to give $(x, y, z - x)$? If you multiply $(3,4,5)$ by $E$ and then multiply by $E^{-1}$, the two results are \underline{\hspace{2cm}} and \underline{\hspace{2cm}}.
+
+    \item 
+    \begin{enumerate}
+        \item[(a)] What $2 \times 2$ matrix $P_1$ projects the vector $(x, y)$ onto the $x$ axis to produce $(x, 0)$?
+        \item[(b)] What matrix $P_2$ projects onto the $y$ axis to produce $(0, y)$? If you multiply $(5,7)$ by $P_1$ and then multiply by $P_2$, you get \underline{\hspace{2cm}} and \underline{\hspace{2cm}}.
+    \end{enumerate}
+
+    \item What $2 \times 2$ matrix $R$ rotates every vector through $45^\circ$? The vector $(1,0)$ goes to $(\sqrt{2}/2, \sqrt{2}/2)$. The vector $(0,1)$ goes to $(-\sqrt{2}/2, \sqrt{2}/2)$. Those determine the matrix. Draw these particular vectors in the $xy$ plane and find $R$.
+
+    \item Write the dot product of $(1,4,5)$ and $(x, y, z)$ as a matrix multiplication $A\boldsymbol{x}$. The matrix $A$ has one row. The solutions to $A\boldsymbol{x} = 0$ lie on a \underline{\hspace{2cm}} perpendicular to the vector \underline{\hspace{2cm}}. The columns of $A$ are only in \underline{\hspace{2cm}}-dimensional space.
+
+    \item In MATLAB notation, write the commands that define this matrix $A$ and the column vectors $\boldsymbol{x}$ and $\boldsymbol{b}$. What command would test whether or not $A\boldsymbol{x} = \boldsymbol{b}$?
+    \[
+    A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \qquad
+    \boldsymbol{x} = \begin{bmatrix} 5 \\ -2 \end{bmatrix}, \qquad
+    \boldsymbol{b} = \begin{bmatrix} 1 \\ 7 \end{bmatrix}.
+    \]
+
+    \item The MATLAB commands \texttt{A = eye(3)} and \texttt{v = [3;5]'} produce the $3 \times 3$ identity matrix and the column vector $(3,4,5)$. What are the outputs from \texttt{A*v} and \texttt{v'*A}? (Computer not needed!) If you ask for \texttt{v*A}, what happens?
+
+    \item If you multiply the $4 \times 4$ all-ones matrix $A = \texttt{ones}(4)$ and the column vector $\boldsymbol{v} = \texttt{ones}(4,1)$, what is $A\boldsymbol{v}$? (Computer not needed.) If you multiply $B = \texttt{eye}(4) + \texttt{ones}(4)$ times $\boldsymbol{w} = \texttt{zeros}(4,1) + 2*\texttt{ones}(4,1)$, what is $B*\boldsymbol{w}$?
+
+    \item Draw the row and column pictures for the equations $x - 2y = 0$, $x + y = 6$.
+
+    \item For two linear equations in three unknowns $x, y, z$, the row picture will show (2 or 3) (lines or planes) in (2 or 3)-dimensional space. The column picture is in (2 or 3)-dimensional space. The solutions normally lie on a \underline{\hspace{3cm}}.
+
+    \item For four linear equations in two unknowns $x$ and $y$, the row picture shows four \underline{\hspace{3cm}}. The column picture is in \underline{\hspace{3cm}}-dimensional space. The equations have no solution unless the vector on the right side is a combination of \underline{\hspace{3cm}}.
+
+    \item Start with the vector $\boldsymbol{u}_0 = (1, 0)$. Multiply again and again by the same ``Markov matrix'' 
+    \[
+    A = \begin{bmatrix} .8 & .3 \\ .2 & .7 \end{bmatrix}.
+    \]
+    The next three vectors are $\boldsymbol{u}_1, \boldsymbol{u}_2, \boldsymbol{u}_3$:
+    \[
+    \boldsymbol{u}_1 = 
+    \begin{bmatrix} .8 & .3 \\ .2 & .7 \end{bmatrix}
+    \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+    = \begin{bmatrix} .8 \\ .2 \end{bmatrix},
+    \qquad
+    \boldsymbol{u}_2 = A\boldsymbol{u}_1 = \underline{\hspace{3cm}},
+    \qquad
+    \boldsymbol{u}_3 = A\boldsymbol{u}_2 = \underline{\hspace{3cm}}.
+    \]
+    What property do you notice for all four vectors $\boldsymbol{u}_0, \boldsymbol{u}_1, \boldsymbol{u}_2, \boldsymbol{u}_3$?
+\end{enumerate}
+
+
 \paragraph{Challenge Problems}
+\begin{enumerate}
+    \setcounter{enumi}{29}
+    \item Continue Problem 29 from $\boldsymbol{u}_0 = (1,0)$ to $\boldsymbol{u}_7$, and also from $\boldsymbol{v}_0 = (0,1)$ to $\boldsymbol{v}_7$. What do you notice about $\boldsymbol{u}_7$ and $\boldsymbol{v}_7$? Here are two MATLAB codes, with \texttt{while} and \texttt{for}:
+    \[
+    \begin{array}{l}
+    \texttt{u = [1; 0]; A = [.8 .3; .2 .7];} \\
+    \texttt{x = u; k = [0 : 7];} \\
+    \texttt{while size(x,2) <= 7} \\
+    \qquad \texttt{u = A*u; x = [x u];} \\
+    \texttt{end} \\
+    \texttt{plot(k, x)}
+    \end{array}
+    \qquad
+    \begin{array}{l}
+    \texttt{v = [0; 1]; A = [.8 .3; .2 .7];} \\
+    \texttt{x = v; k = [0 : 7];} \\
+    \texttt{for j = 1 : 7} \\
+    \qquad \texttt{v = A*v; x = [x v];} \\
+    \texttt{end} \\
+    \texttt{plot(k, x)}
+    \end{array}
+    \]
+    The $\boldsymbol{u}$'s and $\boldsymbol{v}$'s are approaching a steady state vector $\boldsymbol{s}$. Guess that vector and check that $A\boldsymbol{s} = \boldsymbol{s}$. If you start with $\boldsymbol{s}$, you stay with $\boldsymbol{s}$.
+
+    \item Invent a $3 \times 3$ magic matrix $M_3$ with entries $1,2,\dots,9$. All rows and columns and diagonals add to 15. The first row could be $8,3,4$. What is $M_3$ times $(1,1,1)$? What is $M_4$ times $(1,1,1,1)$ if a $4 \times 4$ magic matrix has entries $1,\dots,16$?
+
+    \item Suppose $\boldsymbol{u}$ and $\boldsymbol{v}$ are the first two columns of a $3 \times 3$ matrix $A$. Which third columns $\boldsymbol{w}$ would make this matrix singular? Describe a typical column picture of $A\boldsymbol{x} = \boldsymbol{b}$ in that singular case, and a typical row picture (for a random $\boldsymbol{b}$).
+
+    \item Multiplication by $A$ is a ``linear transformation''. Those words mean:
+    \[
+    \color{blue!60!white}\text{If } \boldsymbol{w} \text{ is a combination of } \boldsymbol{u} \text{ and } \boldsymbol{v}, \text{ then } A\boldsymbol{w} \text{ is the same combination of } A\boldsymbol{u} \text{ and } A\boldsymbol{v}.
+    \]
+    It is this ``linearity'' $A\boldsymbol{w} = cA\boldsymbol{u} + dA\boldsymbol{v}$ that gives us the name ``linear algebra''.
+
+    \medskip
+    \textbf{Problem:} If $\boldsymbol{u} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ and $\boldsymbol{v} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$, then $A\boldsymbol{u}$ and $A\boldsymbol{v}$ are the columns of $A$. \\
+    Combine $\boldsymbol{w} = c\boldsymbol{u} + d\boldsymbol{v}$. If $\boldsymbol{w} = \begin{bmatrix} 5 \\ 7 \end{bmatrix}$, how is $A\boldsymbol{w}$ connected to $A\boldsymbol{u}$ and $A\boldsymbol{v}$?
+
+    \item Start from the four equations $-x_{i+1} + 2x_i - x_{i-1} = i$ (for $i = 1,2,3,4$ with $x_0 = x_5 = 0$). Write those equations in their matrix form $A\boldsymbol{x} = \boldsymbol{b}$. Can you solve them for $x_1, x_2, x_3, x_4$?
+
+    \item A $9 \times 9$ Sudoku matrix $S$ has the numbers $1,\dots,9$ in every row and every column, and in every $3$ by $3$ block. For the all-ones vector $\boldsymbol{x} = (1,\dots,1)$, what is $S\boldsymbol{x}$? \\
+    A better question is: Which row exchanges will produce another Sudoku matrix? Also, which exchanges of block rows give another Sudoku matrix? \\
+    Section 2.7 will look at all possible permutations (reorderings) of the rows. I can see 6 orders for the first 3 rows, all giving Sudoku matrices. Also 6 permutations of the next 3 rows, and of the last 3 rows. And 6 block permutations of the block rows?
+\end{enumerate}
 
 \subsection{The Idea of Elimination}
-\noindent 
+\noindent Problems 1--10 are about elimination on $2 \times 2$ systems.
+
+\begin{enumerate}
+    \item What multiple $\ell_{21}$ of equation 1 should be subtracted from equation 2?
+    \[
+    \begin{aligned}
+        2x + 3y &= 1 \\
+        10x + 9y &= 11
+    \end{aligned}
+    \]
+    After elimination, write down the upper triangular system and circle the two pivots.  
+    The numbers 1 and 11 don’t affect the pivots—use them now in back substitution.
+
+    \item Solve the triangular system of Problem 1 by back substitution, $y$ before $x$.  
+    Verify that $x$ times $(2,10)$ plus $y$ times $(3,9)$ equals $(1,11)$.  
+    If the right side changes to $(4,44)$, what is the new solution?
+
+    \item What multiple of equation 1 should be subtracted from equation 2?
+    \[
+    \begin{aligned}
+        2x - 4y &= 6 \\
+        -x + 5y &= 0
+    \end{aligned}
+    \]
+    After this elimination step, solve the triangular system.  
+    If the right side changes to $(-6,0)$, what is the new solution?
+
+    \item What multiple $\ell$ of equation 1 should be subtracted from equation 2 to remove $c$?
+    \[
+    \begin{aligned}
+        ax + by &= f \\
+        cx + dy &= g
+    \end{aligned}
+    \]
+    The first pivot is $a$ (assumed nonzero). Elimination produces what formula for the second pivot? What is $y$? The second pivot is missing when $ad = bc$: singular.
+
+    \item Choose a right side which gives no solution and another right side which gives infinitely many solutions. What are two of those solutions?
+    \[
+    \begin{array}{c}
+    \textbf{Singular system} \\[0.5em]
+    \begin{aligned}
+        3x + 2y &= 10 \\
+        6x + 4y &= \phantom{1} 
+    \end{aligned}
+    \end{array}
+    \]
+
+    \item Choose a coefficient $b$ that makes this system singular. Then choose a right side $g$ that makes it solvable. Find two solutions in that singular case.
+    \[
+    \begin{aligned}
+        2x + by &= 16 \\
+        4x + 8y &= g
+    \end{aligned}
+    \]
+
+    \item For which numbers $a$ does elimination break down (1) permanently (2) temporarily?
+    \[
+    \begin{aligned}
+        ax + 3y &= -3 \\
+        4x + 6y &= \phantom{-}6
+    \end{aligned}
+    \]
+    Solve for $x$ and $y$ after fixing the temporary breakdown by a row exchange.
+
+    \item For which three numbers $k$ does elimination break down? Which is fixed by a row exchange? In each case, is the number of solutions $0$ or $1$ or $\infty$?
+    \[
+    \begin{aligned}
+        kx + 3y &= \phantom{-}6 \\
+        3x + ky &= -6
+    \end{aligned}
+    \]
+
+    \item What test on $b_1$ and $b_2$ decides whether these two equations allow a solution? How many solutions will they have? Draw the column picture for $\boldsymbol{b} = (1,2)$ and $(1,0)$.
+    \[
+    \begin{aligned}
+        3x - 2y &= b_1 \\
+        6x - 4y &= b_2
+    \end{aligned}
+    \]
+
+    \item In the $xy$ plane, draw the lines $x+y=5$ and $x+2y=6$ and the equation $y = \underline{\hspace{2em}}$ that comes from elimination. The line $5x - 4y = c$ will go through the solution of these equations if $c = \underline{\hspace{2em}}$.
+\end{enumerate}
+
+\noindent Problems 11--20 study elimination on $3 \times 3$ systems (and possible failure).
+
+\begin{enumerate}[resume]
+    \item (Recommended) A system of linear equations can't have exactly two solutions. Why? \\
+    (a) If $(x,y,z)$ and $(X,Y,Z)$ are two solutions, what is another solution? \\
+    (b) If 25 planes meet at two points, where else do they meet?
+
+    \item Reduce this system to upper triangular form by two row operations:
+    \[
+    \begin{aligned}
+        2x + 3y + z &= 8 \\
+        4x + 7y + 5z &= 20 \\
+        -2y + 2z &= 0
+    \end{aligned}
+    \]
+    Circle the pivots. Solve by back substitution for $z, y, x$.
+
+    \item Apply elimination (circle the pivots) and back substitution to solve
+    \[
+    \begin{aligned}
+        2x - 3y \phantom{{}+z} &= 3 \\
+        4x - 5y + z &= 7 \\
+        2x - y - 3z &= 5
+    \end{aligned}
+    \]
+    List the three row operations: Subtract \underline{\hspace{2em}} times row \underline{\hspace{2em}} from row \underline{\hspace{2em}}.
+
+    \item Which number $d$ forces a row exchange, and what is the triangular system (not singular) for that $d$? Which $d$ makes this system singular (no third pivot)?
+    \[
+    \begin{aligned}
+        2x + 5y + z &= 0 \\
+        4x + dy + z &= 2 \\
+        y - z &= 3
+    \end{aligned}
+    \]
+
+    \item Which number $b$ leads later to a row exchange? Which $b$ leads to a missing pivot? In that singular case find a nonzero solution $x, y, z$.
+    \[
+    \begin{aligned}
+        x + by \phantom{{}+z} &= 0 \\
+        x - 2y - z &= 0 \\
+        \phantom{x} + y + z &= 0
+    \end{aligned}
+    \]
+
+    \item 
+    \begin{enumerate}
+        \item Construct a $3 \times 3$ system that needs two row exchanges to reach a triangular form and a solution.
+        \item Construct a $3 \times 3$ system that needs a row exchange to keep going, but breaks down later.
+    \end{enumerate}
+
+    \item If rows 1 and 2 are the same, how far can you get with elimination (allowing row exchange)? If columns 1 and 2 are the same, which pivot is missing?
+    
+    \[
+    \begin{array}{c@{\qquad}c@{\qquad}c@{\qquad}c}
+        \begin{aligned}
+            Equal  \\
+            rows
+        \end{aligned}
+        &
+        \begin{aligned}
+            2x - y + z &= 0 \\
+            2x - y + z &= 0 \\
+            4x + y + z &= 2
+        \end{aligned}
+        &
+        \begin{aligned}
+            2x + 2y + z &= 0 \\
+            4x + 4y + z &= 0 \\
+            6x + 6y + z &= 2
+        \end{aligned}
+        &
+        \begin{aligned}
+            Equal  \\
+            columns
+        \end{aligned}
+    \end{array}
+    \]
+    \item Construct a $3 \times 3$ example that has 9 different coefficients on the left side, but rows 2 and 3 become zero in elimination. How many solutions to your system with $\boldsymbol{b} = (1,10,100)$ and how many with $\boldsymbol{b} = (0,0,0)$?
+    
+    \item Which number $q$ makes this system singular and which right side $t$ gives it infinitely many solutions? Find the solution that has $z = 1$.
+    \[
+    \begin{aligned}
+        x + 4y - 2z &= 1 \\
+        x + 7y - 6z &= 6 \\
+        3y + qz &= t
+    \end{aligned}
+    \]
+
+    \item Three planes can fail to have an intersection point, even if no planes are parallel. The system is singular if row 3 of $A$ is a \underline{\hspace{3em}} of the first two rows. Find a third equation that can't be solved together with $x + y + z = 0$ and $x - 2y - z = 1$.
+
+    \item Find the pivots and the solution for both systems ($A\boldsymbol{x} = \boldsymbol{b}$ and $K\boldsymbol{x} = \boldsymbol{b}$):
+    \[
+    \begin{array}{c@{\quad}c}
+    \begin{aligned}
+        2x + y \phantom{{}+z} \phantom{{}+2t} &= 0 \\
+        x + 2y + z \phantom{{}+2t} &= 0 \\
+        y + 2z + t &= 0 \\
+        z + 2t &= 5
+    \end{aligned}
+    &
+    \begin{aligned}
+        2x - y \phantom{{}+z} \phantom{{}+2t} &= 0 \\
+        -x + 2y - z \phantom{{}+2t} &= 0 \\
+        \phantom{x} - y + 2z - t &= 0 \\
+        \phantom{x+y} - z + 2t &= 5
+    \end{aligned}
+    \end{array}
+    \]
+
+    \item If you extend Problem 21 following the $1,2,1$ pattern or the $-1,2,-1$ pattern, what is the fifth pivot? What is the $n$th pivot? $K$ is my favorite matrix.
+
+    \item If elimination leads to $x + y = 1$ and $2y = 3$, find three possible original problems.
+
+    \item For which two numbers $a$ will elimination fail on 
+    $A = \begin{bmatrix} a & 2 \\ a & a \end{bmatrix}$?
+
+    \item For which three numbers $a$ will elimination fail to give three pivots?
+    \[
+    A = \begin{bmatrix}
+        a & 2 & 3 \\
+        a & a & 4 \\
+        a & a & a
+    \end{bmatrix}
+    \text{ is singular for three values of } a.
+    \]
+
+    \item Look for a matrix that has row sums 4 and 8, and column sums 2 and $s$:
+    \[
+    \text{Matrix } = \begin{bmatrix} a & b \\ c & d \end{bmatrix},
+    \quad
+    \begin{cases}
+        a + b = 4 \\
+        a + c = 2 \\
+        c + d = 8 \\
+        b + d = s
+    \end{cases}
+    \]
+    The four equations are solvable only if $s = \underline{\hspace{2em}}$. Then find two different matrices that have the correct row and column sums.  
+    \textit{Extra credit:} Write down the $4 \times 4$ system $A\boldsymbol{x} = \boldsymbol{b}$ with $\boldsymbol{x} = (a,b,c,d)$ and make $A$ triangular by elimination.
+
+    \item Elimination in the usual order gives what matrix $U$ and what solution to this ``lower triangular'' system? We are really solving by \textit{forward substitution}:
+    \[
+    \begin{aligned}
+        3x \phantom{{}+2y} \phantom{{}+z} &= 3 \\
+        6x + 2y \phantom{{}+z} &= 8 \\
+        9x - 2y + z &= 9
+    \end{aligned}
+    \]
+
+    \item Create a MATLAB command \texttt{A(2,:) = ...} for the new row 2, to subtract 3 times row 1 from the existing row 2 if the matrix $A$ is already known.
+    
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+
+\begin{enumerate}[resume]
+    
+
+    \item Find experimentally the average 1st and 2nd and 3rd pivot sizes from MATLAB's \texttt{[L,U] = lu(rand(3))}. The average size \texttt{abs(U(1,1))} is above $\frac{1}{2}$ because \texttt{lu} picks the largest available pivot in column 1. Here $A = \texttt{rand(3)}$ has random entries between 0 and 1.
+    
+    \item If the last corner entry is $A(5,5) = 11$ and the last pivot of $A$ is $U(5,5) = 4$, what different entry $A(5,5)$ would have made $A$ singular?
+    
+    \item Suppose elimination takes $A$ to $U$ without row exchanges. Then row $j$ of $U$ is a combination of which rows of $A$? If $Ax = 0$, is $Ux = 0$? If $Ax = b$, is $Ux = b$? If $A$ starts out lower triangular, what is the upper triangular $U$?
+    
+    \item Start with 100 equations $Ax = 0$ for 100 unknowns $x = (x_1, \dots, x_{100})$. Suppose elimination reduces the 100th equation to $0 = 0$, so the system is ``singular''.
+    \begin{enumerate}
+        \item Elimination takes linear combinations of the rows. So this singular system has the singular property: Some linear combination of the 100 rows is \underline{\hspace{3em}}.
+        \item Singular systems $Ax = 0$ have infinitely many solutions. This means that some linear combination of the 100 \underline{\hspace{2em}} is \underline{\hspace{3em}}.
+        \item Invent a $100$ by $100$ singular matrix with no zero entries.
+        \item For your matrix, describe in words the row picture and the column picture of $Ax = 0$. Not necessary to draw 100-dimensional space.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
 
 \subsection{Elimination Using Matrices}
 \noindent 
+
+
+
+
 \paragraph{Challenge Problems}
 
 
