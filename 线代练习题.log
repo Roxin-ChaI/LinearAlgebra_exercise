@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  3 JUN 2026 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  4 JUN 2026 13:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -235,7 +235,16 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (e:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (e:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (e:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (e:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (e:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (e:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (e:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (e:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (e:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (e:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks30
 \pgfutil@tempdima=\dimen186
 \pgfutil@tempdimb=\dimen187
@@ -547,6 +556,14 @@ LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 21.
 LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+ (e:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+ (e:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 24.
 LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/m/n' will be
@@ -575,67 +592,88 @@ Package pdftex.def Info: pic/Figure1.5.png  used on input line 106.
 (pdftex.def)             Requested size: 364.19667pt x 145.68062pt.
  [2 <./pic/Figure1.4.png> <./pic/Figure1.5.png>]
 LaTeX Font Info:    Font shape `OT1/LibertinusSerif-TLF/b/it' will be
-(Font)              scaled to size 10.0pt on input line 163.
+(Font)              scaled to size 10.0pt on input line 162.
  [3{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_m5c6xi.enc}] [4]
-Overfull \hbox (141.2415pt too wide) detected at line 253
+Overfull \hbox (141.2415pt too wide) detected at line 252
 \OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 + []\OMS/cmsy/m/n/10 k[] ^^T \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 k[]k \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 k[]k\OT1/cmr/m/n/10 )[] [] []\OML/cmm/m/it/10 :
  []
 
 <pic/Figure_21.png, id=33, 702.625pt x 200.75pt>
 File: pic/Figure_21.png Graphic file (type png)
 <use pic/Figure_21.png>
-Package pdftex.def Info: pic/Figure_21.png  used on input line 257.
+Package pdftex.def Info: pic/Figure_21.png  used on input line 256.
 (pdftex.def)             Requested size: 364.19667pt x 104.05977pt.
-LaTeX Font Info:    Trying to load font information for OT1+LibertinusMono-TLF on input line 307.
+LaTeX Font Info:    Trying to load font information for OT1+LibertinusMono-TLF on input line 306.
 (e:/texlive/2026/texmf-dist/tex/latex/libertinus-type1/OT1LibertinusMono-TLF.fd
 File: OT1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for OT1/LibertinusMono-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LibertinusMono-TLF/b/n' will be
-(Font)              scaled to size 8.50006pt on input line 307.
+(Font)              scaled to size 8.50006pt on input line 306.
  [5{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_wbnhrd.enc} <./pic/Figure_21.png>] [6] [7]
-Overfull \hbox (11.06587pt too wide) in paragraph at lines 548--549
+Overfull \hbox (11.06587pt too wide) in paragraph at lines 546--547
 \OT1/LibertinusSerif-TLF/b/n/10 vec-tors in 4-dimensional space can com-bine to pro-duce $[]$. What com-bi-na-tion of $\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$\OT1/LibertinusSerif-TLF/b/n/10 , $\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$\OT1/LibertinusSerif-TLF/b/n/10 ,
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 648--650
+Underfull \hbox (badness 10000) in paragraph at lines 646--648
 
  []
 
 [9]
-Overfull \hbox (5.38228pt too wide) in paragraph at lines 683--684
+Overfull \hbox (5.38228pt too wide) in paragraph at lines 681--682
 []\OT1/LibertinusSerif-TLF/b/n/10 For four lin-ear equa-tions in two un-knowns $\OML/cmm/m/it/10 x$ \OT1/LibertinusSerif-TLF/b/n/10 and $\OML/cmm/m/it/10 y$\OT1/LibertinusSerif-TLF/b/n/10 , the row pic-ture shows four $[]$.
  []
 
 
-Overfull \hbox (16.95337pt too wide) detected at line 699
+Overfull \hbox (16.95337pt too wide) detected at line 697
 [][] \OT1/cmr/m/n/10 = [] [] = [] \OML/cmm/m/it/10 ;  [][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[][] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ;  [][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[][] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 :
  []
 
 [10] [11] [12] [13]
-Overfull \hbox (28.81908pt too wide) in paragraph at lines 993--994
+Overfull \hbox (28.81908pt too wide) in paragraph at lines 989--990
 []\OT1/LibertinusSerif-TLF/b/n/10 Find ex-per-i-men-tally the av-er-age 1st and 2nd and 3rd pivot sizes from MAT-LAB's \OT1/LibertinusMono-TLF/b/n/10 [L,U] = lu(rand(3))\OT1/LibertinusSerif-TLF/b/n/10 .
  []
 
-[14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] (./线代练习题.aux)
+[14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (20.71136pt too wide) detected at line 1626
+[] [] \OT1/cmr/m/n/10 = []  []
+ []
+
+[21] [22] [23] [24]
+Overfull \hbox (1.06906pt too wide) in paragraph at lines 1978--1979
+[]\OT1/LibertinusSerif-TLF/b/n/10 What three elim-i-na-tion ma-tri-ces $\OML/cmm/m/it/10 E[]; E[]; E[]$ \OT1/LibertinusSerif-TLF/b/n/10 put $\OML/cmm/m/it/10 A$ \OT1/LibertinusSerif-TLF/b/n/10 into its up-per tri-an-gu-lar form $\OML/cmm/m/it/10 E[]E[]E[]A \OT1/cmr/m/n/10 =
+ []
+
+[25] [26] [27] [28] [29]
+Overfull \hbox (14.52704pt too wide) in paragraph at lines 2392--2393
+[]\OT1/LibertinusSerif-TLF/b/n/10 Choose $\OML/cmm/m/it/10 E[]$ \OT1/LibertinusSerif-TLF/b/n/10 to re-move the 4 be-low the sec-ond pivot. Then $\OML/cmm/m/it/10 S$ \OT1/LibertinusSerif-TLF/b/n/10 is re-duced to $\OML/cmm/m/it/10 D$ \OT1/LibertinusSerif-TLF/b/n/10 by $\OML/cmm/m/it/10 E[]E[]SE[]E[] \OT1/cmr/m/n/10 =
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+LibertinusSerif-TLF on input line 2419.
+(e:/texlive/2026/texmf-dist/tex/latex/libertinus-type1/TS1LibertinusSerif-TLF.fd
+File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/LibertinusSerif-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 2419.
+ [30] [31{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_63ftwl.enc}] [32] [33] [34] [35] [36] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16009 strings out of 467348
- 322842 string characters out of 5419842
- 738759 words of memory out of 5000000
- 44807 multiletter control sequences out of 15000+600000
- 647819 words of font info for 76 fonts, out of 8000000 for 9000
+ 16584 strings out of 467348
+ 330312 string characters out of 5419842
+ 739367 words of memory out of 5000000
+ 45356 multiletter control sequences out of 15000+600000
+ 650949 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,107p,551b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,107p,684b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 线代练习题.pdf (26 pages, 595997 bytes).
+Output written on 线代练习题.pdf (36 pages, 635862 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 218 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

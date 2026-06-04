@@ -1,0 +1,12 @@
+# 1. 设置默认缩进单位为 1 个 Tab
+defaultIndent: "    "  
+
+# 2. 关闭 item 之后的自动缩进
+# 这样 \item 后面的 \begin{enumerate} 就不会再额外缩进一层
+item:
+  indentAfterThisHeading: 0
+
+# 3. 设置 enumerate 环境内部的缩进规则
+# 这样 \begin{enumerate} 内部的 \item 会相对外层缩进 1 个 Tab
+enumerate:
+  indentAfterThisHeading: 0
