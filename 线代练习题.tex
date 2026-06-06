@@ -8,18 +8,30 @@
 \usepackage{libertinus}
 \usepackage{amsmath,amssymb}
 \usepackage{tikz}
+\usepackage{hyperref}
 \usetikzlibrary{calc,angles,quotes}
 \DeclareMathOperator{\arccosh}{arccosh}
 \DeclareMathOperator{\arcsinh}{arcsinh}
 
-\title{\textbf{Gilbert Strang - A First Course in Calculus} \\ \Large Chapters 1 - 7}
-\author{}
+\title{\textbf{Gilbert Strang - Introduction to Linear Algebra} \\ \Large Chapters 1 - 7}
+\author{Github:Roxin-ChaI}
 \date{}
 
+\hypersetup{
+    colorlinks=true,      % 启用彩色链接
+    linkcolor=blue,       % 内部链接颜色
+    urlcolor=red,         % 外部URL颜色
+    pdfstartview=Fit      % 打开PDF时适应页面
+}
+
 \begin{document}
+
 \bfseries
 \maketitle
-\vspace{-2.5cm}
+\vspace{-1cm}
+
+\tableofcontents
+\newpage
 
 \section{Chapter 1: Introduction to Vectors}
 
@@ -39,7 +51,7 @@
     \item If $\boldsymbol{v} + \boldsymbol{w} = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$ and $\boldsymbol{v} - \boldsymbol{w} = \begin{bmatrix} 1 \\ 5 \end{bmatrix}$, compute and draw the vectors $\boldsymbol{v}$ and $\boldsymbol{w}$.
     \item From $\boldsymbol{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ and $\boldsymbol{w} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$, find the components of $3\boldsymbol{v} + \boldsymbol{w}$ and $c\boldsymbol{v} + d\boldsymbol{w}$.
     \item Compute $\boldsymbol{u} + \boldsymbol{v} + \boldsymbol{w}$ and $2\boldsymbol{u} + 2\boldsymbol{v} + \boldsymbol{w}$. How do you know $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ lie in a plane?
-          \begin{multicols}{3}
+          \begin{multicols}{3}%分块编辑
               These lie in a plane because
               \\$\boldsymbol{w} = c\boldsymbol{u} + d\boldsymbol{v}$. Find $c$ and $d$
                   \columnbreak
@@ -59,7 +71,13 @@
 
     \item If three corners of a parallelogram are $(1,1), (4,2)$, and $(1,3)$, what are all three of the possible fourth corners? Draw two of them.
 \end{enumerate}
-
+\begin{figure}[htbp] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
+    \centering % 图片居中
+    \includegraphics[width=0.8\textwidth]{pic/Figure1.1.png} % 插入图片，指定宽度为文本宽度的 80%
+    \renewcommand{\thefigure}{1.1}% 强行将当前的图片编号改为 1.1
+    \caption{Vector addition $v + w = (3, 4)$ produces the diagonal of a parallelogram. The reverse of $w$ is $-w$. The linear combination on the right is $v - w = (5, 0)$.}
+    %\label{fig:my_label} % 标签，用于交叉引用（可选）
+\end{figure}
 \noindent Problems 10--14 are about special vectors on cubes and clocks in Figure 1.4.
 
 \begin{enumerate}[resume]
@@ -68,7 +86,7 @@
     \item Four corners of this unit cube are $(0,0,0), (1,0,0), (0,1,0), (0,0,1)$. What are the other four corners? Find the coordinates of the center point of the cube. The center points of the six faces are \underline{\hspace{2cm}}. The cube has how many edges?
 
     \item Review Question. In $xyz$ space, where is the plane of all linear combinations of $\boldsymbol{i} = (1,0,0)$ and $\boldsymbol{i} + \boldsymbol{j} = (1,1,0)$?
-          \newpage
+
     \item
           \begin{enumerate}
               \item What is the sum $V$ of the twelve vectors that go from the center of a clock to the hours 1:00, 2:00, \dots, 12:00?
