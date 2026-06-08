@@ -2478,12 +2478,179 @@
 \section{Chapter 3: Vector Spaces and Subspaces}
 
 \subsection{Spaces of Vectors}
-\noindent
+\noindent The first problems 1--8 are about vector spaces in general. The vectors in those spaces are not necessarily column vectors. In the definition of a \textit{vector space}, vector addition $x+y$ and scalar multiplication $cx$ must obey the following eight rules:
+
+\begin{enumerate}
+    \item[(1)] $x + y = y + x$
+    \item[(2)] $x + (y + z) = (x + y) + z$
+    \item[(3)] There is a unique ``zero vector'' such that $x + 0 = x$ for all $x$
+    \item[(4)] For each $x$ there is a unique vector $-x$ such that $x + (-x) = 0$
+    \item[(5)] $1$ times $x$ equals $x$
+    \item[(6)] $(c_1 c_2)x = c_1(c_2 x)$
+    \item[(7)] $c(x + y) = cx + cy$
+    \item[(8)] $(c_1 + c_2)x = c_1 x + c_2 x$
+\end{enumerate}
+\hspace*{2em}(1) to (4) about $x+y$ \qquad (5) to (6) about $cx$ \qquad (7) to (8) connects them
+\begin{enumerate}
+    \item Suppose $(x_1,x_2)+(y_1,y_2)$ is defined to be $(x_1+y_2,x_2+y_1)$. With the usual multiplication $cx=(cx_1,cx_2)$, which of the eight conditions are not satisfied?
+
+    \item Suppose the multiplication $cx$ is defined to produce $(cx_1,0)$ instead of $(cx_1,cx_2)$. With the usual addition in $\mathbb{R}^2$, are the eight conditions satisfied?
+
+    \item
+          \begin{enumerate}
+              \item Which rules are broken if we keep only the positive numbers $x>0$ in $\mathbb{R}^1$? Every $c$ must be allowed. The half-line is not a subspace.
+              \item The positive numbers with $x+y$ and $cx$ redefined to equal the usual $xy$ and $x^c$ do satisfy the eight rules. Test rule 7 when $c=3$, $x=2$, $y=1$. (Then $x+y=2$ and $cx=8$.) Which number acts as the ``zero vector''?
+          \end{enumerate}
+
+    \item The matrix $A=\begin{bmatrix}2&-2\\2&-2\end{bmatrix}$ is a ``vector'' in the space M of all 2 by 2 matrices. Write down the zero vector in this space, the vector $\frac12 A$, and the vector $-A$. What matrices are in the smallest subspace containing $A$?
+
+    \item Describe a subspace of M that contains $A=\begin{bmatrix}1&0\\0&0\end{bmatrix}$ but not $B=\begin{bmatrix}0&0\\0&1\end{bmatrix}$.
+          \begin{enumerate}
+              \item If a subspace of M contains $A$ and $B$, must it contain $0$?
+              \item Describe a subspace of M that contains no nonzero diagonal matrices.
+          \end{enumerate}
+
+    \item The functions $f(x)=x^2$ and $g(x)=5x$ are ``vectors'' in F. This is the vector space of all real functions. (The functions are defined for $-\infty < x < \infty$.) The combination $3f(x)-4g(x)$ is the function $h(x)=$ \underline{\hspace{3cm}}.
+
+    \item Which rule is broken if multiplying $f(x)$ by $c$ gives the function $f(cx)$? Keep the usual addition, $f(x)+g(x)$.
+
+    \item If the sum of the ``vectors'' $f(x)$ and $g(x)$ is defined to be the function $f(g(x))$, then the ``zero vector'' is $g(x)=x$. Keep the usual scalar multiplication $cf(x)$ and find two rules that are broken.
+\end{enumerate}
+
+\noindent Questions 9--18 are about the ``subspace requirements'': $x+y$ and $cx$ and then all linear combinations $cx+dy$ stay in the subspace.
+
+\begin{enumerate}
+    \setcounter{enumi}{8}
+    \item One requirement can be met while the other fails. Show this by finding
+          \begin{enumerate}
+              \item A set of vectors in $\mathbb{R}^2$ for which $x+y$ stays in the set but $\frac12 x$ may be outside.
+              \item A set of vectors in $\mathbb{R}^2$ (other than two quarter-planes) for which every $cx$ stays in the set but $x+y$ may be outside.
+          \end{enumerate}
+
+    \item Which of the following subsets of $\mathbb{R}^3$ are actually subspaces?
+          \begin{enumerate}
+              \item The plane of vectors $(b_1,b_2,b_3)$ with $b_1 = b_2$.
+              \item The plane of vectors with $b_1 = 1$.
+              \item The vectors with $b_1 b_2 b_3 = 0$.
+              \item All linear combinations of $v=(1,4,0)$ and $w=(2,2,2)$.
+              \item All vectors that satisfy $b_1 + b_2 + b_3 = 0$.
+              \item All vectors with $b_1 \le b_2 \le b_3$.
+          \end{enumerate}
+
+    \item Describe the smallest subspace of the matrix space M that contains
+          \begin{enumerate}
+              \item $\begin{bmatrix}1&0\\0&0\end{bmatrix}$ and $\begin{bmatrix}0&1\\0&0\end{bmatrix}$
+              \item $\begin{bmatrix}1&1\\0&0\end{bmatrix}$
+              \item $\begin{bmatrix}1&0\\0&0\end{bmatrix}$ and $\begin{bmatrix}1&0\\0&1\end{bmatrix}$
+          \end{enumerate}
+
+    \item Let $P$ be the plane in $\mathbb{R}^3$ with equation $x+y-2z=4$. The origin $(0,0,0)$ is not in $P$! Find two vectors in $P$ and check that their sum is not in $P$.
+
+    \item Let $P_0$ be the plane through $(0,0,0)$ parallel to the previous plane $P$. What is the equation for $P_0$? Find two vectors in $P_0$ and check that their sum is in $P_0$.
+
+    \item The subspaces of $\mathbb{R}^3$ are planes, lines, $\mathbb{R}^3$ itself, or $\mathbb{Z}$ containing only $(0,0,0)$.
+          \begin{enumerate}
+              \item Describe the three types of subspaces of $\mathbb{R}^2$.
+              \item Describe all subspaces of D, the space of 2 by 2 diagonal matrices.
+          \end{enumerate}
+
+    \item
+          \begin{enumerate}
+              \item The intersection of two planes through $(0,0,0)$ is probably a \underline{\hspace{2cm}} in $\mathbb{R}^3$ but it could be a \underline{\hspace{2cm}}. It can't be $\mathbb{Z}$!
+              \item The intersection of a plane through $(0,0,0)$ with a line through $(0,0,0)$ is probably a \underline{\hspace{2cm}} but it could be a \underline{\hspace{2cm}}.
+              \item If S and T are subspaces of $\mathbb{R}^5$, prove that their intersection S $\cap$ T is a subspace of $\mathbb{R}^5$. Here S $\cap$ T consists of the vectors that lie in both subspaces. Check that $x+y$ and $cx$ are in S $\cap$ T if $x$ and $y$ are in both spaces.
+          \end{enumerate}
+
+    \item Suppose P is a plane through $(0,0,0)$ and L is a line through $(0,0,0)$. The smallest vector space containing both P and L is either \underline{\hspace{2cm}} or \underline{\hspace{2cm}}.
+
+    \item
+          \begin{enumerate}
+              \item Show that the set of invertible matrices in M is not a subspace.
+              \item Show that the set of singular matrices in M is not a subspace.
+          \end{enumerate}
+
+    \item True or false (check addition in each case by example):
+          \begin{enumerate}
+              \item The symmetric matrices in M (with $A^{\mathrm{T}} = A$) form a subspace.
+              \item The skew-symmetric matrices in M (with $A^{\mathrm{T}} = -A$) form a subspace.
+              \item The unsymmetric matrices in M (with $A^{\mathrm{T}} \ne A$) form a subspace.
+          \end{enumerate}
+\end{enumerate}
+
+\noindent Questions 19--27 are about column spaces $C(A)$ and the equation $Ax = b$.
+
+\begin{enumerate}
+    \setcounter{enumi}{18}
+    \item Describe the column spaces (lines or planes) of these particular matrices:
+          \[
+              A = \begin{bmatrix}1&2\\0&0\\0&0\end{bmatrix},\quad
+              B = \begin{bmatrix}1&0\\0&2\\0&0\end{bmatrix},\quad
+              C = \begin{bmatrix}1&0\\2&0\\0&0\end{bmatrix}.
+          \]
+
+    \item For which right sides (find a condition on $b_1,b_2,b_3$) are these systems solvable?
+          \begin{enumerate}
+              \item $\begin{bmatrix}1&4&2\\2&8&4\\-1&-4&-2\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix} = \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}$
+              \item $\begin{bmatrix}1&4\\2&9\\-1&-4\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix} = \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}$
+          \end{enumerate}
+
+    \item Adding row 1 of $A$ to row 2 produces $B$. Adding column 1 to column 2 produces $C$. A combination of the columns of ($B$ or $C$?) is also a combination of the columns of $A$. Which two matrices have the same column space?
+          \[
+              A = \begin{bmatrix}1&2\\2&4\end{bmatrix},\quad
+              B = \begin{bmatrix}1&2\\3&6\end{bmatrix},\quad
+              C = \begin{bmatrix}1&3\\2&6\end{bmatrix}.
+          \]
+
+    \item For which vectors $(b_1,b_2,b_3)$ do these systems have a solution?
+          \[
+              \begin{bmatrix}1&1&1\\1&1&1\\0&0&1\end{bmatrix}
+              \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+              =
+              \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}
+              \quad\text{and}\quad
+              \begin{bmatrix}1&1&1\\0&1&1\\0&0&1\end{bmatrix}
+              \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+              =
+              \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}.
+          \]
+
+    \item (Recommended) If we add an extra column $b$ to a matrix $A$, then the column space gets larger unless \underline{\hspace{4cm}}. Give an example where the column space gets larger and an example where it doesn't. Why is $Ax = b$ solvable exactly when the column space doesn't get larger---it is the same for $A$ and $[A\ b]$?
+
+    \item The columns of $AB$ are combinations of the columns of $A$. This means: \textit{The column space of $AB$ is contained in} (possibly equal to) \textit{the column space of $A$}. Give an example where the column spaces of $A$ and $AB$ are not equal.
+
+    \item Suppose $Ax = b$ and $Ay = b^*$ are both solvable. Then $Az = b + b^*$ is solvable. What is $z$? This translates into: If $b$ and $b^*$ are in the column space $C(A)$, then $b + b^*$ is in $C(A)$.
+
+    \item If $A$ is any 5 by 5 invertible matrix, then its column space is \underline{\hspace{3cm}}. Why?
+
+    \item True or false (with a counterexample if false):
+          \begin{enumerate}
+              \item The vectors $b$ that are not in the column space $C(A)$ form a subspace.
+              \item If $C(A)$ contains only the zero vector, then $A$ is the zero matrix.
+              \item The column space of $2A$ equals the column space of $A$.
+              \item The column space of $A - I$ equals the column space of $A$ (test this).
+          \end{enumerate}
+
+    \item Construct a 3 by 3 matrix whose column space contains $(1,1,0)$ and $(1,0,1)$ but not $(1,1,1)$. Construct a 3 by 3 matrix whose column space is only a line.
+
+    \item If the 9 by 12 system $Ax = b$ is solvable for every $b$, then $C(A) =$ \underline{\hspace{3cm}}.
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Suppose $S$ and $T$ are two subspaces of a vector space $V$.
+          \begin{enumerate}
+              \item \textbf{Definition:} The sum $S+T$ contains all sums $s+t$ of a vector $s$ in $S$ and a vector $t$ in $T$. Show that $S+T$ satisfies the requirements (addition and scalar multiplication) for a vector space.
+
+              \item If $S$ and $T$ are lines in $\mathbb{R}^n$, what is the difference between $S+T$ and $S\cup T$? That union contains all vectors from $S$ or $T$ or both. Explain this statement: \textit{The span of $S\cup T$ is $S+T$.} (Section 3.5 returns to this word ``span''.)
+          \end{enumerate}
+    \item If $S$ is the column space of $A$ and $T$ is $C(B)$, then $S+T$ is the column space of what matrix $M$? The columns of $A$ and $B$ and $M$ are all in $\mathbb{R}^m$. (I don't think $A+B$ is always correct $M$.)
+
+    \item Show that the matrices $A$ and $\begin{bmatrix}A & AB\end{bmatrix}$ (with extra columns) have the same column space. But find a square matrix with $C(A^2)$ smaller than $C(A)$. \\Important point:  {\color{blue!60!green}An $n$ by $n$ matrix has $C(A)=\mathbb{R}^n$ exactly when $A$ is an \underline{\hspace{2cm}} matrix.}
+\end{enumerate}
 
 \subsection{The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}
-
 \noindent
+
 \paragraph{Challenge Problems}
 
 \subsection{The Complete Solution to $Ax=b$}
