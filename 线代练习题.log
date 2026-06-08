@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  8 JUN 2026 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  8 JUN 2026 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,45 +784,44 @@ File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/L
 LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 2437.
  [31] [32{e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_63ftwl.enc}] [33]
-Overfull \hbox (18.4994pt too wide) in paragraph at lines 2560--2561
+Overfull \hbox (18.4994pt too wide) in paragraph at lines 2563--2564
 []\OT1/LibertinusSerif-TLF/b/n/10 The in-ter-sec-tion of a plane through $\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$ \OT1/LibertinusSerif-TLF/b/n/10 with a line through $\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)$ \OT1/LibertinusSerif-TLF/b/n/10 is prob-a-bly a $[]$
  []
 
 [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2651.
-
-[35]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2656.
+(hyperref)                removing `math shift' on input line 2654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2656.
+(hyperref)                removing `math shift' on input line 2659.
 
-[36] [37] [38] [39] [40] (./线代练习题.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2659.
+
+[35] [36] [37] [38] [39] [40] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -839,7 +838,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  102i,18n,107p,684b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 线代练习题.pdf (40 pages, 741681 bytes).
+Output written on 线代练习题.pdf (40 pages, 741837 bytes).
 PDF statistics:
  1195 PDF objects out of 1200 (max. 8388607)
  1099 compressed objects within 11 object streams
