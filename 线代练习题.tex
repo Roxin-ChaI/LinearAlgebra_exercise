@@ -2753,8 +2753,10 @@
 
     \item Show by example that these three statements are generally false:
           \begin{enumerate}
+              \begin{multicols}{2}
               \item $A$ and $A^{\mathrm{T}}$ have the same nullspace.
               \item $A$ and $A^{\mathrm{T}}$ have the same free variables.
+                    \end{multicols}
               \item If $R$ is the reduced form $\operatorname{rref}(A)$ then $R^{\mathrm{T}}$ is $\operatorname{rref}(A^{\mathrm{T}})$.
           \end{enumerate}
 
@@ -2782,16 +2784,17 @@
     \item Find the reduced row echelon forms $R$ and the rank of these matrices:
           \begin{enumerate}
               \item The 3 by 4 matrix with all entries equal to 4.
-              \item The 3 by 4 matrix with $a_{ij} = i + j - 1$.
-              \item The 3 by 4 matrix with $a_{ij} = (-1)^{i+j}$.
+                    \begin{multicols}{2}
+                        \item The 3 by 4 matrix with $a_{ij} = i + j - 1$.
+                        \item The 3 by 4 matrix with $a_{ij} = (-1)^{i+j}$.
+                    \end{multicols}
           \end{enumerate}
 
     \item Kirchhoff's Current Law $A^{\mathrm{T}} \mathbf{y} = \mathbf{0}$ says that \textit{current in} = \textit{current out} at every node. At node 1 this is $y_3 = y_1 + y_4$. Write the four equations for Kirchhoff's Law (arrows show the positive direction of each $y$). Reduce $A^{\mathrm{T}}$ to $R$ and find three special solutions in the nullspace of $A^{\mathrm{T}}$ (4 by 6 matrix).
-
-          \begin{figure}[h] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
+          \begin{figure}[htbp] % figure 环境用于浮动体，[htbp] 尝试指定位置偏好
               \centering % 图片居中
               \includegraphics[width=0.8\textwidth]{pic/Figure3.2.png} % 插入图片，指定宽度为文本宽度的 80%
-              \renewcommand{\thefigure}{3.2}% 强行将当前的图片编号改为 3.2
+              %\renewcommand{\thefigure}{3.2}% 强行将当前的图片编号改为 3.2
               %\caption{ }
               %\label{fig:my_label} % 标签，用于交叉引用（可选）
           \end{figure}
