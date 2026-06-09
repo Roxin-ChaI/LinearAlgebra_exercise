@@ -352,6 +352,14 @@ INPUT e:/texlive/2026/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSer
 INPUT e:/texlive/2026/texmf-dist/fonts/vf/public/libertinus-type1/LibertinusSerif-Bold-tlf-ts1.vf
 INPUT e:/texlive/2026/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Bold-tlf-ts1--base.tfm
 INPUT e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_63ftwl.enc
+INPUT ./pic/Figure3.2.png
+INPUT ./pic/Figure3.2.png
+INPUT ./pic/Figure3.2.png
+INPUT ./pic/Figure3.2.png
+INPUT ./pic/Figure3.2.png
+INPUT e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT e:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT 线代练习题.aux
 INPUT ./线代练习题.out
 INPUT ./线代练习题.out

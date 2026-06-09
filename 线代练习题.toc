@@ -23,47 +23,47 @@
 \contentsline {section}{\numberline {3}Chapter 3: Vector Spaces and Subspaces}{33}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Spaces of Vectors}{33}{subsection.3.1}%
 \contentsline {paragraph}{Challenge Problems}{35}{section*.16}%
-\contentsline {subsection}{\numberline {3.2}The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}{35}{subsection.3.2}%
-\contentsline {paragraph}{Challenge Problems}{36}{section*.17}%
-\contentsline {subsection}{\numberline {3.3}The Complete Solution to $Ax=b$}{36}{subsection.3.3}%
-\contentsline {paragraph}{Challenge Problems}{36}{section*.18}%
-\contentsline {subsection}{\numberline {3.4}Independence, Basis and Dimension}{36}{subsection.3.4}%
-\contentsline {paragraph}{Challenge Problems}{36}{section*.19}%
-\contentsline {subsection}{\numberline {3.5}Dimensions of the Four Subspaces}{36}{subsection.3.5}%
-\contentsline {paragraph}{Challenge Problems}{36}{section*.20}%
-\contentsline {section}{\numberline {4}Chapter 4: Orthogonality}{37}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Orthogonality of the Four Subspaces}{37}{subsection.4.1}%
-\contentsline {paragraph}{Challenge Problems}{37}{section*.21}%
-\contentsline {subsection}{\numberline {4.2}Projections}{37}{subsection.4.2}%
-\contentsline {paragraph}{Challenge Problems}{37}{section*.22}%
-\contentsline {subsection}{\numberline {4.3}Least Squares Approximations}{37}{subsection.4.3}%
-\contentsline {paragraph}{Challenge Problems}{37}{section*.23}%
-\contentsline {subsection}{\numberline {4.4}Orthonormal Bases and Gram-Schmidt}{37}{subsection.4.4}%
-\contentsline {paragraph}{Challenge Problems}{37}{section*.24}%
-\contentsline {section}{\numberline {5}Chapter 5: Determinants}{38}{section.5}%
-\contentsline {subsection}{\numberline {5.1}The Properties of Determinants}{38}{subsection.5.1}%
-\contentsline {paragraph}{Challenge Problems}{38}{section*.25}%
-\contentsline {subsection}{\numberline {5.2}Permutations and Cofactors }{38}{subsection.5.2}%
-\contentsline {paragraph}{Challenge Problems}{38}{section*.26}%
-\contentsline {subsection}{\numberline {5.3}Cramer's Rule, Inverses, and Volumes}{38}{subsection.5.3}%
-\contentsline {paragraph}{Challenge Problems}{38}{section*.27}%
-\contentsline {section}{\numberline {6}Chapter 6: Eigenvalues and Eigenvectors}{39}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Introduction to Eigenvalues}{39}{subsection.6.1}%
-\contentsline {paragraph}{Challenge Problems}{39}{section*.28}%
-\contentsline {subsection}{\numberline {6.2}Diagonalizing a Matrix}{39}{subsection.6.2}%
-\contentsline {paragraph}{Challenge Problems}{39}{section*.29}%
-\contentsline {subsection}{\numberline {6.3}Systems of Differential Equations}{39}{subsection.6.3}%
-\contentsline {paragraph}{Challenge Problems}{39}{section*.30}%
-\contentsline {subsection}{\numberline {6.4}Symmetric Matrices}{39}{subsection.6.4}%
-\contentsline {paragraph}{Challenge Problems}{39}{section*.31}%
-\contentsline {subsection}{\numberline {6.5}Positive Definite Matrices}{39}{subsection.6.5}%
-\contentsline {paragraph}{Challenge Problems}{39}{section*.32}%
-\contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{40}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Image Processing by Linear Algebra}{40}{subsection.7.1}%
-\contentsline {paragraph}{Challenge Problems}{40}{section*.33}%
-\contentsline {subsection}{\numberline {7.2}Bases and Matrices in the SVD}{40}{subsection.7.2}%
-\contentsline {paragraph}{Challenge Problems}{40}{section*.34}%
-\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{40}{subsection.7.3}%
-\contentsline {paragraph}{Challenge Problems}{40}{section*.35}%
-\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{40}{subsection.7.4}%
-\contentsline {paragraph}{Challenge Problems}{40}{section*.36}%
+\contentsline {subsection}{\numberline {3.2}The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}{36}{subsection.3.2}%
+\contentsline {paragraph}{Challenge Problems}{40}{section*.18}%
+\contentsline {subsection}{\numberline {3.3}The Complete Solution to $Ax=b$}{40}{subsection.3.3}%
+\contentsline {paragraph}{Challenge Problems}{40}{section*.19}%
+\contentsline {subsection}{\numberline {3.4}Independence, Basis and Dimension}{40}{subsection.3.4}%
+\contentsline {paragraph}{Challenge Problems}{40}{section*.20}%
+\contentsline {subsection}{\numberline {3.5}Dimensions of the Four Subspaces}{40}{subsection.3.5}%
+\contentsline {paragraph}{Challenge Problems}{40}{section*.21}%
+\contentsline {section}{\numberline {4}Chapter 4: Orthogonality}{41}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Orthogonality of the Four Subspaces}{41}{subsection.4.1}%
+\contentsline {paragraph}{Challenge Problems}{41}{section*.22}%
+\contentsline {subsection}{\numberline {4.2}Projections}{41}{subsection.4.2}%
+\contentsline {paragraph}{Challenge Problems}{41}{section*.23}%
+\contentsline {subsection}{\numberline {4.3}Least Squares Approximations}{41}{subsection.4.3}%
+\contentsline {paragraph}{Challenge Problems}{41}{section*.24}%
+\contentsline {subsection}{\numberline {4.4}Orthonormal Bases and Gram-Schmidt}{41}{subsection.4.4}%
+\contentsline {paragraph}{Challenge Problems}{41}{section*.25}%
+\contentsline {section}{\numberline {5}Chapter 5: Determinants}{42}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The Properties of Determinants}{42}{subsection.5.1}%
+\contentsline {paragraph}{Challenge Problems}{42}{section*.26}%
+\contentsline {subsection}{\numberline {5.2}Permutations and Cofactors }{42}{subsection.5.2}%
+\contentsline {paragraph}{Challenge Problems}{42}{section*.27}%
+\contentsline {subsection}{\numberline {5.3}Cramer's Rule, Inverses, and Volumes}{42}{subsection.5.3}%
+\contentsline {paragraph}{Challenge Problems}{42}{section*.28}%
+\contentsline {section}{\numberline {6}Chapter 6: Eigenvalues and Eigenvectors}{43}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Introduction to Eigenvalues}{43}{subsection.6.1}%
+\contentsline {paragraph}{Challenge Problems}{43}{section*.29}%
+\contentsline {subsection}{\numberline {6.2}Diagonalizing a Matrix}{43}{subsection.6.2}%
+\contentsline {paragraph}{Challenge Problems}{43}{section*.30}%
+\contentsline {subsection}{\numberline {6.3}Systems of Differential Equations}{43}{subsection.6.3}%
+\contentsline {paragraph}{Challenge Problems}{43}{section*.31}%
+\contentsline {subsection}{\numberline {6.4}Symmetric Matrices}{43}{subsection.6.4}%
+\contentsline {paragraph}{Challenge Problems}{43}{section*.32}%
+\contentsline {subsection}{\numberline {6.5}Positive Definite Matrices}{43}{subsection.6.5}%
+\contentsline {paragraph}{Challenge Problems}{43}{section*.33}%
+\contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{44}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Image Processing by Linear Algebra}{44}{subsection.7.1}%
+\contentsline {paragraph}{Challenge Problems}{44}{section*.34}%
+\contentsline {subsection}{\numberline {7.2}Bases and Matrices in the SVD}{44}{subsection.7.2}%
+\contentsline {paragraph}{Challenge Problems}{44}{section*.35}%
+\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{44}{subsection.7.3}%
+\contentsline {paragraph}{Challenge Problems}{44}{section*.36}%
+\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{44}{subsection.7.4}%
+\contentsline {paragraph}{Challenge Problems}{44}{section*.37}%
