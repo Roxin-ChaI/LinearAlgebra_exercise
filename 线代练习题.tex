@@ -2943,8 +2943,335 @@
 \end{enumerate}
 
 \subsection{The Complete Solution to $Ax=b$}
-\noindent
+\begin{enumerate}
+    \item (Recommended) Execute the six steps of Worked Example 3.3 A to describe the column space and nullspace of $A$ and the complete solution to $A\mathbf{x} = \mathbf{b}$:
+          \[
+              A = \begin{bmatrix}
+                  2 & 4 & 6 & 4 \\
+                  2 & 5 & 7 & 6 \\
+                  2 & 3 & 5 & 2
+              \end{bmatrix}, \qquad
+              \mathbf{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+              = \begin{bmatrix} 4 \\ 3 \\ 5 \end{bmatrix}.
+          \]
+
+    \item Carry out the same six steps for this matrix $A$ with rank one. You will find \emph{two} conditions on $b_1, b_2, b_3$ for $A\mathbf{x} = \mathbf{b}$ to be solvable. Together these two conditions put $\mathbf{b}$ into the \underline{\hspace{2cm}} space (two planes give a line):
+          \[
+              A = \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix}
+              \begin{bmatrix} 2 & 1 & 3 \end{bmatrix}
+              =
+              \begin{bmatrix}
+                  2 & 1 & 3 \\
+                  6 & 3 & 9 \\
+                  4 & 2 & 6
+              \end{bmatrix},
+              \qquad
+              \mathbf{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+              = \begin{bmatrix} 10 \\ 30 \\ 20 \end{bmatrix}.
+          \]
+\end{enumerate}
+
+\noindent Questions 3--15 are about the solution of $A\mathbf{x} = \mathbf{b}$. Follow the steps in the text to $\mathbf{x}_p$ and $\mathbf{x}_n$. Start from the augmented matrix with last column $\mathbf{b}$.
+
+\begin{enumerate}[resume]
+    \item Write the complete solution as $\mathbf{x}_p$ plus any multiple of $\mathbf{s}$ in the nullspace:
+          \begin{align*}
+              x + 3y + 3z  & = 1  \\
+              2x + 6y + 9z & = 5  \\
+              -x - 3y + 3z & = 5.
+          \end{align*}
+
+    \item Find the complete solution (also called the \emph{general solution}) to
+          \[
+              \begin{bmatrix}
+                  1 & 3 & 1 & 2 \\
+                  2 & 6 & 4 & 8 \\
+                  0 & 0 & 2 & 4 \\
+                  0 & 0 & 0 & 0
+              \end{bmatrix}
+              \begin{bmatrix} x \\ y \\ z \\ t \end{bmatrix}
+              =
+              \begin{bmatrix} 1 \\ 3 \\ 3 \\ 1 \end{bmatrix}.
+          \]
+
+    \item Under what condition on $b_1, b_2, b_3$ is this system solvable? Include $\mathbf{b}$ as a fourth column in elimination. Find all solutions when that condition holds:
+          \begin{align*}
+              x + 2y - 2z  & = b_1  \\
+              2x + 5y - 4z & = b_2  \\
+              4x + 9y - 8z & = b_3.
+          \end{align*}
+
+    \item What conditions on $b_1, b_2, b_3, b_4$ make each system solvable? Find $\mathbf{x}$ in that case:
+          \[
+              \begin{bmatrix}
+                  1 & 2 \\
+                  2 & 4 \\
+                  2 & 5 \\
+                  3 & 9
+              \end{bmatrix}
+              \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+              =
+              \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ b_4 \end{bmatrix},
+              \qquad
+              \begin{bmatrix}
+                  1 & 2 & 3  \\
+                  2 & 4 & 6  \\
+                  2 & 5 & 7  \\
+                  3 & 9 & 12
+              \end{bmatrix}
+              \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
+              =
+              \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ b_4 \end{bmatrix}.
+          \]
+
+    \item Show by elimination that $(b_1, b_2, b_3)$ is in the column space if $b_3 - 2b_2 + 4b_1 = 0$.
+          \[
+              A = \begin{bmatrix}
+                  1 & 3 & 1 \\
+                  3 & 8 & 2 \\
+                  2 & 4 & 0
+              \end{bmatrix}.
+          \]
+          What combination of the rows of $A$ gives the zero row?
+
+    \item Which vectors $(b_1, b_2, b_3)$ are in the column space of $A$? Which combinations of the rows of $A$ give zero?
+          \begin{enumerate}\begin{multicols}{2}
+              \item $A = \begin{bmatrix} 1 & 2 & 1 \\ 2 & 6 & 3 \\ 0 & 2 & 5 \end{bmatrix}$
+              \item $A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 4 \\ 2 & 4 & 8 \end{bmatrix}$
+                    \end{multicols}
+
+          \end{enumerate}
+
+    \item
+          \begin{enumerate}
+              \item The Worked Example 3.3 A reached $[U \mid \mathbf{c}]$ from $[A \mid \mathbf{b}]$. Put the multipliers into $L$ and verify that $LU$ equals $A$ and $L\mathbf{c}$ equals $\mathbf{b}$.
+              \item Combine the pivot columns of $A$ with the numbers $-9$ and $3$ in the particular solution $\mathbf{x}_p$. What is that linear combination and why?
+          \end{enumerate}
+
+    \item Construct a $2$ by $3$ system $A\mathbf{x} = \mathbf{b}$ with particular solution $\mathbf{x}_p = (2,4,0)$ and homogeneous solution $\mathbf{x}_n =$ any multiple of $(1,1,1)$.
+
+    \item Why can't a $1$ by $3$ system have $\mathbf{x}_p = (2,4,0)$ and $\mathbf{x}_n =$ any multiple of $(1,1,1)$?
+    \item
+          \begin{enumerate}
+              \item If $A\mathbf{x} = \mathbf{b}$ has two solutions $\mathbf{x}_1$ and $\mathbf{x}_2$, find two solutions to $A\mathbf{x} = \mathbf{0}$.
+              \item Then find another solution to $A\mathbf{x} = \mathbf{0}$ and another solution to $A\mathbf{x} = \mathbf{b}$.
+          \end{enumerate}
+
+    \item Explain why these are all false:
+          \begin{enumerate}
+              \item The complete solution is any linear combination of $\mathbf{x}_p$ and $\mathbf{x}_n$.
+              \item A system $A\mathbf{x} = \mathbf{b}$ has at most one particular solution.
+              \item The solution $\mathbf{x}_p$ with all free variables zero is the shortest solution (minimum length $\|\mathbf{x}\|$). Find a 2 by 2 counterexample.
+              \item If $A$ is invertible there is no solution $\mathbf{x}_n$ in the nullspace.
+          \end{enumerate}
+
+    \item Suppose column 5 of $U$ has no pivot. Then $x_5$ is a \underline{\hspace{2cm}} variable. The zero vector (is) (is not) the only solution to $A\mathbf{x} = \mathbf{0}$. If $A\mathbf{x} = \mathbf{b}$ has a solution, then it has \underline{\hspace{2cm}} solutions.
+
+    \item Suppose row 3 of $U$ has no pivot. Then that row is \underline{\hspace{2cm}}. The equation $U\mathbf{x} = \mathbf{c}$ is only solvable provided \underline{\hspace{2cm}}. The equation $A\mathbf{x} = \mathbf{b}$ (is) (is not) (might not be) solvable.
+
+
+\end{enumerate}
+
+\noindent Questions 16--20 are about matrices of ``full rank'' $r = m$ or $r = n$.
+\begin{enumerate}[resume]
+    \item The largest possible rank of a $3$ by $5$ matrix is \underline{\hspace{2cm}}. Then there is a pivot in every \underline{\hspace{2cm}} of $U$ and $R$. The solution to $A\mathbf{x} = \mathbf{b}$ (always exists) (is unique). The column space of $A$ is \underline{\hspace{2cm}}. An example is $A = $ \underline{\hspace{3cm}}.
+
+    \item The largest possible rank of a $6$ by $4$ matrix is \underline{\hspace{2cm}}. Then there is a pivot in every \underline{\hspace{2cm}} of $U$ and $R$. The solution to $A\mathbf{x} = \mathbf{b}$ (always exists) (is unique). The nullspace of $A$ is \underline{\hspace{2cm}}. An example is $A = $ \underline{\hspace{3cm}}.
+
+    \item Find by elimination the rank of $A$ and also the rank of $A^{\mathrm{T}}$:
+          \[
+              A = \begin{bmatrix}
+                  1  & 4  & 0  \\
+                  2  & 11 & 5  \\
+                  -1 & 2  & 10
+              \end{bmatrix}
+              \quad \text{and} \quad
+              A = \begin{bmatrix}
+                  1 & 0 & 1 \\
+                  1 & 1 & 2 \\
+                  1 & 1 & q
+              \end{bmatrix}
+              \quad \text{(rank depends on $q$)}.
+          \]
+
+    \item Find the rank of $A$ and also of $A^{\mathrm{T}}A$ and also of $AA^{\mathrm{T}}$:
+          \[
+              A = \begin{bmatrix}
+                  1 & 1 & 5 \\
+                  1 & 0 & 1
+              \end{bmatrix}
+              \quad \text{and} \quad
+              A = \begin{bmatrix}
+                  2 & 0 \\
+                  1 & 1 \\
+                  1 & 2
+              \end{bmatrix}.
+          \]
+
+    \item Reduce $A$ to its echelon form $U$. Then find a triangular $L$ so that $A = LU$.
+          \[
+              A = \begin{bmatrix}
+                  3 & 4 & 1 & 0 \\
+                  6 & 5 & 2 & 1
+              \end{bmatrix}
+              \quad \text{and} \quad
+              A = \begin{bmatrix}
+                  1 & 0 & 1 & 0 \\
+                  2 & 2 & 0 & 3 \\
+                  0 & 6 & 5 & 4
+              \end{bmatrix}.
+          \]
+    \item Find the complete solution in the form $\mathbf{x}_p + \mathbf{x}_n$ to these full rank systems:
+          \begin{enumerate}
+              \item $x + y + z = 4$
+              \item
+                    \begin{enumerate}
+                        \item[] $x + y + z = 4$
+                        \item[] $x - y + z = 4$
+                    \end{enumerate}
+          \end{enumerate}
+
+    \item If $A\mathbf{x} = \mathbf{b}$ has infinitely many solutions, why is it impossible for $A\mathbf{x} = B$ (new right side) to have only one solution? Could $A\mathbf{x} = B$ have no solution?
+
+    \item Choose the number $q$ so that (if possible) the ranks are (a) 1, (b) 2, (c) 3:
+          \[
+              A = \begin{bmatrix}
+                  6  & 4  & 2  \\
+                  -3 & -2 & -1 \\
+                  9  & 6  & q
+              \end{bmatrix}
+              \quad \text{and} \quad
+              B = \begin{bmatrix}
+                  3 & 1 & 3 \\
+                  q & 2 & q
+              \end{bmatrix}.
+          \]
+
+    \item Give examples of matrices $A$ for which the number of solutions to $A\mathbf{x} = \mathbf{b}$ is
+          \begin{enumerate}
+              \item 0 or 1, depending on $\mathbf{b}$
+              \item $\infty$, regardless of $\mathbf{b}$
+              \item 0 or $\infty$, depending on $\mathbf{b}$
+              \item 1, regardless of $\mathbf{b}$
+          \end{enumerate}
+
+    \item Write down all known relations between $r$ and $m$ and $n$ if $A\mathbf{x} = \mathbf{b}$ has
+          \begin{enumerate}
+              \item no solution for some $\mathbf{b}$
+              \item infinitely many solutions for every $\mathbf{b}$
+              \item exactly one solution for some $\mathbf{b}$, no solution for other $\mathbf{b}$
+              \item exactly one solution for every $\mathbf{b}$
+          \end{enumerate}
+
+
+\end{enumerate}
+
+\noindent Questions 26--33 are about Gauss-Jordan elimination (upwards as well as downwards) and the reduced echelon matrix $R$.
+
+\begin{enumerate}[resume]
+    \item Continue elimination from $U$ to $R$. Divide rows by pivots so the new pivots are all 1. Then produce zeros above those pivots to reach $R$:
+          \[
+              U = \begin{bmatrix}
+                  2 & 4 & 4 \\
+                  0 & 3 & 6 \\
+                  0 & 0 & 0
+              \end{bmatrix}
+              \quad \text{and} \quad
+              U = \begin{bmatrix}
+                  2 & 4 & 4 \\
+                  0 & 3 & 6 \\
+                  0 & 0 & 5
+              \end{bmatrix}.
+          \]
+
+    \item If $A$ is a triangular matrix, when is $R = \operatorname{ref}(A)$ equal to $I$?
+
+    \item Apply Gauss-Jordan elimination to $U\mathbf{x} = \mathbf{0}$ and $U\mathbf{x} = \mathbf{c}$. Reach $R\mathbf{x} = \mathbf{0}$ and $R\mathbf{x} = \mathbf{d}$:
+          \[
+              [U \mid \mathbf{0}] = \begin{bmatrix}
+                  1 & 2 & 3 & 0 \\
+                  0 & 0 & 4 & 0 \\
+                  0 & 0 & 0 & 0
+              \end{bmatrix}
+              \quad \text{and} \quad
+              [U \mid \mathbf{c}] = \begin{bmatrix}
+                  1 & 2 & 3 & 5 \\
+                  0 & 0 & 4 & 8 \\
+                  0 & 0 & 0 & 0
+              \end{bmatrix}.
+          \]
+          Solve $R\mathbf{x} = \mathbf{0}$ to find $\mathbf{x}_n$ (its free variable is $x_2 = 1$). Solve $R\mathbf{x} = \mathbf{d}$ to find $\mathbf{x}_p$ (its free variable is $x_2 = 0$).
+
+    \item Apply Gauss-Jordan elimination to reduce to $R\mathbf{x} = \mathbf{0}$ and $R\mathbf{x} = \mathbf{d}$:
+          \[
+              [U \mid \mathbf{0}] = \begin{bmatrix}
+                  3 & 0 & 6 & 0 \\
+                  0 & 0 & 2 & 0 \\
+                  0 & 0 & 0 & 0
+              \end{bmatrix}
+              \quad \text{and} \quad
+              [U \mid \mathbf{c}] = \begin{bmatrix}
+                  3 & 0 & 6 & 9 \\
+                  0 & 0 & 2 & 4 \\
+                  0 & 0 & 0 & 0
+              \end{bmatrix}.
+          \]
+          Solve $U\mathbf{x} = \mathbf{0}$ or $R\mathbf{x} = \mathbf{0}$ to find $\mathbf{x}_n$ (free variable $= 1$). What are the solutions to $R\mathbf{x} = \mathbf{d}$?
+
+    \item Reduce to $U\mathbf{x} = \mathbf{c}$ (Gauss elimination) and then $R\mathbf{x} = \mathbf{d}$ (Gauss-Jordan):
+          \[
+              A\mathbf{x} =
+              \begin{bmatrix}
+                  1 & 0 & 2 & 3 \\
+                  1 & 3 & 2 & 0 \\
+                  2 & 0 & 4 & 9
+              \end{bmatrix}
+              \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix}
+              =
+              \begin{bmatrix} 2 \\ 5 \\ 10 \end{bmatrix}
+              = \mathbf{b}.
+          \]
+          Find a particular solution $\mathbf{x}_p$ and all homogeneous solutions $\mathbf{x}_n$.
+
+    \item Find matrices $A$ and $B$ with the given property or explain why you can't:
+          \begin{enumerate}
+              \item The only solution of $A\mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ is $\mathbf{x} = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}$.
+              \item The only solution of $B\mathbf{x} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ is $\mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$.
+          \end{enumerate}
+
+    \item Find the $LU$ factorization of $A$ and the complete solution to $A\mathbf{x} = \mathbf{b}$:
+          \[
+              A = \begin{bmatrix}
+                  1 & 3 & 1 \\
+                  1 & 2 & 3 \\
+                  2 & 4 & 6 \\
+                  1 & 1 & 5
+              \end{bmatrix}
+              \quad \text{and} \quad
+              \mathbf{b} = \begin{bmatrix} 1 \\ 3 \\ 6 \\ 5 \end{bmatrix},
+              \quad \text{and then} \quad
+              \mathbf{b} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}.
+          \]
+
+    \item The complete solution to $A\mathbf{x} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$ is $\mathbf{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} + c \begin{bmatrix} 0 \\ 1 \end{bmatrix}$. Find $A$.
+\end{enumerate}
+
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item (Recommended!) Suppose you know that the $3$ by $4$ matrix $A$ has the vector $\mathbf{s} = (2,3,1,0)$ as the only special solution to $A\mathbf{x} = \mathbf{0}$.
+          \begin{enumerate}
+              \item What is the \emph{rank} of $A$ and the complete solution to $A\mathbf{x} = \mathbf{0}$?
+              \item What is the exact row reduced echelon form $R$ of $A$?
+              \item How do you know that $A\mathbf{x} = \mathbf{b}$ can be solved for all $\mathbf{b}$?
+          \end{enumerate}
+
+    \item Suppose $K$ is the $9$ by $9$ second difference matrix ($2$'s on the diagonal, $-1$'s on the diagonal above and also below). Solve the equation $K\mathbf{x} = \mathbf{b} = (10,\dots,10)$. If you graph $x_1,\dots,x_9$ above the points $1,\dots,9$ on the $x$ axis, I think the nine points fall on a parabola.
+
+    \item Suppose $A\mathbf{x} = \mathbf{b}$ and $C\mathbf{x} = \mathbf{b}$ have the same (complete) solutions for every $\mathbf{b}$. Is it true that $A$ equals $C$?
+
+    \item Describe the column space of a reduced row echelon matrix $R$.
+\end{enumerate}
 
 \subsection{Independence, Basis and Dimension}
 \paragraph{Challenge Problems}
