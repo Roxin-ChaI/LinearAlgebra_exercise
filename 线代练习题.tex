@@ -4439,12 +4439,442 @@
 \end{enumerate}
 
 \subsection{Permutations and Cofactors }
-\noindent
+\noindent Problems 1--10 use the big formula with $n!$ terms: $|A| = \sum \pm a_{1\alpha}a_{2\beta}\cdots a_{n\omega}$.
+\noindent Every term uses each row and each column once.
+\begin{enumerate}
+    \item Compute the determinants of $A, B, C$ from six terms. Are their rows independent?
+
+          \[
+              A = \begin{bmatrix} 1 & 2 & 3 \\ 3 & 1 & 2 \\ 3 & 2 & 1 \end{bmatrix} \qquad
+              B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 4 & 4 \\ 5 & 6 & 7 \end{bmatrix} \qquad
+              C = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}.
+          \]
+
+    \item Compute the determinants of $A, B, C, D$. Are their columns independent?
+          \[
+              A = \begin{bmatrix} 1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix} \qquad
+              B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \qquad
+              C = \begin{bmatrix} A & 0 \\ 0 & A \end{bmatrix} \qquad
+              D = \begin{bmatrix} A & 0 \\ 0 & B \end{bmatrix}.
+          \]
+
+    \item Show that $\det A = 0$, regardless of the five nonzeros marked by $x$'s:
+          \[
+              A = \begin{bmatrix} x & x & x \\ 0 & 0 & x \\ 0 & 0 & x \end{bmatrix} . \qquad
+              \begin{array}{l}
+                  \text{What are the cofactors of row 1?} \\
+                  \text{What is the rank of } A?          \\
+                  \text{What are the 6 terms in } \det A?
+              \end{array}
+          \]
+
+    \item Find two ways to choose nonzeros from four different rows and columns:
+          \[
+              A = \begin{bmatrix} 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 \end{bmatrix} \qquad
+              B = \begin{bmatrix} 1 & 0 & 0 & 2 \\ 0 & 3 & 4 & 5 \\ 5 & 4 & 0 & 3 \\ 2 & 0 & 0 & 1 \end{bmatrix} \quad
+              (B \text{ has the same zeros as } A).
+          \]
+          Is $\det A$ equal to $1+1$ or $1-1$ or $-1-1$? What is $\det B$?
+
+    \item Place the smallest number of zeros in a 4 by 4 matrix that will guarantee $\det A = 0$. Place as many zeros as possible while still allowing $\det A \neq 0$.
+
+    \item
+          \begin{enumerate}
+              \item[(a)] If $a_{11} = a_{22} = a_{33} = 0$, how many of the six terms in $\det A$ will be zero?
+              \item[(b)] If $a_{11} = a_{22} = a_{33} = a_{44} = 0$, how many of the 24 products $a_{1j}a_{2k}a_{3l}a_{4m}$ are sure to be zero?
+          \end{enumerate}
+
+    \item How many 5 by 5 permutation matrices have $\det P = +1$? Those are even permutations. Find one that needs four exchanges to reach the identity matrix.
+
+    \item If $\det A$ is not zero, at least one of the $n!$ terms in formula (8) is not zero. Deduce from the big formula that some ordering of the rows of $A$ leaves no zeros on the diagonal. (Don't use $P$ from elimination; that $PA$ can have zeros on the diagonal.)
+
+    \item Show that 4 is the largest determinant for a 3 by 3 matrix of 1's and $-1$'s.
+
+    \item How many permutations of $(1,2,3,4)$ are even and what are they? Extra credit: What are all the possible 4 by 4 determinants of $I + P_{\text{even}}$?
+\end{enumerate}
+
+\noindent Problems 11--22 use cofactors $C_{ij} = (-1)^{i+j} \det M_{ij}$. Remove row $i$ and column $j$.
+
+
+\begin{enumerate}[resume]
+    \item Find all cofactors and put them into cofactor matrices $C, D$. Find $AC$ and $\det B$.
+          \[
+              A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \qquad
+              B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 0 & 0 \end{bmatrix} .
+          \]
+
+
+    \item Find the cofactor matrix $C$ and multiply $A$ times $C^{\text{T}}$. Compare $AC^{\text{T}}$ with $A^{-1}$:
+          \[
+              A = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2 \end{bmatrix} \qquad
+              A^{-1} = \frac{1}{4} \begin{bmatrix} 3 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 3 \end{bmatrix} .
+          \]
+
+    \item The $n$ by $n$ determinant $C_n$ has 1's above and below the main diagonal:
+          \[
+              C_1 = |0| \quad
+              C_2 = \begin{vmatrix} 0 & 1 \\ 1 & 0 \end{vmatrix} \quad
+              C_3 = \begin{vmatrix} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0 \end{vmatrix} \quad
+              C_4 = \begin{vmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{vmatrix} .
+          \]
+          \begin{enumerate}
+              \item What are these determinants $C_1, C_2, C_3, C_4$?
+              \item By cofactors find the relation between $C_n$ and $C_{n-1}$ and $C_{n-2}$. Find $C_{10}$.
+          \end{enumerate}
+
+    \item The matrices in Problem 13 have 1's just above and below the main diagonal. Going down the matrix, which order of columns (if any) gives all 1's? Explain why that permutation is \textit{even} for $n = 4, 8, 12, \dots$ and \textit{odd} for $n = 2, 6, 10, \dots$ Then
+          \[
+              C_n = 0 \ (\text{odd } n) \qquad C_n = 1 \ (n = 4, 8, \cdots) \qquad C_n = -1 \ (n = 2, 6, \cdots).
+          \]
+
+    \item The tridiagonal $1, 1, 1$ matrix of order $n$ has determinant $E_n$:
+          \[
+              E_1 = |1| \quad
+              E_2 = \begin{vmatrix} 1 & 1 \\ 1 & 1 \end{vmatrix} \quad
+              E_3 = \begin{vmatrix} 1 & 1 & 0 \\ 1 & 1 & 1 \\ 0 & 1 & 1 \end{vmatrix} \quad
+              E_4 = \begin{vmatrix} 1 & 1 & 0 & 0 \\ 1 & 1 & 1 & 0 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{vmatrix} .
+          \]
+          \begin{enumerate}
+              \item[(a)] By cofactors show that $E_n = E_{n-1} - E_{n-2}$.
+              \item[(b)] Starting from $E_1 = 1$ and $E_2 = 0$ find $E_3, E_4, \dots, E_8$.
+              \item[(c)] By noticing how these numbers eventually repeat, find $E_{100}$.
+          \end{enumerate}
+
+    \item $F_n$ is the determinant of the $1, 1, -1$ tridiagonal matrix of order $n$:
+          \[
+              F_2 = \begin{vmatrix} 1 & -1 \\ 1 & 1 \end{vmatrix} = 2 \quad
+              F_3 = \begin{vmatrix} 1 & -1 & 0 \\ 1 & 1 & -1 \\ 0 & 1 & 1 \end{vmatrix} = 3 \quad
+              F_4 = \begin{vmatrix} 1 & -1 &  &  \\ 1 & 1 & -1 &  \\  & 1 & 1 & -1 \\  &  & 1 & 1 \end{vmatrix} \neq 4.
+          \]
+          Expand in cofactors to show that $F_n = F_{n-1} + F_{n-2}$. These determinants are \textit{Fibonacci numbers} $1, 2, 3, 5, 8, 13, \dots$. The sequence usually starts $1, 1, 2, 3$ (with two 1's) so our $F_n$ is the usual $F_{n+1}$.
+
+    \item The matrix $B_n$ is the $-1, 2, -1$ matrix $A_n$ except that $b_{11} = 1$ instead of $a_{11} = 2$. Using cofactors of the \textit{last} row of $B_4$ show that $|B_4| = 2|B_3| - |B_2| = 1$.
+          \[
+              B_4 = \begin{bmatrix} 1 & -1 & & \\ -1 & 2 & -1 & \\ & -1 & 2 & -1 \\ & & -1 & 2 \end{bmatrix} \qquad
+              B_3 = \begin{bmatrix} 1 & -1 & \\ -1 & 2 & -1 \\ & -1 & 2 \end{bmatrix} \qquad
+              B_2 = \begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix} .
+          \]
+          The recursion $|B_n| = 2|B_{n-1}| - |B_{n-2}|$ is satisfied when every $|B_n| = 1$. This recursion is the same as for the $A$'s in Example 6. The difference is in the starting values $1, 1, 1$ for the determinants of sizes $n = 1, 2, 3$.
+
+    \item Go back to $B_n$ in Problem 17. It is the same as $A_n$ except for $b_{11} = 1$. So use linearity in the first row, where $\begin{bmatrix} 1 & -1 & 0 \end{bmatrix}$ equals $\begin{bmatrix} 2 & -1 & 0 \end{bmatrix}$ minus $\begin{bmatrix} 1 & 0 & 0 \end{bmatrix}$:
+          \[
+              |B_n| = \begin{vmatrix} 1 & -1 & & 0 \\ -1 & & & \\ & & A_{n-1} & \\ 0 & & & \end{vmatrix} =
+              \begin{vmatrix} 2 & -1 & & 0 \\ -1 & & & \\ & & A_{n-1} & \\ 0 & & & \end{vmatrix} -
+              \begin{vmatrix} 1 & 0 & & 0 \\ -1 & & & \\ & & A_{n-1} & \\ 0 & & & \end{vmatrix} .
+          \]
+          Linearity gives $|B_n| = |A_n| - |A_{n-1}| = \_\_\_\_\_$.
+
+    \item Explain why the 4 by 4 Vandermonde determinant contains $x^3$ but not $x^4$ or $x^5$:
+          \[
+              V_4 = \det \begin{bmatrix} 1 & a & a^2 & a^3 \\ 1 & b & b^2 & b^3 \\ 1 & c & c^2 & c^3 \\ 1 & x & x^2 & x^3 \end{bmatrix} .
+          \]
+          The determinant is zero at $x = \_\_\_\_\_$, $\_\_\_\_\_$, and $\_\_\_\_\_$. The cofactor of $x^3$ is $V_3 = (b-a)(c-a)(c-b)$. Then $V_4 = (b-a)(c-a)(c-b)(x-a)(x-b)(x-c)$.
+
+    \item Find $G_2$ and $G_3$ and then by row operations $G_4$. Can you predict $G_n$?
+          \[
+              G_2 = \begin{vmatrix} 0 & 1 \\ 1 & 0 \end{vmatrix} \qquad
+              G_3 = \begin{vmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{vmatrix} \qquad
+              G_4 = \begin{vmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{vmatrix} .
+          \]
+
+    \item Compute $S_1, S_2, S_3$ for these $1, 3, 1$ matrices. By Fibonacci guess and check $S_4$.
+          \[
+              S_1 = |3| \qquad
+              S_2 = \begin{vmatrix} 3 & 1 \\ 1 & 3 \end{vmatrix} \qquad
+              S_3 = \begin{vmatrix} 3 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 3 \end{vmatrix} .
+          \]
+
+    \item Change 3 to 2 in the upper left corner of the matrices in Problem 21. Why does that subtract $S_{n-1}$ from the determinant $S_n$? Show that the determinants of the new matrices become the Fibonacci numbers $2, 5, 13$ (always $F_{2n+1}$).
+\end{enumerate}
+
+\noindent Problems 23--26 are about block matrices and block determinants.
+
+\begin{enumerate}[resume]
+    \item With 2 by 2 blocks in 4 by 4 matrices, you cannot always use block determinants:
+          \[
+              \begin{vmatrix} A & B \\ 0 & D \end{vmatrix} = |A||D| \qquad \text{but} \qquad
+              \begin{vmatrix} A & B \\ C & D \end{vmatrix} \neq |A||D| - |C||B|.
+          \]
+          \begin{enumerate}
+              \item Why is the first statement true? Somehow $B$ doesn't enter.
+              \item Show by example that equality fails (as shown) when $C$ enters.
+              \item Show by example that the answer $\det(AD - CB)$ is also wrong.
+          \end{enumerate}
+
+    \item With block multiplication, $A = LU$ has $A_k = L_k U_k$ in the top left corner:
+          \[
+              A = \begin{bmatrix} A_k & * \\ * & * \end{bmatrix} =
+              \begin{bmatrix} L_k & 0 \\ * & * \end{bmatrix} \begin{bmatrix} U_k & * \\ 0 & * \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item Suppose the first three pivots of $A$ are $2, 3, -1$. What are the determinants of $L_1, L_2, L_3$ (with diagonal 1's) and $U_1, U_2, U_3$ and $A_1, A_2, A_3$?
+              \item If $A_1, A_2, A_3$ have determinants $5, 6, 7$ find the three pivots from equation (3).
+          \end{enumerate}
+
+    \item Block elimination subtracts $CA^{-1}$ times the first row $\begin{bmatrix} A & B \end{bmatrix}$ from the second row $\begin{bmatrix} C & D \end{bmatrix}$. This leaves the \textit{Schur complement} $D - CA^{-1}B$ in the corner:
+          \[
+              \begin{bmatrix} I & 0 \\ -CA^{-1} & I \end{bmatrix} \begin{bmatrix} A & B \\ C & D \end{bmatrix} =
+              \begin{bmatrix} A & B \\ 0 & D - CA^{-1}B \end{bmatrix} .
+          \]
+          Take determinants of these block matrices to prove correct rules if $A^{-1}$ exists:
+          \[
+              \begin{vmatrix} A & B \\ C & D \end{vmatrix} = |A| \, |D - CA^{-1}B| = |AD - CB| \quad \text{provided } AC = CA.
+          \]
+
+    \item If $A$ is $m$ by $n$ and $B$ is $n$ by $m$, block multiplication gives $\det M = \det AB$:
+          \[
+              M = \begin{bmatrix} 0 & A \\ -B & I \end{bmatrix} =
+              \begin{bmatrix} AB & A \\ 0 & I \end{bmatrix} \begin{bmatrix} I & 0 \\ -B & I \end{bmatrix} .
+          \]
+          If $A$ is a single row and $B$ is a single column what is $\det M$? If $A$ is a column and $B$ is a row what is $\det M$? Do a 3 by 3 example of each.
+
+    \item (A calculus question) Show that the derivative of $\det A$ with respect to $a_{11}$ is the cofactor $C_{11}$. The other entries are fixed---we are only changing $a_{11}$.
+
+    \item A 3 by 3 determinant has three products ``down to the right'' and three ``down to the left'' with minus signs. Compute the six terms like $(1)(5)(9) = 45$ to find $D$.
+
+
+          % ===== 第 28 题图片与文字并排模板开始 =====
+          \begin{minipage}{\textwidth}
+              \centering
+              % 请去掉下方代码的注释并替换为你自己的图片路径
+              \includegraphics[width=0.8\textwidth]{pic/Figure5.2_1.png}
+          \end{minipage}
+
+
+    \item For $E_4$ in Problem 15, five of the $4! = 24$ terms in the big formula (8) are nonzero. Find those five terms to show that $E_4 = -1$.
+
+    \item For the 4 by 4 tridiagonal second difference matrix (entries $-1, 2, -1$) find the five terms in the big formula that give $\det A = 16 - 4 - 4 - 4 + 1$.
+
+    \item Find the determinant of this cyclic $P$ by cofactors of row 1 and then the ``big formula''. How many exchanges reorder $4, 1, 2, 3$ into $1, 2, 3, 4$? Is $|P^2| = 1$ or $-1$?
+          \[
+              P = \begin{bmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} \qquad
+              P^2 = \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix} =
+              \begin{bmatrix} 0 & I \\ I & 0 \end{bmatrix} .
+          \]
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+
+\begin{enumerate}[resume]
+    \item Cofactors of the $1, 3, 1$ matrices in Problem 21 give a recursion $S_n = 3S_{n-1} - S_{n-2}$. Amazingly that recursion produces every second Fibonacci number. Here is the challenge.
+
+          \textit{Show that $S_n$ is the Fibonacci number $F_{2n+2}$ by proving $F_{2n+2} = 3F_{2n} - F_{2n-2}$.} Keep using Fibonacci's rule $F_k = F_{k-1} + F_{k-2}$ starting with $k = 2n + 2$.
+
+    \item The symmetric Pascal matrices have determinant 1. If I subtract 1 from the $n, n$ entry, why does the determinant become zero? (Use rule 3 or cofactors.)
+          \[
+              \det \begin{bmatrix} 1 & 1 & 1 & 1 \\ 1 & 2 & 3 & 4 \\ 1 & 3 & 6 & 10 \\ 1 & 4 & 10 & 20 \end{bmatrix} = 1 \ (\text{known}) \qquad
+              \det \begin{bmatrix} 1 & 1 & 1 & 1 \\ 1 & 2 & 3 & 4 \\ 1 & 3 & 6 & 10 \\ 1 & 4 & 10 & \mathbf{19} \end{bmatrix} = \mathbf{0} \ (\text{to explain}).
+          \]
+
+    \item This problem shows in two ways that $\det A = 0$ (the $x$'s are any numbers):
+          \[
+              A = \begin{bmatrix}
+                  x & x & x & x & x \\
+                  x & x & x & x & x \\
+                  0 & 0 & 0 & x & x \\
+                  0 & 0 & 0 & x & x \\
+                  0 & 0 & 0 & x & x
+              \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item How do you know that the rows are linearly dependent?
+              \item Explain why all 120 terms are zero in the big formula for $\det A$.
+          \end{enumerate}
+
+    \item If $|\det(A)| > 1$, prove that the powers $A^n$ cannot stay bounded. But if $|\det(A)| \le 1$, show that some entries of $A^n$ might still grow large. Eigenvalues will give the right test for stability, determinants tell us only one number.
+\end{enumerate}
+
+
 
 \subsection{Cramer's Rule, Inverses, and Volumes}
-\paragraph{Challenge Problems}
 
+\noindent Problems 1--5 are about Cramer's Rule for $x = A^{-1}b$.
+
+\begin{enumerate}
+    \item Solve these linear equations by Cramer's Rule $x_j = \det B_j / \det A$:
+          \[
+              \text{(a)} \quad \begin{aligned} 2x_1 + 5x_2 &= 1 \\ x_1 + 4x_2 &= 2 \end{aligned} \qquad\qquad
+              \text{(b)} \quad \begin{aligned} 2x_1 + x_2 \quad &= 1 \\ x_1 + 2x_2 + x_3 &= 0 \\ x_2 + 2x_3 &= 0 \end{aligned}
+          \]
+
+    \item Use Cramer's Rule to solve for $y$ (only). Call the 3 by 3 determinant $D$:
+          \[
+              \text{(a)} \quad \begin{aligned} ax + by &= 1 \\ cx + dy &= 0 \end{aligned} \qquad\qquad
+              \text{(b)} \quad \begin{aligned} ax + by + cz &= 1 \\ dx + ey + fz &= 0 \\ gx + hy + iz &= 0 \end{aligned}
+          \]
+
+    \item Cramer's Rule breaks down when $\det A = 0$. Example (a) has no solution while (b) has infinitely many. What are the ratios $x_j = \det B_j / \det A$ in these two cases?
+          \[
+              \text{(a)} \quad \begin{aligned} 2x_1 + 3x_2 &= 1 \\ 4x_1 + 6x_2 &= 1 \end{aligned} \quad \text{(parallel lines)} \qquad\qquad
+              \text{(b)} \quad \begin{aligned} 2x_1 + 3x_2 &= 1 \\ 4x_1 + 6x_2 &= 2 \end{aligned} \quad \text{(same line)}
+          \]
+
+    \item Quick proof of Cramer's rule. The determinant is a linear function of column 1. It is zero if two columns are equal. When $b = Ax = x_1a_1 + x_2a_2 + x_3a_3$ goes into the first column of $A$, the determinant of this matrix $B_1$ is
+          \[
+              \begin{vmatrix} b & a_2 & a_3 \end{vmatrix} = \begin{vmatrix} x_1a_1 + x_2a_2 + x_3a_3 & a_2 & a_3 \end{vmatrix} = x_1 \begin{vmatrix} a_1 & a_2 & a_3 \end{vmatrix} = x_1 \det A.
+          \]
+          \begin{enumerate}
+              \item What formula for $x_1$ comes from left side = right side?
+              \item What steps lead to the middle equation?
+          \end{enumerate}
+
+    \item If the right side $b$ is the first column of $A$, solve the 3 by 3 system $Ax = b$. How does each determinant in Cramer's Rule lead to this solution $x$?
+\end{enumerate}
+
+\noindent \textbf{Problems 6--15 are about $A^{-1} = C^{\text{T}} / \det A$. Remember to transpose $C$.}
+
+\begin{enumerate}[resume]
+    \item Find $A^{-1}$ from the cofactor formula $C^{\text{T}} / \det A$. Use symmetry in part (b).
+          \[
+              \text{(a)} \quad A = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 3 & 0 \\ 0 & 7 & 1 \end{bmatrix} \qquad
+              \text{(b)} \quad A = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2 \end{bmatrix} .
+          \]
+
+    \item If all the cofactors are zero, how do you know that $A$ has no inverse? If none of the cofactors are zero, is $A$ sure to be invertible?
+
+    \item Find the cofactors of $A$ and multiply $AC^{\text{T}}$ to find $\det A$:
+          \[
+              A = \begin{bmatrix} 1 & 1 & 4 \\ 1 & 2 & 2 \\ 1 & 2 & 5 \end{bmatrix} \qquad \text{and} \qquad
+              C = \begin{bmatrix} 6 & -3 & 0 \\ \cdot & \cdot & \cdot \\ \cdot & \cdot & \cdot \end{bmatrix} \qquad \text{and }
+              AC^{\text{T}} = \underline{\hspace{1cm}} .
+          \]
+          If you change that 4 to 100, why is $\det A$ unchanged?
+
+    \item Suppose $\det A = 1$ and you know all the cofactors in $C$. How can you find $A$?
+
+    \item From the formula $AC^{\text{T}} = (\det A)I$ show that $\det C = (\det A)^{n-1}$.
+
+    \item If all entries of $A$ are integers, and $\det A = 1$ or $-1$, prove that all entries of $A^{-1}$ are integers. Give a 2 by 2 example with no zero entries.
+
+    \item If all entries of $A$ and $A^{-1}$ are integers, prove that $\det A = 1$ or $-1$. Hint: What is $\det A$ times $\det A^{-1}$?
+
+    \item Complete the calculation of $A^{-1}$ by cofactors that was started in Example 5.
+
+    \item $L$ is lower triangular and $S$ is symmetric. Assume they are invertible:
+          \[
+              \begin{array}{l}
+                  \textbf{To invert}     \\
+                  \textbf{triangular } L \\
+                  \textbf{symmetric } S
+              \end{array} \qquad
+              L = \begin{bmatrix} a & 0 & 0 \\ b & c & 0 \\ d & e & f \end{bmatrix} \qquad
+              S = \begin{bmatrix} a & b & d \\ b & c & e \\ d & e & f \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item Which three cofactors of $L$ are zero? Then $L^{-1}$ is also lower triangular.
+              \item Which three pairs of cofactors of $S$ are equal? Then $S^{-1}$ is also symmetric.
+              \item The cofactor matrix $C$ of an orthogonal $Q$ will be \underline{\hspace{1cm}}. \textit{Why}?
+          \end{enumerate}
+
+    \item For $n = 5$ the matrix $C$ contains \underline{\hspace{1cm}} cofactors. Each 4 by 4 cofactor contains \underline{\hspace{1cm}} terms and each term needs \underline{\hspace{1cm}} multiplications. Compare with $5^3 = 125$ for the Gauss-Jordan computation of $A^{-1}$ in Section 2.4.
+\end{enumerate}
+
+\noindent \textbf{Problems 16--26 are about area and volume by determinants.}
+\begin{enumerate}[resume]
+    \item
+          \begin{enumerate}
+              \item Find the area of the parallelogram with edges $\boldsymbol{v} = (3, 2)$ and $\boldsymbol{w} = (1, 4)$.
+              \item Find the area of the triangle with sides $\boldsymbol{v}$, $\boldsymbol{w}$, and $\boldsymbol{v} + \boldsymbol{w}$. Draw it.
+              \item Find the area of the triangle with sides $\boldsymbol{v}$, $\boldsymbol{w}$, and $\boldsymbol{w} - \boldsymbol{v}$. Draw it.
+          \end{enumerate}
+
+    \item A box has edges from $(0, 0, 0)$ to $(3, 1, 1)$ and $(1, 3, 1)$ and $(1, 1, 3)$. Find its volume. Also find the area of each parallelogram face using $\|\boldsymbol{u} \times \boldsymbol{v}\|$.
+
+    \item
+          \begin{enumerate}
+              \item The corners of a triangle are $(2, 1)$ and $(3, 4)$ and $(0, 5)$. What is the area?
+              \item Add a corner at $(-1, 0)$ to make a lopsided region (four sides). Find the area.
+          \end{enumerate}
+
+    \item The parallelogram with sides $(2, 1)$ and $(2, 3)$ has the same area as the parallelogram with sides $(2, 2)$ and $(1, 3)$. Find those areas from 2 by 2 determinants and say why they must be equal. (I can't see why from a picture. Please write to me if you do.)
+
+    \item The Hadamard matrix $H$ has orthogonal rows. The box is a hypercube!
+          \[
+              \text{What is} \quad |H| = \begin{vmatrix} 1 & 1 & 1 & 1 \\ 1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1 \\ 1 & -1 & 1 & -1 \end{vmatrix} = \text{volume of a hypercube in } \mathbf{R}^4?
+          \]
+
+    \item If the columns of a 4 by 4 matrix have lengths $L_1, L_2, L_3, L_4$, what is the largest possible value for the determinant (based on volume)? If all entries of the matrix are $1$ or $-1$, what are those lengths and the maximum determinant?
+
+    \item Show by a picture how a rectangle with area $x_1y_2$ minus a rectangle with area $x_2y_1$ produces the same area as our parallelogram.
+
+    \item When the edge vectors $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ are perpendicular, the volume of the box is $\|\boldsymbol{a}\|$ times $\|\boldsymbol{b}\|$ times $\|\boldsymbol{c}\|$. The matrix $A^{\text{T}}A$ is \_\_\_\_\_. Find $\det A^{\text{T}}A$ and $\det A$.
+
+    \item The box with edges $\boldsymbol{i}$ and $\boldsymbol{j}$ and $\boldsymbol{w} = 2\boldsymbol{i} + 3\boldsymbol{j} + 4\boldsymbol{k}$ has height \_\_\_\_\_. What is the volume? What is the matrix with this determinant? What is $\boldsymbol{i} \times \boldsymbol{j}$ and what is its dot product with $\boldsymbol{w}$?
+
+    \item An $n$-dimensional cube has how many corners? How many edges? How many $(n-1)$-dimensional faces? The cube in $\mathbf{R}^n$ whose edges are the rows of $2I$ has volume \_\_\_\_\_. A hypercube computer has parallel processors at the corners with connections along the edges.
+
+    \item The triangle with corners $(0, 0), (1, 0), (0, 1)$ has area $\frac{1}{2}$. The pyramid in $\mathbf{R}^3$ with four corners $(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1)$ has volume \_\_\_\_\_. What is the volume of a pyramid in $\mathbf{R}^4$ with five corners at $(0, 0, 0, 0)$ and the rows of $I$?
+\end{enumerate}
+
+\noindent Problems 27--30 are about areas $dA$ and volumes $dV$ in calculus.
+
+\begin{enumerate}[resume]
+    \item Polar coordinates satisfy $x = r \cos \theta$ and $y = r \sin \theta$. Polar area is $J \, dr \, d\theta$:
+          \[
+              J = \begin{vmatrix} \partial x / \partial r & \partial x / \partial \theta \\ \partial y / \partial r & \partial y / \partial \theta \end{vmatrix} =
+              \begin{vmatrix} \cos \theta & -r \sin \theta \\ \sin \theta & r \cos \theta \end{vmatrix} .
+          \]
+          The two columns are orthogonal. Their lengths are \_\_\_\_\_. Thus $J = $ \_\_\_\_\_.
+
+    \item Spherical coordinates $\rho, \phi, \theta$ satisfy $x = \rho \sin \phi \cos \theta$ and $y = \rho \sin \phi \sin \theta$ and $z = \rho \cos \phi$. Find the 3 by 3 matrix of partial derivatives: $\partial x/\partial \rho, \partial x/\partial \phi, \partial x/\partial \theta$ in row 1. Simplify its determinant to $J = \rho^2 \sin \phi$. Then $dV$ in spherical coordinates is $\rho^2 \sin \phi \, d\rho \, d\phi \, d\theta$, the volume of an infinitesimal ``coordinate box''.
+
+    \item The matrix that connects $r, \theta$ to $x, y$ is in Problem 27. Invert that 2 by 2 matrix:
+          \[
+              J^{-1} = \begin{vmatrix} \partial r/\partial x & \partial r/\partial y \\ \partial \theta/\partial x & \partial \theta/\partial y \end{vmatrix} =
+              \begin{vmatrix} \cos \theta & ? \\ ? & ? \end{vmatrix} = ?
+          \]
+          It is surprising that $\partial r/\partial x = \partial x/\partial r$ (\textit{Calculus}, Gilbert Strang, p. 501). Multiplying the matrices $J$ and $J^{-1}$ gives the chain rule $\frac{\partial x}{\partial x} = \frac{\partial x}{\partial r}\frac{\partial r}{\partial x} + \frac{\partial x}{\partial \theta}\frac{\partial \theta}{\partial x} = 1$.
+
+    \item The triangle with corners $(0, 0), (6, 0)$, and $(1, 4)$ has area \_\_\_\_\_. When you rotate it by $\theta = 60^\circ$ the area is \_\_\_\_\_. The determinant of the rotation matrix is
+          \[
+              J = \begin{vmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{vmatrix} =
+              \begin{vmatrix} \frac{1}{2} & ? \\ ? & ? \end{vmatrix} = ?
+          \]
+\end{enumerate}
+
+\noindent Problems 31--38 are about the triple product $(\boldsymbol{u} \times \boldsymbol{v}) \cdot \boldsymbol{w}$ in three dimensions.
+
+\begin{enumerate}[resume]
+    \item A box has base area $\|\boldsymbol{u} \times \boldsymbol{v}\|$. Its perpendicular height is $\|\boldsymbol{w}\| \cos \theta$. Base area times height = volume = $\|\boldsymbol{u} \times \boldsymbol{v}\| \|\boldsymbol{w}\| \cos \theta$ which is $(\boldsymbol{u} \times \boldsymbol{v}) \cdot \boldsymbol{w}$. Compute base area, height, and volume for $\boldsymbol{u} = (2, 4, 0), \boldsymbol{v} = (-1, 3, 0), \boldsymbol{w} = (1, 2, 2)$.
+
+    \item The volume of the same box is given more directly by a 3 by 3 determinant. Evaluate that determinant.
+
+    \item Expand the 3 by 3 determinant in equation (13) in cofactors of its row $u_1, u_2, u_3$. This expansion is the dot product of $\boldsymbol{u}$ with the vector \_\_\_\_\_.
+
+    \item Which of the triple products $(\boldsymbol{u} \times \boldsymbol{w}) \cdot \boldsymbol{v}$ and $(\boldsymbol{w} \times \boldsymbol{u}) \cdot \boldsymbol{v}$ and $(\boldsymbol{v} \times \boldsymbol{w}) \cdot \boldsymbol{u}$ are the same as $(\boldsymbol{u} \times \boldsymbol{v}) \cdot \boldsymbol{w}$? Which orders of the rows $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}$ give the correct determinant?
+
+    \item Let $P = (1, 0, -1)$ and $Q = (1, 1, 1)$ and $R = (2, 2, 1)$. Choose $S$ so that $PQRS$ is a parallelogram and compute its area. Choose $T, U, V$ so that $OPQRSTUV$ is a tilted box and compute its volume.
+
+    \item Suppose $(x, y, z)$ and $(1, 1, 0)$ and $(1, 2, 1)$ lie on a plane through the origin. What determinant is zero? What equation does this give for the plane?
+
+    \item Suppose $(x, y, z)$ is a linear combination of $(2, 3, 1)$ and $(1, 2, 3)$. What determinant is zero? What equation does this give for the plane of all combinations?
+
+    \item
+          \begin{enumerate}
+              \item Explain from volumes why $\det 2A = 2^n \det A$ for $n$ by $n$ matrices.
+              \item For what size matrix is the false statement $\det A + \det A = \det(A + A)$ true?
+          \end{enumerate}
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item If you know all 16 cofactors of a 4 by 4 invertible matrix $A$, how would you find $A$?
+
+    \item Suppose $A$ is a 5 by 5 matrix. Its entries in row 1 multiply determinants (cofactors) in rows 2--5 to give the determinant. Can you guess a ``Jacobi formula'' for $\det A$ using 2 by 2 determinants from rows 1--2 \textit{times} 3 by 3 determinants from rows 3--5? Test your formula on the $-1, 2, -1$ tridiagonal matrix that has determinant $= 6$.
+
+    \item The 2 by 2 matrix $AB = (\text{2 by 3})(\text{3 by 2})$ has a ``Cauchy-Binet formula'' for $\det AB$:
+          \[
+              \det AB = \text{sum of } (\text{2 by 2 determinants in } A)(\text{2 by 2 determinants in } B)
+          \]
+          \begin{enumerate}
+              \item Guess which 2 by 2 determinants to use from $A$ and $B$.
+              \item Test your formula when the rows of $A$ are $1, 2, 3$ and $1, 4, 7$ with $B = A^{\text{T}}$.
+          \end{enumerate}
+
+    \item The big formula has $n!$ terms. But if an entry of $A$ is zero, $(n - 1)!$ terms disappear. If $A$ has only \textit{three diagonals}, how many terms are left?
+
+          For $n = 1, 2, 3, 4$ the tridiagonal determinant has $1, 2, 3, 5$ terms. Those are Fibonacci numbers in Section 6.2! Show why a tridiagonal 5 by 5 determinant has $5 + 3 = 8$ nonzero terms (Fibonacci again). Use the cofactors of $a_{11}$ and $a_{12}$.
+\end{enumerate}
 \newpage
 
 \section{Chapter 6: Eigenvalues and Eigenvectors}

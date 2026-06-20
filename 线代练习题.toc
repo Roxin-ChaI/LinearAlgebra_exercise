@@ -43,26 +43,26 @@
 \contentsline {section}{\numberline {5}Chapter 5: Determinants}{63}{section.5}%
 \contentsline {subsection}{\numberline {5.1}The Properties of Determinants}{63}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Permutations and Cofactors }{65}{subsection.5.2}%
-\contentsline {paragraph}{Challenge Problems}{65}{section*.27}%
-\contentsline {subsection}{\numberline {5.3}Cramer's Rule, Inverses, and Volumes}{65}{subsection.5.3}%
-\contentsline {paragraph}{Challenge Problems}{65}{section*.28}%
-\contentsline {section}{\numberline {6}Chapter 6: Eigenvalues and Eigenvectors}{66}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Introduction to Eigenvalues}{66}{subsection.6.1}%
-\contentsline {paragraph}{Challenge Problems}{66}{section*.29}%
-\contentsline {subsection}{\numberline {6.2}Diagonalizing a Matrix}{66}{subsection.6.2}%
-\contentsline {paragraph}{Challenge Problems}{66}{section*.30}%
-\contentsline {subsection}{\numberline {6.3}Systems of Differential Equations}{66}{subsection.6.3}%
-\contentsline {paragraph}{Challenge Problems}{66}{section*.31}%
-\contentsline {subsection}{\numberline {6.4}Symmetric Matrices}{66}{subsection.6.4}%
-\contentsline {paragraph}{Challenge Problems}{66}{section*.32}%
-\contentsline {subsection}{\numberline {6.5}Positive Definite Matrices}{66}{subsection.6.5}%
-\contentsline {paragraph}{Challenge Problems}{66}{section*.33}%
-\contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{67}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Image Processing by Linear Algebra}{67}{subsection.7.1}%
-\contentsline {paragraph}{Challenge Problems}{67}{section*.34}%
-\contentsline {subsection}{\numberline {7.2}Bases and Matrices in the SVD}{67}{subsection.7.2}%
-\contentsline {paragraph}{Challenge Problems}{67}{section*.35}%
-\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{67}{subsection.7.3}%
-\contentsline {paragraph}{Challenge Problems}{67}{section*.36}%
-\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{67}{subsection.7.4}%
-\contentsline {paragraph}{Challenge Problems}{67}{section*.37}%
+\contentsline {paragraph}{Challenge Problems}{69}{section*.27}%
+\contentsline {subsection}{\numberline {5.3}Cramer's Rule, Inverses, and Volumes}{69}{subsection.5.3}%
+\contentsline {paragraph}{Challenge Problems}{72}{section*.28}%
+\contentsline {section}{\numberline {6}Chapter 6: Eigenvalues and Eigenvectors}{73}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Introduction to Eigenvalues}{73}{subsection.6.1}%
+\contentsline {paragraph}{Challenge Problems}{73}{section*.29}%
+\contentsline {subsection}{\numberline {6.2}Diagonalizing a Matrix}{73}{subsection.6.2}%
+\contentsline {paragraph}{Challenge Problems}{73}{section*.30}%
+\contentsline {subsection}{\numberline {6.3}Systems of Differential Equations}{73}{subsection.6.3}%
+\contentsline {paragraph}{Challenge Problems}{73}{section*.31}%
+\contentsline {subsection}{\numberline {6.4}Symmetric Matrices}{73}{subsection.6.4}%
+\contentsline {paragraph}{Challenge Problems}{73}{section*.32}%
+\contentsline {subsection}{\numberline {6.5}Positive Definite Matrices}{73}{subsection.6.5}%
+\contentsline {paragraph}{Challenge Problems}{73}{section*.33}%
+\contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{74}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Image Processing by Linear Algebra}{74}{subsection.7.1}%
+\contentsline {paragraph}{Challenge Problems}{74}{section*.34}%
+\contentsline {subsection}{\numberline {7.2}Bases and Matrices in the SVD}{74}{subsection.7.2}%
+\contentsline {paragraph}{Challenge Problems}{74}{section*.35}%
+\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{74}{subsection.7.3}%
+\contentsline {paragraph}{Challenge Problems}{74}{section*.36}%
+\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{74}{subsection.7.4}%
+\contentsline {paragraph}{Challenge Problems}{74}{section*.37}%

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1781660083.34673 "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" "线代练习题.pdf" "线代练习题" 1781660087.47066 0
-  "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" 1781191292 277691 b7c5f1d6697f18b9c44b5019f39830d1 ""
+["pdflatex"] 1781987481.58738 "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" "线代练习题.pdf" "线代练习题" 1781987486.63082 0
+  "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" 1781987479 307026 050cc1dd6562e20b440931ca70fadccf ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_63ftwl.enc" 1777962438 3256 d67ce3a4bafba4e41bf7b9c1e1bff17d ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_674lrv.enc" 1777962438 2914 b91f1eda835b6f3c794ae782cbcfb704 ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_m5c6xi.enc" 1777962439 2922 c4c22ae90239b9e80a9f9d7ece527f5b ""
@@ -208,11 +208,12 @@
   "pic/Figure4.2.png" 1781172717 10783 c813102b2c19d42f4f50638fbe5ed39b ""
   "pic/Figure4.2_1.png" 1781174038 11018 125b11d228d1414be918fadd35f3a038 ""
   "pic/Figure4.3.png" 1781174802 31255 9e8de538b7b5b571080b577c87e05b33 ""
+  "pic/Figure5.2_1.png" 1781985712 30301 839453d0b5a2ebf8e31c2941ebf4cbbf ""
   "pic/Figure_21.png" 1780301152 35951 79f2e4f1090c25762c5b9c3642b20e3a ""
-  "线代练习题.aux" 1781660087 9598 e89db166ee532c719c3a6b5e4033c32b "pdflatex"
-  "线代练习题.out" 1781660087 7954 208624769709447f696cc29fb5ed8637 "pdflatex"
-  "线代练习题.tex" 1781191292 277691 b7c5f1d6697f18b9c44b5019f39830d1 ""
-  "线代练习题.toc" 1781660087 5490 160414494d6b2ad37b5d79591394a21d "pdflatex"
+  "线代练习题.aux" 1781987486 9598 d064133e7f92d702fb27b12f219a6d33 "pdflatex"
+  "线代练习题.out" 1781987486 7954 208624769709447f696cc29fb5ed8637 "pdflatex"
+  "线代练习题.tex" 1781987479 307026 050cc1dd6562e20b440931ca70fadccf ""
+  "线代练习题.toc" 1781987486 5490 539c8d3b2b018cb0dfb1abaef5292c13 "pdflatex"
   (generated)
   "线代练习题.aux"
   "线代练习题.log"
