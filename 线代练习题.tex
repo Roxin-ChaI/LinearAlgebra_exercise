@@ -321,7 +321,7 @@
 
     \item Find 4 perpendicular unit vectors of the form $\left(\pm \tfrac{1}{2}, \pm \tfrac{1}{2}, \pm \tfrac{1}{2}, \pm \tfrac{1}{2}\right)$: Choose $+$ or $-$.
 
-    \item Using $\boldsymbol{v} = \texttt{randn}(3,1)$ in MATLAB, create a random unit vector $\boldsymbol{u} = \boldsymbol{v}/\|\boldsymbol{v}\|$.
+    \item Using $\boldsymbol{v} = \texttt{randn}(3,1)$ in \textcolor{blue!60!white}{MATLAB}, create a random unit vector $\boldsymbol{u} = \boldsymbol{v}/\|\boldsymbol{v}\|$.
           \\ Using $\boldsymbol{V} = \texttt{randn}(3,30)$ create 30 more random unit vectors $\boldsymbol{U}_j$.
           \\ What is the average size of the dot products $|\boldsymbol{u} \cdot \boldsymbol{U}_j|$?
           \\ In calculus, the average is $\displaystyle \int_0^\pi |\cos\theta| \,{d\theta}/{\pi} = {2}/{\pi}$.
@@ -545,7 +545,7 @@
 
     \item If equation 1 is added to equation 2, which of these are changed: the planes in the row picture, the vectors in the column picture, the coefficient matrix, the solution? The new equations in Problem 1 would be $x = 2$, $x + y = 5$, $z = 4$.
 
-    \item Find a point with $z = 2$ on the intersection line of the planes $x + 3z = 6$ and $x - y + z = 4$. Find the point with $z = 0$. Find a third point halfway between.
+    \item Find a point with $z = 2$ on the intersection line of the planes $x + y + 3z = 6$ and $x - y + z = 4$. Find the point with $z = 0$. Find a third point halfway between.
 
     \item The first of these equations plus the second equals the third:
           \[
@@ -681,14 +681,14 @@
 
     \item Write the dot product of $(1,4,5)$ and $(x, y, z)$ as a matrix multiplication $A\boldsymbol{x}$. The matrix $A$ has one row. The solutions to $A\boldsymbol{x} = 0$ lie on a \underline{\hspace{2cm}} perpendicular to the vector \underline{\hspace{2cm}}. The columns of $A$ are only in \underline{\hspace{2cm}}-dimensional space.
 
-    \item In MATLAB notation, write the commands that define this matrix $A$ and the column vectors $\boldsymbol{x}$ and $\boldsymbol{b}$. What command would test whether or not $A\boldsymbol{x} = \boldsymbol{b}$?
+    \item In \textcolor{blue!60!white}{MATLAB} notation, write the commands that define this matrix $A$ and the column vectors $\boldsymbol{x}$ and $\boldsymbol{b}$. What command would test whether or not $A\boldsymbol{x} = \boldsymbol{b}$?
           \[
               A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \qquad
               \boldsymbol{x} = \begin{bmatrix} 5 \\ -2 \end{bmatrix}, \qquad
               \boldsymbol{b} = \begin{bmatrix} 1 \\ 7 \end{bmatrix}.
           \]
 
-    \item The MATLAB commands \texttt{A = eye(3)} and \texttt{v = [3;5]'} produce the $3 \times 3$ identity matrix and the column vector $(3,4,5)$. What are the outputs from \texttt{A*v} and \texttt{v'*A}? (Computer not needed!) If you ask for \texttt{v*A}, what happens?
+    \item The \textcolor{blue!60!white}{MATLAB} commands \texttt{A = eye(3)} and \texttt{v = [3;5]'} produce the $3 \times 3$ identity matrix and the column vector $(3,4,5)$. What are the outputs from \texttt{A*v} and \texttt{v'*A}? (Computer not needed!) If you ask for \texttt{v*A}, what happens?
 
     \item If you multiply the $4 \times 4$ all-ones matrix $A = \texttt{ones}(4)$ and the column vector $\boldsymbol{v} = \texttt{ones}(4,1)$, what is $A\boldsymbol{v}$? (Computer not needed.) If you multiply $B = \texttt{eye}(4) + \texttt{ones}(4)$ times $\boldsymbol{w} = \texttt{zeros}(4,1) + 2*\texttt{ones}(4,1)$, what is $B*\boldsymbol{w}$?
 
@@ -719,7 +719,7 @@
 \paragraph{Challenge Problems}
 \begin{enumerate}
     \setcounter{enumi}{29}
-    \item Continue Problem 29 from $\boldsymbol{u}_0 = (1,0)$ to $\boldsymbol{u}_7$, and also from $\boldsymbol{v}_0 = (0,1)$ to $\boldsymbol{v}_7$. What do you notice about $\boldsymbol{u}_7$ and $\boldsymbol{v}_7$? Here are two MATLAB codes, with \texttt{while} and \texttt{for}:
+    \item Continue Problem 29 from $\boldsymbol{u}_0 = (1,0)$ to $\boldsymbol{u}_7$, and also from $\boldsymbol{v}_0 = (0,1)$ to $\boldsymbol{v}_7$. What do you notice about $\boldsymbol{u}_7$ and $\boldsymbol{v}_7$? Here are two \textcolor{blue!60!white}{MATLAB} codes, with \texttt{while} and \texttt{for}:
           \[
               \begin{array}{l}
                   \texttt{u = [1; 0]; A = [.8 .3; .2 .7];} \\
@@ -996,7 +996,7 @@
               \end{aligned}
           \]
 
-    \item Create a MATLAB command \texttt{A(2,:) = ...} for the new row 2, to subtract 3 times row 1 from the existing row 2 if the matrix $A$ is already known.
+    \item Create a \textcolor{blue!60!white}{MATLAB} command \texttt{A(2,:) = ...} for the new row 2, to subtract 3 times row 1 from the existing row 2 if the matrix $A$ is already known.
 
 \end{enumerate}
 
@@ -1823,15 +1823,15 @@
     \item In the Worked Example 2.5 C, the triangular Pascal matrix $L$ has $L^{-1} = LDL$, where the diagonal matrix $D$ has alternating entries $1,-1,1,-1$. Then $LDL D = I$, so the inverse of $LD = \text{pascal}(4,1)$.\\
           So what is the inverse of $LD = \text{pascal}(4,1)$?
 
-    \item The Hilbert matrices have $H_{ij} = 1/(i+j-1)$. Ask MATLAB for the exact 6 by 6 inverse $\text{inv}(H(6))$. Then ask for it to compute $\text{inv}(H(6))$. How can these be different, when the computer never makes mistakes?
+    \item The Hilbert matrices have $H_{ij} = 1/(i+j-1)$. Ask \textcolor{blue!60!white}{MATLAB} for the exact 6 by 6 inverse $\text{inv}(H(6))$. Then ask for it to compute $\text{inv}(H(6))$. How can these be different, when the computer never makes mistakes?
 
     \item
           \begin{enumerate}
-              \item Use $\text{inv}(P)$ to invert MATLAB's 4 by 4 symmetric matrix $P = \text{pascal}(4)$.
+              \item Use $\text{inv}(P)$ to invert \textcolor{blue!60!white}{MATLAB}'s 4 by 4 symmetric matrix $P = \text{pascal}(4)$.
               \item Create Pascal's lower triangular $L = \text{abs}(\text{pascal}(4,1))$ and test $P = LL^T$.
           \end{enumerate}
 
-    \item If $A = \text{ones}(4)$ and $b = \text{rand}(4,1)$, how does MATLAB tell you that $A\boldsymbol{x} = \boldsymbol{b}$ has no solution? For the special $b = \text{ones}(4,1)$, which solution to $A\boldsymbol{x} = \boldsymbol{b}$ is found by $A\backslash b$?
+    \item If $A = \text{ones}(4)$ and $b = \text{rand}(4,1)$, how does \textcolor{blue!60!white}{MATLAB} tell you that $A\boldsymbol{x} = \boldsymbol{b}$ has no solution? For the special $b = \text{ones}(4,1)$, which solution to $A\boldsymbol{x} = \boldsymbol{b}$ is found by $A\backslash b$?
 \end{enumerate}
 
 \paragraph{Challenge Problems}
@@ -2211,7 +2211,7 @@
           Explain that answer: $A_k$ factors into \underline{\hspace{4em}} because
           $LU = \begin{bmatrix} L_k & 0 \\ * & * \end{bmatrix} \begin{bmatrix} U_k & * \\ 0 & * \end{bmatrix}$.
 
-    \item For the 6 by 6 second difference constant-diagonal matrix $K$, put the pivots and multipliers into $K = LU$. ($L$ and $U$ will have only two nonzero diagonals, because $K$ has three.) Find a formula for the $i,j$ entry of $L^{-1}$, by software like MATLAB using $\text{inv}(L)$ or by looking for a nice pattern.
+    \item For the 6 by 6 second difference constant-diagonal matrix $K$, put the pivots and multipliers into $K = LU$. ($L$ and $U$ will have only two nonzero diagonals, because $K$ has three.) Find a formula for the $i,j$ entry of $L^{-1}$, by software like \textcolor{blue!60!white}{MATLAB} using $\text{inv}(L)$ or by looking for a nice pattern.
           \[
               {\color{blue!60!green}\text{$-1,2,-1$ matrix}}\quad
               K = \begin{bmatrix}
@@ -3274,37 +3274,1169 @@
 \end{enumerate}
 
 \subsection{Independence, Basis and Dimension}
+
+\noindent \textbf{Questions 1--10 are about linear independence and linear dependence.}
+\begin{enumerate}
+    \item Show that $\boldsymbol{v}_1, \boldsymbol{v}_2, \boldsymbol{v}_3$ are independent but $\boldsymbol{v}_1, \boldsymbol{v}_2, \boldsymbol{v}_3, \boldsymbol{v}_4$ are dependent:
+          \[
+              \boldsymbol{v}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \qquad
+              \boldsymbol{v}_2 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \qquad
+              \boldsymbol{v}_3 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \qquad
+              \boldsymbol{v}_4 = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix}.
+          \]
+          Solve $c_1\boldsymbol{v}_1 + c_2\boldsymbol{v}_2 + c_3\boldsymbol{v}_3 + c_4\boldsymbol{v}_4 = \boldsymbol{0}$ or $A\boldsymbol{x} = \boldsymbol{0}$. The $\boldsymbol{v}$'s go in the columns of $A$.
+
+    \item (Recommended) Find the largest possible number of independent vectors among
+          \[
+              \boldsymbol{v}_1 = \begin{bmatrix} 1 \\ -1 \\ 0 \\ 0 \end{bmatrix} \quad
+              \boldsymbol{v}_2 = \begin{bmatrix} 1 \\ 0 \\ -1 \\ 0 \end{bmatrix} \quad
+              \boldsymbol{v}_3 = \begin{bmatrix} 1 \\ 0 \\ 0 \\ -1 \end{bmatrix} \quad
+              \boldsymbol{v}_4 = \begin{bmatrix} 0 \\ 1 \\ -1 \\ 0 \end{bmatrix} \quad
+              \boldsymbol{v}_5 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ -1 \end{bmatrix} \quad
+              \boldsymbol{v}_6 = \begin{bmatrix} 0 \\ 0 \\ 1 \\ -1 \end{bmatrix}
+          \]
+
+    \item Prove that if $a = 0$ or $d = 0$ or $f = 0$ (3 cases), the columns of $U$ are dependent:
+          \[
+              U = \begin{bmatrix} a & b & c \\ 0 & d & e \\ 0 & 0 & f \end{bmatrix}.
+          \]
+
+    \item If $a, d, f$ in Question 3 are all nonzero, show that the only solution to $U\boldsymbol{x} = \boldsymbol{0}$ is $\boldsymbol{x} = \boldsymbol{0}$. Then the upper triangular $U$ has independent columns.
+
+    \item Decide the dependence or independence of
+          \begin{enumerate}
+              \item the vectors $(1, 3, 2)$ and $(2, 1, 3)$ and $(3, 2, 1)$
+              \item the vectors $(1, -3, 2)$ and $(2, 1, -3)$ and $(-3, 2, 1)$.
+          \end{enumerate}
+
+    \item Choose three independent columns of $U$. Then make two other choices. Do the same for $A$.
+          \[
+              U = \begin{bmatrix} 2 & 3 & 4 & 1 \\ 0 & 6 & 7 & 0 \\ 0 & 0 & 0 & 9 \\ 0 & 0 & 0 & 0 \end{bmatrix}
+              \quad \text{and} \quad
+              A = \begin{bmatrix} 2 & 3 & 4 & 1 \\ 0 & 6 & 7 & 0 \\ 0 & 0 & 0 & 9 \\ 4 & 6 & 8 & 2 \end{bmatrix}.
+          \]
+
+    \item If $\boldsymbol{w}_1, \boldsymbol{w}_2, \boldsymbol{w}_3$ are independent vectors, show that the differences $\boldsymbol{v}_1 = \boldsymbol{w}_2 - \boldsymbol{w}_3$ and $\boldsymbol{v}_2 = \boldsymbol{w}_1 - \boldsymbol{w}_3$ and $\boldsymbol{v}_3 = \boldsymbol{w}_1 - \boldsymbol{w}_2$ are \emph{dependent}. Find a combination of the $\boldsymbol{v}$'s that gives zero. Which matrix $A$ in $[\, \boldsymbol{v}_1 \quad \boldsymbol{v}_2 \quad \boldsymbol{v}_3 \,] = [\, \boldsymbol{w}_1 \quad \boldsymbol{w}_2 \quad \boldsymbol{w}_3 \,] A$ is singular?
+
+    \item If $\boldsymbol{w}_1, \boldsymbol{w}_2, \boldsymbol{w}_3$ are independent vectors, show that the sums $\boldsymbol{v}_1 = \boldsymbol{w}_2 + \boldsymbol{w}_3$ and $\boldsymbol{v}_2 = \boldsymbol{w}_1 + \boldsymbol{w}_3$ and $\boldsymbol{v}_3 = \boldsymbol{w}_1 + \boldsymbol{w}_2$ are \emph{independent}. (Write $c_1\boldsymbol{v}_1 + c_2\boldsymbol{v}_2 + c_3\boldsymbol{v}_3 = \boldsymbol{0}$ in terms of the $\boldsymbol{w}$'s. Find and solve equations for the $c$'s, to show they are zero.)
+
+    \item Suppose $\boldsymbol{v}_1, \boldsymbol{v}_2, \boldsymbol{v}_3, \boldsymbol{v}_4$ are vectors in $\mathbf{R}^3$.
+          \begin{enumerate}
+              \item These four vectors are dependent because \underline{\hspace{2cm}}.
+              \item The two vectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$ will be dependent if \underline{\hspace{2cm}}.
+              \item The vectors $\boldsymbol{v}_1$ and $(0,0,0)$ are dependent because \underline{\hspace{2cm}}.
+          \end{enumerate}
+
+    \item Find two independent vectors on the plane $x + 2y - 3z - t = 0$ in $\mathbf{R}^4$. Then find three independent vectors. Why not four? This plane is the nullspace of what matrix?
+\end{enumerate}
+
+\noindent \textbf{Questions 11--14 are about the space \emph{spanned} by a set of vectors. Take all linear combinations of the vectors.}
+
+\begin{enumerate}[resume]
+    \item Describe the subspace of $\mathbf{R}^3$ (is it a line or plane or $\mathbf{R}^3$?) spanned by
+          \begin{enumerate}
+              \item the two vectors $(1, 1, -1)$ and $(-1, -1, 1)$
+              \item the three vectors $(0, 1, 1)$ and $(1, 1, 0)$ and $(0, 0, 0)$
+              \item all vectors in $\mathbf{R}^3$ with whole number components
+              \item all vectors with positive components.
+          \end{enumerate}
+
+    \item The vector $\boldsymbol{b}$ is in the subspace spanned by the columns of $A$ when \underline{\hspace{2cm}} has a solution. The vector $\boldsymbol{c}$ is in the row space of $A$ when \underline{\hspace{2cm}} has a solution. \\
+          \emph{True or false}: If the zero vector is in the row space, the rows are dependent.
+
+    \item Find the dimensions of these 4 spaces. Which two of the spaces are the same? (a) column space of $A$, (b) column space of $U$, (c) row space of $A$, (d) row space of $U$:
+          \[
+              A = \begin{bmatrix} 1 & 1 & 0 \\ 1 & 3 & 1 \\ 3 & 1 & -1 \end{bmatrix} \quad \text{and} \quad
+              U = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 0 \end{bmatrix}.
+          \]
+
+    \item $\boldsymbol{v} + \boldsymbol{w}$ and $\boldsymbol{v} - \boldsymbol{w}$ are combinations of $\boldsymbol{v}$ and $\boldsymbol{w}$. Write $\boldsymbol{v}$ and $\boldsymbol{w}$ as combinations of $\boldsymbol{v} + \boldsymbol{w}$ and $\boldsymbol{v} - \boldsymbol{w}$. The two pairs of vectors \underline{\hspace{2cm}} the same space. When are they a basis for the same space?
+\end{enumerate}
+
+\noindent \textbf{Questions 15--25 are about the requirements for a basis.}
+
+\begin{enumerate}[resume]
+    \item If $\boldsymbol{v}_1, \dots, \boldsymbol{v}_n$ are linearly independent, the space they span has dimension \underline{\hspace{2cm}}. These vectors are a \underline{\hspace{2cm}} for that space. If the vectors are the columns of an $m$ by $n$ matrix, then $m$ is \underline{\hspace{2cm}} than $n$. If $m = n$, that matrix is \underline{\hspace{2cm}}.
+
+    \item Find a basis for each of these subspaces of $\mathbf{R}^4$:
+          \begin{enumerate}
+              \item All vectors whose components are equal.
+              \item All vectors whose components add to zero.
+              \item All vectors that are perpendicular to $(1, 1, 0, 0)$ and $(1, 0, 1, 1)$.
+              \item The column space and the nullspace of $I$ (4 by 4).
+          \end{enumerate}
+
+    \item Find three different bases for the column space of $U = \begin{bmatrix} 1 & 0 & 1 & 0 & 1 \\ 0 & 1 & 0 & 1 & 0 \end{bmatrix}$. Then find two different bases for the row space of $U$.
+
+    \item Suppose $\boldsymbol{v}_1, \boldsymbol{v}_2, \dots, \boldsymbol{v}_6$ are six vectors in $\mathbf{R}^4$.
+          \begin{enumerate}
+              \item Those vectors (do)(do not)(might not) span $\mathbf{R}^4$.
+              \item Those vectors (are)(are not)(might be) linearly independent.
+              \item Any four of those vectors (are)(are not)(might be) a basis for $\mathbf{R}^4$.
+          \end{enumerate}
+
+    \item The columns of $A$ are $n$ vectors from $\mathbf{R}^m$. If they are linearly independent, what is the rank of $A$? If they span $\mathbf{R}^m$, what is the rank? If they are a basis for $\mathbf{R}^m$, what then? \emph{Looking ahead}: The rank $r$ counts the number of \underline{\hspace{2cm}} columns.
+
+    \item Find a basis for the plane $x - 2y + 3z = 0$ in $\mathbf{R}^3$. Then find a basis for the intersection of that plane with the $xy$ plane. Then find a basis for all vectors perpendicular to the plane.
+
+    \item Suppose the columns of a 5 by 5 matrix $A$ are a basis for $\mathbf{R}^5$.
+          \begin{enumerate}
+              \item The equation $A\boldsymbol{x} = \boldsymbol{0}$ has only the solution $\boldsymbol{x} = \boldsymbol{0}$ because \underline{\hspace{2cm}}.
+              \item If $\boldsymbol{b}$ is in $\mathbf{R}^5$ then $A\boldsymbol{x} = \boldsymbol{b}$ is solvable because the basis vectors \underline{\hspace{2cm}} $\mathbf{R}^5$.
+          \end{enumerate}
+          Conclusion: $A$ is invertible. Its rank is 5. Its rows are also a basis for $\mathbf{R}^5$.
+
+    \item Suppose $\mathbf{S}$ is a 5-dimensional subspace of $\mathbf{R}^6$. True or false (example if false):
+          \begin{enumerate}
+              \item Every basis for $\mathbf{S}$ can be extended to a basis for $\mathbf{R}^6$ by adding one more vector.
+              \item Every basis for $\mathbf{R}^6$ can be reduced to a basis for $\mathbf{S}$ by removing one vector.
+          \end{enumerate}
+
+    \item $U$ comes from $A$ by subtracting row 1 from row 3:
+          \[
+              A = \begin{bmatrix} 1 & 3 & 2 \\ 0 & 1 & 1 \\ 1 & 3 & 2 \end{bmatrix} \quad \text{and} \quad
+              U = \begin{bmatrix} 1 & 3 & 2 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{bmatrix}.
+          \]
+          Find bases for the two column spaces. Find bases for the two row spaces. Find bases for the two nullspaces. Which spaces stay fixed in elimination?
+
+    \item True or false (give a good reason):
+          \begin{enumerate}
+              \item If the columns of a matrix are dependent, so are the rows.
+              \item The column space of a 2 by 2 matrix is the same as its row space.
+              \item The column space of a 2 by 2 matrix has the same dimension as its row space.
+              \item The columns of a matrix are a basis for the column space.
+          \end{enumerate}
+
+    \item For which numbers $c$ and $d$ do these matrices have rank 2?
+          \[
+              A = \begin{bmatrix} 1 & 2 & 5 & 0 & 5 \\ 0 & 0 & c & 2 & 2 \\ 0 & 0 & 0 & d & 2 \end{bmatrix} \quad \text{and} \quad
+              B = \begin{bmatrix} c & d \\ d & c \end{bmatrix}.
+          \]
+\end{enumerate}
+
+\noindent \textbf{Questions 26--30 are about spaces where the ``vectors'' are matrices.}
+
+\begin{enumerate}[resume]
+    \item Find a basis (and the dimension) for each of these subspaces of 3 by 3 matrices:
+          \begin{enumerate}
+              \item All diagonal matrices.
+              \item All symmetric matrices ($A^{\mathrm{T}} = A$).
+              \item All skew-symmetric matrices ($A^{\mathrm{T}} = -A$).
+          \end{enumerate}
+
+    \item Construct six linearly independent 3 by 3 echelon matrices $U_1, \dots, U_6$.
+
+    \item Find a basis for the space of all 2 by 3 matrices whose columns add to zero. Find a basis for the subspace whose rows also add to zero.
+
+    \item What subspace of 3 by 3 matrices is spanned (take all combinations) by
+          \begin{enumerate}
+              \item the invertible matrices?
+              \item the rank one matrices?
+              \item the identity matrix?
+          \end{enumerate}
+
+    \item Find a basis for the space of 2 by 3 matrices whose nullspace contains $(2, 1, 1)$.
+\end{enumerate}
+
+\noindent \textbf{Questions 31--35 are about spaces where the ``vectors'' are functions.}
+
+\begin{enumerate}[resume]
+    \item \begin{enumerate}
+              \item Find all functions that satisfy $\frac{dy}{dx} = 0$.
+              \item Choose a particular function that satisfies $\frac{dy}{dx} = 3$.
+              \item Find all functions that satisfy $\frac{dy}{dx} = 3$.
+          \end{enumerate}
+
+    \item The cosine space $\mathbf{F}_3$ contains all combinations $y(x) = A \cos x + B \cos 2x + C \cos 3x$. Find a basis for the subspace with $y(0) = 0$.
+
+    \item Find a basis for the space of functions that satisfy
+          \begin{enumerate}
+              \item $\frac{dy}{dx} - 2y = 0$
+              \item $\frac{dy}{dx} - \frac{y}{x} = 0$.
+          \end{enumerate}
+
+    \item Suppose $y_1(x), y_2(x), y_3(x)$ are three different functions of $x$. The vector space they span could have dimension 1, 2, or 3. Give an example of $y_1, y_2, y_3$ to show each possibility.
+
+    \item Find a basis for the space of polynomials $p(x)$ of degree $\le 3$. Find a basis for the subspace with $p(1) = 0$.
+
+    \item Find a basis for the space $\mathbf{S}$ of vectors $(a, b, c, d)$ with $a + c + d = 0$ and also for the space $\mathbf{T}$ with $a + b = 0$ and $c = 2d$. What is the dimension of the intersection $\mathbf{S} \cap \mathbf{T}$?
+
+    \item If $AS = SA$ for the \emph{shift matrix} $S$, show that $A$ must have this special form:
+          \[
+              \text{If} \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix} \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix} \text{ then } A = \begin{bmatrix} a & b & c \\ 0 & a & b \\ 0 & 0 & a \end{bmatrix}.
+          \]
+          ``The subspace of matrices that commute with the shift $S$ has dimension \underline{\hspace{1cm}}.''
+
+    \item Which of the following are bases for $\mathbf{R}^3$?
+          \begin{enumerate}
+              \item $(1, 2, 0)$ and $(0, 1, -1)$
+              \item $(1, 1, -1), (2, 3, 4), (4, 1, -1), (0, 1, -1)$
+              \item $(1, 2, 2), (-1, 2, 1), (0, 8, 0)$
+              \item $(1, 2, 2), (-1, 2, 1), (0, 8, 6)$
+          \end{enumerate}
+
+    \item Suppose $A$ is 5 by 4 with rank 4. Show that $A\boldsymbol{x} = \boldsymbol{b}$ has no solution when the 5 by 5 matrix $[\, A \quad \boldsymbol{b} \,]$ is invertible. Show that $A\boldsymbol{x} = \boldsymbol{b}$ is solvable when $[\, A \quad \boldsymbol{b} \,]$ is singular.
+
+    \item \begin{enumerate}
+              \item Find a basis for all solutions to $d^4y/dx^4 = y(x)$.
+              \item Find a particular solution to $d^4y/dx^4 = y(x) + 1$. Find the complete solution.
+          \end{enumerate}
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Write the 3 by 3 identity matrix as a combination of the other five permutation matrices! Then show that those five matrices are linearly independent. (Assume a combination gives $c_1 P_1 + \dots + c_5 P_5 = \text{zero matrix}$, and check entries to prove that $c_1$ to $c_5$ must all be zero.) The five permutations are a basis for the subspace of 3 by 3 matrices with row and column sums all equal.
+
+    \item Choose $\boldsymbol{x} = (x_1, x_2, x_3, x_4)$ in $\mathbf{R}^4$. It has 24 rearrangements like $(x_2, x_1, x_3, x_4)$ and $(x_4, x_3, x_1, x_2)$. Those 24 vectors, including $\boldsymbol{x}$ itself, span a subspace $\mathbf{S}$. Find specific vectors $\boldsymbol{x}$ so that the dimension of $\mathbf{S}$ is: (a) zero, (b) one, (c) three, (d) four.
+
+    \item Intersections and sums have $\dim(\mathbf{V}) + \dim(\mathbf{W}) = \dim(\mathbf{V} \cap \mathbf{W}) + \dim(\mathbf{V} + \mathbf{W})$. Start with a basis $\boldsymbol{u}_1, \dots, \boldsymbol{u}_r$ for the intersection $\mathbf{V} \cap \mathbf{W}$. Extend with $\boldsymbol{v}_1, \dots, \boldsymbol{v}_s$ to a basis for $\mathbf{V}$, and separately with $\boldsymbol{w}_1, \dots, \boldsymbol{w}_t$ to a basis for $\mathbf{W}$. Prove that the $\boldsymbol{u}$'s, $\boldsymbol{v}$'s and $\boldsymbol{w}$'s together are \textbf{\textit{independent}}. The dimensions have $(r + s) + (r + t) = (r) + (r + s + t)$ as desired.
+
+    \item Mike Artin suggested a neat higher-level proof of that dimension formula in Problem 43. From all inputs $\boldsymbol{v}$ in $\mathbf{V}$ and $\boldsymbol{w}$ in $\mathbf{W}$, the ``sum transformation'' produces $\boldsymbol{v} + \boldsymbol{w}$. Those outputs fill the space $\mathbf{V} + \mathbf{W}$. The nullspace contains all pairs $\boldsymbol{v} = \boldsymbol{u}$, $\boldsymbol{w} = -\boldsymbol{u}$ for vectors $\boldsymbol{u}$ in $\mathbf{V} \cap \mathbf{W}$. (Then $\boldsymbol{v} + \boldsymbol{w} = \boldsymbol{u} - \boldsymbol{u} = \boldsymbol{0}$.) So $\dim(\mathbf{V} + \mathbf{W}) + \dim(\mathbf{V} \cap \mathbf{W})$ equals $\dim(\mathbf{V}) + \dim(\mathbf{W})$ (\textit{input dimension from} $\mathbf{V}$ \textit{and} $\mathbf{W}$) by the Counting Theorem.
+          \[
+              \color{blue!60!green} \textit{dimension of outputs} + \textit{dimension of nullspace} = \textit{dimension of inputs.}
+          \]
+          \textit{Problem} \quad For an $m$ by $n$ matrix of rank $r$, what are those 3 dimensions? Outputs = column space. This question will be answered in Section 3.5, can you do it now?
+
+    \item Inside $\mathbf{R}^n$, suppose dimension ($\mathbf{V}$) + dimension ($\mathbf{W}$) > $n$. Show that some nonzero vector is in both $\mathbf{V}$ and $\mathbf{W}$.
+
+    \item Suppose $A$ is 10 by 10 and $A^2 = 0$ (zero matrix). So $A$ multiplies each column of $A$ to give the zero vector. This means that the column space of $A$ is contained in the \underline{\hspace{2cm}}. If $A$ has rank $r$, those subspaces have dimension $r \le 10 - r$. So the rank is $r \le 5$.
+\end{enumerate}
+
+
 
 \subsection{Dimensions of the Four Subspaces}
-\paragraph{Challenge Problems}
+\begin{enumerate}
+    \item
+          \begin{enumerate}
+              \item If a 7 by 9 matrix has rank 5, what are the dimensions of the four subspaces? What is the sum of all four dimensions?
+              \item If a 3 by 4 matrix has rank 3, what are its column space and left nullspace?
+          \end{enumerate}
 
+    \item Find bases and dimensions for the four subspaces associated with $A$ and $B$:
+          \[
+              A = \begin{bmatrix} 1 & 2 & 4 \\ 2 & 4 & 8 \end{bmatrix} \quad \text{and} \quad
+              B = \begin{bmatrix} 1 & 2 & 4 \\ 2 & 5 & 8 \end{bmatrix}.
+          \]
+
+    \item Find a basis for each of the four subspaces associated with $A$:
+          \[
+              A = \begin{bmatrix} 0 & 1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 4 & 6 \\ 0 & 0 & 0 & 1 & 2 \end{bmatrix}
+              = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}
+              \begin{bmatrix} 0 & 1 & 2 & 3 & 4 \\ 0 & 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}.
+          \]
+
+    \item Construct a matrix with the required property or explain why this is impossible:
+          \begin{enumerate}
+              \item Column space contains $\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$, row space contains $\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix} 2 \\ 5 \end{bmatrix}$.
+              \item Column space has basis $\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$, nullspace has basis $\begin{bmatrix} 3 \\ 1 \\ 1 \end{bmatrix}$.
+              \item Dimension of nullspace = 1 + dimension of left nullspace.
+              \item Nullspace contains $\begin{bmatrix} 1 \\ 3 \end{bmatrix}$, column space contains $\begin{bmatrix} 3 \\ 1 \end{bmatrix}$.
+              \item Row space = column space, nullspace $\neq$ left nullspace.
+          \end{enumerate}
+
+    \item If $\mathbf{V}$ is the subspace spanned by $(1, 1, 1)$ and $(2, 1, 0)$, find a matrix $A$ that has $\mathbf{V}$ as its row space. Find a matrix $B$ that has $\mathbf{V}$ as its nullspace. Multiply $AB$.
+
+    \item Without using elimination, find dimensions and bases for the four subspaces for
+          \[
+              A = \begin{bmatrix} 0 & 3 & 3 & 3 \\ 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 \end{bmatrix} \quad \text{and} \quad
+              B = \begin{bmatrix} 1 \\ 4 \\ 5 \end{bmatrix}.
+          \]
+
+    \item Suppose the 3 by 3 matrix $A$ is invertible. Write down bases for the four subspaces for $A$, and also for the 3 by 6 matrix $B = [\,A \quad A\,]$. (The basis for $\mathbf{Z}$ is empty.)
+
+    \item What are the dimensions of the four subspaces for $A, B$, and $C$, if $I$ is the 3 by 3 identity matrix and $0$ is the 3 by 2 zero matrix?
+          \[
+              A = [\,I \quad 0\,] \quad \text{and} \quad
+              B = \begin{bmatrix} I & I \\ ^{\mathrm{T}} & ^{\mathrm{T}} \end{bmatrix} \quad \text{and} \quad
+              C = [\,0\,].
+          \]
+
+    \item Which subspaces are the same for these matrices of different sizes?
+          \begin{enumerate}
+              \begin{multicols}{2}
+              \item $[\,A\,]$ and $\begin{bmatrix} A \\ A \end{bmatrix}$
+              \item $\begin{bmatrix} A \\ A \end{bmatrix}$ and $\begin{bmatrix} A & A \\ A & A \end{bmatrix}$.
+                    \end{multicols}
+          \end{enumerate}
+          Prove that all three of those matrices have the \emph{same} rank $r$.
+
+    \item If the entries of a 3 by 3 matrix are chosen randomly between 0 and 1, what are the most likely dimensions of the four subspaces? What if the random matrix is 3 by 5?
+
+    \item (Important) $A$ is an $m$ by $n$ matrix of rank $r$. Suppose there are right sides $\boldsymbol{b}$ for which $A\boldsymbol{x} = \boldsymbol{b}$ has \emph{no solution}.
+          \begin{enumerate}
+              \item What are all inequalities ($<$ or $\le$) that must be true between $m, n$, and $r$?
+              \item How do you know that $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$ has solutions other than $\boldsymbol{y} = \boldsymbol{0}$?
+          \end{enumerate}
+
+    \item Construct a matrix with $(1, 0, 1)$ and $(1, 2, 0)$ as a basis for its row space and its column space. Why can't this be a basis for the row space and nullspace?
+
+    \item True or false (with a reason or a counterexample):
+          \begin{enumerate}
+              \item If $m = n$ then the row space of $A$ equals the column space.
+              \item The matrices $A$ and $-A$ share the same four subspaces.
+              \item If $A$ and $B$ share the same four subspaces then $A$ is a multiple of $B$.
+          \end{enumerate}
+
+    \item Without computing $A$, find bases for its four fundamental subspaces:
+          \[
+              A = \begin{bmatrix} 1 & 0 & 0 \\ 6 & 1 & 0 \\ 9 & 8 & 1 \end{bmatrix}
+              \begin{bmatrix} 1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 2 \end{bmatrix}.
+          \]
+
+    \item If you exchange the first two rows of $A$, which of the four subspaces stay the same? If $\boldsymbol{v} = (1, 2, 3, 4)$ is in the left nullspace of $A$, write down a vector in the left nullspace of the new matrix after the row exchange.
+
+    \item Explain why $\boldsymbol{v} = (1, 0, -1)$ \emph{cannot} be a row of $A$ and also in the nullspace.
+
+    \item Describe the four subspaces of $\mathbf{R}^3$ associated with
+          \[
+              A = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \quad \text{and} \quad
+              I + A = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix}.
+          \]
+
+    \item (Left nullspace) Add the extra column $\boldsymbol{b}$ and reduce $A$ to echelon form:
+          \[
+              [\,A \quad \boldsymbol{b}\,] = \begin{bmatrix} 1 & 2 & 3 & b_1 \\ 4 & 5 & 6 & b_2 \\ 7 & 8 & 9 & b_3 \end{bmatrix} \to
+              \begin{bmatrix} 1 & 2 & 3 & b_1 \\ 0 & -3 & -6 & b_2 - 4b_1 \\ 0 & 0 & 0 & b_3 - 2b_2 + b_1 \end{bmatrix}.
+          \]
+          A combination of the rows of $A$ has produced the zero row. What combination is it? (Look at $b_3 - 2b_2 + b_1$ on the right side.) Which vectors are in the nullspace of $A^{\mathrm{T}}$ and which vectors are in the nullspace of $A$?
+
+    \item Following the method of Problem 18, reduce $A$ to echelon form and look at zero rows. The $\boldsymbol{b}$ column tells which combinations you have taken of the rows:
+          \begin{enumerate}
+              \begin{multicols}{2}
+              \item $\begin{bmatrix} 1 & 2 & b_1 \\ 3 & 4 & b_2 \\ 4 & 6 & b_3 \end{bmatrix}$
+              \item $\begin{bmatrix} 1 & 2 & b_1 \\ 2 & 3 & b_2 \\ 2 & 4 & b_3 \\ 2 & 5 & b_4 \end{bmatrix}$
+                    \end{multicols}
+          \end{enumerate}
+          From the $\boldsymbol{b}$ column after elimination, read off $m-r$ basis vectors in the left nullspace. Those $\boldsymbol{y}$'s are combinations of rows that give zero rows in the echelon form.
+
+    \item
+          \begin{enumerate}
+              \item Check that the solutions to $A\boldsymbol{x} = \boldsymbol{0}$ are perpendicular to the rows of $A$:
+                    \[
+                        A = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 3 & 4 & 1 \end{bmatrix}
+                        \begin{bmatrix} 4 & 2 & 0 & 1 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{bmatrix} = ER.
+                    \]
+              \item How many independent solutions to $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$? Why does $\boldsymbol{y}^{\mathrm{T}} =$ row 3 of $E^{-1}$?
+          \end{enumerate}
+
+    \item Suppose $A$ is the sum of two matrices of rank one: $A = \boldsymbol{u}\boldsymbol{v}^{\mathrm{T}} + \boldsymbol{w}\boldsymbol{z}^{\mathrm{T}}$.
+          \begin{enumerate}
+              \item Which vectors span the column space of $A$?
+              \item Which vectors span the row space of $A$?
+              \item The rank is less than 2 if \underline{\hspace{1.5cm}} or if \underline{\hspace{1.5cm}}.
+              \item Compute $A$ and its rank if $\boldsymbol{u} = \boldsymbol{z} = (1, 0, 0)$ and $\boldsymbol{v} = \boldsymbol{w} = (0, 0, 1)$.
+          \end{enumerate}
+
+    \item Construct $A = \boldsymbol{u}\boldsymbol{v}^{\mathrm{T}} + \boldsymbol{w}\boldsymbol{z}^{\mathrm{T}}$ whose column space has basis $(1, 2, 4), (2, 2, 1)$ and whose row space has basis $(1, 0), (1, 1)$. Write $A$ as (3 by 2) times (2 by 2).
+
+    \item Without multiplying matrices, find bases for the row and column spaces of $A$:
+          \[
+              A = \begin{bmatrix} 1 & 2 \\ 4 & 5 \\ 2 & 7 \end{bmatrix} \begin{bmatrix} 3 & 0 & 3 \\ 1 & 1 & 2 \end{bmatrix}.
+          \]
+          How do you know from these shapes that $A$ cannot be invertible?
+
+    \item (Important) $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{d}$ is solvable when $\boldsymbol{d}$ is in which of the four subspaces? The solution $\boldsymbol{y}$ is unique when the \underline{\hspace{1.5cm}} contains only the zero vector.
+
+    \item True or false (with a reason or a counterexample):
+          \begin{enumerate}
+              \item $A$ and $A^{\mathrm{T}}$ have the same number of pivots.
+              \item $A$ and $A^{\mathrm{T}}$ have the same left nullspace.
+              \item If the row space equals the column space then $A^{\mathrm{T}} = A$.
+              \item If $A^{\mathrm{T}} = -A$ then the row space of $A$ equals the column space.
+          \end{enumerate}
+
+    \item If $a, b, c$ are given with $a \neq 0$, how would you choose $d$ so that $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$ has rank 1? Find a basis for the row space and nullspace. Show they are perpendicular!
+
+    \item Find the ranks of the 8 by 8 checkerboard matrix $B$ and the chess matrix $C$:
+          \[
+              B = \begin{bmatrix} 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ \cdot & \cdot & \cdot & \cdot & \cdot & \cdot & \cdot & \cdot \\ 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \end{bmatrix} \quad \text{and} \quad
+              C = \begin{bmatrix} r & n & b & q & k & b & n & r \\ p & p & p & p & p & p & p & p \\ \multicolumn{8}{c}{\text{four zero rows}} \\ p & p & p & p & p & p & p & p \\ r & n & b & q & k & b & n & r \end{bmatrix}.
+          \]
+          The numbers $r, n, b, q, k, p$ are all different. Find bases for the row space and left nullspace of $B$ and $C$. Challenge problem: Find a basis for the nullspace of $C$.
+
+    \item Can tic-tac-toe be completed (5 ones and 4 zeros in $A$) so that rank ($A$) = 2 but neither side passed up a winning move?
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item If $A = \boldsymbol{u}\boldsymbol{v}^{\mathrm{T}}$ is a 2 by 2 matrix of rank 1, redraw Figure 3.5 to show clearly the Four Fundamental Subspaces. If $B$ produces those same four subspaces, what is the exact relation of $B$ to $A$?
+
+    \item $\mathbf{M}$ is the space of 3 by 3 matrices. Multiply every matrix $X$ in $\mathbf{M}$ by
+          \[
+              A = \begin{bmatrix} 1 & 0 & -1 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix}. \quad
+              \text{Notice: } A \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}.
+          \]
+          \begin{enumerate}
+              \item Which matrices $X$ lead to $AX = \text{zero matrix}$?
+              \item Which matrices have the form $AX$ for some matrix $X$?
+          \end{enumerate}
+          (a) finds the ``nullspace'' of that operation $AX$ and (b) finds the ``column space''. What are the dimensions of those two subspaces of $\mathbf{M}$? Why do the dimensions add to $(n - r) + r = 9$?
+
+    \item Suppose the $m$ by $n$ matrices $A$ and $B$ have \emph{the same four subspaces}. If they are both in row reduced echelon form, prove that $F$ must equal $G$:
+          \[
+              A = \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix} \qquad
+              B = \begin{bmatrix} I & G \\ 0 & 0 \end{bmatrix}.
+          \]
+\end{enumerate}
 %\addtocounter{subsection}{-1} % 将计数器减 1
 \newpage
 
 \section{Chapter 4: Orthogonality}
 
 \subsection{Orthogonality of the Four Subspaces}
-\noindent
+
+\noindent \textbf{Questions 1--12 grow out of Figures 4.2 and 4.3 with four subspaces.}
+
+\begin{enumerate}
+    \item Construct any 2 by 3 matrix of rank one. Copy Figure 4.2 and put one vector in each subspace (and put two in the nullspace). Which vectors are orthogonal?
+
+    \item Redraw Figure 4.3 for a 3 by 2 matrix of rank $r=2$. Which subspace is $\mathbf{Z}$ (zero vector only)? The nullspace part of any vector $\boldsymbol{x}$ in $\mathbf{R}^2$ is $\boldsymbol{x}_n = \underline{\hspace{2cm}}$.
+
+    \item Construct a matrix with the required property or say why that is impossible:
+          \begin{enumerate}
+              \item Column space contains $\begin{bmatrix} 1 \\ 2 \\ -3 \end{bmatrix}$ and $\begin{bmatrix} 2 \\ -3 \\ 5 \end{bmatrix}$, nullspace contains $\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$
+              \item Row space contains $\begin{bmatrix} 1 \\ 2 \\ -3 \end{bmatrix}$ and $\begin{bmatrix} 2 \\ -3 \\ 5 \end{bmatrix}$, nullspace contains $\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$
+              \item $A\boldsymbol{x} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$ has a solution and $A^{\mathrm{T}}\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}$
+              \item Every row is orthogonal to every column ($A$ is not the zero matrix)
+              \item Columns add up to a column of zeros, rows add to a row of 1's.
+          \end{enumerate}
+
+    \item If $AB = 0$ then the columns of $B$ are in the \underline{\hspace{2cm}} of $A$. The rows of $A$ are in the \underline{\hspace{2cm}} of $B$. With $AB = 0$, why can't $A$ and $B$ be 3 by 3 matrices of rank 2?
+
+    \item
+          \begin{enumerate}
+              \item If $A\boldsymbol{x} = \boldsymbol{b}$ has a solution and $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$, is $(\boldsymbol{y}^{\mathrm{T}}\boldsymbol{x} = 0)$ or $(\boldsymbol{y}^{\mathrm{T}}\boldsymbol{b} = 0)$?
+              \item If $A^{\mathrm{T}}\boldsymbol{y} = (1, 1, 1)$ has a solution and $A\boldsymbol{x} = \boldsymbol{0}$, then \underline{\hspace{2cm}}.
+          \end{enumerate}
+
+    \item This system of equations $A\boldsymbol{x} = \boldsymbol{b}$ has \emph{no solution} (they lead to $0 = 1$):
+          \begin{align*}
+              x + 2y + 2z  & = 5 \\
+              2x + 2y + 3z & = 5 \\
+              3x + 4y + 5z & = 9
+          \end{align*}
+          Find numbers $y_1, y_2, y_3$ to multiply the equations so they add to $0 = 1$. You have found a vector $\boldsymbol{y}$ in which subspace? Its dot product $\boldsymbol{y}^{\mathrm{T}}\boldsymbol{b}$ is 1, so no solution $\boldsymbol{x}$.
+
+    \item Every system with no solution is like the one in Problem 6. There are numbers $y_1, \dots, y_m$ that multiply the $m$ equations so they add up to $0 = 1$. This is called \textbf{Fredholm's Alternative}:
+          \begin{center}
+              \textbf{Exactly one of these problems has a solution} \\
+              $A\boldsymbol{x} = \boldsymbol{b} \quad \textbf{OR} \quad A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0} \quad \text{with} \quad \boldsymbol{y}^{\mathrm{T}}\boldsymbol{b} = 1$.
+          \end{center}
+          If $\boldsymbol{b}$ is not in the column space of $A$, it is not orthogonal to the nullspace of $A^{\mathrm{T}}$. Multiply the equations $x_1 - x_2 = 1$ and $x_2 - x_3 = 1$ and $x_1 - x_3 = 1$ by numbers $y_1, y_2, y_3$ chosen so that the equations add up to $0 = 1$.
+
+    \item In Figure 4.3, how do we know that $A\boldsymbol{x}_r$ is equal to $A\boldsymbol{x}$? How do we know that this vector is in the column space? If $A = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ and $\boldsymbol{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ what is $\boldsymbol{x}_r$?
+
+    \item If $A^{\mathrm{T}}A\boldsymbol{x} = \boldsymbol{0}$ then $A\boldsymbol{x} = \boldsymbol{0}$. Reason: $A\boldsymbol{x}$ is in the nullspace of $A^{\mathrm{T}}$ and also in the \underline{\hspace{1.5cm}} of $A$ and those spaces are \underline{\hspace{1.5cm}}. \emph{Conclusion: $A^{\mathrm{T}}A$ has the same nullspace as $A$. This key fact is repeated in the next section.}
+
+    \item Suppose $A$ is a symmetric matrix ($A^{\mathrm{T}} = A$).
+          \begin{enumerate}
+              \item Why is its column space perpendicular to its nullspace?
+              \item If $A\boldsymbol{x} = \boldsymbol{0}$ and $A\boldsymbol{z} = 5\boldsymbol{z}$, which subspaces contain these ``eigenvectors'' $\boldsymbol{x}$ and $\boldsymbol{z}$? \textbf{Symmetric matrices have perpendicular eigenvectors} $\boldsymbol{x}^{\mathrm{T}}\boldsymbol{z} = 0$.
+          \end{enumerate}
+
+    \item (Recommended) Draw Figure 4.2 to show each subspace correctly for
+          \[
+              A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix} \quad \text{and} \quad
+              B = \begin{bmatrix} 1 & 0 \\ 3 & 0 \end{bmatrix}.
+          \]
+
+    \item Find the pieces $\boldsymbol{x}_r$ and $\boldsymbol{x}_n$ and draw Figure 4.3 properly if
+          \[
+              A = \begin{bmatrix} 1 & -1 \\ 0 & 0 \\ 0 & 0 \end{bmatrix} \quad \text{and} \quad
+              \boldsymbol{x} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}.
+          \]
+\end{enumerate}
+
+\noindent \textbf{Questions 13--23 are about orthogonal subspaces.}
+
+\begin{enumerate}[resume]
+    \item Put bases for the subspaces $\mathbf{V}$ and $\mathbf{W}$ into the columns of matrices $V$ and $W$. Explain why the test for orthogonal subspaces can be written $V^{\mathrm{T}}W = \text{zero matrix}$. This matches $\boldsymbol{v}^{\mathrm{T}}\boldsymbol{w} = 0$ for orthogonal vectors.
+
+    \item The floor $\mathbf{V}$ and the wall $\mathbf{W}$ are not orthogonal subspaces, because they share a nonzero vector (along the line where they meet). No planes $\mathbf{V}$ and $\mathbf{W}$ in $\mathbf{R}^3$ can be orthogonal! Find a vector in the column spaces of both matrices:
+          \[
+              A = \begin{bmatrix} 1 & 2 \\ 1 & 3 \\ 1 & 2 \end{bmatrix} \quad \text{and} \quad
+              B = \begin{bmatrix} 5 & 4 \\ 6 & 3 \\ 5 & 1 \end{bmatrix}
+          \]
+          This will be a vector $A\boldsymbol{x}$ and also $B\widehat{\boldsymbol{x}}$. Think 3 by 4 with the matrix $[\, A \quad B \,]$.
+
+    \item Extend Problem 14 to a $p$-dimensional subspace $\mathbf{V}$ and a $q$-dimensional subspace $\mathbf{W}$ of $\mathbf{R}^n$. What inequality on $p+q$ guarantees that $\mathbf{V}$ intersects $\mathbf{W}$ in a nonzero vector? These subspaces cannot be orthogonal.
+
+    \item Prove that every $\boldsymbol{y}$ in $\mathbf{N}(A^{\mathrm{T}})$ is perpendicular to every $A\boldsymbol{x}$ in the column space, using the matrix shorthand of equation (2). Start from $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$.
+
+    \item If $\mathbf{S}$ is the subspace of $\mathbf{R}^3$ containing only the zero vector, what is $\mathbf{S}^{\perp}$? If $\mathbf{S}$ is spanned by $(1, 1, 1)$, what is $\mathbf{S}^{\perp}$? If $\mathbf{S}$ is spanned by $(1, 1, 1)$ and $(1, 1, -1)$, what is a basis for $\mathbf{S}^{\perp}$?
+
+    \item Suppose $\mathbf{S}$ only contains two vectors $(1, 5, 1)$ and $(2, 2, 2)$ (not a subspace). Then $\mathbf{S}^{\perp}$ is the nullspace of the matrix $A =$ \underline{\hspace{2cm}}. $\mathbf{S}^{\perp}$ is a subspace even if $\mathbf{S}$ is not.
+
+    \item Suppose $\mathbf{L}$ is a one-dimensional subspace (a line) in $\mathbf{R}^3$. Its orthogonal complement $\mathbf{L}^{\perp}$ is the \underline{\hspace{2cm}} perpendicular to $\mathbf{L}$. Then $(\mathbf{L}^{\perp})^{\perp}$ is a \underline{\hspace{2cm}} perpendicular to $\mathbf{L}^{\perp}$. In fact $(\mathbf{L}^{\perp})^{\perp}$ is the same as \underline{\hspace{2cm}}.
+
+    \item Suppose $\mathbf{V}$ is the whole space $\mathbf{R}^4$. Then $\mathbf{V}^{\perp}$ contains only the vector \underline{\hspace{2cm}}. Then $(\mathbf{V}^{\perp})^{\perp}$ is \underline{\hspace{2cm}}. So $(\mathbf{V}^{\perp})^{\perp}$ is the same as \underline{\hspace{2cm}}.
+
+    \item Suppose $\mathbf{S}$ is spanned by the vectors $(1, 2, 2, 3)$ and $(1, 3, 3, 2)$. Find two vectors that span $\mathbf{S}^{\perp}$. This is the same as solving $A\boldsymbol{x} = \boldsymbol{0}$ for which $A$?
+
+    \item If $\mathbf{P}$ is the plane of vectors in $\mathbf{R}^4$ satisfying $x_1 + x_2 + x_3 + x_4 = 0$, write a basis for $\mathbf{P}^{\perp}$. Construct a matrix that has $\mathbf{P}$ as its nullspace.
+
+    \item If a subspace $\mathbf{S}$ is contained in a subspace $\mathbf{V}$, prove that $\mathbf{S}^{\perp}$ contains $\mathbf{V}^{\perp}$.
+\end{enumerate}
+
+\noindent \textbf{Questions 24--30 are about perpendicular columns and rows.}
+
+\begin{enumerate}[resume]
+    \item Suppose an $n$ by $n$ matrix is invertible: $AA^{-1} = I$. Then the first column of $A^{-1}$ is orthogonal to the space spanned by which rows of $A$?
+
+    \item Find $A^{\mathrm{T}}A$ if the columns of $A$ are unit vectors, all mutually perpendicular.
+
+    \item Construct a 3 by 3 matrix $A$ with no zero entries whose columns are mutually perpendicular. Compute $A^{\mathrm{T}}A$. Why is it a diagonal matrix?
+
+    \item The lines $3x + y = b_1$ and $6x + 2y = b_2$ are \underline{\hspace{2cm}}. They are the same line if \underline{\hspace{2cm}}. In that case $(b_1, b_2)$ is perpendicular to the vector \underline{\hspace{2cm}}. The nullspace of the matrix is the line $3x + y =$ \underline{\hspace{2cm}}. One particular vector in that nullspace is \underline{\hspace{2cm}}.
+
+    \item Why is each of these statements false?
+          \begin{enumerate}
+              \item $(1, 1, 1)$ is perpendicular to $(1, 1, -2)$ so the planes $x + y + z = 0$ and $x + y - 2z = 0$ are orthogonal subspaces.
+              \item The subspace spanned by $(1, 1, 0, 0, 0)$ and $(0, 0, 0, 1, 1)$ is the orthogonal complement of the subspace spanned by $(1, -1, 0, 0, 0)$ and $(2, -2, 3, 4, -4)$.
+              \item Two subspaces that meet only in the zero vector are orthogonal.
+          \end{enumerate}
+
+    \item Find a matrix with $\boldsymbol{v} = (1, 2, 3)$ in the row space and column space. Find another matrix with $\boldsymbol{v}$ in the nullspace and column space. Which pairs of subspaces can $\boldsymbol{v}$ \emph{not} be in?
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Suppose $A$ is 3 by 4 and $B$ is 4 by 5 and $AB = 0$. So $\mathbf{N}(A)$ contains $\mathbf{C}(B)$. Prove from the dimensions of $\mathbf{N}(A)$ and $\mathbf{C}(B)$ that $\operatorname{rank}(A) + \operatorname{rank}(B) \le 4$.
+
+    \item The command $N = \operatorname{null}(A)$ will produce a basis for the nullspace of $A$. Then the command $B = \operatorname{null}(N')$ will produce a basis for the \underline{\hspace{2cm}} of $A$.
+
+    \item Suppose I give you four nonzero vectors $\boldsymbol{r}, \boldsymbol{n}, \boldsymbol{c}, \boldsymbol{l}$ in $\mathbf{R}^2$.
+          \begin{enumerate}
+              \item What are the conditions for those to be bases for the four fundamental subspaces $\mathbf{C}(A^{\mathrm{T}}), \mathbf{N}(A), \mathbf{C}(A), \mathbf{N}(A^{\mathrm{T}})$ of a 2 by 2 matrix?
+              \item What is one possible matrix $A$?
+          \end{enumerate}
+
+    \item Suppose I give you eight vectors $\boldsymbol{r}_1, \boldsymbol{r}_2, \boldsymbol{n}_1, \boldsymbol{n}_2, \boldsymbol{c}_1, \boldsymbol{c}_2, \boldsymbol{l}_1, \boldsymbol{l}_2$ in $\mathbf{R}^4$.
+          \begin{enumerate}
+              \item What are the conditions for those pairs to be bases for the four fundamental subspaces of a 4 by 4 matrix?
+              \item What is one possible matrix $A$?
+          \end{enumerate}
+\end{enumerate}
 
 \subsection{Projections}
-\paragraph{Challenge Problems}
+\noindent \textbf{Questions 1--9 ask for projections $\boldsymbol{p}$ onto lines. Also errors $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p}$ and matrices $P$.}
 
-\subsection{Least Squares Approximations}
-\noindent
+\begin{enumerate}
+    \item Project the vector $\boldsymbol{b}$ onto the line through $\boldsymbol{a}$. Check that $\boldsymbol{e}$ is perpendicular to $\boldsymbol{a}$:
+          \[
+              \text{(a)} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \qquad
+              \text{(b)} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} -1 \\ -3 \\ -1 \end{bmatrix}.
+          \]
+
+    \item \emph{Draw} the projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ and also compute it from $\boldsymbol{p} = \widehat{x}\boldsymbol{a}$:
+          \[
+              \text{(a)} \quad \boldsymbol{b} = \begin{bmatrix} \cos\theta \\ \sin\theta \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \qquad
+              \text{(b)} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.
+          \]
+
+    \item In Problem 1, find the projection matrix $P = \boldsymbol{a}\boldsymbol{a}^{\mathrm{T}} / \boldsymbol{a}^{\mathrm{T}}\boldsymbol{a}$ onto the line through each vector $\boldsymbol{a}$. Verify in both cases that $P^2 = P$. Multiply $P\boldsymbol{b}$ in each case to compute the projection $\boldsymbol{p}$.
+
+    \item Construct the projection matrices $P_1$ and $P_2$ onto the lines through the $\boldsymbol{a}$'s in Problem 2. Is it true that $(P_1 + P_2)^2 = P_1 + P_2$? This \emph{would} be true if $P_1 P_2 = 0$.
+
+    \item Compute the projection matrices $\boldsymbol{a}\boldsymbol{a}^{\mathrm{T}} / \boldsymbol{a}^{\mathrm{T}}\boldsymbol{a}$ onto the lines through $\boldsymbol{a}_1 = (-1, 2, 2)$ and $\boldsymbol{a}_2 = (2, 2, -1)$. Multiply those projection matrices and explain why their product $P_1 P_2$ is what it is.
+
+    \item Project $\boldsymbol{b} = (1, 0, 0)$ onto the lines through $\boldsymbol{a}_1$ and $\boldsymbol{a}_2$ in Problem 5 and also onto $\boldsymbol{a}_3 = (2, -1, 2)$. Add up the three projections $\boldsymbol{p}_1 + \boldsymbol{p}_2 + \boldsymbol{p}_3$.
+
+    \item Continuing Problems 5--6, find the projection matrix $P_3$ onto $\boldsymbol{a}_3 = (2, -1, 2)$. Verify that $P_1 + P_2 + P_3 = I$. This is because the basis $\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3$ is orthogonal!
+
+          \vspace{0.5cm}
+          \begin{center}
+              \begin{minipage}{0.45\textwidth}
+                  \centering
+                  % \includegraphics[width=0.9\textwidth]{pic/Figure_orthogonal.png}
+                  \includegraphics[width=\textwidth]{pic/Figure4.2.png} \\
+                  \vspace{0.2cm}
+                  Questions 5--6--7: orthogonal
+              \end{minipage}
+              \hfill
+              \begin{minipage}{0.45\textwidth}
+                  \centering
+                  % \includegraphics[width=0.9\textwidth]{pic/Figure_not_orthogonal.png}
+                  \includegraphics[width=\textwidth]{pic/Figure4.2_1.png} \\
+                  \vspace{0.2cm}
+                  Questions 8--9--10: not orthogonal
+              \end{minipage}
+          \end{center}
+          \vspace{0.5cm}
+
+    \item Project the vector $\boldsymbol{b} = (1, 1)$ onto the lines through $\boldsymbol{a}_1 = (1, 0)$ and $\boldsymbol{a}_2 = (1, 2)$. Draw the projections $\boldsymbol{p}_1$ and $\boldsymbol{p}_2$ and add $\boldsymbol{p}_1 + \boldsymbol{p}_2$. The projections do not add to $\boldsymbol{b}$ because the $\boldsymbol{a}$'s are not orthogonal.
+
+    \item In Problem 8, the projection of $\boldsymbol{b}$ onto the \emph{plane} of $\boldsymbol{a}_1$ and $\boldsymbol{a}_2$ will equal $\boldsymbol{b}$. Find $P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ for $A = [\, \boldsymbol{a}_1 \quad \boldsymbol{a}_2 \,] = \begin{bmatrix} 1 & 1 \\ 0 & 2 \end{bmatrix} = \text{invertible matrix}$.
+
+    \item Project $\boldsymbol{a}_1 = (1, 0)$ onto $\boldsymbol{a}_2 = (1, 2)$. Then project the result back onto $\boldsymbol{a}_1$. Draw these projections and multiply the projection matrices $P_1 P_2$: Is this a projection?
+\end{enumerate}
+\noindent \textbf{Questions 11--20 ask for projections, and projection matrices, onto subspaces.}
+
+\begin{enumerate}[resume]
+    \item Project $\boldsymbol{b}$ onto the column space of $A$ by solving $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$ and $\boldsymbol{p} = A\widehat{\boldsymbol{x}}$:
+          \[
+              \text{(a)} \quad A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix} \qquad
+              \text{(b)} \quad A = \begin{bmatrix} 1 & 1 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 4 \\ 4 \\ 6 \end{bmatrix}.
+          \]
+          Find $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p}$. It should be perpendicular to the columns of $A$.
+
+    \item Compute the projection matrices $P_1$ and $P_2$ onto the column spaces in Problem 11. Verify that $P_1\boldsymbol{b}$ gives the first projection $\boldsymbol{p}_1$. Also verify $P_2^2 = P_2$.
+
+    \item (Quick and Recommended) Suppose $A$ is the 4 by 4 identity matrix with its last column removed. $A$ is 4 by 3. Project $\boldsymbol{b} = (1, 2, 3, 4)$ onto the column space of $A$. What shape is the projection matrix $P$ and what is $P$?
+
+    \item Suppose $\boldsymbol{b}$ equals 2 times the first column of $A$. What is the projection of $\boldsymbol{b}$ onto the column space of $A$? Is $P = I$ for sure in this case? Compute $\boldsymbol{p}$ and $P$ when $\boldsymbol{b} = (0, 2, 4)$ and the columns of $A$ are $(0, 1, 2)$ and $(1, 2, 0)$.
+
+    \item If $A$ is doubled, then $P = 2A(4A^{\mathrm{T}}A)^{-1}2A^{\mathrm{T}}$. This is the same as $A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$. The column space of $2A$ is the same as \underline{\hspace{2cm}}. Is $\widehat{\boldsymbol{x}}$ the same for $A$ and $2A$?
+
+    \item What linear combination of $(1, 2, -1)$ and $(1, 0, 1)$ is closest to $\boldsymbol{b} = (2, 1, 1)$?
+
+    \item \emph{(Important)} If $P^2 = P$ show that $(I - P)^2 = I - P$. When $P$ projects onto the column space of $A$, $I - P$ projects onto the \underline{\hspace{2cm}}.
+
+    \item
+          \begin{enumerate}
+              \item If $P$ is the 2 by 2 projection matrix onto the line through $(1, 1)$, then $I - P$ is the projection matrix onto \underline{\hspace{2cm}}.
+              \item If $P$ is the 3 by 3 projection matrix onto the line through $(1, 1, 1)$, then $I - P$ is the projection matrix onto \underline{\hspace{2cm}}.
+          \end{enumerate}
+
+    \item To find the projection matrix onto the plane $x - y - 2z = 0$, choose two vectors in that plane and make them the columns of $A$. The plane will be the column space of $A$! Then compute $P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$.
+
+    \item To find the projection matrix $P$ onto the same plane $x - y - 2z = 0$, write down a vector $\boldsymbol{e}$ that is perpendicular to that plane. Compute the projection $Q = \boldsymbol{e}\boldsymbol{e}^{\mathrm{T}}/\boldsymbol{e}^{\mathrm{T}}\boldsymbol{e}$ and then $P = I - Q$.
+\end{enumerate}
+
+\noindent \textbf{Questions 21--26 show that projection matrices satisfy $\boldsymbol{P^2 = P}$ and $\boldsymbol{P^{\mathrm{T}} = P}$.}
+
+\begin{enumerate}[resume]
+    \item Multiply the matrix $P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ by itself. Cancel to prove that $P^2 = P$. Explain why $P(P\boldsymbol{b})$ always equals $P\boldsymbol{b}$: The vector $P\boldsymbol{b}$ is in the column space of $A$ so its projection onto that column space is \underline{\hspace{2cm}}.
+
+    \item Prove that $P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ is symmetric by computing $P^{\mathrm{T}}$. Remember that the inverse of a symmetric matrix is symmetric.
+
+    \item If $A$ is square and invertible, the warning against splitting $(A^{\mathrm{T}}A)^{-1}$ does not apply. It is true that $AA^{-1}(A^{\mathrm{T}})^{-1}A^{\mathrm{T}} = I$. When $A$ is invertible, why is $P = I$? \textbf{What is the error $\boldsymbol{e}$?}
+
+    \item The nullspace of $A^{\mathrm{T}}$ is \underline{\hspace{2cm}} to the column space $\mathbf{C}(A)$. So if $A^{\mathrm{T}}\boldsymbol{b} = \boldsymbol{0}$, the projection of $\boldsymbol{b}$ onto $\mathbf{C}(A)$ should be $\boldsymbol{p} = $ \underline{\hspace{2cm}}. Check that $P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ gives this answer.
+
+    \item The projection matrix $P$ onto an $n$-dimensional subspace of $\mathbf{R}^m$ has rank $r = n$. \textbf{Reason:} The projections $P\boldsymbol{b}$ fill the subspace $S$. So $S$ is the \underline{\hspace{2cm}} of $P$.
+
+    \item If an $m$ by $m$ matrix has $A^2 = A$ and its rank is $m$, prove that $A = I$.
+
+    \item The important fact that ends the section is this: \textbf{If $\boldsymbol{A^{\mathrm{T}}A\boldsymbol{x} = \boldsymbol{0}}$ then $\boldsymbol{A\boldsymbol{x} = \boldsymbol{0}}$.} \\
+          \emph{New Proof:} The vector $A\boldsymbol{x}$ is in the nullspace of \underline{\hspace{2cm}}. $A\boldsymbol{x}$ is always in the column space of \underline{\hspace{2cm}}. To be in both of those perpendicular spaces, $A\boldsymbol{x}$ must be zero.
+
+    \item Use $P^{\mathrm{T}} = P$ and $P^2 = P$ to prove that the length squared of column 2 always equals the diagonal entry $P_{22}$. This number is $\frac{2}{6} = \frac{4}{36} + \frac{4}{36} + \frac{4}{36}$ for
+          \[
+              P = \frac{1}{6} \begin{bmatrix} 5 & 2 & -1 \\ 2 & 2 & 2 \\ -1 & 2 & 5 \end{bmatrix}.
+          \]
+
+    \item If $B$ has rank $m$ (full row rank, independent rows) show that $BB^{\mathrm{T}}$ is invertible.
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item
+          \begin{enumerate}
+              \item Find the projection matrix $P_C$ onto the column space of $A$ (after looking closely at the matrix!)
+                    \[
+                        A = \begin{bmatrix} 3 & 6 & 6 \\ 4 & 8 & 8 \end{bmatrix}
+                    \]
+              \item Find the 3 by 3 projection matrix $P_R$ onto the row space of $A$. Multiply $B = P_C A P_R$. Your answer $B$ should be a little surprising---can you explain it?
+          \end{enumerate}
+
+    \item In $\mathbf{R}^m$, suppose I give you $\boldsymbol{b}$ and also a combination $\boldsymbol{p}$ of $\boldsymbol{a}_1, \dots, \boldsymbol{a}_n$. How would you test to see if $\boldsymbol{p}$ is the projection of $\boldsymbol{b}$ onto the subspace spanned by the $\boldsymbol{a}$'s?
+
+    \item Suppose $P_1$ is the projection matrix onto the 1-dimensional subspace spanned by the first column of $A$. Suppose $P_2$ is the projection matrix onto the 2-dimensional column space of $A$. After thinking a little, compute the product $P_2P_1$.
+          \[
+              A = \begin{bmatrix} 1 & 0 \\ 2 & 1 \\ 0 & 1 \end{bmatrix}.
+          \]
+
+    \item Suppose you know the average $\widehat{x}_{\mathrm{old}}$ of $b_1, b_2, \dots, b_{999}$. When $b_{1000}$ arrives, check that the new average is a combination of $\widehat{x}_{\mathrm{old}}$ and the mismatch $b_{1000} - \widehat{x}_{\mathrm{old}}$:
+          \[
+              \widehat{\boldsymbol{x}}_{\mathrm{new}} = \frac{b_1 + \cdots + b_{1000}}{1000} = \frac{b_1 + \cdots + b_{999}}{999} + \frac{1}{1000} \left( b_{1000} - \frac{b_1 + \cdots + b_{999}}{999} \right).
+          \]
+          This is a ``\textbf{Kalman filter}'' $\widehat{x}_{\mathrm{new}} = \widehat{x}_{\mathrm{old}} + \frac{1}{1000} (b_{1000} - \widehat{x}_{\mathrm{old}})$ with gain matrix $\frac{1}{1000}$. \\
+          The last page of the book extends the Kalman filter to matrix updates.
+
+    \item (2017) Suppose $P_1$ and $P_2$ are projection matrices ($P_i^2 = P_i = P_i^{\mathrm{T}}$). Prove this fact:
+          \[
+              P_1 P_2 \text{ is a projection matrix if and only if } P_1 P_2 = P_2 P_1.
+          \]
+\end{enumerate}
+\subsection{Least Squares Approximations}
+\noindent \textbf{Problems 1--11 use four data points $\boldsymbol{b} = (0, 8, 8, 20)$ to bring out the key ideas.}
+
+\begin{figure}[htbp]
+    \centering
+    % 请将下面花括号里的路径替换为你本地的 Figure 4.9 图片路径
+    \includegraphics[width=0.8\textwidth]{pic/Figure4.3.png}
+    \renewcommand{\thefigure}{4.9}
+    \caption{\textbf{Problems 1--11:} The closest line $C + Dt$ matches $C\boldsymbol{a}_1 + D\boldsymbol{a}_2$ in $\mathbf{R}^4$.}
+\end{figure}
+
+\begin{enumerate}
+    \item With $\boldsymbol{b} = (0, 8, 8, 20)$ at $t = 0, 1, 3, 4$, set up and solve the normal equations $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$. For the best straight line in Figure 4.9a, find its four heights $p_i$ and four errors $e_i$. What is the minimum value $E = e_1^2 + e_2^2 + e_3^2 + e_4^2$?
+
+    \item (Line $C + Dt$ does go through $\boldsymbol{p}$'s) With $\boldsymbol{b} = (0, 8, 8, 20)$ at times $t = 0, 1, 3, 4$, write down the four equations $A\boldsymbol{x} = \boldsymbol{b}$ (unsolvable). Change the measurements to $\boldsymbol{p} = (1, 5, 13, 17)$ and find an exact solution to $A\widehat{\boldsymbol{x}} = \boldsymbol{p}$.
+
+    \item Check that $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p} = (-1, 3, -5, 3)$ is perpendicular to both columns of the same matrix $A$. What is the shortest distance $\|\boldsymbol{e}\|$ from $\boldsymbol{b}$ to the column space of $A$?
+
+    \item (By calculus) Write down $E = \|A\boldsymbol{x} - \boldsymbol{b}\|^2$ as a sum of four squares---the last one is $(C + 4D - 20)^2$. Find the derivative equations $\partial E/\partial C = 0$ and $\partial E/\partial D = 0$. Divide by 2 to obtain the normal equations $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$.
+
+    \item Find the height $C$ of the best \emph{horizontal line} to fit $\boldsymbol{b} = (0, 8, 8, 20)$. An exact fit would solve the unsolvable equations $C = 0, C = 8, C = 8, C = 20$. Find the 4 by 1 matrix $A$ in these equations and solve $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$. Draw the horizontal line at height $\widehat{x} = C$ and the four errors in $\boldsymbol{e}$.
+
+    \item Project $\boldsymbol{b} = (0, 8, 8, 20)$ onto the line through $\boldsymbol{a} = (1, 1, 1, 1)$. Find $\widehat{x} = \boldsymbol{a}^{\mathrm{T}}\boldsymbol{b}/\boldsymbol{a}^{\mathrm{T}}\boldsymbol{a}$ and the projection $\boldsymbol{p} = \widehat{x}\boldsymbol{a}$. Check that $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p}$ is perpendicular to $\boldsymbol{a}$, and find the shortest distance $\|\boldsymbol{e}\|$ from $\boldsymbol{b}$ to the line through $\boldsymbol{a}$.
+
+    \item Find the closest line $\boldsymbol{b} = Dt$, \emph{through the origin}, to the same four points. An exact fit would solve $D \cdot 0 = 0, D \cdot 1 = 8, D \cdot 3 = 8, D \cdot 4 = 20$. Find the 4 by 1 matrix and solve $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$. Redraw Figure 4.9a showing the best line $\boldsymbol{b} = Dt$ and the $\boldsymbol{e}$'s.
+
+    \item Project $\boldsymbol{b} = (0, 8, 8, 20)$ onto the line through $\boldsymbol{a} = (0, 1, 3, 4)$. Find $\widehat{x} = D$ and $\boldsymbol{p} = \widehat{x}\boldsymbol{a}$. The best $C$ in Problems 5--6 and the best $D$ in Problems 7--8 do \emph{not} agree with the best $(C, D)$ in Problems 1--4. That is because $(1, 1, 1, 1)$ and $(0, 1, 3, 4)$ are \underline{\hspace{2cm}} perpendicular.
+
+    \item For the closest parabola $b = C + Dt + Et^2$ to the same four points, write down the unsolvable equations $A\boldsymbol{x} = \boldsymbol{b}$ in three unknowns $\boldsymbol{x} = (C, D, E)$. Set up the three normal equations $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$ (solution not required). In Figure 4.9a you are now fitting a parabola to 4 points---what is happening in Figure 4.9b?
+
+    \item For the closest cubic $b = C + Dt + Et^2 + Ft^3$ to the same four points, write down the four equations $A\boldsymbol{x} = \boldsymbol{b}$. Solve them by elimination. In Figure 4.9a this cubic now goes exactly through the points. What are $\boldsymbol{p}$ and $\boldsymbol{e}$?
+
+    \item The average of the four times is $\widehat{t} = \frac{1}{4}(0 + 1 + 3 + 4) = 2$. The average of the four $b$'s is $\widehat{b} = \frac{1}{4}(0 + 8 + 8 + 20) = 9$.
+          \begin{enumerate}
+              \item Verify that the best line goes through the center point $(\widehat{t}, \widehat{b}) = (2, 9)$.
+              \item Explain why $C + D\widehat{t} = \widehat{b}$ comes from the first equation in $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$.
+          \end{enumerate}
+\end{enumerate}
+
+\noindent \textbf{Questions 12--16 introduce basic ideas of statistics---the foundation for least squares.}
+
+\begin{enumerate}[resume]
+    \item (Recommended) This problem projects $\boldsymbol{b} = (b_1, \dots, b_m)$ onto the line through $\boldsymbol{a} = (1, \dots, 1)$. We solve $m$ equations $\boldsymbol{a}x = \boldsymbol{b}$ in 1 unknown (by least squares).
+          \begin{enumerate}
+              \item Solve $\boldsymbol{a}^{\mathrm{T}}\boldsymbol{a}\widehat{x} = \boldsymbol{a}^{\mathrm{T}}\boldsymbol{b}$ to show that $\widehat{x}$ is the \emph{mean} (the average) of the $b$'s.
+              \item Find $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{a}\widehat{x}$ and the \emph{variance} $\|\boldsymbol{e}\|^2$ and the \emph{standard deviation} $\|\boldsymbol{e}\|$.
+              \item The horizontal line $\widehat{\boldsymbol{b}} = 3$ is closest to $\boldsymbol{b} = (1, 2, 6)$. Check that $\boldsymbol{p} = (3, 3, 3)$ is perpendicular to $\boldsymbol{e}$ and find the 3 by 3 projection matrix $P$.
+          \end{enumerate}
+
+    \item First assumption behind least squares: $A\boldsymbol{x} = \boldsymbol{b} - (\text{\emph{noise} } \boldsymbol{e} \text{ \emph{with mean zero}})$. Multiply the error vectors $\boldsymbol{e} = \boldsymbol{b} - A\boldsymbol{x}$ by $(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ to get $\widehat{\boldsymbol{x}} - \boldsymbol{x}$ on the right. The estimation errors $\widehat{\boldsymbol{x}} - \boldsymbol{x}$ also average to zero. The estimate $\widehat{\boldsymbol{x}}$ is \emph{unbiased}.
+
+    \item Second assumption behind least squares: The $m$ errors $e_i$ are independent with variance $\sigma^2$, so the average of $(\boldsymbol{b} - A\boldsymbol{x})(\boldsymbol{b} - A\boldsymbol{x})^{\mathrm{T}}$ is $\sigma^2 I$. Multiply on the left by $(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}}$ and on the right by $A(A^{\mathrm{T}}A)^{-1}$ to show that the average matrix $(\widehat{\boldsymbol{x}} - \boldsymbol{x})(\widehat{\boldsymbol{x}} - \boldsymbol{x})^{\mathrm{T}}$ is $\sigma^2 (A^{\mathrm{T}}A)^{-1}$. This is the \textbf{covariance matrix} $W$ in Section 10.2.
+
+    \item A doctor takes 4 readings of your heart rate. The best solution to $x = b_1, \dots, x = b_4$ is the average $\widehat{x}$ of $b_1, \dots, b_4$. The matrix $A$ is a column of 1's. Problem 14 gives the expected error $(\widehat{x} - x)^2$ as $\sigma^2(A^{\mathrm{T}}A)^{-1} =$ \underline{\hspace{2cm}}. \textbf{\emph{By averaging, the variance drops from $\sigma^2$ to $\sigma^2/4$.}}
+
+    \item If you know the average $\widehat{x}_9$ of 9 numbers $b_1, \dots, b_9$, how can you quickly find the average $\widehat{x}_{10}$ with one more number $b_{10}$? The idea of \emph{recursive} least squares is to avoid adding 10 numbers. What number multiplies $\widehat{x}_9$ in computing $\widehat{x}_{10}$?
+          \[
+              \widehat{x}_{10} = \frac{1}{10}b_{10} + \underline{\hspace{1.5cm}} \widehat{x}_9 = \frac{1}{10}(b_1 + \cdots + b_{10}) \quad \text{as in Worked Example 4.2 C.}
+          \]
+\end{enumerate}
+
+\noindent \textbf{Questions 17--24 give more practice with $\widehat{\boldsymbol{x}}$ and $\boldsymbol{p}$ and $\boldsymbol{e}$.}
+
+\begin{enumerate}[resume]
+    \item Write down three equations for the line $b = C + Dt$ to go through $b = 7$ at $t = -1$, $b = 7$ at $t = 1$, and $b = 21$ at $t = 2$. Find the least squares solution $\widehat{\boldsymbol{x}} = (C, D)$ and draw the closest line.
+
+    \item Find the projection $\boldsymbol{p} = A\widehat{\boldsymbol{x}}$ in Problem 17. This gives the three heights of the closest line. Show that the error vector is $\boldsymbol{e} = (2, -6, 4)$. Why is $P\boldsymbol{e} = \mathbf{0}$?
+
+    \item Suppose the measurements at $t = -1, 1, 2$ are the errors $2, -6, 4$ in Problem 18. Compute $\widehat{\boldsymbol{x}}$ and the closest line to these new measurements. Explain the answer: $\boldsymbol{b} = (2, -6, 4)$ is perpendicular to \underline{\hspace{2cm}} so the projection is $\boldsymbol{p} = \mathbf{0}$.
+
+    \item Suppose the measurements at $t = -1, 1, 2$ are $\boldsymbol{b} = (5, 13, 17)$. Compute $\widehat{\boldsymbol{x}}$ and the closest line and $\boldsymbol{e}$. The error is $\boldsymbol{e} = \mathbf{0}$ because this $\boldsymbol{b}$ is \underline{\hspace{2cm}}.
+
+    \item Which of the four subspaces contains the error vector $\boldsymbol{e}$? Which contains $\boldsymbol{p}$? Which contains $\widehat{\boldsymbol{x}}$? What is the nullspace of $A$?
+
+    \item Find the best line $C + Dt$ to fit $b = 4, 2, -1, 0, 0$ at times $t = -2, -1, 0, 1, 2$.
+
+    \item Is the error vector $\boldsymbol{e}$ orthogonal to $\boldsymbol{b}$ or $\boldsymbol{p}$ or $\boldsymbol{e}$ or $\widehat{\boldsymbol{x}}$? Show that $\|\boldsymbol{e}\|^2$ equals $\boldsymbol{e}^{\mathrm{T}}\boldsymbol{b}$ which equals $\boldsymbol{b}^{\mathrm{T}}\boldsymbol{b} - \boldsymbol{p}^{\mathrm{T}}\boldsymbol{b}$. This is the smallest total error $E$.
+
+    \item The partial derivatives of $\|A\boldsymbol{x}\|^2$ with respect to $x_1, \dots, x_n$ fill the vector $2A^{\mathrm{T}}A\boldsymbol{x}$. The derivatives of $2\boldsymbol{b}^{\mathrm{T}}A\boldsymbol{x}$ fill the vector $2A^{\mathrm{T}}\boldsymbol{b}$. So the derivatives of $\|A\boldsymbol{x} - \boldsymbol{b}\|^2$ are zero when \underline{\hspace{2cm}}.
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item \emph{What condition on $(t_1, b_1), (t_2, b_2), (t_3, b_3)$ puts those three points onto a straight line?} A column space answer is: $(b_1, b_2, b_3)$ must be a combination of $(1, 1, 1)$ and $(t_1, t_2, t_3)$. Try to reach a specific equation connecting the $t$'s and $b$'s. I should have thought of this question sooner!
+
+    \item Find the \emph{plane} that gives the best fit to the 4 values $\boldsymbol{b} = (0, 1, 3, 4)$ at the corners $(1, 0)$ and $(0, 1)$ and $(-1, 0)$ and $(0, -1)$ of a square. The equations $C + Dx + Ey = b$ at those 4 points are $A\boldsymbol{x} = \boldsymbol{b}$ with 3 unknowns $\boldsymbol{x} = (C, D, E)$. What is $A$? At the center $(0, 0)$ of the square, show that $C + Dx + Ey = \text{average of the } b\text{'s}$.
+
+    \item (Distance between lines) The points $P = (x, x, x)$ and $Q = (y, 3y, -1)$ are on two lines in space that don't meet. Choose $x$ and $y$ to minimize the squared distance $\|P - Q\|^2$. The line connecting the closest $P$ and $Q$ is perpendicular to \underline{\hspace{2cm}}.
+
+    \item Suppose the columns of $A$ are not independent. How could you find a matrix $B$ so that $P = B(B^{\mathrm{T}}B)^{-1}B^{\mathrm{T}}$ does give the projection onto the column space of $A$? (The usual formula will fail when $A^{\mathrm{T}}A$ is not invertible.)
+
+    \item Usually there will be exactly one hyperplane in $\mathbf{R}^n$ that contains the $n$ given points $\boldsymbol{x} = \mathbf{0}, \boldsymbol{a}_1, \dots, \boldsymbol{a}_{n-1}$. (Example for $n = 3$: There will be one plane containing $\mathbf{0}, \boldsymbol{a}_1, \boldsymbol{a}_2$ unless \underline{\hspace{2cm}}.) What is the test to have exactly one plane in $\mathbf{R}^n$?
+
+    \item Example 2 shifted the times $t_i$ to make them add to zero. We subtracted away the average time $\widehat{t} = (t_1 + \cdots + t_m)/m$ to get $T_i = t_i - \widehat{t}$. Those $T_i$ add to zero. \\
+          With the columns $(1, \dots, 1)$ and $(T_1, \dots, T_m)$ now orthogonal, $A^{\mathrm{T}}A$ is diagonal. Its entries are $m$ and $T_1^2 + \cdots + T_m^2$. Show that the best $C$ and $D$ have direct formulas:
+          \[
+              \boldsymbol{T} \text{ is } \boldsymbol{t} - \widehat{t} \qquad C = \frac{b_1 + \cdots + b_m}{m} \qquad \text{and} \qquad D = \frac{b_1 T_1 + \cdots + b_m T_m}{T_1^2 + \cdots + T_m^2}.
+          \]
+          \textbf{\emph{The best line is }} $C + D\boldsymbol{T} \text{ or } C + D(\boldsymbol{t} - \widehat{t})$. \emph{The time shift that makes $A^{\mathrm{T}}A$ diagonal is an example of the Gram-Schmidt process: orthogonalize the columns of $A$ in advance.}
+\end{enumerate}
+
+
 
 \subsection{Orthonormal Bases and Gram-Schmidt}
-\noindent
+
+\noindent \textbf{Problems 1--12 are about orthogonal vectors and orthogonal matrices.}
+
+\begin{enumerate}
+    \item Are these pairs of vectors orthonormal or only orthogonal or only independent?
+          \[
+              \text{(a)} \quad \begin{bmatrix} 1 \\ 0 \end{bmatrix} \text{ and } \begin{bmatrix} -1 \\ 1 \end{bmatrix} \qquad
+              \text{(b)} \quad \begin{bmatrix} .6 \\ .8 \end{bmatrix} \text{ and } \begin{bmatrix} .4 \\ -.3 \end{bmatrix} \qquad
+              \text{(c)} \quad \begin{bmatrix} \cos\theta \\ \sin\theta \end{bmatrix} \text{ and } \begin{bmatrix} -\sin\theta \\ \cos\theta \end{bmatrix}.
+          \]
+          Change the second vector when necessary to produce orthonormal vectors.
+
+    \item The vectors $(2, 2, -1)$ and $(-1, 2, 2)$ are orthogonal. Divide them by their lengths to find orthonormal vectors $\boldsymbol{q}_1$ and $\boldsymbol{q}_2$. Put those into the columns of $Q$ and multiply $Q^{\mathrm{T}}Q$ and $QQ^{\mathrm{T}}$.
+
+    \item
+          \begin{enumerate}
+              \item If $A$ has three orthogonal columns each of length 4, what is $A^{\mathrm{T}}A$?
+              \item If $A$ has three orthogonal columns of lengths 1, 2, 3, what is $A^{\mathrm{T}}A$?
+          \end{enumerate}
+
+    \item Give an example of each of the following:
+          \begin{enumerate}
+              \item A matrix $Q$ that has orthonormal columns but $QQ^{\mathrm{T}} \ne I$.
+              \item Two orthogonal vectors that are not linearly independent.
+              \item An orthonormal basis for $\mathbf{R}^3$, including the vector $\boldsymbol{q}_1 = (1, 1, 1)/\sqrt{3}$.
+          \end{enumerate}
+
+    \item Find two orthogonal vectors in the plane $x + y + 2z = 0$. Make them orthonormal.
+
+    \item If $Q_1$ and $Q_2$ are orthogonal matrices, show that their product $Q_1 Q_2$ is also an orthogonal matrix. (Use $Q^{\mathrm{T}}Q = I$.)
+
+    \item If $Q$ has orthonormal columns, what is the least squares solution $\widehat{\boldsymbol{x}}$ to $Q\boldsymbol{x} = \boldsymbol{b}$?
+
+    \item If $\boldsymbol{q}_1$ and $\boldsymbol{q}_2$ are orthonormal vectors in $\mathbf{R}^5$, what combination \underline{\hspace{1cm}} $\boldsymbol{q}_1 +$ \underline{\hspace{1cm}} $\boldsymbol{q}_2$ is closest to a given vector $\boldsymbol{b}$?
+
+    \item
+          \begin{enumerate}
+              \item Compute $P = QQ^{\mathrm{T}}$ when $\boldsymbol{q}_1 = (.8, .6, 0)$ and $\boldsymbol{q}_2 = (-.6, .8, 0)$. Verify that $P^2 = P$.
+              \item Prove that always $(QQ^{\mathrm{T}})^2 = QQ^{\mathrm{T}}$ by using $Q^{\mathrm{T}}Q = I$. Then $P = QQ^{\mathrm{T}}$ is the projection matrix onto the column space of $Q$.
+          \end{enumerate}
+
+    \item Orthonormal vectors are automatically linearly independent.
+          \begin{enumerate}
+              \item Vector proof: When $c_1\boldsymbol{q}_1 + c_2\boldsymbol{q}_2 + c_3\boldsymbol{q}_3 = \mathbf{0}$, what dot product leads to $c_1 = 0$? Similarly $c_2 = 0$ and $c_3 = 0$. Thus the $\boldsymbol{q}$'s are independent.
+              \item Matrix proof: Show that $Q\boldsymbol{x} = \mathbf{0}$ leads to $\boldsymbol{x} = \mathbf{0}$. Since $Q$ may be rectangular, you can use $Q^{\mathrm{T}}$ but not $Q^{-1}$.
+          \end{enumerate}
+
+    \item
+          \begin{enumerate}
+              \item Gram-Schmidt: Find orthonormal vectors $\boldsymbol{q}_1$ and $\boldsymbol{q}_2$ in the plane spanned by $\boldsymbol{a} = (1, 3, 4, 5, 7)$ and $\boldsymbol{b} = (-6, 6, 8, 0, 8)$.
+              \item Which vector in this plane is closest to $(1, 0, 0, 0, 0)$?
+          \end{enumerate}
+
+    \item If $\boldsymbol{a}_1, \boldsymbol{a}_2, \boldsymbol{a}_3$ is a basis for $\mathbf{R}^3$, any vector $\boldsymbol{b}$ can be written as
+          \[
+              \boldsymbol{b} = x_1\boldsymbol{a}_1 + x_2\boldsymbol{a}_2 + x_3\boldsymbol{a}_3 \qquad \text{or} \qquad
+              [\, \boldsymbol{a}_1 \quad \boldsymbol{a}_2 \quad \boldsymbol{a}_3 \,]
+              \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \boldsymbol{b}.
+          \]
+          \begin{enumerate}
+              \item Suppose the $\boldsymbol{a}$'s are orthonormal. Show that $x_1 = \boldsymbol{a}_1^{\mathrm{T}}\boldsymbol{b}$.
+              \item Suppose the $\boldsymbol{a}$'s are orthogonal. Show that $x_1 = \boldsymbol{a}_1^{\mathrm{T}}\boldsymbol{b} / \boldsymbol{a}_1^{\mathrm{T}}\boldsymbol{a}_1$.
+              \item If the $\boldsymbol{a}$'s are independent, $x_1$ is the first component of \underline{\hspace{1.5cm}} times $\boldsymbol{b}$.
+          \end{enumerate}
+\end{enumerate}
+
+\noindent \textbf{Problems 13--25 are about the Gram-Schmidt process and $\boldsymbol{A = QR}$.}
+
+\begin{enumerate}[resume]
+    \item What multiple of $\boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ should be subtracted from $\boldsymbol{b} = \begin{bmatrix} 4 \\ 0 \end{bmatrix}$ to make the result $\boldsymbol{B}$ orthogonal to $\boldsymbol{a}$? Sketch a figure to show $\boldsymbol{a}, \boldsymbol{b}$, and $\boldsymbol{B}$.
+
+    \item Complete the Gram-Schmidt process in Problem 13 by computing $\boldsymbol{q}_1 = \boldsymbol{a} / \|\boldsymbol{a}\|$ and $\boldsymbol{q}_2 = \boldsymbol{B} / \|\boldsymbol{B}\|$ and factoring into $QR$:
+          \[
+              \begin{bmatrix} 1 & 4 \\ 1 & 0 \end{bmatrix} = [\, \boldsymbol{q}_1 \quad \boldsymbol{q}_2 \,] \begin{bmatrix} \|\boldsymbol{a}\| & ? \\ 0 & \|\boldsymbol{B}\| \end{bmatrix}.
+          \]
+
+    \item
+          \begin{enumerate}
+              \item Find orthonormal vectors $\boldsymbol{q}_1, \boldsymbol{q}_2, \boldsymbol{q}_3$ such that $\boldsymbol{q}_1, \boldsymbol{q}_2$ span the column space of
+                    \[
+                        A = \begin{bmatrix} 1 & 1 \\ 2 & -1 \\ -2 & 4 \end{bmatrix}.
+                    \]
+              \item Which of the four fundamental subspaces contains $\boldsymbol{q}_3$?
+              \item Solve $A\boldsymbol{x} = (1, 2, 7)$ by least squares.
+          \end{enumerate}
+
+    \item What multiple of $\boldsymbol{a} = (4, 5, 2, 2)$ is closest to $\boldsymbol{b} = (1, 2, 0, 0)$? Find orthonormal vectors $\boldsymbol{q}_1$ and $\boldsymbol{q}_2$ in the plane of $\boldsymbol{a}$ and $\boldsymbol{b}$.
+
+    \item Find the projection of $\boldsymbol{b}$ onto the line through $\boldsymbol{a}$:
+          \[
+              \boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 3 \\ 5 \end{bmatrix} \quad \text{and} \quad \boldsymbol{p} = \text{?} \quad \text{and} \quad \boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p} = \text{?}
+          \]
+          Compute the orthonormal vectors $\boldsymbol{q}_1 = \boldsymbol{a} / \|\boldsymbol{a}\|$ and $\boldsymbol{q}_2 = \boldsymbol{e} / \|\boldsymbol{e}\|$.
+
+    \item (Recommended) Find orthogonal vectors $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ by Gram-Schmidt from $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$:
+          \[
+              \boldsymbol{a} = (1, -1, 0, 0) \qquad \boldsymbol{b} = (0, 1, -1, 0) \qquad \boldsymbol{c} = (0, 0, 1, -1).
+          \]
+          $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ and $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ are bases for the vectors perpendicular to $\boldsymbol{d} = (1, 1, 1, 1)$.
+
+    \item If $A = QR$ then $A^{\mathrm{T}}A = R^{\mathrm{T}}R =$ \underline{\hspace{2cm}} triangular times \underline{\hspace{2cm}} triangular. \emph{Gram-Schmidt on $A$ corresponds to elimination on $A^{\mathrm{T}}A$.} The pivots for $A^{\mathrm{T}}A$ must be the squares of diagonal entries of $R$. Find $Q$ and $R$ by Gram-Schmidt for this $A$:
+          \[
+              A = \begin{bmatrix} -1 & 1 \\ 2 & 1 \\ 2 & 4 \end{bmatrix} \qquad \text{and} \qquad
+              A^{\mathrm{T}}A = \begin{bmatrix} 9 & 9 \\ 9 & 18 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 9 & 9 \\ 0 & 9 \end{bmatrix}.
+          \]
+
+    \item True or false (give an example in either case):
+          \begin{enumerate}
+              \item $Q^{-1}$ is an orthogonal matrix when $Q$ is an orthogonal matrix.
+              \item If $Q$ ($3$ by $2$) has orthonormal columns then $\|Q\boldsymbol{x}\|$ always equals $\|\boldsymbol{x}\|$.
+          \end{enumerate}
+
+    \item Find an orthonormal basis for the column space of $A$:
+          \[
+              A = \begin{bmatrix} 1 & -2 \\ 1 & 0 \\ 1 & 1 \\ 1 & 3 \end{bmatrix} \qquad \text{and} \qquad \boldsymbol{b} = \begin{bmatrix} -4 \\ -3 \\ 3 \\ 0 \end{bmatrix}.
+          \]
+          Then compute the projection of $\boldsymbol{b}$ onto that column space.
+
+    \item Find orthogonal vectors $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$ by Gram-Schmidt from
+          \[
+              \boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \\ 2 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} \quad \text{and} \quad \boldsymbol{c} = \begin{bmatrix} 1 \\ 0 \\ 4 \end{bmatrix}.
+          \]
+
+    \item Find $\boldsymbol{q}_1, \boldsymbol{q}_2, \boldsymbol{q}_3$ (orthonormal) as combinations of $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ (independent columns). Then write $A$ as $QR$:
+          \[
+              A = \begin{bmatrix} 1 & 2 & 4 \\ 0 & 0 & 5 \\ 0 & 3 & 6 \end{bmatrix}.
+          \]
+
+    \item
+          \begin{enumerate}
+              \item Find a basis for the subspace $\mathbf{S}$ in $\mathbf{R}^4$ spanned by all solutions of
+                    \[
+                        x_1 + x_2 + x_3 - x_4 = 0.
+                    \]
+              \item Find a basis for the orthogonal complement $\mathbf{S}^{\perp}$.
+              \item Find $\boldsymbol{b}_1$ in $\mathbf{S}$ and $\boldsymbol{b}_2$ in $\mathbf{S}^{\perp}$ so that $\boldsymbol{b}_1 + \boldsymbol{b}_2 = \boldsymbol{b} = (1, 1, 1, 1)$.
+          \end{enumerate}
+
+    \item If $ad - bc > 0$, the entries in $A = QR$ are
+          \[
+              \begin{bmatrix} a & b \\ c & d \end{bmatrix} =
+              \frac{1}{\sqrt{a^2 + c^2}} \begin{bmatrix} a & -c \\ c & a \end{bmatrix}
+              \frac{1}{\sqrt{a^2 + c^2}} \begin{bmatrix} a^2 + c^2 & ab + cd \\ 0 & ad - bc \end{bmatrix}.
+          \]
+          Write $A = QR$ when $a, b, c, d = 2, 1, 1, 1$ and also $1, 1, 1, 1$. Which entry of $R$ becomes zero when the columns are dependent and Gram-Schmidt breaks down?
+\end{enumerate}
+
+\noindent \textbf{Problems 26--29 use the $\boldsymbol{QR}$ code in equation (11). It executes Gram-Schmidt.}
+
+\begin{enumerate}[resume]
+    \item Show why $\boldsymbol{C}$ (found via $\boldsymbol{C}^*$ in the steps after (11)) is equal to $\boldsymbol{C}$ in equation (8).
+
+    \item Equation (8) subtracts from $\boldsymbol{c}$ its components along $\boldsymbol{A}$ and $\boldsymbol{B}$. Why not subtract the components along $\boldsymbol{a}$ and along $\boldsymbol{b}$?
+
+    \item Where are the $mn^2$ multiplications in equation (11)?
+
+    \item Apply the \textcolor{blue!60!white}{MATLAB} \texttt{qr} code to $\boldsymbol{a} = (2, 2, -1)$, $\boldsymbol{b} = (0, -3, 3)$, $\boldsymbol{c} = (1, 0, 0)$. What are the $\boldsymbol{q}$'s?
+\end{enumerate}
+
+\noindent \textbf{Problems 30--35 involve orthogonal matrices that are special.}
+
+\begin{enumerate}[resume]
+    \item The first four \emph{wavelets} are in the columns of this wavelet matrix $W$:
+          \[
+              W = \frac{1}{2} \begin{bmatrix} 1 & 1 & \sqrt{2} & 0 \\ 1 & 1 & -\sqrt{2} & 0 \\ 1 & -1 & 0 & \sqrt{2} \\ 1 & -1 & 0 & -\sqrt{2} \end{bmatrix}.
+          \]
+          What is special about the columns? Find the inverse wavelet transform $W^{-1}$.
+
+    \item
+          \begin{enumerate}
+              \item Choose $c$ so that $Q$ is an orthogonal matrix:
+                    \[
+                        Q = c \begin{bmatrix} 1 & -1 & -1 & -1 \\ -1 & 1 & -1 & -1 \\ -1 & -1 & 1 & -1 \\ -1 & -1 & -1 & 1 \end{bmatrix}.
+                    \]
+              \item Project $\boldsymbol{b} = (1, 1, 1, 1)$ onto the first column. Then project $\boldsymbol{b}$ onto the plane of the first two columns.
+          \end{enumerate}
+
+    \item If $\boldsymbol{u}$ is a unit vector, then $Q = I - 2\boldsymbol{u}\boldsymbol{u}^{\mathrm{T}}$ is a reflection matrix (Example 3). Find $Q_1$ from $\boldsymbol{u} = (0, 1)$ and $Q_2$ from $\boldsymbol{u} = (0, \sqrt{2}/2, \sqrt{2}/2)$. Draw the reflections when $Q_1$ and $Q_2$ multiply the vectors $(1, 2)$ and $(1, 1, 1)$.
+
+    \item Find all matrices that are both orthogonal and lower triangular.
+
+    \item $Q = I - 2\boldsymbol{u}\boldsymbol{u}^{\mathrm{T}}$ is a reflection matrix when $\boldsymbol{u}^{\mathrm{T}}\boldsymbol{u} = 1$. Two reflections give $Q^2 = I$.
+          \begin{enumerate}
+              \item Show that $Q\boldsymbol{u} = -\boldsymbol{u}$. The mirror is perpendicular to $\boldsymbol{u}$.
+              \item Find $Q\boldsymbol{v}$ when $\boldsymbol{u}^{\mathrm{T}}\boldsymbol{v} = 0$. The mirror contains $\boldsymbol{v}$. It reflects to itself.
+          \end{enumerate}
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item (\textcolor{blue!60!white}{MATLAB}) Factor $[Q, R] = \textbf{qr}(A)$ for $A = \textbf{eye}(4) - \textbf{diag}([\, 1 \quad 1 \quad 1 \,], -1)$. You are orthogonalizing the columns $(1, -1, 0, 0)$ and $(0, 1, -1, 0)$ and $(0, 0, 1, -1)$ and $(0, 0, 0, 1)$ of $A$. Can you scale the orthogonal columns of $Q$ to get nice integer components?
+
+    \item If $A$ is $m$ by $n$ with rank $n$, $\textbf{qr}(A)$ produces a \emph{square} $Q$ and zeros below $R$:
+          \[
+              \text{The factors from MATLAB are } (m \text{ by } m)(m \text{ by } n) \qquad A = [\, Q_1 \quad Q_2 \,] \begin{bmatrix} R \\ 0 \end{bmatrix}.
+          \]
+          The $n$ columns of $Q_1$ are an orthonormal basis for which fundamental subspace? \\
+          The $m-n$ columns of $Q_2$ are an orthonormal basis for which fundamental subspace?
+
+    \item We know that $P = QQ^{\mathrm{T}}$ is the projection onto the column space of $Q$ ($m$ by $n$). Now add another column $\boldsymbol{a}$ to produce $A = [\, Q \quad \boldsymbol{a} \,]$. Gram-Schmidt replaces $\boldsymbol{a}$ by what vector $\boldsymbol{q}$? Start with $\boldsymbol{a}$, subtract \underline{\hspace{1.5cm}}, divide by \underline{\hspace{1.5cm}} to find $\boldsymbol{q}$.
+\end{enumerate}
+
 
 \newpage
 
 \section{Chapter 5: Determinants}
 \subsection{The Properties of Determinants}
-\noindent
-\paragraph{Challenge Problems}
+\noindent \textbf{Questions 1--12 are about the rules for determinants.}
+
+\begin{enumerate}
+    \item If a 4 by 4 matrix has $\det A = \frac{1}{2}$, find $\det(2A)$ and $\det(-A)$ and $\det(A^2)$ and $\det(A^{-1})$.
+
+    \item If a 3 by 3 matrix has $\det A = -1$, find $\det(\frac{1}{2}A)$ and $\det(-A)$ and $\det(A^2)$ and $\det(A^{-1})$.
+
+    \item True or false, with a reason if true or a counterexample if false:
+          \begin{enumerate}
+              \item The determinant of $I + A$ is $1 + \det A$.
+              \item The determinant of $ABC$ is $|A||B||C|$.
+              \item The determinant of $4A$ is $4|A|$.
+              \item The determinant of $AB - BA$ is zero. Try an example with $A = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$.
+          \end{enumerate}
+
+    \item Which row exchanges show that these ``reverse identity matrices'' $J_3$ and $J_4$ have $|J_3| = -1$ but $|J_4| = +1$?
+          \[
+              \det \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix} = -1 \qquad \text{but} \qquad \det \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix} = +1.
+          \]
+
+    \item For $n = 5, 6, 7$, count the row exchanges to permute the reverse identity $J_n$ to the identity matrix $I_n$. Propose a rule for every size $n$ and predict whether $J_{101}$ has determinant $+1$ or $-1$.
+
+    \item Show how Rule 6 (determinant $= 0$ if a row is all zero) comes from Rule 3.
+
+    \item Find the determinants of rotations and reflections:
+          \[
+              Q = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \quad \text{and} \quad Q = \begin{bmatrix} 1 - 2\cos^2\theta & -2\cos\theta\sin\theta \\ -2\cos\theta\sin\theta & 1 - 2\sin^2\theta \end{bmatrix}.
+          \]
+
+    \item Prove that every orthogonal matrix ($Q^{\mathrm{T}}Q = I$) has determinant $1$ or $-1$.
+          \begin{enumerate}
+              \item Use the product rule $|AB| = |A||B|$ and the transpose rule $|Q| = |Q^{\mathrm{T}}|$.
+              \item Use only the product rule. If $|\det Q| > 1$ then $\det Q^n = (\det Q)^n$ blows up. How do you know this can't happen to $Q^n$?
+          \end{enumerate}
+
+    \item Do these matrices have determinant $0, 1, 2$, or $3$?
+          \[
+              A = \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \qquad
+              B = \begin{bmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{bmatrix} \qquad
+              C = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}.
+          \]
+
+    \item If the entries in every row of $A$ add to zero, solve $A\boldsymbol{x} = \mathbf{0}$ to prove $\det A = 0$. If those entries add to one, show that $\det(A - I) = 0$. Does this mean $\det A = 1$?
+
+    \item Suppose that $CD = -DC$ and find the flaw in this reasoning: Taking determinants gives $|C||D| = -|D||C|$. Therefore $|C| = 0$ or $|D| = 0$. One or both of the matrices must be singular. (That is not true.)
+
+    \item The inverse of a $2$ by $2$ matrix seems to have determinant $= 1$:
+          \[
+              \det A^{-1} = \det \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} = \frac{ad - bc}{ad - bc} = 1.
+          \]
+          What is wrong with this calculation? What is the correct $\det A^{-1}$?
+\end{enumerate}
+
+\noindent \textbf{Questions 13--27 use the rules to compute specific determinants.}
+
+\begin{enumerate}[resume]
+    \item Reduce $A$ to $U$ and find $\det A =$ product of the pivots:
+          \[
+              A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3 \end{bmatrix} \qquad \qquad
+              A = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 2 & 3 \\ 3 & 3 & 3 \end{bmatrix}.
+          \]
+
+    \item By applying row operations to produce an upper triangular $U$, compute
+          \[
+              \det \begin{bmatrix} 1 & 2 & 3 & 0 \\ 2 & 6 & 6 & 1 \\ -1 & 0 & 0 & 3 \\ 0 & 2 & 0 & 7 \end{bmatrix}
+              \qquad \text{and} \qquad
+              \det \begin{bmatrix} 2 & -1 & 0 & 0 \\ -1 & 2 & -1 & 0 \\ 0 & -1 & 2 & -1 \\ 0 & 0 & -1 & 2 \end{bmatrix}.
+          \]
+
+    \item Use row operations to simplify and compute these determinants:
+          \[
+              \det \begin{bmatrix} 101 & 201 & 301 \\ 102 & 202 & 302 \\ 103 & 203 & 303 \end{bmatrix}
+              \qquad \text{and} \qquad
+              \det \begin{bmatrix} 1 & t & t^2 \\ t & 1 & t \\ t^2 & t & 1 \end{bmatrix}.
+          \]
+
+    \item Find the determinants of a rank one matrix and a skew-symmetric matrix :
+          \[
+              A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \begin{bmatrix} 1 & -4 & 5 \end{bmatrix}
+              \qquad \text{and} \qquad
+              A = \begin{bmatrix} 0 & 1 & 3 \\ -1 & 0 & 4 \\ -3 & -4 & 0 \end{bmatrix}.
+          \]
+
+    \item A skew-symmetric matrix has $A^{\mathrm{T}} = -A$. Insert $a,b,c$ for $1,3,4$ in Question 16 and show that $|A| = 0$. Write down a 4 by 4 example with $|A| = 1$.
+
+    \item Use row operations to show that the 3 by 3 ``Vandermonde determinant'' is
+          \[
+              \det \begin{bmatrix} 1 & a & a^2 \\ 1 & b & b^2 \\ 1 & c & c^2 \end{bmatrix} = (b - a)(c - a)(c - b).
+          \]
+
+    \item Find the determinants of $U$ and $U^{-1}$ and $U^2$:
+          \[
+              U = \begin{bmatrix} 1 & 4 & 6 \\ 0 & 2 & 5 \\ 0 & 0 & 3 \end{bmatrix}
+              \qquad \text{and} \qquad
+              U = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix}.
+          \]
+
+    \item Suppose you do two row operations at once, going from
+          \[
+              \begin{bmatrix} a & b \\ c & d \end{bmatrix} \qquad \text{to} \qquad \begin{bmatrix} a - Lc & b - Ld \\ c - \ell a & d - \ell b \end{bmatrix}.
+          \]
+          Find the second determinant. Does it equal $ad - bc$?
+
+    \item \emph{Row exchange:} Add row 1 of $A$ to row 2, then subtract row 2 from row 1. Then add row 1 to row 2 and multiply row 1 by $-1$ to reach $B$. Which rules show
+          \[
+              \det B = \begin{vmatrix} c & d \\ a & b \end{vmatrix} \quad \text{equals} \quad -\det A = - \begin{vmatrix} a & b \\ c & d \end{vmatrix}?
+          \]
+          Those rules could replace Rule 2 in the definition of the determinant.
+
+    \item From $ad - bc$, find the determinants of $A$ and $A^{-1}$ and $A - \lambda I$:
+          \[
+              A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \quad \text{and} \quad
+              A^{-1} = \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \quad \text{and} \quad
+              A - \lambda I = \begin{bmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{bmatrix}.
+          \]
+          Which two numbers $\lambda$ lead to $\det(A - \lambda I) = 0$? Write down the matrix $A - \lambda I$ for each of those numbers $\lambda$---it should not be invertible.
+
+    \item From $A = \begin{bmatrix} 4 & 1 \\ 2 & 3 \end{bmatrix}$ find $A^2$ and $A^{-1}$ and $A - \lambda I$ and their determinants. Which two numbers $\lambda$ lead to $\det(A - \lambda I) = 0$?
+
+    \item Elimination reduces $A$ to $U$. Then $A = LU$:
+          \[
+              A = \begin{bmatrix} 3 & 3 & 4 \\ 6 & 8 & 7 \\ -3 & 5 & -9 \end{bmatrix}
+              = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}
+              \begin{bmatrix} 3 & 3 & 4 \\ 0 & 2 & -1 \\ 0 & 0 & -1 \end{bmatrix} = LU.
+          \]
+          Find the determinants of $L, U, A, U^{-1}L^{-1}$, and $U^{-1}L^{-1}A$.
+
+    \item If the $i,j$ entry of $A$ is $i$ times $j$, show that $\det A = 0$. (Exception when $A = [1]$.)
+
+    \item If the $i,j$ entry of $A$ is $i + j$, show that $\det A = 0$. (Exception when $n = 1$ or $2$.)
+
+    \item Compute the determinants of these matrices by row operations:
+          \[
+              A = \begin{bmatrix} 0 & a & 0 \\ 0 & 0 & b \\ c & 0 & 0 \end{bmatrix} \qquad \text{and} \qquad
+              B = \begin{bmatrix} 0 & a & 0 & 0 \\ 0 & 0 & b & 0 \\ 0 & 0 & 0 & c \\ d & 0 & 0 & 0 \end{bmatrix} \qquad \text{and} \qquad
+              C = \begin{bmatrix} a & a & a \\ a & b & b \\ a & b & c \end{bmatrix}.
+          \]
+
+    \item True or false (give a reason if true or a 2 by 2 example if false):
+          \begin{enumerate}
+              \item If $A$ is not invertible then $AB$ is not invertible.
+              \item The determinant of $A$ is always the product of its pivots.
+              \item The determinant of $A - B$ equals $\det A - \det B$.
+              \item $AB$ and $BA$ have the same determinant.
+          \end{enumerate}
+
+    \item What is wrong with this proof that projection matrices have $\det P = 1$?
+          \[
+              P = A(A^{\mathrm{T}}A)^{-1}A^{\mathrm{T}} \qquad \text{so} \qquad |P| = |A| \frac{1}{|A^{\mathrm{T}}||A|} |A^{\mathrm{T}}| = 1.
+          \]
+
+    \item (Calculus question) Show that the partial derivatives of $\ln(\det A)$ give $A^{-1}$!
+          \[
+              f(a, b, c, d) = \ln(ad - bc) \qquad \text{leads to} \qquad \begin{bmatrix} \partial f/\partial a & \partial f/\partial c \\ \partial f/\partial b & \partial f/\partial d \end{bmatrix} = A^{-1}.
+          \]
+
+    \item (MATLAB) The Hilbert matrix \textbf{hilb}($n$) has $i,j$ entry equal to $1/(i + j - 1)$. Print the determinants of \textbf{hilb}(1), \textbf{hilb}(2), \dots, \textbf{hilb}(10). Hilbert matrices are hard to work with! What are the pivots of \textbf{hilb} (5)?
+
+    \item (MATLAB) What is a typical determinant (experimentally) of \textbf{rand}($n$) and \textbf{randn}($n$) for $n = 50, 100, 200, 400$? (And what does ``Inf'' mean in MATLAB?)
+
+    \item (MATLAB) Find the largest determinant of a 6 by 6 matrix of 1's and $-1$'s.
+
+    \item If you know that $\det A = 6$, what is the determinant of $B$?
+          \[
+              \text{From } \det A = \begin{vmatrix} \text{row } 1 \\ \text{row } 2 \\ \text{row } 3 \end{vmatrix} = 6 \text{ find } \det B = \begin{vmatrix} \text{row } 3 + \text{row } 2 + \text{row } 1 \\ \text{row } 2 + \text{row } 1 \\ \text{row } 1 \end{vmatrix}.
+          \]
+\end{enumerate}
 
 \subsection{Permutations and Cofactors }
 \noindent
