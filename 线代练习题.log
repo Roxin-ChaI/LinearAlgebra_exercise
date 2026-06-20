@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  21 JUN 2026 04:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  21 JUN 2026 06:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,7 +886,12 @@ Overfull \hbox (1.45436pt too wide) in paragraph at lines 4804--4805
 []\OT1/LibertinusSerif-TLF/b/n/10 An $\OML/cmm/m/it/10 n$\OT1/LibertinusSerif-TLF/b/n/10 -dimensional cube has how many cor-ners? How many edges? How many $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)$\OT1/LibertinusSerif-TLF/b/n/10 -dimensional
  []
 
-[71] [72] [73] [74] (./线代练习题.aux)
+[71] [72] [73] [74] [75] [76] [77] [78]
+Overfull \hbox (7.15204pt too wide) in paragraph at lines 5259--5260
+[]\OT1/LibertinusSerif-TLF/b/n/10 Suppose $\OML/cmm/m/it/10 A[]$ \OT1/LibertinusSerif-TLF/b/n/10 and $\OML/cmm/m/it/10 A[]$ \OT1/LibertinusSerif-TLF/b/n/10 are $\OML/cmm/m/it/10 n$ \OT1/LibertinusSerif-TLF/b/n/10 by $\OML/cmm/m/it/10 n$ \OT1/LibertinusSerif-TLF/b/n/10 in-vert-ible ma-tri-ces. What ma-trix $\OML/cmm/m/it/10 B$ \OT1/LibertinusSerif-TLF/b/n/10 shows that $\OML/cmm/m/it/10 A[]A[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]A[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 B[]$\OT1/LibertinusSerif-TLF/b/n/10 ?
+ []
+
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -895,18 +900,18 @@ Package rerunfilecheck Info: File `线代练习题.out' has not changed.
 (rerunfilecheck)             Checksum: 208624769709447F696CC29FB5ED8637;7954.
  ) 
 Here is how much of TeX's memory you used:
- 24964 strings out of 467348
- 451196 string characters out of 5419842
+ 25256 strings out of 467348
+ 453799 string characters out of 5419842
  855221 words of memory out of 5000000
- 52307 multiletter control sequences out of 15000+600000
+ 52308 multiletter control sequences out of 15000+600000
  654591 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,18n,107p,882b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 线代练习题.pdf (74 pages, 1017070 bytes).
+<e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 线代练习题.pdf (92 pages, 1105504 bytes).
 PDF statistics:
- 2130 PDF objects out of 2487 (max. 8388607)
- 1983 compressed objects within 20 object streams
- 1328 named destinations out of 1440 (max. 500000)
+ 2544 PDF objects out of 2984 (max. 8388607)
+ 2373 compressed objects within 24 object streams
+ 1619 named destinations out of 1728 (max. 500000)
  362 words of extra memory for PDF output out of 10000 (max. 10000000)
 

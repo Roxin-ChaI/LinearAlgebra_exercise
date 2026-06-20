@@ -4906,25 +4906,957 @@
               A^{-1} = \begin{bmatrix} -1/2 & 1 \\ 1/2 & 0 \end{bmatrix} .
           \]
           $A^{-1}$ has the \underline{\hspace{1cm}} eigenvectors as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, its inverse has eigenvalues \underline{\hspace{1.5cm}} .
+
+    \item Compute the eigenvalues and eigenvectors of $A$ and $A^2$:
+          \[
+              A = \begin{bmatrix} -1 & 3 \\ 2 & 0 \end{bmatrix} \quad \text{and} \quad A^2 = \begin{bmatrix} 7 & -3 \\ -2 & 6 \end{bmatrix} .
+          \]
+          $A^2$ has the same \underline{\hspace{1cm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{1cm}} . In this example, why is $\lambda_1^2 + \lambda_2^2 = 13$?
+
+    \item Find the eigenvalues of $A$ and $B$ (easy for triangular matrices) and $A + B$:
+          \[
+              A = \begin{bmatrix} 3 & 0 \\ 1 & 1 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 1 & 1 \\ 0 & 3 \end{bmatrix} \quad \text{and} \quad A + B = \begin{bmatrix} 4 & 1 \\ 1 & 4 \end{bmatrix} .
+          \]
+          Eigenvalues of $A + B$ (\textit{are equal to})(\textit{are not equal to}) eigenvalues of $A$ plus eigenvalues of $B$.
+
+    \item Find the eigenvalues of $A$ and $B$ and $AB$ and $BA$:
+          \[
+              A = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \quad \text{and} \quad AB = \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} \quad \text{and} \quad BA = \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item Are the eigenvalues of $AB$ equal to eigenvalues of $A$ times eigenvalues of $B$?
+              \item Are the eigenvalues of $AB$ equal to the eigenvalues of $BA$?
+          \end{enumerate}
+
+    \item Elimination produces $A = LU$. The eigenvalues of $U$ are on its diagonal; they are the \underline{\hspace{1cm}} . The eigenvalues of $L$ are on its diagonal; they are all \underline{\hspace{1cm}} . The eigenvalues of $A$ are not the same as \underline{\hspace{1cm}} .
+
+    \item
+          \begin{enumerate}
+              \item If you know that $x$ is an eigenvector, the way to find $\lambda$ is to \underline{\hspace{1cm}} .
+              \item If you know that $\lambda$ is an eigenvalue, the way to find $x$ is to \underline{\hspace{1cm}} .
+          \end{enumerate}
+
+    \item What do you do to the equation $Ax = \lambda x$, in order to prove (a), (b), and (c)?
+          \begin{enumerate}
+              \item $\lambda^2$ is an eigenvalue of $A^2$, as in Problem 4.
+              \item $\lambda^{-1}$ is an eigenvalue of $A^{-1}$, as in Problem 3.
+              \item $\lambda + 1$ is an eigenvalue of $A + I$, as in Problem 2.
+          \end{enumerate}
+
+    \item Find the eigenvalues and eigenvectors for both of these Markov matrices $A$ and $A^{\infty}$. Explain from those answers why $A^{100}$ is close to $A^{\infty}$:
+          \[
+              A = \begin{bmatrix} .6 & .2 \\ .4 & .8 \end{bmatrix} \quad \text{and} \quad A^{\infty} = \begin{bmatrix} 1/3 & 1/3 \\ 2/3 & 2/3 \end{bmatrix} .
+          \]
+
+    \item Here is a strange fact about 2 by 2 matrices with eigenvalues $\lambda_1 \neq \lambda_2$: The columns of $A - \lambda_1 I$ are multiples of the eigenvector $x_2$. Any idea why this should be?
+
+    \item Find three eigenvectors for this matrix $P$ (projection matrices have $\lambda = 1$ and $0$):
+          \[
+              \textbf{Projection matrix} \hspace{2cm} P = \begin{bmatrix} .2 & .4 & 0 \\ .4 & .8 & 0 \\ 0 & 0 & 1 \end{bmatrix} .
+          \]
+          If two eigenvectors share the same $\lambda$, so do all their linear combinations. Find an eigenvector of $P$ with no zero components.
+
+    \item From the unit vector ${u} = \left(\frac{1}{6}, \frac{1}{6}, \frac{3}{6}, \frac{5}{6}\right)$ construct the rank one projection matrix $P = {u}{u}^{\mathrm{T}}$. This matrix has $P^2 = P$ because ${u}^{\mathrm{T}}{u} = 1$.
+          \begin{enumerate}
+              \item $P{u} = {u}$ comes from $({u}{u}^{\mathrm{T}}){u} = {u}(\underline{\hspace{1cm}})$. Then ${u}$ is an eigenvector with $\lambda = 1$.
+              \item If ${v}$ is perpendicular to ${u}$ show that $P{v} = {0}$. Then $\lambda = 0$.
+              \item Find three independent eigenvectors of $P$ all with eigenvalue $\lambda = 0$.
+          \end{enumerate}
+
+    \item Solve $\det(Q - \lambda I) = 0$ by the quadratic formula to reach $\lambda = \cos \theta \pm i \sin \theta$:
+          \[
+              Q = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \quad \text{rotates the } xy \text{ plane by the angle } \theta. \text{ No real } \lambda \text{'s}.
+          \]
+          Find the eigenvectors of $Q$ by solving $(Q - \lambda I){x} = {0}$. Use $i^2 = -1$.
+
+    \item Every permutation matrix leaves ${x} = (1, 1, \dots, 1)$ unchanged. Then $\lambda = 1$. Find two more $\lambda$'s (possibly complex) for these permutations, from $\det(P - \lambda I) = 0$:
+          \[
+              P = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix} .
+          \]
+
+    \item \textbf{The determinant of $A$ equals the product} $\lambda_1 \lambda_2 \cdots \lambda_n$. Start with the polynomial $\det(A - \lambda I)$ separated into its $n$ factors (always possible). Then set $\lambda = 0$:
+          \[
+              \det(A - \lambda I) = (\lambda_1 - \lambda)(\lambda_2 - \lambda) \cdots (\lambda_n - \lambda) \quad \text{so} \quad \det A = \underline{\hspace{1cm}} .
+          \]
+          Check this rule in Example 1 where the Markov matrix has $\lambda = 1$ and $\frac{1}{2}$.
+
+    \item The sum of the diagonal entries (the \textit{trace}) equals the sum of the eigenvalues:
+          \[
+              A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \quad \text{has} \quad \det(A - \lambda I) = \lambda^2 - (a + d)\lambda + ad - bc = 0.
+          \]
+          The quadratic formula gives the eigenvalues $\lambda = (a + d + \sqrt{\hspace{0.5cm}})/2$ and $\lambda = \underline{\hspace{1cm}}$. Their sum is \underline{\hspace{1cm}}. If $A$ has $\lambda_1 = 3$ and $\lambda_2 = 4$ then $\det(A - \lambda I) = \underline{\hspace{1cm}}$.
+
+    \item If $A$ has $\lambda_1 = 4$ and $\lambda_2 = 5$ then $\det(A - \lambda I) = (\lambda - 4)(\lambda - 5) = \lambda^2 - 9\lambda + 20$. Find three matrices that have trace $a + d = 9$ and determinant $20$ and $\lambda = 4, 5$.
+
+    \item A 3 by 3 matrix $B$ is known to have eigenvalues $0, 1, 2$. This information is enough to find three of these (give the answers where possible):
+          \begin{enumerate}
+              \item the rank of $B$
+              \item the determinant of $B^{\mathrm{T}}B$
+              \item the eigenvalues of $B^{\mathrm{T}}B$
+              \item the eigenvalues of $(B^2 + I)^{-1}$.
+          \end{enumerate}
+
+    \item Choose the last rows of $A$ and $C$ to give eigenvalues $4, 7$ and $1, 2, 3$:
+          \[
+              \text{Companion matrices} \hspace{2cm} A = \begin{bmatrix} 0 & 1 \\ * & * \end{bmatrix} \quad C = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ * & * & * \end{bmatrix} .
+          \]
+
+    \item The eigenvalues of $A$ equal the eigenvalues of $A^{\mathrm{T}}$. This is because $\det(A - \lambda I)$ equals $\det(A^{\mathrm{T}} - \lambda I)$. That is true because \underline{\hspace{1cm}} . Show by an example that the eigenvectors of $A$ and $A^{\mathrm{T}}$ are \textit{not} the same.
+
+    \item Construct any 3 by 3 Markov matrix $M$: positive entries down each column add to $1$. Show that $M^{\mathrm{T}}(1, 1, 1) = (1, 1, 1)$. By Problem 21, $\lambda = 1$ is also an eigenvalue of $M$. Challenge: A 3 by 3 singular Markov matrix with trace $1/2$ has what $\lambda$'s?
+
+    \item Find three 2 by 2 matrices that have $\lambda_1 = \lambda_2 = 0$. The trace is zero and the determinant is zero. $A$ might not be the zero matrix but check that $A^2 = 0$.
+
+    \item This matrix is singular with rank one. Find three $\lambda$'s and three eigenvectors:
+          \[
+              A = \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} 2 & 1 & 2 \end{bmatrix} = \begin{bmatrix} 2 & 1 & 2 \\ 4 & 2 & 4 \\ 2 & 1 & 2 \end{bmatrix} .
+          \]
+
+    \item Suppose $A$ and $B$ have the same eigenvalues $\lambda_1, \dots, \lambda_n$ with the same independent eigenvectors $x_1, \dots, x_n$. Then $A = B$. Reason: Any vector $x$ is a combination $c_1 x_1 + \dots + c_n x_n$. What is $Ax$? What is $Bx$?
+
+    \item The block $B$ has eigenvalues $1, 2$ and $C$ has eigenvalues $3, 4$ and $D$ has eigenvalues $5, 7$. Find the eigenvalues of the 4 by 4 matrix $A$:
+          \[
+              A = \begin{bmatrix} B & C \\ 0 & D \end{bmatrix} = \begin{bmatrix} 0 & 1 & 3 & 0 \\ -2 & 3 & 0 & 4 \\ 0 & 0 & 6 & 1 \\ 0 & 0 & 1 & 6 \end{bmatrix} .
+          \]
+
+    \item Find the rank and the four eigenvalues of $A$ and $C$:
+          \[
+              A = \begin{bmatrix} 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \end{bmatrix} \quad \text{and} \quad C = \begin{bmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{bmatrix} .
+          \]
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{27}
+    \item Subtract $I$ from the previous $A$. Find the $\lambda$'s and then the determinants of
+          \[
+              B = A - I = \begin{bmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix} \quad \text{and} \quad C = I - A = \begin{bmatrix} 0 & -1 & -1 & -1 \\ -1 & 0 & -1 & -1 \\ -1 & -1 & 0 & -1 \\ -1 & -1 & -1 & 0 \end{bmatrix} .
+          \]
+
+    \item (Review) Find the eigenvalues of $A, B$, and $C$:
+          \[
+              A = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 2 & 0 \\ 3 & 0 & 0 \end{bmatrix} \quad \text{and} \quad C = \begin{bmatrix} 2 & 2 & 2 \\ 2 & 2 & 2 \\ 2 & 2 & 2 \end{bmatrix} .
+          \]
+
+    \item When $a + b = c + d$ show that $(1, 1)$ is an eigenvector and find both eigenvalues:
+          \[
+              A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} .
+          \]
+
+    \item If we exchange rows 1 and 2 \textit{and} columns 1 and 2, the eigenvalues don't change. Find eigenvectors of $A$ and $B$ for $\lambda = 11$. \textit{Rank one gives} $\lambda_2 = \lambda_3 = 0$.
+          \[
+              A = \begin{bmatrix} 1 & 2 & 1 \\ 3 & 6 & 3 \\ 4 & 8 & 4 \end{bmatrix} \quad \text{and} \quad B = PAP^{\mathrm{T}} = \begin{bmatrix} 6 & 3 & 3 \\ 2 & 1 & 1 \\ 8 & 4 & 4 \end{bmatrix} .
+          \]
+
+    \item Suppose $A$ has eigenvalues $0, 3, 5$ with independent eigenvectors $u, v, w$.
+          \begin{enumerate}
+              \item Give a basis for the nullspace and a basis for the column space.
+              \item Find a particular solution to $Ax = v + w$. Find all solutions.
+              \item $Ax = u$ has no solution. If it did then \underline{\hspace{1cm}} would be in the column space.
+          \end{enumerate}
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Show that $u$ is an eigenvector of the rank one $2 \times 2$ matrix $A = uv^{\mathrm{T}}$. Find both eigenvalues of $A$. Check that $\lambda_1 + \lambda_2$ agrees with the trace $u_1v_1 + u_2v_2$.
+
+    \item Find the eigenvalues of this permutation matrix $P$ from $\det(P - \lambda I) = 0$. Which vectors are not changed by the permutation? They are eigenvectors for $\lambda = 1$. Can you find three more eigenvectors?
+          \[
+              P = \begin{bmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} .
+          \]
+
+    \item There are six 3 by 3 permutation matrices $P$. What numbers can be the \textit{determinants} of $P$? What numbers can be \textit{pivots}? What numbers can be the \textit{trace} of $P$? What \textit{four numbers} can be eigenvalues of $P$, as in Problem 15?
+
+    \item (Heisenberg's Uncertainty Principle) $AB - BA = I$ can happen for infinite matrices with $A = A^{\mathrm{T}}$ and $B = -B^{\mathrm{T}}$. Then
+          \[
+              x^{\mathrm{T}}x = x^{\mathrm{T}}ABx - x^{\mathrm{T}}BAx \le 2\|Ax\| \|Bx\|.
+          \]
+          Explain that last step by using the Schwarz inequality $|u^{\mathrm{T}}v| \le \|u\|\|v\|$. Then Heisenberg's inequality says that $\|Ax\|/\|x\|$ times $\|Bx\|/\|x\|$ is at least $1/2$. It is impossible to get the position error and momentum error both very small.
+
+    \item \textit{Find a 2 by 2 rotation matrix} (other than $I$) with $A^3 = I$. Its eigenvalues must satisfy $\lambda^3 = 1$. They can be $e^{2\pi i/3}$ and $e^{-2\pi i/3}$. What are the trace and determinant?
+
+    \item
+          \begin{enumerate}
+              \item Find the eigenvalues and eigenvectors of $A$. They depend on $c$:
+                    \[
+                        A = \begin{bmatrix} .4 & 1 - c \\ .6 & c \end{bmatrix} .
+                    \]
+              \item Show that $A$ has just one line of eigenvectors when $c = 1.6$.
+              \item This is a Markov matrix when $c = .8$. Then $A^n$ will approach what matrix $A^{\infty}$?
+          \end{enumerate}
+\end{enumerate}
+
+\subsection{Diagonalizing a Matrix}
+\noindent Questions 1--7 are about the eigenvalue and eigenvector matrices $\Lambda$ and $X$.
+
+\begin{enumerate}
+    \item
+          \begin{enumerate}
+              \item Factor these two matrices into $A = X\Lambda X^{-1}$:
+                    \[
+                        A = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 1 & 1 \\ 3 & 3 \end{bmatrix} .
+                    \]
+              \item If $A = X\Lambda X^{-1}$ then $A^3 = ( \quad )( \quad )( \quad )$ and $A^{-1} = ( \quad )( \quad )( \quad )$.
+          \end{enumerate}
+
+    \item If $A$ has $\lambda_1 = 2$ with eigenvector $x_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ and $\lambda_2 = 5$ with $x_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$, use $X\Lambda X^{-1}$ to find $A$. No other matrix has the same $\lambda$'s and $x$'s.
+
+    \item Suppose $A = X\Lambda X^{-1}$. What is the eigenvalue matrix for $A + 2I$? What is the eigenvector matrix? Check that $A + 2I = ( \quad )( \quad )( \quad )^{-1}$.
+
+    \item True or false: If the columns of $X$ (eigenvectors of $A$) are linearly independent, then
+          \begin{enumerate}
+              \item $A$ is invertible
+              \item $A$ is diagonalizable
+              \item $X$ is invertible
+              \item $X$ is diagonalizable.
+          \end{enumerate}
+
+    \item If the eigenvectors of $A$ are the columns of $I$, then $A$ is a \underline{\hspace{1cm}} matrix. If the eigenvector matrix $X$ is triangular, then $X^{-1}$ is triangular. Prove that $A$ is also triangular.
+
+    \item Describe all matrices $X$ that diagonalize this matrix $A$ (find all eigenvectors):
+          \[
+              A = \begin{bmatrix} 4 & 0 \\ 1 & 2 \end{bmatrix} .
+          \]
+          Then describe all matrices that diagonalize $A^{-1}$.
+
+    \item Write down the most general matrix that has eigenvectors $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix} 1 \\ -1 \end{bmatrix}$.
+\end{enumerate}
+
+\noindent Questions 8--10 are about Fibonacci and Gibonacci numbers.
+
+\begin{enumerate}[resume]
+    \item Diagonalize the Fibonacci matrix by completing $X^{-1}$:
+          \[
+              \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \begin{bmatrix} \quad & \quad \\ \quad & \quad \end{bmatrix} .
+          \]
+          Do the multiplication $X \Lambda^k X^{-1} \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ to find its second component. This is the $k$th Fibonacci number $F_k = (\lambda_1^k - \lambda_2^k)/(\lambda_1 - \lambda_2)$.
+
+    \item Suppose $G_{k+2}$ is the \textit{average} of the two previous numbers $G_{k+1}$ and $G_k$:
+          \[
+              \begin{matrix} G_{k+2} = \frac{1}{2} G_{k+1} + \frac{1}{2} G_k \\ G_{k+1} = G_{k+1} \end{matrix} \quad \text{is} \quad \begin{bmatrix} G_{k+2} \\ G_{k+1} \end{bmatrix} = \begin{bmatrix} \quad & A & \quad \\ \quad & \quad & \quad \end{bmatrix} \begin{bmatrix} G_{k+1} \\ G_k \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item Find the eigenvalues and eigenvectors of $A$.
+              \item Find the limit as $n \to \infty$ of the matrices $A^n = X \Lambda^n X^{-1}$.
+              \item If $G_0 = 0$ and $G_1 = 1$ show that the Gibonacci numbers approach $2/3$.
+          \end{enumerate}
+
+    \item Prove that every third Fibonacci number in $0, 1, 1, 2, 3, \dots$ is even.
+\end{enumerate}
+
+\noindent Questions 11--14 are about diagonalizability.
+
+\begin{enumerate}[resume]
+    \item True or false: If the eigenvalues of $A$ are $2, 2, 5$ then the matrix is certainly
+          \begin{enumerate}
+              \item invertible \quad (b) diagonalizable \quad (c) not diagonalizable.
+          \end{enumerate}
+
+    \item True or false: If the only eigenvectors of $A$ are multiples of $(1, 4)$ then $A$ has
+          \begin{enumerate}
+              \item no inverse \quad (b) a repeated eigenvalue \quad (c) no diagonalization $X \Lambda X^{-1}$.
+          \end{enumerate}
+
+    \item Complete these matrices so that $\det A = 25$. Then check that $\lambda = 5$ is repeated---the trace is $10$ so the determinant of $A - \lambda I$ is $(\lambda - 5)^2$. Find an eigenvector with $Ax = 5x$. These matrices will not be diagonalizable because there is no second line of eigenvectors.
+          \[
+              A = \begin{bmatrix} 8 & \quad \\ \quad & 2 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 9 & 4 \\ \quad & 1 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 10 & 5 \\ -5 & \quad \end{bmatrix}
+          \]
+
+    \item The matrix $A = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$ is not diagonalizable because the rank of $A - 3I$ is \underline{\hspace{1cm}} . Change one entry to make $A$ diagonalizable. Which entries could you change?
+\end{enumerate}
+
+\noindent Questions 15--19 are about powers of matrices.
+
+\begin{enumerate}[resume]
+    \item $A^k = X \Lambda^k X^{-1}$ approaches the zero matrix as $k \to \infty$ if and only if every $\lambda$ has absolute value less than \underline{\hspace{1cm}} . Which of these matrices has $A^k \to 0$?
+          \[
+              A_1 = \begin{bmatrix} .6 & .9 \\ .4 & .1 \end{bmatrix} \quad \text{and} \quad A_2 = \begin{bmatrix} .6 & .9 \\ .1 & .6 \end{bmatrix} .
+          \]
+
+    \item (Recommended) Find $\Lambda$ and $X$ to diagonalize $A_1$ in Problem 15. What is the limit of $\Lambda^k$ as $k \to \infty$? What is the limit of $X \Lambda^k X^{-1}$? In the columns of this limiting matrix you see the \underline{\hspace{1cm}} .
+
+    \item Find $\Lambda$ and $X$ to diagonalize $A_2$ in Problem 15. What is $(A_2)^{10}u_0$ for these $u_0$?
+          \[
+              u_0 = \begin{bmatrix} 3 \\ 1 \end{bmatrix} \quad \text{and} \quad u_0 = \begin{bmatrix} 3 \\ -1 \end{bmatrix} \quad \text{and} \quad u_0 = \begin{bmatrix} 6 \\ 0 \end{bmatrix} .
+          \]
+
+    \item Diagonalize $A$ and compute $X \Lambda^k X^{-1}$ to prove this formula for $A^k$:
+          \[
+              A = \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \quad \text{has} \quad A^k = \frac{1}{2} \begin{bmatrix} 1 + 3^k & 1 - 3^k \\ 1 - 3^k & 1 + 3^k \end{bmatrix} .
+          \]
+
+    \item Diagonalize $B$ and compute $X \Lambda^k X^{-1}$ to prove this formula for $B^k$:
+          \[
+              B = \begin{bmatrix} 5 & 1 \\ 0 & 4 \end{bmatrix} \quad \text{has} \quad B^k = \begin{bmatrix} 5^k & 5^k - 4^k \\ 0 & 4^k \end{bmatrix} .
+          \]
+
+    \item Suppose $A = X \Lambda X^{-1}$. Take determinants to prove $\det A = \det \Lambda = \lambda_1 \lambda_2 \cdots \lambda_n$. This quick proof only works when $A$ can be \underline{\hspace{1cm}} .
+
+    \item Show that trace $XY = \text{trace } YX$, by adding the diagonal entries of $XY$ and $YX$:
+          \[
+              X = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \quad \text{and} \quad Y = \begin{bmatrix} q & r \\ s & t \end{bmatrix} .
+          \]
+          Now choose $Y$ to be $\Lambda X^{-1}$. Then $X \Lambda X^{-1}$ has the same trace as $\Lambda X^{-1} X = \Lambda$. This proves that \textit{the trace of $A$ equals the trace of $\Lambda = \text{sum of the eigenvalues}$}.
+
+    \item $AB - BA = I$ is impossible since the left side has trace $=$ \underline{\hspace{1cm}} . But find an elimination matrix so that $A = E$ and $B = E^{\mathrm{T}}$ give
+          \[
+              AB - BA = \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \quad \text{which has trace zero.}
+          \]
+
+    \item If $A = X \Lambda X^{-1}$, diagonalize the block matrix $B = \begin{bmatrix} A & 0 \\ 0 & 2A \end{bmatrix}$. Find its eigenvalue and eigenvector (block) matrices.
+
+    \item Consider all 4 by 4 matrices $A$ that are diagonalized by the same fixed eigenvector matrix $X$. Show that the $A$'s form a subspace ($cA$ and $A_1 + A_2$ have this same $X$). What is this subspace when $X = I$? What is its dimension?
+
+    \item Suppose $A^2 = A$. On the left side $A$ multiplies each column of $A$. Which of our four subspaces contains eigenvectors with $\lambda = 1$? Which subspace contains eigenvectors with $\lambda = 0$? From the dimensions of those subspaces, $A$ has a full set of independent eigenvectors. So a matrix with $A^2 = A$ can be diagonalized.
+
+    \item (Recommended) Suppose $Ax = \lambda x$. If $\lambda = 0$ then $x$ is in the nullspace. If $\lambda \neq 0$ then $x$ is in the column space. Those spaces have dimensions $(n - r) + r = n$. So why doesn't every square matrix have $n$ linearly independent eigenvectors?
+
+    \item The eigenvalues of $A$ are $1$ and $9$, and the eigenvalues of $B$ are $-1$ and $9$:
+          \[
+              A = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 4 & 5 \\ 5 & 4 \end{bmatrix} .
+          \]
+          Find a matrix square root of $A$ from $R = X\sqrt{\Lambda}X^{-1}$. Why is there no real matrix square root of $B$?
+
+    \item If $A$ and $B$ have the same $\lambda$'s with the same independent eigenvectors, their factorizations into \underline{\hspace{1cm}} are the same. So $A = B$.
+
+    \item Suppose the same $X$ diagonalizes both $A$ and $B$. They have the \textit{same eigenvectors} in $A = X\Lambda_1 X^{-1}$ and $B = X\Lambda_2 X^{-1}$. Prove that $AB = BA$.
+
+    \item
+          \begin{enumerate}
+              \item If $A = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix}$ then the determinant of $A - \lambda I$ is $(\lambda - a)(\lambda - d)$. Check the ``Cayley-Hamilton Theorem'' that $(A - aI)(A - dI) = \textit{zero matrix}$.
+              \item Test the Cayley-Hamilton Theorem on Fibonacci's $A = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}$. The theorem predicts that $A^2 - A - I = 0$, since the polynomial $\det(A - \lambda I)$ is $\lambda^2 - \lambda - 1$.
+          \end{enumerate}
+
+    \item Substitute $A = X\Lambda X^{-1}$ into the product $(A - \lambda_1 I)(A - \lambda_2 I) \cdots (A - \lambda_n I)$ and explain why this produces the zero matrix. We are substituting the matrix $A$ for the number $\lambda$ in the polynomial $p(\lambda) = \det(A - \lambda I)$. The \textit{Cayley-Hamilton Theorem} says that this product is always $p(A) = \textit{zero matrix}$, even if $A$ is not diagonalizable.
+
+    \item If $A = \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ and $AB = BA$, show that $B = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is also a diagonal matrix. $B$ has the same eigen\underline{\hspace{1cm}} as $A$ but different eigen\underline{\hspace{1cm}} . These diagonal matrices $B$ form a two-dimensional subspace of matrix space. $AB - BA = 0$ gives four equations for the unknowns $\mathbf{a, b, c, d}$---find the rank of the 4 by 4 matrix.
+
+    \item The powers $A^k$ approach zero if all $|\lambda_i| < 1$ and they blow up if any $|\lambda_i| > 1$. Peter Lax gives these striking examples in his book \textit{Linear Algebra}:
+          \[
+              A = \begin{bmatrix} 3 & 2 \\ 1 & 4 \end{bmatrix} \quad B = \begin{bmatrix} 3 & 2 \\ -5 & -3 \end{bmatrix} \quad C = \begin{bmatrix} 5 & 7 \\ -3 & -4 \end{bmatrix} \quad D = \begin{bmatrix} 5 & 6.9 \\ -3 & -4 \end{bmatrix}
+          \]
+          \[
+              \|A^{1024}\| > 10^{700} \quad B^{1024} = I \quad C^{1024} = -C \quad \|D^{1024}\| < 10^{-78}
+          \]
+          Find the eigenvalues $\lambda = e^{i\theta}$ of $B$ and $C$ to show $B^4 = I$ and $C^3 = -I$.
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item The $n$th power of rotation through $\theta$ is rotation through $n\theta$:
+          \[
+              A^n = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}^n = \begin{bmatrix} \cos n\theta & -\sin n\theta \\ \sin n\theta & \cos n\theta \end{bmatrix} .
+          \]
+          Prove that neat formula by diagonalizing $A = X \Lambda X^{-1}$. The eigenvectors (columns of $X$) are $(1, i)$ and $(i, 1)$. You need to know Euler's formula $e^{i\theta} = \cos \theta + i\sin \theta$.
+
+    \item The transpose of $A = X \Lambda X^{-1}$ is $A^{\mathrm{T}} = (X^{-1})^{\mathrm{T}} \Lambda X^{\mathrm{T}}$. The eigenvectors in $A^{\mathrm{T}} y = \lambda y$ are the columns of that matrix $(X^{-1})^{\mathrm{T}}$. They are often called \textit{left eigenvectors of $A$}, because $y^{\mathrm{T}} A = \lambda y^{\mathrm{T}}$. How do you multiply matrices to find this formula for $A$?
+          \begin{center}
+              \framebox{
+                  Sum of rank-1 matrices \quad $A = X \Lambda X^{-1} = \lambda_1 x_1 y_1^{\mathrm{T}} + \cdots + \lambda_n x_n y_n^{\mathrm{T}}.$
+              }
+          \end{center}
+
+    \item The inverse of $A = \text{eye}(n) + \text{ones}(n)$ is $A^{-1} = \text{eye}(n) + C * \text{ones}(n)$. Multiply $A A^{-1}$ to find that number $C$ (depending on $n$).
+
+    \item Suppose $A_1$ and $A_2$ are $n$ by $n$ invertible matrices. What matrix $B$ shows that $A_2 A_1 = B(A_1 A_2)B^{-1}$? Then $A_2 A_1$ is similar to $A_1 A_2$: \textit{same eigenvalues}.
+
+    \item When is a matrix $A$ similar to its eigenvalue matrix $\Lambda$? \\
+          $A$ and $\Lambda$ always have the same eigenvalues. But similarity requires a matrix $B$ with $A = B \Lambda B^{-1}$. Then $B$ is the \underline{\hspace{1cm}} matrix and $A$ must have $n$ independent \underline{\hspace{1cm}} .
+
+    \item (Pavel Grinfeld) Without writing down any calculations, can you find the eigenvalues of this matrix? Can you find the 2017th power $A^{2017}$?
+          \[
+              A = \begin{bmatrix} 110 & 55 & -164 \\ 42 & 21 & -62 \\ 88 & 44 & -131 \end{bmatrix} .
+          \]
+\end{enumerate}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\noindent If $A$ is $m$ by $n$ and $B$ is $n$ by $m$, then $AB$ and $BA$ have same nonzero eigenvalues. \\
+\textit{Proof.} Start with this identity between square matrices (easily checked). The first and third matrices are inverses. The ``size matrix'' shows the shapes of all blocks.
+\[
+    \begin{bmatrix} I & -A \\ 0 & I \end{bmatrix} \begin{bmatrix} AB & 0 \\ B & 0 \end{bmatrix} \begin{bmatrix} I & A \\ 0 & I \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ B & BA \end{bmatrix} \qquad \begin{bmatrix} m \times m & m \times n \\ n \times m & n \times n \end{bmatrix}
+\]
+This equation $D^{-1} E D = F$ says $F$ is similar to $E$---they have the \textit{same} $m+n$ eigenvalues.
+\[
+    E = \begin{bmatrix} AB & 0 \\ B & 0 \end{bmatrix} \text{has the } m \text{ eigenvalues of } AB \text{, plus } n \text{ zeros}
+\]
+\[
+    F = \begin{bmatrix} 0 & 0 \\ B & BA \end{bmatrix} \text{has the } n \text{ eigenvalues of } BA \text{, plus } m \text{ zeros}
+\]
+So $AB$ and $BA$ have the same eigenvalues except for $|n - m|$ zeros. Wow.
+
+\noindent If $A = \begin{bmatrix} 1 & 1 \end{bmatrix}$ and $B = A^{\mathrm{T}}$ then $A^{\mathrm{T}}A = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ (notice $\lambda = 2$ and $0$) and $AA^{\mathrm{T}} = \begin{bmatrix} 2 \end{bmatrix}$.
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Systems of Differential Equations}
+\begin{enumerate}
+    \item Find two $\lambda$'s and $x$'s so that $u = e^{\lambda t}x$ solves
+          \[
+              \frac{du}{dt} = \begin{bmatrix} 4 & 3 \\ 0 & 1 \end{bmatrix} u.
+          \]
+          What combination $u = c_1 e^{\lambda_1 t}x_1 + c_2 e^{\lambda_2 t}x_2$ starts from $u(0) = (5, -2)$?
+
+    \item Solve Problem 1 for $u = (y, z)$ by back substitution, $z$ before $y$:
+          \[
+              \text{Solve } \frac{dz}{dt} = z \text{ from } z(0) = -2. \qquad \text{Then solve } \frac{dy}{dt} = 4y + 3z \text{ from } y(0) = 5.
+          \]
+          The solution for $y$ will be a combination of $e^{4t}$ and $e^t$. The $\lambda$'s are $4$ and $1$.
+
+    \item
+          \begin{enumerate}
+              \item If every column of $A$ adds to zero, why is $\lambda = 0$ an eigenvalue?
+              \item With negative diagonal and positive off-diagonal adding to zero, $u' = Au$ will be a ``continuous'' Markov equation. Find the eigenvalues and eigenvectors, and the \textit{steady state} as $t \to \infty$
+          \end{enumerate}
+          \[
+              \text{Solve } \frac{du}{dt} = \begin{bmatrix} -2 & 3 \\ 2 & -3 \end{bmatrix} u \quad \text{with} \quad u(0) = \begin{bmatrix} 4 \\ 1 \end{bmatrix}. \quad \text{What is } u(\infty)?
+          \]
+
+    \item A door is opened between rooms that hold $v(0) = 30$ people and $w(0) = 10$ people. The movement between rooms is proportional to the difference $v - w$:
+          \[
+              \frac{dv}{dt} = w - v \qquad \text{and} \qquad \frac{dw}{dt} = v - w.
+          \]
+          Show that the total $v + w$ is constant (40 people). Find the matrix in $du/dt = Au$ and its eigenvalues and eigenvectors. What are $v$ and $w$ at $t = 1$ and $t = \infty$?
+
+    \item Reverse the diffusion of people in Problem 4 to $du/dt = -Au$:
+          \[
+              \frac{dv}{dt} = v - w \qquad \text{and} \qquad \frac{dw}{dt} = w - v.
+          \]
+          The total $v + w$ still remains constant. How are the $\lambda$'s changed now that $A$ is changed to $-A$? But show that $v(t)$ grows to infinity from $v(0) = 30$.
+
+    \item $A$ has real eigenvalues but $B$ has complex eigenvalues:
+          \[
+              A = \begin{bmatrix} a & 1 \\ 1 & a \end{bmatrix} \quad B = \begin{bmatrix} b & -1 \\ 1 & b \end{bmatrix} \quad \text{($a$ and $b$ are real)}
+          \]
+          Find the conditions on $a$ and $b$ so that all solutions of $du/dt = Au$ and $dv/dt = Bv$ approach zero as $t \to \infty$: $\text{Re } \lambda < 0$ for all eigenvalues.
+
+    \item Suppose $P$ is the projection matrix onto the $45^\circ$ line $y = x$ in $\mathbf{R}^2$. What are its eigenvalues? If $d\mathbf{u}/dt = -P\mathbf{u}$ (notice minus sign) can you find the limit of $\mathbf{u}(t)$ at $t = \infty$ starting from $\mathbf{u}(0) = (3, 1)$?
+
+    \item The rabbit population shows fast growth (from $6r$) but loss to wolves (from $-2w$). The wolf population always grows in this model ($-w^2$ would control wolves):
+          \[
+              \frac{dr}{dt} = 6r - 2w \qquad \text{and} \qquad \frac{dw}{dt} = 2r + w.
+          \]
+          Find the eigenvalues and eigenvectors. If $r(0) = w(0) = 30$ what are the populations at time $t$? After a long time, what is the ratio of rabbits to wolves?
+
+    \item
+          \begin{enumerate}
+              \item Write $(4, 0)$ as a combination $c_1 x_1 + c_2 x_2$ of these two eigenvectors of $A$:
+                    \[
+                        \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\ i \end{bmatrix} = i \begin{bmatrix} 1 \\ i \end{bmatrix} \qquad \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\ -i \end{bmatrix} = -i \begin{bmatrix} 1 \\ -i \end{bmatrix} .
+                    \]
+              \item The solution to $d\mathbf{u}/dt = A\mathbf{u}$ starting from $(4, 0)$ is $c_1 e^{it}x_1 + c_2 e^{-it}x_2$. Substitute $e^{it} = \cos t + i \sin t$ and $e^{-it} = \cos t - i \sin t$ to find $\mathbf{u}(t)$.
+          \end{enumerate}
+\end{enumerate}
+
+\noindent Questions 10--13 reduce second-order equations to first-order systems for $(y, y')$.
+
+\begin{enumerate}[resume]
+    \item Find $A$ to change the scalar equation $y'' = 5y' + 4y$ into a vector equation for $\mathbf{u} = (y, y')$:
+          \[
+              \frac{d\mathbf{u}}{dt} = \begin{bmatrix} y' \\ y'' \end{bmatrix} = \begin{bmatrix} \quad & \quad \\ \quad & \quad \end{bmatrix} \begin{bmatrix} y \\ y' \end{bmatrix} = A\mathbf{u}.
+          \]
+          What are the eigenvalues of $A$? Find them also by substituting $y = e^{\lambda t}$ into $y'' = 5y' + 4y$.
+
+    \item The solution to $y'' = 0$ is a straight line $y = C + Dt$. Convert to a matrix equation:
+          \[
+              \frac{d}{dt} \begin{bmatrix} y \\ y' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} y \\ y' \end{bmatrix} \text{ has the solution } \begin{bmatrix} y \\ y' \end{bmatrix} = e^{At} \begin{bmatrix} y(0) \\ y'(0) \end{bmatrix} .
+          \]
+          This matrix $A$ has $\lambda = 0, 0$ and it cannot be diagonalized. Find $A^2$ and compute $e^{At} = I + At + \frac{1}{2}A^2t^2 + \cdots$. Multiply your $e^{At}$ times $(y(0), y'(0))$ to check the straight line $y(t) = y(0) + y'(0)t$.
+
+    \item Substitute $y = e^{\lambda t}$ into $y'' = 6y' - 9y$ to show that $\lambda = 3$ is a repeated root. This is trouble; we need a second solution after $e^{3t}$. The matrix equation is
+          \[
+              \frac{d}{dt} \begin{bmatrix} y \\ y' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -9 & 6 \end{bmatrix} \begin{bmatrix} y \\ y' \end{bmatrix} .
+          \]
+          Show that this matrix has $\lambda = 3, 3$ and only one line of eigenvectors. \textit{Trouble here too.} Show that the second solution to $y'' = 6y' - 9y$ is $y = te^{3t}$.
+
+    \item
+          \begin{enumerate}
+              \item Write down two familiar functions that solve the equation $d^2y/dt^2 = -9y$. Which one starts with $y(0) = 3$ and $y'(0) = 0$?
+              \item This second-order equation $y'' = -9y$ produces a vector equation $u' = Au$:
+                    \[
+                        u = \begin{bmatrix} y \\ y' \end{bmatrix} \quad \frac{du}{dt} = \begin{bmatrix} y' \\ y'' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -9 & 0 \end{bmatrix} \begin{bmatrix} y \\ y' \end{bmatrix} = Au.
+                    \]
+                    Find $u(t)$ by using the eigenvalues and eigenvectors of $A$: $u(0) = (3, 0)$.
+          \end{enumerate}
+
+    \item The matrix in this question is skew-symmetric ($A^{\mathrm{T}} = -A$):
+          \[
+              \frac{du}{dt} = \begin{bmatrix} 0 & c & -b \\ -c & 0 & a \\ b & -a & 0 \end{bmatrix} u \quad \text{or} \quad \begin{matrix} u_1' = cu_2 - bu_3 \\ u_2' = au_3 - cu_1 \\ u_3' = bu_1 - au_2 \end{matrix}
+          \]
+          \begin{enumerate}
+              \item The derivative of $\|u(t)\|^2 = u_1^2 + u_2^2 + u_3^2$ is $2u_1u_1' + 2u_2u_2' + 2u_3u_3'$. Substitute $u_1', u_2', u_3'$ to get zero. Then $\|u(t)\|^2$ stays equal to $\|u(0)\|^2$.
+              \item When $A$ is skew-symmetric, $Q = e^{At}$ is orthogonal. Prove $Q^{\mathrm{T}} = e^{-At}$ from the series for $Q = e^{At}$. Then $Q^{\mathrm{T}}Q = I$.
+          \end{enumerate}
+
+    \item A particular solution to $du/dt = Au - b$ is $u_p = A^{-1}b$, if $A$ is invertible. The usual solutions to $du/dt = Au$ give $u_n$. Find the complete solution $u = u_p + u_n$:
+          \begin{enumerate}
+              \item $\frac{du}{dt} = u - 4$ \qquad (b) $\frac{du}{dt} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} u - \begin{bmatrix} 4 \\ 6 \end{bmatrix}$.
+          \end{enumerate}
+
+    \item If $c$ is not an eigenvalue of $A$, substitute $u = e^{ct}v$ and find a particular solution to $du/dt = Au - e^{ct}b$. How does it break down when $c$ is an eigenvalue of $A$? The ``nullspace'' of $du/dt = Au$ contains the usual solutions $e^{\lambda_i t}x_i$.
+
+    \item Find a matrix $A$ to illustrate each of the unstable regions in Figure 6.5:
+          \begin{enumerate}
+              \item $\lambda_1 < 0$ and $\lambda_2 > 0$ \qquad (b) $\lambda_1 > 0$ and $\lambda_2 > 0$ \qquad (c) $\lambda = a \pm ib$ with $a > 0$.
+          \end{enumerate}
+\end{enumerate}
+
+\noindent Questions 18--27 are about the matrix exponential $e^{At}$.
+
+\begin{enumerate}[resume]
+    \item Write five terms of the infinite series for $e^{At}$. Take the $t$ derivative of each term. Show that you have four terms of $Ae^{At}$. Conclusion: $e^{At}u_0$ solves $u' = Au$.
+
+    \item The matrix $B = \begin{bmatrix} 0 & -4 \\ 0 & 0 \end{bmatrix}$ has $B^2 = 0$. Find $e^{Bt}$ from a (short) infinite series. Check that the derivative of $e^{Bt}$ is $Be^{Bt}$.
+
+    \item Starting from $u(0)$ the solution at time $T$ is $e^{AT}u(0)$. Go an additional time $t$ to reach $e^{At} e^{AT}u(0)$. This solution at time $t + T$ can also be written as \underline{\hspace{1cm}}. Conclusion: $e^{At}$ times $e^{AT}$ equals \underline{\hspace{1cm}}.
+
+    \item Write $A = \begin{bmatrix} 1 & 4 \\ 0 & 0 \end{bmatrix}$ in the form $X \Lambda X^{-1}$. Find $e^{At}$ from $Xe^{\Lambda t}X^{-1}$.
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{21}
+    \item If $A^2 = A$ show that the infinite series produces $e^{At} = I + (e^t - 1)A$. For $A = \begin{bmatrix} 1 & 4 \\ 0 & 0 \end{bmatrix}$ in Problem 21 this gives $e^{At} = \underline{\hspace{1cm}}$.
+
+    \item Generally $e^A e^B$ is different from $e^B e^A$. They are both different from $e^{A+B}$. Check this using Problems 21--22 and 19. (If $AB = BA$, all three are the same.)
+          \[
+              A = \begin{bmatrix} 1 & 4 \\ 0 & 0 \end{bmatrix} \quad B = \begin{bmatrix} 0 & -4 \\ 0 & 0 \end{bmatrix} \quad A + B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} .
+          \]
+
+    \item Write $A = \begin{bmatrix} 1 & 1 \\ 0 & 3 \end{bmatrix}$ as $X \Lambda X^{-1}$. Multiply $X e^{\Lambda t} X^{-1}$ to find the matrix exponential $e^{At}$. Check $e^{At}$ and the derivative of $e^{At}$ when $t = 0$.
+
+    \item Put $A = \begin{bmatrix} 1 & 3 \\ 0 & 0 \end{bmatrix}$ into the infinite series to find $e^{At}$. First compute $A^2$ and $A^n$:
+          \[
+              e^{At} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} + \begin{bmatrix} t & 3t \\ 0 & 0 \end{bmatrix} + \frac{1}{2} \begin{bmatrix} \quad & \quad \\ \quad & \quad \end{bmatrix} + \cdots = \begin{bmatrix} e^t & \quad \\ 0 & \quad \end{bmatrix} .
+          \]
+
+    \item (Recommended) Give two reasons why the matrix exponential $e^{At}$ is never singular:
+          \begin{enumerate}
+              \item Write down its inverse.
+              \item Why are these eigenvalues nonzero? If $Ax = \lambda x$ then $e^{At}x = \underline{\hspace{1cm}} x$.
+          \end{enumerate}
+
+    \item Find a solution $x(t), y(t)$ that gets large as $t \to \infty$. To avoid this instability a scientist exchanged the two equations:
+          \[
+              \begin{matrix} dx/dt = 0x - 4y \\ dy/dt = -2x + 2y \end{matrix} \quad \text{becomes} \quad \begin{matrix} dy/dt = -2x + 2y \\ dx/dt = 0x - 4y \end{matrix} .
+          \]
+          Now the matrix $\begin{bmatrix} -2 & 2 \\ 0 & -4 \end{bmatrix}$ is stable. It has negative eigenvalues. How can this be?
+\end{enumerate}
+
+\paragraph{Challenge Problems}
+\begin{enumerate}[resume]
+    \item Centering $y'' = -y$ in Example 3 will produce $Y_{n+1} - 2Y_n + Y_{n-1} = -(\Delta t)^2 Y_n$. This can be written as a one-step difference equation for $U = (Y, Z)$:
+          \[
+              Y_{n+1} = Y_n + \Delta t Z_n \qquad \begin{bmatrix} 1 & 0 \\ \Delta t & 1 \end{bmatrix} \begin{bmatrix} Y_{n+1} \\ Z_{n+1} \end{bmatrix} = \begin{bmatrix} 1 & \Delta t \\ 0 & 1 \end{bmatrix} \begin{bmatrix} Y_n \\ Z_n \end{bmatrix}
+          \]
+          Invert the matrix on the left side to write this as $U_{n+1} = AU_n$. Show that $\det A = 1$. Choose the large time step $\Delta t = 1$ and find the eigenvalues $\lambda_1$ and $\lambda_2 = \bar{\lambda}_1$ of $A$:
+          \[
+              \textcolor{blue!60!green}{A = \begin{bmatrix} 1 & 1 \\ -1 & 0 \end{bmatrix} \quad \text{has } |\lambda_1| = |\lambda_2| = 1. \quad \textbf{Show that } A^6 \textbf{ is exactly } I.}
+          \]
+          After 6 steps to $t = 6$, $U_6$ equals $U_0$. The exact $y = \cos t$ returns to 1 at $t = 2\pi$.
+
+    \item That centered choice (\textit{leapfrog method}) in Problem 28 is very successful for small time steps $\Delta t$. But find the eigenvalues of $A$ for $\Delta t = \sqrt{2}$ and $2$:
+          \[
+              A = \begin{bmatrix} 1 & \sqrt{2} \\ -\sqrt{2} & -1 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 1 & 2 \\ -2 & -3 \end{bmatrix} .
+          \]
+          Both matrices have $|\lambda| = 1$. Compute $A^4$ in both cases and find the eigenvectors of $A$. That second value $\Delta t = 2$ is at the border of instability. Any time step $\Delta t > 2$ will lead to $|\lambda| > 1$, and the powers in $U_n = A^n U_0$ will explode.
+          \textit{Note} You might say that nobody would compute with $\Delta t > 2$. But if an atom vibrates with $y'' = -1000000y$, then $\Delta t > .0002$ will give instability. Leapfrog has a very strict stability limit. $Y_{n+1} = Y_n + 3Z_n$ and $Z_{n+1} = Z_n - 3Y_{n+1}$ will explode because $\Delta t = 3$ is too large. The matrix has $|\lambda| > 1$.
+
+    \item Another good idea for $y'' = -y$ is the trapezoidal method (half forward/half back). \textcolor{blue!60!green}{This may be the best way to keep $(Y_n, Z_n)$ exactly on a circle.}
+          \[
+              \text{Trapezoidal} \quad \begin{bmatrix} 1 & -\Delta t/2 \\ \Delta t/2 & 1 \end{bmatrix} \begin{bmatrix} Y_{n+1} \\ Z_{n+1} \end{bmatrix} = \begin{bmatrix} 1 & \Delta t/2 \\ -\Delta t/2 & 1 \end{bmatrix} \begin{bmatrix} Y_n \\ Z_n \end{bmatrix} .
+          \]
+          \begin{enumerate}
+              \item Invert the left matrix to write this equation as $U_{n+1} = AU_n$. \textit{Show that $A$ is an orthogonal matrix: $A^{\mathrm{T}}A = I$. \textbf{These points $U_n$ never leave the circle.}} $A = (I - B)^{-1}(I + B)$ is always an orthogonal matrix if $B^{\mathrm{T}} = -B$.
+              \item (Optional MATLAB) Take 32 steps from $U_0 = (1, 0)$ to $U_{32}$ with $\Delta t = 2\pi/32$. Is $U_{32} = U_0$? I think there is a small error.
+          \end{enumerate}
+
+    \item The \textit{cosine of a matrix} is defined like $e^A$, by copying the series for $\cos t$:
+          \[
+              \cos t = 1 - \frac{1}{2!}t^2 + \frac{1}{4!}t^4 - \cdots \quad \textcolor{blue!60!green}{\cos A = I - \frac{1}{2!}A^2 + \frac{1}{4!}A^4 - \cdots}
+          \]
+          \begin{enumerate}
+              \item If $Ax = \lambda x$, multiply each term times $x$ to find the eigenvalue of $\cos A$.
+              \item Find the eigenvalues of $A = \begin{bmatrix} \pi & \pi \\ \pi & \pi \end{bmatrix}$ with eigenvectors $(1, 1)$ and $(1, -1)$. From the eigenvalues and eigenvectors of $\cos A$, find that matrix $C = \cos A$.
+              \item The second derivative of $\cos(At)$ is $-A^2 \cos(At)$.
+          \end{enumerate}
+          \[
+              u(t) = \cos(At)u(0) \quad \text{solves} \quad \frac{d^2u}{dt^2} = -A^2u \quad \text{starting from } u'(0) = 0.
+          \]
+          Construct $u(t) = \cos(At)u(0)$ by the usual three steps for that specific $A$:
+          \begin{enumerate}
+              \item Expand $u(0) = (4, 2) = c_1 x_1 + c_2 x_2$ in the eigenvectors.
+              \item Multiply those eigenvectors by \underline{\hspace{1cm}} and \underline{\hspace{1cm}} (instead of $e^{\lambda t}$).
+              \item Add up the solution $u(t) = c_1 \underline{\hspace{1cm}} x_1 + c_2 \underline{\hspace{1cm}} x_2$.
+          \end{enumerate}
 \end{enumerate}
 
 
-\paragraph{Challenge Problems}
-
-\subsection{Diagonalizing a Matrix}
-
-\paragraph{Challenge Problems}
-
-\subsection{Systems of Differential Equations}
-\paragraph{Challenge Problems}
-
 \subsection{Symmetric Matrices}
-\noindent
+\begin{enumerate}
+    \item Which of these matrices $ASB$ will be symmetric with eigenvalues $1$ and $-1$?
+          \[
+              \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \quad \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ -1 & 1 \end{bmatrix} \quad \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
+          \]
+          $B = A^{\mathrm{T}}$ doesn't do it. $B = A^{-1}$ doesn't do it. $B = \underline{\hspace{1cm}} = \underline{\hspace{1cm}}$ will succeed. So $B$ must be an \underline{\hspace{1cm}} matrix.
+
+    \item Suppose $S = S^{\mathrm{T}}$. When is $ASB$ also symmetric with the same eigenvalues as $S$?
+          \begin{enumerate}
+              \item Transpose $ASB$ to see that it stays symmetric when $B = \underline{\hspace{1cm}}$.
+              \item $ASB$ is similar to $S$ (same eigenvalues) when $B = \underline{\hspace{1cm}}$.
+          \end{enumerate}
+          Put (a) and (b) together. The symmetric matrices similar to $S$ look like $(\underline{\hspace{1cm}})S(\underline{\hspace{1cm}})$.
+
+    \item Write $A$ as $S + N$, symmetric matrix $S$ plus skew-symmetric matrix $N$:
+          \[
+              A = \begin{bmatrix} 1 & 2 & 4 \\ 4 & 3 & 0 \\ 8 & 6 & 5 \end{bmatrix} = S + N \qquad (S^{\mathrm{T}} = S \text{ and } N^{\mathrm{T}} = -N).
+          \]
+          For any square matrix, $S = \frac{1}{2}(A + A^{\mathrm{T}})$ and $N = \underline{\hspace{1cm}}$ add up to $A$.
+
+    \item If $C$ is symmetric prove that $A^{\mathrm{T}}CA$ is also symmetric. (Transpose it.) When $A$ is 6 by 3, what are the shapes of $C$ and $A^{\mathrm{T}}CA$?
+
+    \item Find the eigenvalues and the unit eigenvectors of
+          \[
+              S = \begin{bmatrix} 2 & 2 & 2 \\ 2 & 0 & 0 \\ 2 & 0 & 0 \end{bmatrix} .
+          \]
+
+    \item Find an orthogonal matrix $Q$ that diagonalizes $S = \begin{bmatrix} -2 & 6 \\ 6 & 7 \end{bmatrix}$. What is $\Lambda$?
+
+    \item Find an orthogonal matrix $Q$ that diagonalizes this symmetric matrix:
+          \[
+              S = \begin{bmatrix} 1 & 0 & 2 \\ 0 & -1 & -2 \\ 2 & -2 & 0 \end{bmatrix} .
+          \]
+
+    \item Find \textit{all} orthogonal matrices that diagonalize $S = \begin{bmatrix} 9 & 12 \\ 12 & 16 \end{bmatrix}$.
+
+    \item
+          \begin{enumerate}
+              \item Find a symmetric matrix $\begin{bmatrix} 1 & b \\ b & 1 \end{bmatrix}$ that has a negative eigenvalue.
+              \item How do you know it must have a negative pivot?
+              \item How do you know it can't have two negative eigenvalues?
+          \end{enumerate}
+
+    \item If $A^3 = 0$ then the eigenvalues of $A$ must be \underline{\hspace{1cm}}. Give an example that has $A \neq 0$. But if $A$ is symmetric, diagonalize it to prove that $A$ must be a zero matrix.
+
+    \item If $\lambda = a + ib$ is an eigenvalue of a real matrix $A$, then its conjugate $\bar{\lambda} = a - ib$ is also an eigenvalue. (If $Ax = \lambda x$ then also $A\bar{x} = \bar{\lambda}\bar{x}$: a conjugate pair $\lambda$ and $\bar{\lambda}$.) Explain why every real 3 by 3 matrix has at least one real eigenvalue.
+
+    \item Here is a quick ``proof'' that the eigenvalues of every real matrix $A$ are real:
+          \begin{center}
+              \textbf{False proof} \quad $Ax = \lambda x$ \quad gives \quad $x^{\mathrm{T}}Ax = \lambda x^{\mathrm{T}}x$ \quad so \quad $\lambda = \frac{x^{\mathrm{T}}Ax}{x^{\mathrm{T}}x} = \frac{\text{real}}{\text{real}}$.
+          \end{center}
+          Find the flaw in this reasoning—a hidden assumption that is not justified. You could test those steps on the $90^\circ$ rotation matrix $[0 \ -1; \ 1 \ 0]$ with $\lambda = i$ and $x = (i, 1)$.
+
+    \item Write $S$ and $B$ in the form $\lambda_1 x_1 x_1^{\mathrm{T}} + \lambda_2 x_2 x_2^{\mathrm{T}}$ of the spectral theorem $Q\Lambda Q^{\mathrm{T}}$:
+          \[
+              S = \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix} \quad B = \begin{bmatrix} 9 & 12 \\ 12 & 16 \end{bmatrix} \quad (\text{keep } \|x_1\| = \|x_2\| = 1).
+          \]
+
+    \item Every 2 by 2 symmetric matrix is $\lambda_1 x_1 x_1^{\mathrm{T}} + \lambda_2 x_2 x_2^{\mathrm{T}} = \lambda_1 P_1 + \lambda_2 P_2$. Explain $P_1 + P_2 = x_1 x_1^{\mathrm{T}} + x_2 x_2^{\mathrm{T}} = I$ from columns times rows of $Q$. Why is $P_1 P_2 = 0$?
+
+    \item What are the eigenvalues of $A = \begin{bmatrix} 0 & b \\ -b & 0 \end{bmatrix}$? Create a 4 by 4 antisymmetric matrix ($A^{\mathrm{T}} = -A$) and verify that all its eigenvalues are imaginary.
+
+    \item (Recommended) This matrix $M$ is antisymmetric and also \underline{\hspace{1cm}}. Then all its eigenvalues are pure imaginary and they also have $|\lambda| = 1$. ($\|Mx\| = \|x\|$ for every $x$ so $\|\lambda x\| = \|x\|$ for eigenvectors.) Find all four eigenvalues from the trace of $M$:
+          \[
+              M = \frac{1}{\sqrt{3}} \begin{bmatrix} 0 & 1 & 1 & 1 \\ -1 & 0 & -1 & 1 \\ -1 & 1 & 0 & -1 \\ -1 & -1 & 1 & 0 \end{bmatrix} \quad \text{can only have eigenvalues } i \text{ or } -i.
+          \]
+
+    \item Show that this $A$ (\textit{symmetric but complex}) has only one line of eigenvectors:
+          \[
+              A = \begin{bmatrix} i & 1 \\ 1 & -i \end{bmatrix} \quad \text{is not even diagonalizable: eigenvalues } \lambda = 0, 0.
+          \]
+          $A^{\mathrm{T}} = A$ is not such a special property for complex matrices. The good property is $\bar{A}^{\mathrm{T}} = A$ (Section 9.2). Then all $\lambda$'s are real and the eigenvectors are orthogonal.
+
+    \item Even if $A$ is rectangular, the block matrix $S = \begin{bmatrix} 0 & A \\ A^{\mathrm{T}} & 0 \end{bmatrix}$ is symmetric:
+          \[
+              Sx = \lambda x \quad \text{is} \quad \begin{bmatrix} 0 & A \\ A^{\mathrm{T}} & 0 \end{bmatrix} \begin{bmatrix} y \\ z \end{bmatrix} = \lambda \begin{bmatrix} y \\ z \end{bmatrix} \quad \text{which is} \quad \begin{matrix} Az = \lambda y \\ A^{\mathrm{T}}y = \lambda z \end{matrix} .
+          \]
+          \begin{enumerate}
+              \item Show that $-\lambda$ is also an eigenvalue, with the eigenvector $(y, -z)$.
+              \item Show that $A^{\mathrm{T}}Az = \lambda^2 z$, so that $\lambda^2$ is an eigenvalue of $A^{\mathrm{T}}A$.
+              \item If $A = I$ (2 by 2) find all four eigenvalues and eigenvectors of $S$.
+          \end{enumerate}
+
+    \item If $A = [1]$ in Problem 18, find all three eigenvalues and eigenvectors of $S$.
+
+    \item \textbf{Another proof that eigenvectors are perpendicular when $S = S^{\mathrm{T}}$.} Two steps:
+          \begin{enumerate}
+              \item Suppose $Sx = \lambda x$ and $Sy = 0y$ and $\lambda \neq 0$. Then $y$ is in the nullspace and $x$ is in the column space. They are perpendicular because \underline{\hspace{1cm}}. Go carefully—why are these subspaces orthogonal?
+              \item If $Sy = \beta y$, apply that argument to $S - \beta I$. One eigenvalue of $S - \beta I$ moves to zero. The eigenvectors $x, y$ stay the same—so they are perpendicular.
+          \end{enumerate}
+
+    \item Find the eigenvector matrices $Q$ for $S$ and $X$ for $B$. Show that $X$ doesn't collapse at $d = 1$, even though $\lambda = 1$ is repeated. Are those eigenvectors perpendicular?
+          \[
+              S = \begin{bmatrix} 0 & d & 0 \\ d & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \quad B = \begin{bmatrix} -d & 0 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & d \end{bmatrix} \quad \text{have } \lambda = 1, d, -d.
+          \]
+
+    \item Write a 2 by 2 \textit{complex} matrix with $\bar{S}^{\mathrm{T}} = S$ (a ``Hermitian matrix''). Find $\lambda_1$ and $\lambda_2$ for your complex matrix. Check that $\bar{x}_1^{\mathrm{T}}x_2 = 0$ (this is complex orthogonality).
+
+    \item \textit{True} (with reason) \textit{or false} (with example).
+          \begin{enumerate}
+              \item A matrix with real eigenvalues and $n$ real eigenvectors is symmetric.
+              \item A matrix with real eigenvalues and $n$ orthonormal eigenvectors is symmetric.
+              \item The inverse of an invertible symmetric matrix is symmetric.
+              \item The eigenvector matrix $Q$ of a symmetric matrix is symmetric.
+          \end{enumerate}
+
+    \item (A paradox for instructors) If $AA^{\mathrm{T}} = A^{\mathrm{T}}A$ then $A$ and $A^{\mathrm{T}}$ share the same eigenvectors (true). $A$ and $A^{\mathrm{T}}$ always share the same eigenvalues. Find the flaw in this conclusion: $A$ and $A^{\mathrm{T}}$ must have the same $X$ and same $\Lambda$. Therefore $A$ equals $A^{\mathrm{T}}$.
+
+    \item (Recommended) Which of these classes of matrices do $A$ and $B$ belong to: Invertible, orthogonal, projection, permutation, diagonalizable, Markov?
+          \[
+              A = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix} \quad B = \frac{1}{3} \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix} .
+          \]
+          Which of these factorizations are possible for $A$ and $B$: $LU, QR, X \Lambda X^{-1}, Q \Lambda Q^{\mathrm{T}}$?
+
+    \item What number $b$ in $A = \begin{bmatrix} 2 & b \\ 1 & 0 \end{bmatrix}$ makes $A = Q \Lambda Q^{\mathrm{T}}$ possible? What number will make it impossible to diagonalize $A$? What number makes $A$ singular?
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{26}
+    \item Find all 2 by 2 matrices that are orthogonal and also symmetric. Which two numbers can be eigenvalues of those two matrices?
+
+    \item This $A$ is nearly symmetric. But its eigenvectors are far from orthogonal:
+          \[
+              A = \begin{bmatrix} 1 & 10^{-15} \\ 0 & 1 + 10^{-15} \end{bmatrix} \quad \text{has eigenvectors } \begin{bmatrix} 1 \\ 0 \end{bmatrix} \quad \text{and} \quad \begin{bmatrix} ? \end{bmatrix}
+          \]
+          What is the angle between the eigenvectors?
+
+    \item (MATLAB) Take two symmetric matrices with different eigenvectors, say $A = \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ and $B = \begin{bmatrix} 8 & 1 \\ 1 & 0 \end{bmatrix}$. Graph the eigenvalues $\lambda_1(A + tB)$ and $\lambda_2(A + tB)$ for $-8 < t < 8$.\\ Peter Lax says on page 113 of \textit{Linear Algebra} that $\lambda_1$ and $\lambda_2$ appear to be on a collision course at certain values of $t$. ``Yet at the last minute they turn aside.'' How close does $\lambda_1$ come to $\lambda_2$?
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+
+\begin{enumerate}[resume]
+    \item For complex matrices, the symmetry $S^{\mathrm{T}} = S$ that produces real eigenvalues must change in Section 9.2 to $\bar{S}^{\mathrm{T}} = S$. From $\det(S - \lambda I) = 0$, find the eigenvalues of the 2 by 2 \textbf{Hermitian matrix} $S = \begin{bmatrix} 4 & 2 + i; & 2 - i & 0 \end{bmatrix} = \bar{S}^{\mathrm{T}}$.
+
+    \item \textbf{Normal matrices} have $\bar{N}^{\mathrm{T}}N = N\bar{N}^{\mathrm{T}}$. For real matrices, this is $N^{\mathrm{T}}N = NN^{\mathrm{T}}$. Normal includes symmetric, skew-symmetric, and orthogonal (with real $\lambda$, imaginary $\lambda$, and $|\lambda| = 1$). Other normal matrices can have any complex eigenvalues. \\
+          Key point: \textit{Normal matrices have $n$ orthonormal eigenvectors}. Those vectors $x_i$ probably will have complex components. In that complex case (Chapter 9) orthogonality means $\bar{x}_i^{\mathrm{T}}x_j = 0$. Inner products (dot products) $x^{\mathrm{T}}y$ become $\bar{x}^{\mathrm{T}}y$.
+          $$
+              \text{The test for } n \text{ orthonormal columns in } Q \text{ becomes } \bar{Q}^{\mathrm{T}}Q = I \text{ instead of } Q^{\mathrm{T}}Q = I.
+          $$
+          \[
+              \textcolor{blue!50!green}{N \text{ has } n \text{ orthonormal eigenvectors } (N = Q\Lambda\bar{Q}^{\mathrm{T}}) \text{ if and only if } N \text{ is normal.}}
+          \]
+          \begin{enumerate}
+              \item Start from $N = Q\Lambda\bar{Q}^{\mathrm{T}}$ with $\bar{Q}^{\mathrm{T}}Q = I$. Show that $\bar{N}^{\mathrm{T}}N = N\bar{N}^{\mathrm{T}}$: $N$ is normal.
+              \item Now start from $\bar{N}^{\mathrm{T}}N = N\bar{N}^{\mathrm{T}}$. Schur found $A = QT\bar{Q}^{\mathrm{T}}$ for every matrix $A$, with a \textit{triangular} $T$. For normal matrices $A = N$ we must show (in 3 steps) that this triangular matrix $T$ will actually be diagonal. Then $T = \Lambda$. \\
+                    Step 1. Put $N = QT\bar{Q}^{\mathrm{T}}$ into $\bar{N}^{\mathrm{T}}N = N\bar{N}^{\mathrm{T}}$ to find $\bar{T}^{\mathrm{T}}T = T\bar{T}^{\mathrm{T}}$. \\
+                    Step 2. Suppose $T = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix}$ has $\bar{T}^{\mathrm{T}}T = T\bar{T}^{\mathrm{T}}$. Prove that $b = 0$. \\
+                    Step 3. Extend Step 2 to size $n$. Any normal triangular $T$ must be diagonal.
+          \end{enumerate}
+
+    \item If $\lambda_{\max}$ is the largest eigenvalue of a symmetric matrix $S$, no diagonal entry can be larger than $\lambda_{\max}$. What is the first entry $a_{11}$ of $S = Q\Lambda Q^{\mathrm{T}}$? Show why $a_{11} \le \lambda_{\max}$.
+
+    \item Suppose $A^{\mathrm{T}} = -A$ (real \textit{antisymmetric} matrix). Explain these facts about $A$:
+          \begin{enumerate}
+              \item $x^{\mathrm{T}}Ax = 0$ for every real vector $x$.
+              \item The eigenvalues of $A$ are pure imaginary.
+              \item The determinant of $A$ is positive or zero (not negative).
+          \end{enumerate}
+          For (a), multiply out an example of $x^{\mathrm{T}}Ax$ and watch terms cancel. Or reverse $x^{\mathrm{T}}(Ax)$ to $-(Ax)^{\mathrm{T}}x$. For (b), $Az = \lambda z$ leads to $\bar{z}^{\mathrm{T}}Az = \lambda \bar{z}^{\mathrm{T}}z = \lambda \|z\|^2$. Part (a) shows that $\bar{z}^{\mathrm{T}}Az = (x - iy)^{\mathrm{T}}A(x + iy)$ has zero real part. Then (b) helps with (c).
+
+    \item If $S$ is symmetric and all its eigenvalues are $\lambda = 2$, how do you know that $S$ must be $2I$? Key point: Symmetry guarantees that $S = Q\Lambda Q^{\mathrm{T}}$. What is that $\Lambda$?
+
+    \item Which symmetric matrices $S$ are also orthogonal? Then $S^{\mathrm{T}} = S^{-1}$.
+          \begin{enumerate}
+              \item Show how symmetry and orthogonality lead to $S^2 = I$.
+              \item What are the possible eigenvalues of this $S$?
+              \item What are the possible eigenvalue matrices $\Lambda$? Then $S$ must be $Q\Lambda Q^{\mathrm{T}}$ for those $\Lambda$ and any orthogonal $Q$.
+          \end{enumerate}
+
+    \item If $S$ is symmetric, show that $A^{\mathrm{T}}SA$ is also symmetric (take the transpose of $A^{\mathrm{T}}SA$). Here $A$ is $m$ by $n$ and $S$ is $m$ by $m$. Are eigenvalues of $S =$ eigenvalues of $A^{\mathrm{T}}SA$? \\
+          In case $A$ is square and invertible, $A^{\mathrm{T}}SA$ is called \textit{congruent} to $S$. They have the same number of positive, negative, and zero eigenvalues: \textbf{Law of Inertia}.
+
+    \item Here is a way to show that $a$ is \textit{in between} the eigenvalues $\lambda_1$ and $\lambda_2$ of $S$:
+          \[
+              S = \begin{bmatrix} a & b \\ b & c \end{bmatrix} \quad \det(S - \lambda I) = \lambda^2 - a\lambda - c\lambda + ac - b^2 \quad \text{is a parabola opening upwards (because of } \lambda^2)
+          \]
+          Show that $\det(S - \lambda I)$ is negative at $\lambda = a$. So the parabola crosses the axis left and right of $\lambda = a$. It crosses at the two eigenvalues of $S$ so they must enclose $a$. \\
+          The $n - 1$ eigenvalues of $A$ always fall between the $n$ eigenvalues of $S = \begin{bmatrix} A & b \\ b^{\mathrm{T}} & c \end{bmatrix}$.
+\end{enumerate}
+
 
 \subsection{Positive Definite Matrices}
-\noindent
+\noindent Problems 1-13 are about tests for positive definiteness.
+\begin{enumerate}
+    \item Suppose the 2 by 2 tests $a > 0$ and $ac - b^2 > 0$ are passed. Then $c > b^2/a > 0$.
+          \begin{enumerate}
+              \item $\lambda_1$ and $\lambda_2$ have the \textit{same sign} because their product $\lambda_1\lambda_2$ equals \underline{\hspace{1cm}}.
+              \item That sign is positive because $\lambda_1 + \lambda_2$ equals \underline{\hspace{1cm}}.
+          \end{enumerate}
+          \textit{Conclusion:} The tests $a > 0, ac - b^2 > 0$ guarantee positive eigenvalues $\lambda_1, \lambda_2$.
+
+    \item Which of $S_1, S_2, S_3, S_4$ has two positive eigenvalues? Use a test, don't compute the $\lambda$'s. Also find an $x$ so that $x^{\mathrm{T}}S_1x < 0$, so $S_1$ is not positive definite.
+          \[
+              S_1 = \begin{bmatrix} 5 & 6 \\ 6 & 7 \end{bmatrix} \quad S_2 = \begin{bmatrix} -1 & -2 \\ -2 & -5 \end{bmatrix} \quad S_3 = \begin{bmatrix} 1 & 10 \\ 10 & 100 \end{bmatrix} \quad S_4 = \begin{bmatrix} 1 & 10 \\ 10 & 101 \end{bmatrix}.
+          \]
+
+    \item For which numbers $b$ and $c$ are these matrices positive definite?
+          \[
+              S = \begin{bmatrix} 1 & b \\ b & 9 \end{bmatrix} \quad S = \begin{bmatrix} 2 & 4 \\ 4 & c \end{bmatrix} \quad S = \begin{bmatrix} c & b \\ b & c \end{bmatrix}.
+          \]
+          With the pivots in $D$ and multiplier in $L$, factor each $A$ into $LDL^{\mathrm{T}}$.
+
+    \item What is the function $f = ax^2 + 2bxy + cy^2$ for each of these matrices? Complete the square to write each $f$ as a sum of one or two squares $f = d_1(\underline{\hspace{1cm}})^2 + d_2(\underline{\hspace{1cm}})^2$.
+          \[
+              S_1 = \begin{bmatrix} 1 & 2 \\ 2 & 9 \end{bmatrix} \quad S_2 = \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix} \quad f = \begin{bmatrix} x & y \end{bmatrix} S \begin{bmatrix} x \\ y \end{bmatrix}
+          \]
+
+    \item Write $f(x, y) = x^2 + 4xy + 3y^2$ as a \textit{difference} of squares and find a point $(x, y)$ where $f$ is negative. No minimum at $(0, 0)$ even though $f$ has positive coefficients.
+
+    \item The function $f(x, y) = 2xy$ certainly has a saddle point and not a minimum at $(0, 0)$. What symmetric matrix $S$ produces this $f$? What are its eigenvalues?
+
+    \item Test to see if $A^{\mathrm{T}}A$ is positive definite in each case: $A$ needs independent columns.
+          \[
+              A = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 2 & 1 \end{bmatrix} \quad \text{and} \quad A = \begin{bmatrix} 1 & 1 & 2 \\ 1 & 2 & 1 \end{bmatrix}.
+          \]
+
+    \item The function $f(x, y) = 3(x + 2y)^2 + 4y^2$ is positive except at $(0, 0)$. What is the matrix in $f = \begin{bmatrix} x & y \end{bmatrix}S\begin{bmatrix} x \\ y \end{bmatrix}^{\mathrm{T}}$? Check that the pivots of $A$ are 3 and 4.
+
+    \item Find the 3 by 3 matrix $S$ and its pivots, rank, eigenvalues, and determinant:
+          \[
+              \begin{bmatrix} x_1 & x_2 & x_3 \end{bmatrix} [S] \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = 4(x_1 - x_2 + 2x_3)^2.
+          \]
+
+    \item Which 3 by 3 symmetric matrices $S$ and $T$ produce these quadratics?
+          \[
+              x^{\mathrm{T}}Sx = 2(x_1^2 + x_2^2 + x_3^2 - x_1x_2 - x_2x_3). \quad \text{Why is } S \text{ positive definite?}
+          \]
+          \[
+              x^{\mathrm{T}}Tx = 2(x_1^2 + x_2^2 + x_3^2 - x_1x_2 - x_1x_3 - x_2x_3). \quad \text{Why is } T \text{ semidefinite?}
+          \]
+
+    \item Compute the three upper left determinants of $S$ to establish positive definiteness. Verify that their ratios give the second and third pivots.
+          \[
+              \text{Pivots} = \text{ratios of determinants} \quad S = \begin{bmatrix} 2 & 2 & 0 \\ 2 & 5 & 3 \\ 0 & 3 & 8 \end{bmatrix}.
+          \]
+
+    \item For what numbers $c$ and $d$ are $S$ and $T$ positive definite? Test their 3 determinants:
+          \[
+              S = \begin{bmatrix} c & 1 & 1 \\ 1 & c & 1 \\ 1 & 1 & c \end{bmatrix} \quad \text{and} \quad T = \begin{bmatrix} 1 & 2 & 3 \\ 2 & d & 4 \\ 3 & 4 & 5 \end{bmatrix}.
+          \]
+
+    \item Find a matrix with $a > 0$ and $c > 0$ and $a + c > 2b$ that has a negative eigenvalue.
+
+\end{enumerate}
+\noindent Problems 14-20 are about applications of the tests.
+\begin{enumerate}[resume]
+    \item If $S$ is positive definite then $S^{-1}$ is positive definite. Best proof: The eigenvalues of $S^{-1}$ are positive because \underline{\hspace{1cm}}. Second proof (only for 2 by 2):
+          \[
+              \text{The entries of } S^{-1} = \frac{1}{ac - b^2} \begin{bmatrix} c & -b \\ -b & a \end{bmatrix} \text{ pass the determinant tests \underline{\hspace{1cm}}}.
+          \]
+
+    \item If $S$ and $T$ are positive definite, their sum $S + T$ is positive definite. Pivots and eigenvalues are not convenient for $S + T$. Better to use $x^{\mathrm{T}}(S + T)x > 0$. Also $S = A^{\mathrm{T}}A$ and $T = B^{\mathrm{T}}B$ give $S + T = \begin{bmatrix} A & B \end{bmatrix}^{\mathrm{T}} \begin{bmatrix} A \\ B \end{bmatrix}$ with independent columns.
+
+    \item A positive definite matrix cannot have a zero (or even worse, a negative number) on its main diagonal. Show that this matrix fails to have $x^{\mathrm{T}}Sx > 0$:
+          \[
+              \begin{bmatrix} x_1 & x_2 & x_3 \end{bmatrix} \begin{bmatrix} 4 & 1 & 1 \\ 1 & 0 & 2 \\ 1 & 2 & 5 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \text{ is not positive when } (x_1, x_2, x_3) = (\underline{\hspace{0.5cm}}, \underline{\hspace{0.5cm}}, \underline{\hspace{0.5cm}}).
+          \]
+
+    \item A diagonal entry $s_{jj}$ of a symmetric matrix cannot be smaller than all the $\lambda$'s. If it were, then $S - s_{jj}I$ would have \underline{\hspace{1cm}} eigenvalues and would be positive definite. But $S - s_{jj}I$ has a \underline{\hspace{1cm}} on the main diagonal.
+
+    \item If $Sx = \lambda x$ then $x^{\mathrm{T}}Sx =$ \underline{\hspace{1cm}}. Why is this number positive when $\lambda > 0$?
+
+    \item Reverse Problem 18 to show that if all $\lambda > 0$ then $x^{\mathrm{T}}Sx > 0$. We must do this for \textbf{every nonzero} $x$, not just the eigenvectors. So write $x$ as a combination of the eigenvectors and \textit{explain why} all ``cross terms'' are $x_i^{\mathrm{T}}x_j = 0$. Then $x^{\mathrm{T}}Sx$ is
+          \[
+              (c_1x_1 + \dots + c_nx_n)^{\mathrm{T}}(c_1\lambda_1x_1 + \dots + c_n\lambda_nx_n) = c_1^2\lambda_1x_1^{\mathrm{T}}x_1 + \dots + c_n^2\lambda_nx_n^{\mathrm{T}}x_n > 0.
+          \]
+
+    \item Give a quick reason why each of these statements is true:
+          \begin{enumerate}
+              \item Every positive definite matrix is invertible.
+              \item The only positive definite projection matrix is $P = I$.
+              \item A diagonal matrix with positive diagonal entries is positive definite.
+              \item A symmetric matrix with a positive determinant might not be positive definite!
+          \end{enumerate}
+\end{enumerate}
+\noindent Problems 21-24 use the eigenvalues; Problems 25-27 are based on pivots.
+\begin{enumerate}[resume]
+    \item For which $s$ and $t$ do $S$ and $T$ have all $\lambda > 0$ (therefore positive definite)?
+          \[
+              S = \begin{bmatrix} s & -4 & -4 \\ -4 & s & -4 \\ -4 & -4 & s \end{bmatrix} \quad \text{and} \quad T = \begin{bmatrix} t & 3 & 0 \\ 3 & t & 4 \\ 0 & 4 & t \end{bmatrix}.
+          \]
+
+    \item From $S = Q\Lambda Q^{\mathrm{T}}$ compute the positive definite symmetric square root $Q\sqrt{\Lambda}Q^{\mathrm{T}}$ of each matrix. Check that this square root gives $A^{\mathrm{T}}A = S$:
+          \[
+              S = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix} \quad \text{and} \quad S = \begin{bmatrix} 10 & 6 \\ 6 & 10 \end{bmatrix}.
+          \]
+
+    \item You may have seen the equation for an ellipse as $x^2/a^2 + y^2/b^2 = 1$. What are $a$ and $b$ when the equation is written $\lambda_1x^2 + \lambda_2y^2 = 1$? The ellipse $9x^2 + 4y^2 = 1$ has axes with half-lengths $a =$ \underline{\hspace{1cm}} and $b =$ \underline{\hspace{1cm}}.
+
+    \item Draw the tilted ellipse $x^2 + xy + y^2 = 1$ and find the half-lengths of its axes from the eigenvalues of the corresponding matrix $S$.
+
+    \item With positive pivots in $D$, the factorization $S = LDL^{\mathrm{T}}$ becomes $L\sqrt{D}\sqrt{D}L^{\mathrm{T}}$. (Square roots of the pivots give $D = \sqrt{D}\sqrt{D}$.) Then $C = \sqrt{D}L^{\mathrm{T}}$ yields the \textbf{Cholesky factorization} $A = C^{\mathrm{T}}C$ which is ``symmetrized $LU$'':
+          \[
+              \text{From } C = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \text{ find } S. \quad \text{From } S = \begin{bmatrix} 4 & 8 \\ 8 & 25 \end{bmatrix} \text{ find } C = \textbf{chol}(S).
+          \]
+
+    \item In the Cholesky factorization $S = C^{\mathrm{T}}C$, with $C = \sqrt{D}L^{\mathrm{T}}$, the square roots of the pivots are on the diagonal of $C$. Find $C$ (upper triangular) for
+          \[
+              S = \begin{bmatrix} 9 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 2 & 8 \end{bmatrix} \quad \text{and} \quad S = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 7 \end{bmatrix}.
+          \]
+
+    \item The symmetric factorization $S = LDL^{\mathrm{T}}$ means that $x^{\mathrm{T}}Sx = x^{\mathrm{T}}LDL^{\mathrm{T}}x$:
+          \[
+              \begin{bmatrix} x & y \end{bmatrix} \begin{bmatrix} a & b \\ b & c \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} x & y \end{bmatrix} \begin{bmatrix} 1 & 0 \\ b/a & 1 \end{bmatrix} \begin{bmatrix} a & 0 \\ 0 & (ac - b^2)/a \end{bmatrix} \begin{bmatrix} 1 & b/a \\ 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}.
+          \]
+          The left side is $ax^2 + 2bxy + cy^2$. The right side is $a(x + \frac{b}{a}y)^2 + \underline{\hspace{1cm}}y^2$. The second pivot completes the square! Test with $a = 2, b = 4, c = 10$.
+
+    \item Without multiplying $S = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 0 & 5 \end{bmatrix} \begin{bmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos \theta \end{bmatrix}$, find
+          \begin{enumerate}
+              \item the determinant of $S$
+              \item the eigenvalues of $S$
+              \item the eigenvectors of $S$
+              \item a reason why $S$ is symmetric positive definite.
+          \end{enumerate}
+
+    \item For $F_1(x, y) = \frac{1}{4}x^4 + x^2y + y^2$ and $F_2(x, y) = x^3 + xy - x$ find the second derivative matrices $S_1$ and $S_2$:
+          \[
+              \textbf{Test for minimum} \quad S = \begin{bmatrix} \partial^2F/\partial x^2 & \partial^2F/\partial x\partial y \\ \partial^2F/\partial y\partial x & \partial^2F/\partial y^2 \end{bmatrix} \text{ is positive definite}
+          \]
+          $S_1$ is positive definite so $F_1$ is concave up (= convex). Find the minimum point of $F_1$. Find the saddle point of $F_2$ (look only where first derivatives are zero).
+
+    \item The graph of $z = x^2 + y^2$ is a bowl opening upward. \textit{The graph of $z = x^2 - y^2$ is a saddle}. The graph of $z = -x^2 - y^2$ is a bowl opening downward. What is a test on $a, b, c$ for $z = ax^2 + 2bxy + cy^2$ to have a saddle point at $(x, y) = (0, 0)$?
+
+    \item Which values of $c$ give a bowl and which $c$ give a saddle point for the graph of $z = 4x^2 + 12xy + cy^2$? Describe this graph at the borderline value of $c$.
+
+    \item \textbf{The Minimum of a Function $F(x, y, z)$} \\
+          What tests would you expect for a minimum point? First come zero slopes:
+          \[
+              \textbf{First derivatives are zero} \quad \frac{\partial F}{\partial x} = \frac{\partial F}{\partial y} = \frac{\partial F}{\partial z} = 0 \text{ at the minimum point.}
+          \]
+          Next comes the linear algebra version of the usual calculus test $d^2f/dx^2 > 0$:
+          \[
+              \textbf{Second derivative matrix } S \textbf{ is positive definite} \quad S = \begin{bmatrix} F_{xx} & F_{xy} & F_{xz} \\ F_{yx} & F_{yy} & F_{yz} \\ F_{zx} & F_{zy} & F_{zz} \end{bmatrix}
+          \]
+          Here $F_{xy} = \frac{\partial}{\partial x}\left(\frac{\partial F}{\partial y}\right) = \frac{\partial}{\partial y}\left(\frac{\partial F}{\partial x}\right) = F_{yx}$ is a `mixed' second derivative.
+\end{enumerate}
+
 \paragraph{Challenge Problems}
+
+\begin{enumerate}[resume]
+    \item A group of nonsingular matrices includes $AB$ and $A^{-1}$ if it includes $A$ and $B$. ``Products and inverses stay in the group.'' Which of these are groups (as in 2.7.37)? Invent a ``subgroup'' of two of these groups (not $I$ by itself = the smallest group).
+          \begin{enumerate}
+              \item Positive definite symmetric matrices $S$.
+              \item Orthogonal matrices $Q$.
+              \item All exponentials $e^{tA}$ of a fixed matrix $A$.
+              \item Matrices $P$ with positive eigenvalues.
+              \item Matrices $D$ with determinant 1.
+          \end{enumerate}
+
+    \item When $S$ and $T$ are symmetric positive definite, $ST$ might not even be symmetric. But its eigenvalues are still positive. Start from $STx = \lambda x$ and take dot products with $Tx$. Then prove $\lambda > 0$.
+
+    \item Write down the 5 by 5 sine matrix $Q$ from Worked Example 6.5 C, containing the eigenvectors of $S$ when $n = 5$ and $h = 1/6$. Multiply $SQ$ to see the five $\lambda$'s. The sum of $\lambda$'s should equal the trace 10. Their product should be $\det S = 6$.
+
+    \item Suppose $C$ is positive definite (so $y^{\mathrm{T}}Cy > 0$ whenever $y \ne 0$) and $A$ has independent columns (so $Ax \ne 0$ whenever $x \ne 0$). Apply the energy test to $x^{\mathrm{T}}A^{\mathrm{T}}CAx$ to show that $S = A^{\mathrm{T}}CA$ is positive definite: the crucial matrix in engineering.
+
+    \item \textbf{Important!} Suppose $S$ is positive definite with eigenvalues $\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_n$.
+          \begin{enumerate}
+              \item What are the eigenvalues of the matrix $\lambda_1I - S$? Is it positive semidefinite?
+              \item How does it follow that $\lambda_1x^{\mathrm{T}}x \ge x^{\mathrm{T}}Sx$ for every $x$?
+              \item Draw this conclusion: The maximum value of $x^{\mathrm{T}}Sx/x^{\mathrm{T}}x$ is \underline{\hspace{1cm}}.
+          \end{enumerate}
+
+    \item For which $a$ and $c$ is this matrix positive definite? For which $a$ and $c$ is it positive semidefinite (this includes definite)?
+          \[
+              S = \begin{bmatrix} a & a & a \\ a & a + c & a - c \\ a & a - c & a + c \end{bmatrix} \quad \text{All 5 tests are possible.}
+          \]
+          The energy $x^{\mathrm{T}}Sx$ equals $a(x_1 + x_2 + x_3)^2 + c(x_2 - x_3)^2$.
+\end{enumerate}
 
 \newpage
 

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1781987668.69611 "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" "线代练习题.pdf" "线代练习题" 1781987675.60375 0
-  "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" 1781987666 308619 94e226368a7fec20bab9d2fc6764f620 ""
+["pdflatex"] 1781992973.11926 "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" "线代练习题.pdf" "线代练习题" 1781992979.17843 0
+  "d:/GitHub/LinearAlgebra_exercise/线代练习题.tex" 1781992964 383320 cdc2348219def32341ec383522482e46 ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_63ftwl.enc" 1777962438 3256 d67ce3a4bafba4e41bf7b9c1e1bff17d ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_674lrv.enc" 1777962438 2914 b91f1eda835b6f3c794ae782cbcfb704 ""
   "e:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_m5c6xi.enc" 1777962439 2922 c4c22ae90239b9e80a9f9d7ece527f5b ""
@@ -48,6 +48,7 @@
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1777959472 30251 6afa5cb1d0204815a708a080681d4674 ""
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1777959472 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1777959472 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1777959472 37912 07513ec114ac737ab54cea0152f4424b ""
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1777959472 36281 c355509802a035cadc5f15869451dcee ""
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1777959472 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1777959472 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -210,10 +211,10 @@
   "pic/Figure4.3.png" 1781174802 31255 9e8de538b7b5b571080b577c87e05b33 ""
   "pic/Figure5.2_1.png" 1781985712 30301 839453d0b5a2ebf8e31c2941ebf4cbbf ""
   "pic/Figure_21.png" 1780301152 35951 79f2e4f1090c25762c5b9c3642b20e3a ""
-  "线代练习题.aux" 1781987674 9598 d064133e7f92d702fb27b12f219a6d33 "pdflatex"
-  "线代练习题.out" 1781987674 7954 208624769709447f696cc29fb5ed8637 "pdflatex"
-  "线代练习题.tex" 1781987666 308619 94e226368a7fec20bab9d2fc6764f620 ""
-  "线代练习题.toc" 1781987674 5490 539c8d3b2b018cb0dfb1abaef5292c13 "pdflatex"
+  "线代练习题.aux" 1781992978 9598 1b14da51c9501f77632f6b2fda2a30ac "pdflatex"
+  "线代练习题.out" 1781992978 7954 208624769709447f696cc29fb5ed8637 "pdflatex"
+  "线代练习题.tex" 1781992964 383320 cdc2348219def32341ec383522482e46 ""
+  "线代练习题.toc" 1781992978 5490 290d6f670e021af18596985917eb5192 "pdflatex"
   (generated)
   "线代练习题.aux"
   "线代练习题.log"
