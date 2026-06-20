@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  21 JUN 2026 04:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  21 JUN 2026 04:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,18 +895,18 @@ Package rerunfilecheck Info: File `线代练习题.out' has not changed.
 (rerunfilecheck)             Checksum: 208624769709447F696CC29FB5ED8637;7954.
  ) 
 Here is how much of TeX's memory you used:
- 24959 strings out of 467348
- 451151 string characters out of 5419842
+ 24964 strings out of 467348
+ 451196 string characters out of 5419842
  855221 words of memory out of 5000000
  52307 multiletter control sequences out of 15000+600000
  654591 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,18n,107p,882b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 线代练习题.pdf (74 pages, 1015697 bytes).
+Output written on 线代练习题.pdf (74 pages, 1017070 bytes).
 PDF statistics:
- 2124 PDF objects out of 2487 (max. 8388607)
- 1977 compressed objects within 20 object streams
- 1323 named destinations out of 1440 (max. 500000)
+ 2130 PDF objects out of 2487 (max. 8388607)
+ 1983 compressed objects within 20 object streams
+ 1328 named destinations out of 1440 (max. 500000)
  362 words of extra memory for PDF output out of 10000 (max. 10000000)
 
