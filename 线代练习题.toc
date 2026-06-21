@@ -59,10 +59,6 @@
 \contentsline {paragraph}{Challenge Problems}{91}{section*.33}%
 \contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{92}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Image Processing by Linear Algebra}{92}{subsection.7.1}%
-\contentsline {paragraph}{Challenge Problems}{92}{section*.34}%
 \contentsline {subsection}{\numberline {7.2}Bases and Matrices in the SVD}{92}{subsection.7.2}%
-\contentsline {paragraph}{Challenge Problems}{92}{section*.35}%
-\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{92}{subsection.7.3}%
-\contentsline {paragraph}{Challenge Problems}{92}{section*.36}%
-\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{92}{subsection.7.4}%
-\contentsline {paragraph}{Challenge Problems}{92}{section*.37}%
+\contentsline {subsection}{\numberline {7.3}Principal Component Analysis (PCA by the SVD)}{94}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}The Geometry of the SVD}{95}{subsection.7.4}%

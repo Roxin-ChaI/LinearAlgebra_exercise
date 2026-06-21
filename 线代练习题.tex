@@ -5863,20 +5863,282 @@ So $AB$ and $BA$ have the same eigenvalues except for $|n - m|$ zeros. Wow.
 \section{Chapter 7: The Singular Value Decomposition (SVD)}
 
 \subsection{Image Processing by Linear Algebra}
-\noindent
-\paragraph{Challenge Problems}
+\begin{enumerate}
+    \item What are the ranks $r$ for these matrices with entries $i$ times $j$ and $i$ plus $j$? Write $A$ and $B$ as the sum of $r$ pieces $\boldsymbol{u}\boldsymbol{v}^{\mathrm{T}}$ of rank one. Not requiring $\boldsymbol{u}_1^{\mathrm{T}}\boldsymbol{u}_2 = \boldsymbol{v}_1^{\mathrm{T}}\boldsymbol{v}_2 = \mathbf{0}$.
+          \[
+              A = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 6 & 8 \\ 3 & 6 & 9 & 12 \\ 4 & 8 & 12 & 16 \end{bmatrix} \qquad B = \begin{bmatrix} 2 & 3 & 4 & 5 \\ 3 & 4 & 5 & 6 \\ 4 & 5 & 6 & 7 \\ 5 & 6 & 7 & 8 \end{bmatrix}
+          \]
+
+    \item We usually think that the identity matrix $I$ is as simple as possible. But why is $I$ completely incompressible? \textit{Draw a rank 5 flag with a cross.}
+
+    \item These flags have rank 2. Write $A$ and $B$ in any way as $\boldsymbol{u}_1\boldsymbol{v}_1^{\mathrm{T}} + \boldsymbol{u}_2\boldsymbol{v}_2^{\mathrm{T}}$.
+          \[
+              A_{\text{Sweden}} = A_{\text{Finland}} = \begin{bmatrix} 1 & 2 & 1 & 1 \\ 2 & 2 & 2 & 2 \\ 1 & 2 & 1 & 1 \end{bmatrix} \qquad B_{\text{Benin}} = \begin{bmatrix} 1 & 2 & 2 \\ 1 & 3 & 3 \end{bmatrix}
+          \]
+
+    \item Now find the trace and determinant of $BB^{\mathrm{T}}$ and $B^{\mathrm{T}}B$ in Problem 3. The singular values of $B$ are close to $\sigma_1^2 = 28 - \frac{1}{14}$ and $\sigma_2^2 = \frac{1}{14}$. Is $B$ compressible or not?
+
+    \item Use $[U, S, V] = \operatorname{svd}(A)$ to find two orthogonal pieces $\sigma \boldsymbol{u}\boldsymbol{v}^{\mathrm{T}}$ of $A_{\text{Sweden}}$.
+
+    \item Find the eigenvalues and the singular values of this 2 by 2 matrix $A$.
+          \[
+              A = \begin{bmatrix} 2 & 1 \\ 4 & 2 \end{bmatrix} \qquad \text{with} \quad A^{\mathrm{T}}A = \begin{bmatrix} 20 & 10 \\ 10 & 5 \end{bmatrix} \qquad \text{and} \quad AA^{\mathrm{T}} = \begin{bmatrix} 5 & 10 \\ 10 & 20 \end{bmatrix}.
+          \]
+          The eigenvectors $(1, 2)$ and $(1, -2)$ of $A$ are not orthogonal. How do you know the eigenvectors $\boldsymbol{v}_1, \boldsymbol{v}_2$ of $A^{\mathrm{T}}A$ are orthogonal? Notice that $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ have the same eigenvalues (25 and 0).
+
+    \item How does the second form $A\boldsymbol{V} = \boldsymbol{U}\Sigma$ in equation (3) follow from the first form $A = \boldsymbol{U}\Sigma\boldsymbol{V}^{\mathrm{T}}$? That is the most famous form of the SVD.
+
+    \item The two columns of $A\boldsymbol{V} = \boldsymbol{U}\Sigma$ are $A\boldsymbol{v}_1 = \sigma_1\boldsymbol{u}_1$ and $A\boldsymbol{v}_2 = \sigma_2\boldsymbol{u}_2$. So we hope that
+          \[
+              A\boldsymbol{v}_1 = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} \sigma_1 \\ 1 \end{bmatrix} = \sigma_1 \begin{bmatrix} 1 \\ \sigma_1 \end{bmatrix} \qquad \text{and} \qquad \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ -\sigma_1 \end{bmatrix} = \sigma_2 \begin{bmatrix} \sigma_1 \\ -1 \end{bmatrix}
+          \]
+          The first needs $\sigma_1 + 1 = \sigma_1^2$ and the second needs $1 - \sigma_1 = -\sigma_2$. Are those true?
+
+    \item The MATLAB commands $A = \operatorname{rand}(20, 40)$ and $B = \operatorname{randn}(20, 40)$ produce 20 by 40 random matrices. The entries of $A$ are between 0 and 1 with uniform probability. The entries of $B$ have a normal ``bell-shaped'' probability distribution. Using an \texttt{svd} command, find and graph their singular values $\sigma_1$ to $\sigma_{20}$. Why do they have 20 $\sigma$'s?
+\end{enumerate}
+
 
 \subsection{Bases and Matrices in the SVD}
-\noindent
-\paragraph{Challenge Problems}
+\begin{enumerate}
+    \item Find the eigenvalues of these matrices. Then find singular values from $A^{\mathrm{T}}A$:
+          \[
+              A = \begin{bmatrix} 0 & 4 \\ 0 & 0 \end{bmatrix} \qquad A = \begin{bmatrix} 0 & 4 \\ 1 & 0 \end{bmatrix}
+          \]
+          For each $A$, construct $V$ from the eigenvectors of $A^{\mathrm{T}}A$ and $U$ from the eigenvectors of $AA^{\mathrm{T}}$. Check that $A = U\Sigma V^{\mathrm{T}}$.
+
+    \item Find $A^{\mathrm{T}}A$ and $V$ and $\Sigma$ and $\boldsymbol{u}_i = A\boldsymbol{v}_i/\sigma_i$ and the full SVD:
+          \[
+              A = \begin{bmatrix} 2 & 2 \\ -1 & 1 \end{bmatrix} = U\Sigma V^{\mathrm{T}}.
+          \]
+
+    \item In Problem 2, show that $AA^{\mathrm{T}}$ is diagonal. Its eigenvectors $\boldsymbol{u}_1, \boldsymbol{u}_2$ are \underline{\hspace{1cm}}. Its eigenvalues $\sigma_1^2, \sigma_2^2$ are \underline{\hspace{1cm}}. The rows of $A$ are orthogonal but they are not \underline{\hspace{1cm}}. So the columns of $A$ are not orthogonal.
+
+    \item Compute $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ and their eigenvalues and unit eigenvectors for $V$ and $U$.
+          \[
+              \textbf{Rectangular matrix} \qquad A = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}.
+          \]
+          Check $AV = U\Sigma$ (this decides $\pm$ signs in $U$). $\Sigma$ has the same shape as $A: 2 \times 3$.
+
+    \item (a) The row space of $A = \begin{bmatrix} 1 & 1 \\ 3 & 3 \end{bmatrix}$ is 1-dimensional. Find $\boldsymbol{v}_1$ in the row space and $\boldsymbol{u}_1$ in the column space. What is $\sigma_1$? Why is there no $\sigma_2$? \\
+          (b) Choose $\boldsymbol{v}_2$ and $\boldsymbol{u}_2$ in $U$ and $V$. Then $A = U\Sigma V^{\mathrm{T}} = \boldsymbol{u}_1\sigma_1\boldsymbol{v}_1^{\mathrm{T}}$ (one term only).
+
+    \item Substitute the SVD for $A$ and $A^{\mathrm{T}}$ to show that $A^{\mathrm{T}}A$ has its eigenvalues in $\Sigma^{\mathrm{T}}\Sigma$ and $AA^{\mathrm{T}}$ has its eigenvalues in $\Sigma\Sigma^{\mathrm{T}}$. Since a diagonal $\Sigma^{\mathrm{T}}\Sigma$ has the same nonzeros as $\Sigma\Sigma^{\mathrm{T}}$, we see again that $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ have the same nonzero eigenvalues.
+
+    \item If $(A^{\mathrm{T}}A)\boldsymbol{v} = \sigma^2\boldsymbol{v}$, multiply by $A$. \textit{Move the parentheses} to get $(AA^{\mathrm{T}})A\boldsymbol{v} = \sigma^2(A\boldsymbol{v})$. \\
+          \textbf{If $\boldsymbol{v}$ is an eigenvector of $A^{\mathrm{T}}A$, then \underline{\hspace{1cm}} is an eigenvector of $AA^{\mathrm{T}}$.}
+
+    \item Find the eigenvalues and unit eigenvectors $\boldsymbol{v}_1, \boldsymbol{v}_2$ of $A^{\mathrm{T}}A$. Then find $\boldsymbol{u}_1 = A\boldsymbol{v}_1/\sigma_1$:
+          \[
+              A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix} \quad \text{and} \quad A^{\mathrm{T}}A = \begin{bmatrix} 10 & 20 \\ 20 & 40 \end{bmatrix} \quad \text{and} \quad AA^{\mathrm{T}} = \begin{bmatrix} 5 & 15 \\ 15 & 45 \end{bmatrix}.
+          \]
+          Verify that $\boldsymbol{u}_1$ is a unit eigenvector of $AA^{\mathrm{T}}$. Complete the matrices $U, \Sigma, V$.
+          \[
+              \textbf{SVD} \qquad \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix} = \begin{bmatrix} \boldsymbol{u}_1 & \boldsymbol{u}_2 \end{bmatrix} \begin{bmatrix} \sigma_1 & \\ & 0 \end{bmatrix} \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 \end{bmatrix}^{\mathrm{T}}.
+          \]
+
+    \item Write down orthonormal bases for the four fundamental subspaces of this $A$.
+
+    \item (a) Why is the trace of $A^{\mathrm{T}}A$ equal to the sum of all $a_{ij}^2$? In Example 3 it is 50. \\
+          (b) For every rank-one matrix, why is $\sigma_1^2 = \text{sum of all } a_{ij}^2$?
+
+    \item Find the eigenvalues and unit eigenvectors of $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$. Keep each $A\boldsymbol{v} = \sigma\boldsymbol{u}$. Then construct the singular value decomposition and verify that $A$ equals $U\Sigma V^{\mathrm{T}}$.
+          \[
+              \textbf{Fibonacci matrix} \qquad A = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}
+          \]
+
+    \item Use the \textbf{svd} part of the MATLAB demo \textbf{eigshow} to find those $\boldsymbol{v}$'s graphically.
+
+    \item If $A = U\Sigma V^{\mathrm{T}}$ is a square invertible matrix then $A^{-1} =$ \underline{\hspace{1cm}} \underline{\hspace{1cm}} \underline{\hspace{1cm}}. Check $A^{-1}A$. This shows that \textit{the singular values of} $A^{-1}$ \textit{are} $1/\sigma_i$. \\
+          \textit{Note}: The largest singular value of $A^{-1}$ is therefore $1/\sigma_{\min}(A)$. The largest eigenvalue $|\lambda(A^{-1})|_{\max}$ is $1/|\lambda(A)|_{\min}$. Then equation (14) says that $\sigma_{\min}(A) \le |\lambda(A)|_{\min}$.
+
+    \item Suppose $\boldsymbol{u}_1, \dots, \boldsymbol{u}_n$ and $\boldsymbol{v}_1, \dots, \boldsymbol{v}_n$ are orthonormal bases for $\mathbf{R}^n$. Construct the matrix $A = U\Sigma V^{\mathrm{T}}$ that transforms each $\boldsymbol{v}_j$ into $\boldsymbol{u}_j$ to give $A\boldsymbol{v}_1 = \boldsymbol{u}_1, \dots, A\boldsymbol{v}_n = \boldsymbol{u}_n$.
+
+    \item Construct the matrix with rank one that has $A\boldsymbol{v} = 12\boldsymbol{u}$ for $\boldsymbol{v} = \frac{1}{2}(1, 1, 1, 1)$ and $\boldsymbol{u} = \frac{1}{3}(2, 2, 1)$. Its only singular value is $\sigma_1 =$ \underline{\hspace{1cm}}.
+
+    \item Suppose $A$ has orthogonal columns $\boldsymbol{w}_1, \boldsymbol{w}_2, \dots, \boldsymbol{w}_n$ of lengths $\sigma_1, \sigma_2, \dots, \sigma_n$. What are $U, \Sigma$, and $V$ in the SVD?
+
+    \item Suppose $A$ is a 2 by 2 symmetric matrix with unit eigenvectors $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$. If its eigenvalues are $\lambda_1 = 3$ and $\lambda_2 = -2$, what are the matrices $U, \Sigma, V^{\mathrm{T}}$ in its SVD?
+
+    \item If $A = QR$ with an orthogonal matrix $Q$, the SVD of $A$ is almost the same as the SVD of $R$. Which of the three matrices $U, \Sigma, V$ is changed because of $Q$?
+
+    \item Suppose $A$ is invertible (with $\sigma_1 > \sigma_2 > 0$). Change $A$ by \textbf{\textit{as small a matrix as possible}} to produce a singular matrix $A_0$. Hint: $U$ and $V$ do not change:
+          \[
+              \text{From} \qquad A = \begin{bmatrix} \boldsymbol{u}_1 & \boldsymbol{u}_2 \end{bmatrix} \begin{bmatrix} \sigma_1 & \\ & \sigma_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 \end{bmatrix}^{\mathrm{T}} \qquad \text{find the nearest } A_0.
+          \]
+
+    \item Find the singular values of $A$ from the command \textbf{svd}$(A)$ or by hand.
+          \[
+              A = \begin{bmatrix} 1 & 0 \\ 100 & 1 \end{bmatrix}. \quad \text{Why is } \sigma_2 = \frac{1}{\sigma_1} \text{ for this matrix?}
+          \]
+
+    \item Why doesn't the SVD for $A + I$ just use $\Sigma + I$?
+
+    \item If $A = U\Sigma V^{\mathrm{T}}$ then $Q_1 A Q_2^{\mathrm{T}} = (Q_1 U)\Sigma(Q_2 V)^{\mathrm{T}}$. Why will any orthogonal matrices $Q_1$ and $Q_2$ leave $Q_1 U =$ orthogonal matrix and $Q_2 V =$ orthogonal matrix? Then $\Sigma$ sees \textbf{no change in the singular values: $Q_1 A Q_2^{\mathrm{T}}$ has the same $\sigma$'s as $A$.}
+
+    \item If $Q$ is an orthogonal matrix, why do all its singular values equal 1?
+
+    \item (a) Find the maximum of $\frac{x^{\mathrm{T}}Sx}{x^{\mathrm{T}}x} = \frac{3x_1^2 + 2x_1x_2 + 3x_2^2}{x_1^2 + x_2^2}$. What matrix is $S$? \\
+          (b) Find the maximum of $\frac{(x_1 + 4x_2)^2}{x_1^2 + x_2^2}$. For what matrix $A$ is this $\frac{\|A\boldsymbol{x}\|^2}{\|\boldsymbol{x}\|^2}$?
+
+    \item What are the \textbf{minimum values} of the ratios $\frac{x^{\mathrm{T}}Sx}{x^{\mathrm{T}}x}$ and $\frac{\|A\boldsymbol{x}\|^2}{\|\boldsymbol{x}\|^2}$? We should take $\boldsymbol{x}$ to be which eigenvectors of $S$? Should $\boldsymbol{x}$ always be an eigenvector of $A$?
+
+    \item Every matrix $A = U\Sigma V^{\mathrm{T}}$ takes \textbf{circles to ellipses}. $A\boldsymbol{V} = U\Sigma$ says that the radius vectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$ of the circle go to the semi-axes $\sigma_1\boldsymbol{u}_1$ and $\sigma_2\boldsymbol{u}_2$ of the ellipse. Draw the circle and the ellipse for $\theta = 30^{\circ}$:
+          \[
+              V = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \qquad U = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \qquad \Sigma = \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}.
+          \]
+          Section 7.4 will start with an important SVD picture for 2 by 2 matrices:
+          \[
+              A = (\textbf{rotate})(\textbf{stretch})(\textbf{rotate}).
+          \]
+          With symmetry
+          \[
+              S = (\textbf{rotate})(\textbf{stretch})(\textbf{rotate back}).
+          \]
+    \item This problem looks for all matrices $A$ with a given column space in $\mathbf{R}^m$ and a given row space in $\mathbf{R}^n$. Suppose $\boldsymbol{c}_1, \dots, \boldsymbol{c}_r$ and $\boldsymbol{b}_1, \dots, \boldsymbol{b}_r$ are bases for those two spaces. Make them columns of $C$ and $B$. The goal is to show that $A$ has this form: \\
+          \[
+              \boldsymbol{A = CMB^{\mathrm{T}}} \textbf{\textit{for an $r$ by $r$ invertible matrix $M$}}. Hint: \textit{Start from} A = U\Sigma V^{\mathrm{T}}.
+          \]
+          The first $r$ columns of $U$ and $V$ must be connected to $C$ and $B$ by invertible matrices, because they contain bases for the same column space (in $U$) and row space (in $V$).
+\end{enumerate}
 
 \subsection{Principal Component Analysis (PCA by the SVD)}
-\noindent
-\paragraph{Challenge Problems}
+\begin{enumerate}
+    \item Suppose $A_0$ holds these 2 measurements of 5 samples:
+          \[
+              A_0 = \begin{bmatrix} 5 & 4 & 3 & 2 & 1 \\ -1 & 1 & 0 & 1 & -1 \end{bmatrix}
+          \]
+          Find the average of each row and subtract it to produce the centered matrix $A$. Compute the sample covariance matrix $S = AA^{\mathrm{T}}/(n - 1)$ and find its eigenvalues $\lambda_1$ and $\lambda_2$. What line through the origin is closest to the 5 samples in columns of $A$?
+
+    \item Take the steps of Problem 1 for this 2 by 6 matrix $A_0$:
+          \[
+              A_0 = \begin{bmatrix} 1 & 0 & 1 & 0 & 1 & 0 \\ 1 & 2 & 3 & 3 & 2 & 1 \end{bmatrix}
+          \]
+
+    \item The sample variances $s_1^2, s_2^2$ and the sample covariance $s_{12}$ are the entries of $S$. What is $S$ (after subtracting means) when $A_0 = \begin{bmatrix} 1 & 2 & 3 \\ 5 & 2 & 2 \end{bmatrix}$ ? What is $\sigma_1$ ?
+
+    \item From the eigenvectors of $S = AA^{\mathrm{T}}$, find the line (the $\boldsymbol{u}_1$ direction through the center point) and then the plane ($\boldsymbol{u}_1, \boldsymbol{u}_2$ directions) closest to these four points in three-dimensional space:
+          \[
+              A = \begin{bmatrix} 1 & -1 & 0 & 0 \\ 0 & 0 & 2 & -2 \\ 1 & 1 & -1 & -1 \end{bmatrix}.
+          \]
+
+    \item From this sample covariance matrix $S$, find the correlation matrix $DSD$ with 1's down its main diagonal. $D$ is a positive diagonal matrix that produces those 1's.
+          \[
+              S = \begin{bmatrix} 4 & 2 & 0 \\ 2 & 4 & 1 \\ 0 & 1 & 1 \end{bmatrix}.
+          \]
+
+    \item Choose the diagonal matrix $D$ that produces $DSD$ and find the correlations $c_{ij}$:
+          \[
+              S = \begin{bmatrix} s_1^2 & s_{12} & s_{13} \\ s_{12} & s_2^2 & s_{23} \\ s_{13} & s_{23} & s_3^2 \end{bmatrix} \qquad DSD = \begin{bmatrix} 1 & c_{12} & c_{13} \\ c_{12} & 1 & c_{23} \\ c_{13} & c_{23} & 1 \end{bmatrix}.
+          \]
+
+    \item Suppose $A_0$ is a 5 by 10 matrix with average grades for 5 courses over 10 years. How would you create the centered matrix $A$ and the sample covariance matrix $S$? When you find the leading eigenvector of $S$, what does it tell you?
+\end{enumerate}
 
 \subsection{The Geometry of the SVD}
-\noindent
-\paragraph{Challenge Problems}
+\noindent \textbf{Problems 1-4 compute and use the SVD of a particular matrix (not invertible).}
+\begin{enumerate}
+    \item
+          \begin{enumerate}
+              \item Compute $A^{\mathrm{T}}A$ and its eigenvalues and unit eigenvectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. Find $\sigma_1$.
+                    \[
+                        \textbf{Rank one matrix} \quad A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix}
+                    \]
+              \item Compute $AA^{\mathrm{T}}$ and its eigenvalues and unit eigenvectors $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$.
+              \item Verify that $A\boldsymbol{v}_1 = \sigma_1\boldsymbol{u}_1$. Put numbers into $\boldsymbol{A = U\Sigma V^{\mathrm{T}}}$ (this is the SVD).
+          \end{enumerate}
+
+    \item
+          \begin{enumerate}
+              \item From the $\boldsymbol{u}$'s and $\boldsymbol{v}$'s in Problem 1 write down orthonormal bases for the four fundamental subspaces of this matrix $A$.
+              \item Describe all matrices that have those same four subspaces. Multiples of $A$?
+          \end{enumerate}
+
+    \item From $U$, $V$, and $\Sigma$ in Problem 1 find the orthogonal matrix $Q = UV^{\mathrm{T}}$ and the symmetric matrix $S = V\Sigma V^{\mathrm{T}}$. Verify the polar decomposition $A = QS$. This $S$ is only semidefinite because \underline{\hspace{1cm}}. Test $S^2 = A$.
+
+    \item Compute the pseudoinverse $A^+ = V\Sigma^+U^{\mathrm{T}}$. The diagonal matrix $\Sigma^+$ contains $1/\sigma_1$. Rename the four subspaces (for $A$) in Figure 7.6 as four subspaces for $A^+$. Compute the projections $A^+A$ and $AA^+$ on the row and column spaces of $A$.
+\end{enumerate}
+
+
+\noindent \textbf{Problems 5-9 are about the SVD of an invertible matrix.}
+\begin{enumerate}[resume]
+    \item Compute $A^{\mathrm{T}}A$ and its eigenvalues and unit eigenvectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. What are the singular values $\sigma_1$ and $\sigma_2$ for this matrix $A$?
+          \[
+              A = \begin{bmatrix} 3 & 3 \\ -1 & 1 \end{bmatrix}.
+          \]
+
+    \item $AA^{\mathrm{T}}$ has the same eigenvalues $\sigma_1^2$ and $\sigma_2^2$ as $A^{\mathrm{T}}A$. Find unit eigenvectors $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$. Put numbers into the SVD:
+          \[
+              A = \begin{bmatrix} 3 & 3 \\ -1 & 1 \end{bmatrix} = \begin{bmatrix} \boldsymbol{u}_1 & \boldsymbol{u}_2 \end{bmatrix} \begin{bmatrix} \sigma_1 & \\ & \sigma_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 \end{bmatrix}^{\mathrm{T}}.
+          \]
+
+    \item In Problem 6, multiply columns times rows to show that $A = \sigma_1\boldsymbol{u}_1\boldsymbol{v}_1^{\mathrm{T}} + \sigma_2\boldsymbol{u}_2\boldsymbol{v}_2^{\mathrm{T}}$. Prove from $A = U\Sigma V^{\mathrm{T}}$ that every matrix of rank $r$ is the sum of $r$ matrices of rank one.
+
+    \item From $U$, $V$, and $\Sigma$ find the orthogonal matrix $Q = UV^{\mathrm{T}}$ and the symmetric matrix $K = U\Sigma U^{\mathrm{T}}$. Verify the polar decomposition in reverse order $A = KQ$.
+
+    \item The pseudoinverse of this $A$ is the same as \underline{\hspace{1cm}} because \underline{\hspace{1cm}}.
+\end{enumerate}
+
+
+\noindent \textbf{Problems 10-11 compute and use the SVD of a 1 by 3 rectangular matrix.}
+\begin{enumerate}[resume]
+    \item Compute $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ and their eigenvalues and unit eigenvectors when the matrix is $A = \begin{bmatrix} 3 & 4 & 0 \end{bmatrix}$. What are the singular values of $A$?
+
+    \item Put numbers into the singular value decomposition of $A$:
+          \[
+              A = \begin{bmatrix} 3 & 4 & 0 \end{bmatrix} = \begin{bmatrix} \boldsymbol{u}_1 \end{bmatrix} \begin{bmatrix} \sigma_1 & 0 & 0 \end{bmatrix} \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 & \boldsymbol{v}_3 \end{bmatrix}^{\mathrm{T}}.
+          \]
+          Put numbers into the pseudoinverse $V\Sigma^+U^{\mathrm{T}}$ of $A$. \textit{Compute $AA^+$ and $A^+A$}:
+          \[
+              \textbf{Pseudoinverse} \quad A^+ = \begin{bmatrix} \phantom{0} \\ \phantom{0} \\ \phantom{0} \end{bmatrix} = \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 & \boldsymbol{v}_3 \end{bmatrix} \begin{bmatrix} 1/\sigma_1 \\ 0 \\ 0 \end{bmatrix} \begin{bmatrix} \boldsymbol{u}_1 \end{bmatrix}^{\mathrm{T}}.
+          \]
+
+    \item What is the only 2 by 3 matrix that has no pivots and no singular values? What is $\Sigma$ for that matrix? $A^+$ is the zero matrix, but what is its shape?
+
+    \item If $\det A = 0$ why is $\det A^+ = 0$? If $A$ has rank $r$, why does $A^+$ have rank $r$?
+
+    \item For vectors in the unit circle $\|\boldsymbol{x}\| = 1$, the vectors $\boldsymbol{y} = A\boldsymbol{x}$ in the ellipse will have $\|A^{-1}\boldsymbol{y}\| = 1$. This ellipse has axes along the singular vectors with lengths $= \sigma_1, \dots, \sigma_r$ (as in Figure 7.5). Expand $\|A^{-1}\boldsymbol{y}\|^2 = 1$ for $A = [\,2\ 1\,;\,1\ 2\,]$.
+\end{enumerate}
+
+
+\noindent \textbf{Problems 15-18 bring out the main properties of $A^+$ and $\boldsymbol{x}^+ = A^+\boldsymbol{b}$.}
+\begin{enumerate}[resume]
+    \item All matrices in this problem have rank one. The vector $\boldsymbol{b}$ is $(b_1, b_2)$.
+          \[
+              A = \begin{bmatrix} 2 & 2 \\ 1 & 1 \end{bmatrix} \quad AA^{\mathrm{T}} = \begin{bmatrix} 8 & 4 \\ 4 & 2 \end{bmatrix} \quad A^{\mathrm{T}}A = \begin{bmatrix} 5 & 5 \\ 5 & 5 \end{bmatrix} \quad A^+ = \begin{bmatrix} .2 & .1 \\ .2 & .1 \end{bmatrix}
+          \]
+          \begin{enumerate}
+              \item The equation $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$ has many solutions because $A^{\mathrm{T}}A$ is \underline{\hspace{1cm}}.
+              \item Verify that $\boldsymbol{x}^+ = A^+\boldsymbol{b} = (.2b_1 + .1b_2, .2b_1 + .1b_2)$ solves $A^{\mathrm{T}}A\boldsymbol{x}^+ = A^{\mathrm{T}}\boldsymbol{b}$.
+              \item Add $(1, -1)$ to that $\boldsymbol{x}^+$ to get another solution to $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$. Show that $\|\widehat{\boldsymbol{x}}\|^2 = \|\boldsymbol{x}^+\|^2 + 2$, and $\boldsymbol{x}^+$ is shorter.
+          \end{enumerate}
+
+    \item \textit{The vector $\boldsymbol{x}^+ = A^+\boldsymbol{b}$ is the shortest possible solution to $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$.} \\
+          Reason: The difference $\widehat{\boldsymbol{x}} - \boldsymbol{x}^+$ is in the nullspace of $A^{\mathrm{T}}A$. This is also the nullspace of $A$, orthogonal to $\boldsymbol{x}^+$. Explain how it follows that $\|\widehat{\boldsymbol{x}}\|^2 = \|\boldsymbol{x}^+\|^2 + \|\widehat{\boldsymbol{x}} - \boldsymbol{x}^+\|^2$.
+
+    \item Every $\boldsymbol{b}$ in $\mathbf{R}^m$ is $\boldsymbol{p} + \boldsymbol{e}$. This is the column space part plus the left nullspace part. Every $\boldsymbol{x}$ in $\mathbf{R}^n$ is $\boldsymbol{x}^+ + \boldsymbol{x}_n$. This is the row space part plus the nullspace part. Then
+          \[
+              AA^+\boldsymbol{p} = \underline{\hspace{1cm}} \qquad AA^+\boldsymbol{e} = \underline{\hspace{1cm}} \qquad A^+A\boldsymbol{x}^+ = \underline{\hspace{1cm}} \qquad A^+A\boldsymbol{x}_n = \underline{\hspace{1cm}}
+          \]
+
+    \item Find $A^+$ and $A^+A$ and $AA^+$ and $\boldsymbol{x}^+$ for this matrix $A = U\Sigma V^{\mathrm{T}}$ and these $\boldsymbol{b}$:
+          \[
+              A = \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} .6 & -.8 \\ .8 & .6 \end{bmatrix} \begin{bmatrix} 5 \\ 0 \end{bmatrix} \begin{bmatrix} 1 \end{bmatrix} \qquad \boldsymbol{b} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} -4 \\ 3 \end{bmatrix}.
+          \]
+
+    \item A general 2 by 2 matrix $A$ is determined by four numbers. If triangular, it is determined by three. If diagonal, by two. If a rotation, by one. If a unit eigenvector, also by one. Check that the total count is four for each factorization of $A$:
+          \[
+              \textbf{Four numbers in} \quad LU \quad LDU \quad QR \quad U\Sigma V^{\mathrm{T}} \quad X\Lambda X^{-1}.
+          \]
+
+    \item Following Problem 18, check that $LDL^{\mathrm{T}}$ and $Q\Lambda Q^{\mathrm{T}}$ are determined by \textit{three} numbers. This is correct because the matrix is now \underline{\hspace{1cm}}.
+
+    \item From $A$ and $A^+$ show that $A^+A$ is correct and $(A^+A)^2 = A^+A = \text{projection}$.
+          \[
+              A = \sum_1^r \sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathrm{T}} \qquad A^+ = \sum_1^r \frac{\boldsymbol{v}_i\boldsymbol{u}_i^{\mathrm{T}}}{\sigma_i} \qquad A^+A = \sum_1^r \boldsymbol{v}_i\boldsymbol{v}_i^{\mathrm{T}} \qquad AA^+ = \sum_1^r \boldsymbol{u}_i\boldsymbol{u}_i^{\mathrm{T}}
+          \]
+
+    \item Each pair of singular vectors $\boldsymbol{v}$ and $\boldsymbol{u}$ has $A\boldsymbol{v} = \sigma\boldsymbol{u}$ and $A^{\mathrm{T}}\boldsymbol{u} = \sigma\boldsymbol{v}$. Show that the double vector $\begin{bmatrix} \boldsymbol{v} \\ \boldsymbol{u} \end{bmatrix}$ is an eigenvector of the symmetric block matrix $M = \begin{bmatrix} 0 & A^{\mathrm{T}} \\ A & 0 \end{bmatrix}$. The SVD of $A$ is equivalent to the diagonalization of that symmetric matrix $M$.
+\end{enumerate}
 
 \newpage
 
