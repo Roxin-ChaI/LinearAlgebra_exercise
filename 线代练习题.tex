@@ -5859,6 +5859,47 @@ So $AB$ and $BA$ have the same eigenvalues except for $|n - m|$ zeros. Wow.
 \end{enumerate}
 
 \newpage
+\begin{flushright}
+    \textbf{\Large \color{blue!80!black} Table of Eigenvalues and Eigenvectors}
+\end{flushright}
+
+\noindent How are the properties of a matrix reflected in its eigenvalues and eigenvectors? This question is fundamental throughout Chapter 6. A table that organizes the key facts may be helpful. Here are the special properties of the eigenvalues $\lambda_i$ and the eigenvectors $x_i$.
+
+\vspace{0.5cm}
+
+\noindent
+\renewcommand{\arraystretch}{1.4} % 增加行高，避免加上边框后显得拥挤
+\begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Symmetric}: $S^{\mathrm{T}} = S = Q\Lambda Q^{\mathrm{T}}$ & real eigenvalues                                & orthogonal $x_i^{\mathrm{T}}x_j = 0$                                       \\ \hline
+    \textbf{Orthogonal}: $Q^{\mathrm{T}} = Q^{-1}$                     & all $|\lambda| = 1$                             & orthogonal $\bar{x}_i^{\mathrm{T}}x_j = 0$                                 \\ \hline
+    \textbf{Skew-symmetric}: $A^{\mathrm{T}} = -A$                     & imaginary $\lambda$'s                           & orthogonal $\bar{x}_i^{\mathrm{T}}x_j = 0$                                 \\ \hline
+    \textbf{Complex Hermitian}: $\bar{S}^{\mathrm{T}} = S$             & real $\lambda$'s                                & orthogonal $\bar{x}_i^{\mathrm{T}}x_j = 0$                                 \\ \hline
+    \textbf{Positive Definite}: $x^{\mathrm{T}}Sx > 0$                 & all $\lambda > 0$                               & orthogonal since $S^{\mathrm{T}} = S$                                      \\ \hline
+    \textbf{Markov}: $m_{ij} > 0, \sum_{i=1}^n m_{ij} = 1$             & $\lambda_{\max} = 1$                            & steady state $x > 0$                                                       \\ \hline
+    \textbf{Similar}: $A = BCB^{-1}$                                   & $\lambda(A) = \lambda(C)$                       & $B$ times eigenvector of $C$                                               \\ \hline
+    \textbf{Projection}: $P = P^2 = P^{\mathrm{T}}$                    & $\lambda = 1; 0$                                & column space; nullspace                                                    \\ \hline
+    \textbf{Plane Rotation: cosine-sine}                               & $e^{i\theta}$ and $e^{-i\theta}$                & $x = (1, i)$ and $(1, -i)$                                                 \\ \hline
+    \textbf{Reflection}: $I - 2uu^{\mathrm{T}}$                        & $\lambda = -1; 1, \dots, 1$                     & $u$; whole plane $u^{\perp}$                                               \\ \hline
+    \textbf{Rank One}: $uv^{\mathrm{T}}$                               & $\lambda = v^{\mathrm{T}}u; 0, \dots, 0$        & $u$; whole plane $v^{\perp}$                                               \\ \hline
+    \textbf{Inverse}: $A^{-1}$                                         & $1/\lambda(A)$                                  & keep eigenvectors of $A$                                                   \\ \hline
+    \textbf{Shift}: $A + cI$                                           & $\lambda(A) + c$                                & keep eigenvectors of $A$                                                   \\ \hline
+    \textbf{Stable Powers}: $A^n \to 0$                                & all $|\lambda| < 1$                             & any eigenvectors                                                           \\ \hline
+    \textbf{Stable Exponential}: $e^{At} \to 0$                        & all $\mathrm{Re}\, \lambda < 0$                 & any eigenvectors                                                           \\ \hline
+    \textbf{Cyclic Permutation}: $P_{i,i+1} = 1, P_{n1} = 1$           & $\lambda_k = e^{2\pi ik/n} = \text{roots of 1}$ & $x_k = (1, \lambda_k, \dots, \lambda_k^{n-1})$                             \\ \hline
+    \textbf{Circulant}: $c_0I + c_1P + \cdots$                         & $\lambda_k = c_0 + c_1 e^{2\pi ik/n} + \cdots$  & $x_k = (1, \lambda_k, \dots, \lambda_k^{n-1})$                             \\ \hline
+    \textbf{Tridiagonal}: $-1, 2, -1$ on diagonals                     & $\lambda_k = 2 - 2 \cos \frac{k\pi}{n+1}$       & $x_k = \left(\sin \frac{k\pi}{n+1}, \sin \frac{2k\pi}{n+1}, \dots \right)$ \\ \hline
+    \textbf{Diagonalizable}: $A = X\Lambda X^{-1}$                     & diagonal of $\Lambda$                           & columns of $X$ are independent                                             \\ \hline
+    \textbf{Schur}: $A = QTQ^{-1}$                                     & diagonal of triangular $T$                      & columns of $Q$ if $A^{\mathrm{T}}A = AA^{\mathrm{T}}$                      \\ \hline
+    \textbf{Jordan}: $A = BJB^{-1}$                                    & diagonal of $J$                                 & each block gives 1 eigenvector                                             \\ \hline
+    \textbf{SVD}: $A = U\Sigma V^{\mathrm{T}}$                         & $r$ singular values in $\Sigma$                 & eigenvectors of $A^{\mathrm{T}}A, AA^{\mathrm{T}}$ in $V, U$               \\ \hline
+\end{tabular}
+
+
+
+
+
+\newpage
 
 \section{Chapter 7: The Singular Value Decomposition (SVD)}
 
