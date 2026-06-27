@@ -1,0 +1,903 @@
+﻿\documentclass[12pt,a4paper]{ctexart}
+\usepackage{geometry}
+\geometry{left=2.2cm,right=2.2cm,top=2.2cm,bottom=2.2cm}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=red!60!black
+}
+
+\setlist[itemize]{leftmargin=2em,itemsep=0.2em}
+\setlist[enumerate]{leftmargin=2.6em,itemsep=0.75em}
+
+\newcommand{\core}{\textbf{\textcolor{blue!70!black}{[Core]}}}
+\newcommand{\drill}{\textbf{\textcolor{teal!70!black}{[Drill]}}}
+\newcommand{\challenge}{\textbf{\textcolor{red!70!black}{[Challenge]}}}
+\newcommand{\source}[3]{\par\noindent{\small\textcolor{gray!80!black}{Original: #1; #2; #3.}}\par\vspace{0.15em}}
+\newcommand{\cover}[1]{\par\noindent{\small\textbf{母题覆盖：}#1}\par\vspace{0.25em}}
+
+\title{\textbf{Linear Algebra Selected Mother Problems}\\
+\large A focused review version based on Gilbert Strang, \textit{Introduction to Linear Algebra}, Chapters 1--7}
+\author{整理：Roxin-ChaI 项目重点版}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{使用方式}
+这份文档按“母题”标准重新筛选：不是为了覆盖所有小题，而是选择做透以后能迁移到同知识点其他题目的代表题。题目正文保留英文，不翻译；每道题都标明原文 Chapter、Subsection 和 Problem number。
+
+\begin{itemize}
+  \item \core{}: first-pass mother problems; do these first.
+  \item \drill{}: reinforcement problems; use them to confirm the same template works in nearby forms.
+  \item \challenge{}: synthesis problems; use them to test whether the idea transfers across sections.
+\end{itemize}
+
+\tableofcontents
+\newpage
+\section{Chapter 1: Introduction to Vectors}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Vectors and Linear Combinations}{Problem 1}
+  \cover{线性组合的几何判别：共线、共面、生成整个空间。}
+  Describe geometrically (line, plane, or all of $R^3$) all linear combinations of
+            \begin{enumerate}
+                \begin{multicols}{3}
+                \item $\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} and \begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix}$
+                \item $\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} and \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix}$
+                \item $\begin{bmatrix} 2 \\ 0 \\ 0 \end{bmatrix} and \begin{bmatrix} 0 \\ 2 \\ 2 \end{bmatrix} and \begin{bmatrix} 2 \\ 2 \\ 3 \end{bmatrix}$
+                      \end{multicols}
+            \end{enumerate}
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Vectors and Linear Combinations}{Problem 26}
+  \cover{把向量组合转化为小型线性方程组，后面所有求系数题都用这个模板。}
+  What combination $c\begin{bmatrix} 2 \\ 1 \end{bmatrix} + d\begin{bmatrix} 3 \\ 1 \end{bmatrix}$ produces $\begin{bmatrix} 14 \\ 8 \end{bmatrix}$? Express this question as two equations for the coefficients $c$ and $d$ in the linear combination.
+
+  \item \challenge{} \source{Chapter 1: Introduction to Vectors}{Vectors and Linear Combinations}{Problem 30}
+  \cover{生成空间与线性相关的抽象母题，连接二维、四维和基的概念。}
+  The linear combinations of $\boldsymbol{v} = (a,b)$ and $\boldsymbol{w} = (c,d)$ fill the plane unless \underline{\hspace{2cm}}. \\Find four vectors $\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}, \boldsymbol{z}$ with four components each so that their combinations $c\boldsymbol{u} + d\boldsymbol{v} + e\boldsymbol{w} + f\boldsymbol{z}$ produce all vectors $(b_1, b_2, b_3, b_4)$ in four-dimensional space.
+  
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Lengths and Dot Products}{Problem 1}
+  \cover{点积计算和点积线性性，长度、角度、投影都会反复用到。}
+  Calculate the dot products $\boldsymbol{u} \cdot \boldsymbol{v}$ and $\boldsymbol{u} \cdot \boldsymbol{w}$ and $\boldsymbol{u} \cdot (\boldsymbol{v} + \boldsymbol{w})$ and $\boldsymbol{w} \cdot \boldsymbol{v}$:
+            \[
+                \boldsymbol{u} = \begin{bmatrix} -.6 \\ .8 \end{bmatrix}, \qquad
+                \boldsymbol{v} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}, \qquad
+                \boldsymbol{w} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Lengths and Dot Products}{Problem 7}
+  \cover{由点积求夹角，是所有角度判断题的标准流程。}
+  Find the angle $\theta$ (from its cosine) between these pairs of vectors:
+            \begin{enumerate}
+                \begin{multicols}{2}
+                \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$
+                \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 2 \\ 2 \\ -1 \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} 2 \\ -1 \\ 2 \end{bmatrix}$
+                      \end{multicols}
+                      \begin{multicols}{2}
+                          \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} -1 \\ \sqrt{3} \end{bmatrix}$
+                          \item $\displaystyle \boldsymbol{v} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$ and $\displaystyle \boldsymbol{w} = \begin{bmatrix} -1 \\ -2 \end{bmatrix}$
+                      \end{multicols}
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Lengths and Dot Products}{Problem 6}
+  \cover{垂直条件对应直线、平面、交线，后面四个基本子空间会继续使用。}
+            \begin{enumerate}
+                \item Describe every vector $\boldsymbol{w} = (w_1, w_2)$ that is perpendicular to $\boldsymbol{v} = (2, -1)$.
+                \item All vectors perpendicular to $\boldsymbol{V} = (1,1,1)$ lie on a \underline{\hspace{2cm}} in 3 dimensions.
+                \item The vectors perpendicular to both $(1,1,1)$ and $(1,2,3)$ lie on a \underline{\hspace{2cm}}.
+            \end{enumerate}
+  
+
+  \item \drill{} \source{Chapter 1: Introduction to Vectors}{Lengths and Dot Products}{Problem 12}
+  \cover{投影系数的原型题，也是 Gram-Schmidt 的第一步。}
+  With $\boldsymbol{v} = (1,1)$ and $\boldsymbol{w} = (1,5)$ choose a number $c$ so that $\boldsymbol{w} - c\boldsymbol{v}$ is perpendicular to $\boldsymbol{v}$. Then find the formula for $c$ starting from any nonzero $\boldsymbol{v}$ and $\boldsymbol{w}$.
+  
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Matrices}{Problem 1}
+  \cover{矩阵乘法的列组合视角，后面列空间和线性方程组都靠它。}
+  Find the linear combination $3\boldsymbol{s}_1 + 4\boldsymbol{s}_2 + 5\boldsymbol{s}_3 = \boldsymbol{b}$. Then write $\boldsymbol{b}$ as a matrix-vector multiplication $S\boldsymbol{x}$, with $3,4,5$ in $\boldsymbol{x}$. Compute the three dot products (row of $S$) $\cdot \boldsymbol{x}$:
+            \[
+                \boldsymbol{s}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \quad
+                \boldsymbol{s}_2 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
+                \boldsymbol{s}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+                \quad \text{go into the columns of } S.
+            \]
+  
+
+  \item \core{} \source{Chapter 1: Introduction to Vectors}{Matrices}{Problem 2}
+  \cover{矩阵方程求系数，连接线性组合、方程组和逆矩阵。}
+  Solve these equations $S\boldsymbol{y} = \boldsymbol{b}$ with $\boldsymbol{s}_1, \boldsymbol{s}_2, \boldsymbol{s}_3$ in the columns of $S$:
+            \[
+                \begin{bmatrix}
+                    1 & 0 & 0 \\
+                    1 & 1 & 0 \\
+                    1 & 1 & 1
+                \end{bmatrix}
+                \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+                =
+                \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+                \quad \text{and} \quad
+                \begin{bmatrix}
+                    1 & 0 & 0 \\
+                    1 & 1 & 0 \\
+                    1 & 1 & 1
+                \end{bmatrix}
+                \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+                =
+                \begin{bmatrix} 1 \\ 4 \\ 9 \end{bmatrix}.
+            \]
+            $S$ is a sum matrix. The sum of the first 3 odd numbers is \underline{\hspace{2cm}}.
+  
+
+  \item \drill{} \source{Chapter 1: Introduction to Vectors}{Matrices}{Problem 7}
+  \cover{从 $A\boldsymbol{x}=0$ 看列相关与行方程，是零空间章节的预备母题。}
+  If the columns combine into $A\boldsymbol{x} = \boldsymbol{0}$, then each of the rows has $\boldsymbol{r} \cdot \boldsymbol{x} = 0$:
+            \[
+                \begin{bmatrix}
+                    a_1 & a_2 & a_3
+                \end{bmatrix}
+                \begin{bmatrix}
+                    x_1 \\ x_2 \\ x_3
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    0 \\ 0 \\ 0
+                \end{bmatrix}
+                \quad \text{By rows} \quad
+                \begin{bmatrix}
+                    \boldsymbol{r}_1 \cdot \boldsymbol{x} \\
+                    \boldsymbol{r}_2 \cdot \boldsymbol{x} \\
+                    \boldsymbol{r}_3 \cdot \boldsymbol{x}
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    0 \\ 0 \\ 0
+                \end{bmatrix}.
+            \]
+            The three rows also lie in a plane. Why is that plane perpendicular to $\boldsymbol{x}$?
+  
+
+\end{enumerate}
+
+\section{Chapter 2: Solving Linear Equations}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Vectors and Linear Equations}{Problem 9}
+  \cover{行图像：用行点积计算 $A\boldsymbol{x}$，对应方程组每一行。}
+  Compute each $A\boldsymbol{x}$ by dot products of the rows with the column vector:
+            \[
+                \text{(a)}\;
+                \begin{bmatrix}
+                    1  & 2 & 4 \\
+                    -2 & 3 & 1 \\
+                    -4 & 1 & 2
+                \end{bmatrix}
+                \begin{bmatrix} 2 \\ 2 \\ 3 \end{bmatrix}
+                \qquad
+                \text{(b)}\;
+                \begin{bmatrix}
+                    2 & 1 & 0 & 0 \\
+                    1 & 2 & 1 & 0 \\
+                    0 & 1 & 2 & 1 \\
+                    0 & 0 & 1 & 2
+                \end{bmatrix}
+                \begin{bmatrix} 1 \\ 1 \\ 1 \\ 2 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Vectors and Linear Equations}{Problem 10}
+  \cover{列图像：同一个 $A\boldsymbol{x}$ 改成列向量组合，和上一题成对掌握。}
+  Compute each $A\boldsymbol{x}$ in Problem 9 as a combination of the columns:
+            \[
+                9\text{(a) becomes}\quad
+                A\boldsymbol{x} =
+                2\begin{bmatrix} 1 \\ -2 \\ -4 \end{bmatrix}
+                + 2\begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix}
+                + 3\begin{bmatrix} 4 \\ 1 \\ 2 \end{bmatrix}
+                = \begin{bmatrix} \; \\ \; \\ \; \end{bmatrix}.
+            \]
+            How many separate multiplications for $A\boldsymbol{x}$, when the matrix is ``3 by 3''?
+  
+
+  \item \drill{} \source{Chapter 2: Solving Linear Equations}{Vectors and Linear Equations}{Problem 17}
+  \cover{置换矩阵与基本线性变换，后面转置、置换和行交换都用这个想法。}
+  Find the matrix $P$ that multiplies $(x, y, z)$ to give $(y, x, z)$. Find the matrix $Q$ that multiplies $(y, x, z)$ to bring back $(x, y, z)$.
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{The Idea of Elimination}{Problem 4}
+  \cover{一般 $2\times2$ 消元公式：乘数、第二主元、奇异条件一次到位。}
+  What multiple $\ell$ of equation 1 should be subtracted from equation 2 to remove $c$?
+            \[
+                \begin{aligned}
+                    ax + by & = f \\
+                    cx + dy & = g
+                \end{aligned}
+            \]
+            The first pivot is $a$ (assumed nonzero). Elimination produces what formula for the second pivot? What is $y$? The second pivot is missing when $ad = bc$: singular.
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{The Idea of Elimination}{Problem 12}
+  \cover{完整三元消元和回代，是所有手算消元题的基本流程。}
+  Reduce this system to upper triangular form by two row operations:
+            \[
+                \begin{aligned}
+                    2x + 3y + z  & = 8  \\
+                    4x + 7y + 5z & = 20 \\
+                    -2y + 2z     & = 0
+                \end{aligned}
+            \]
+            Circle the pivots. Solve by back substitution for $z, y, x$.
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{The Idea of Elimination}{Problem 5}
+  \cover{奇异系统的无解与无穷多解，训练对右端项的条件判断。}
+  Choose a right side which gives no solution and another right side which gives infinitely many solutions. What are two of those solutions?
+            \[
+                \begin{array}{c}
+                    \textbf{Singular system} \\[0.5em]
+                    \begin{aligned}
+                        3x + 2y & = 10          \\
+                        6x + 4y & = \phantom{1}
+                    \end{aligned}
+                \end{array}
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Elimination Using Matrices}{Problem 1}
+  \cover{把行操作写成消元矩阵，后面 $EA=U$、$LU$ 都从这里来。}
+  Write down the $3$ by $3$ matrices that produce these elimination steps:
+            \begin{enumerate}
+                \item $E_{21}$ subtracts $5$ times row $1$ from row $2$.
+                \item $E_{32}$ subtracts $-7$ times row $2$ from row $3$.
+                \item $P$ exchanges rows $1$ and $2$, then rows $2$ and $3$.
+            \end{enumerate}
+  
+
+  \item \drill{} \source{Chapter 2: Solving Linear Equations}{Elimination Using Matrices}{Problem 24}
+  \cover{增广矩阵母题：判断可解、三角化、读出解。}
+  Apply elimination to the $2$ by $3$ augmented matrix $[\,A \mid \boldsymbol{b}\,]$. What is the triangular system $U\boldsymbol{x} = \boldsymbol{c}$? What is the solution $\boldsymbol{x}$?
+            \[
+                A\boldsymbol{x} =
+                \begin{bmatrix}
+                    2 & 3 \\
+                    4 & 1
+                \end{bmatrix}
+                \begin{bmatrix}
+                    x_1 \\ x_2
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    1 \\ 17
+                \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Rules for Matrix Operations}{Problem 7}
+  \cover{矩阵运算规则与反例，覆盖常见真假判断题。}
+  True or false. Give a specific example when false:
+            \begin{enumerate}
+                \item If columns 1 and 3 of $B$ are the same, so are columns 1 and 3 of $AB$.
+                \item If rows 1 and 3 of $B$ are the same, so are rows 1 and 3 of $AB$.
+                \item If rows 1 and 3 of $A$ are the same, so are rows 1 and 3 of $ABC$.
+                \item $(AB)^2 = A^2 B^2$.
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Inverse Matrices}{Problem 1}
+  \cover{小矩阵求逆，建立逆矩阵的直接计算手感。}
+  Find the inverses (directly or from the 2 by 2 formula) of $A, B, C$:
+            \[
+                A = \begin{bmatrix} 0 & 3 \\ 4 & 0 \end{bmatrix}
+                \quad\text{and}\quad
+                B = \begin{bmatrix} 2 & 0 \\ 4 & 2 \end{bmatrix}
+                \quad\text{and}\quad
+                C = \begin{bmatrix} 3 & 4 \\ 5 & 7 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Inverse Matrices}{Problem 22}
+  \cover{Gauss-Jordan 求逆母题，比公式更通用。}
+  Change $I$ into $A^{-1}$ as you reduce $A$ to $I$ (by row operations):
+            \[
+                [A\mid I] = \begin{bmatrix} 1 & 3 & 1 & 0 \\ 2 & 7 & 0 & 1 \end{bmatrix}
+                \quad\text{and}\quad
+                [A\mid I] = \begin{bmatrix} 1 & 4 & 1 & 0 \\ 3 & 9 & 0 & 1 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Elimination = Factorization: $A=LU$}{Problem 5}
+  \cover{从消元矩阵反推 $A=LU$，是 LU 分解的核心模板。}
+  What matrix $E$ puts $A$ into triangular form $EA = U$? Multiply by $E^{-1} = L$ to factor $A$ into $LU$:
+            \[
+                A = \begin{bmatrix}
+                    2 & 1 & 0 \\
+                    0 & 4 & 2 \\
+                    6 & 3 & 5
+                \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 2: Solving Linear Equations}{Elimination = Factorization: $A=LU$}{Problem 16}
+  \cover{用 $LU$ 解方程：先前代再回代，覆盖分解后的求解题。}
+  Solve $L\boldsymbol{c} = \boldsymbol{b}$. Then solve $U\boldsymbol{x} = \boldsymbol{c}$. What was $A$?
+            \[
+                L = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix},
+                \quad
+                U = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix},
+                \quad
+                \boldsymbol{b} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 2: Solving Linear Equations}{Transposes and Permutations}{Problem 2}
+  \cover{转置乘法规则，覆盖 $(AB)^T$、顺序反转、对称性判断。}
+  Verify that $(AB)^{\mathrm{T}}$ equals $B^{\mathrm{T}}A^{\mathrm{T}}$ but those are different from $A^{\mathrm{T}}B^{\mathrm{T}}$:
+            \[
+                A = \begin{bmatrix}1 & 0 \\ 2 & 1\end{bmatrix},\quad B = \begin{bmatrix}1 & 3 \\ 0 & 1\end{bmatrix},\quad AB = \begin{bmatrix}1 & 3 \\ 2 & 7\end{bmatrix}.
+            \]
+            Show also that $AA^{\mathrm{T}}$ is different from $A^{\mathrm{T}}A$. But both of those matrices are \underline{\hspace{2cm}}.
+
+  \item \drill{} \source{Chapter 2: Solving Linear Equations}{Transposes and Permutations}{Problem 20}
+  \cover{对称矩阵的 $LDL^T$ 分解，连接消元、转置和正定矩阵。}
+  Factor these symmetric matrices into $S = LDL^{\mathrm{T}}$. The pivot matrix $D$ is diagonal:
+            \[
+                S = \begin{bmatrix}1 & 3 \\ 3 & 2\end{bmatrix},\quad
+                S = \begin{bmatrix}1 & b \\ b & c\end{bmatrix},\quad
+                S = \begin{bmatrix}2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2\end{bmatrix}.
+            \]
+  
+
+\end{enumerate}
+
+\section{Chapter 3: Vector Spaces and Subspaces}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{Spaces of Vectors}{Problem 18}
+  \cover{子空间三项检查：零向量、加法封闭、数乘封闭。}
+  Which of the following subsets of $\mathbb{R}^3$ are actually subspaces?
+            \begin{enumerate}
+                \item The plane of vectors $(b_1,b_2,b_3)$ with $b_1 = b_2$.
+                \item The plane of vectors with $b_1 = 1$.
+                \item The vectors with $b_1 b_2 b_3 = 0$.
+                \item All linear combinations of $v=(1,4,0)$ and $w=(2,2,2)$.
+                \item All vectors that satisfy $b_1 + b_2 + b_3 = 0$.
+                \item All vectors with $b_1 \le b_2 \le b_3$.
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{Spaces of Vectors}{Problem 28}
+  \cover{列空间与可解条件，训练“哪些右端项可达”。}
+  For which right sides (find a condition on $b_1,b_2,b_3$) are these systems solvable?
+            \begin{enumerate}
+                \item $\begin{bmatrix}1&4&2\\2&8&4\\-1&-4&-2\end{bmatrix}\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix} = \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}$
+                \item $\begin{bmatrix}1&4\\2&9\\-1&-4\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix} = \begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}$
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}{Problem 1}
+  \cover{从矩阵到阶梯形，识别主元变量和自由变量。}
+  Reduce $A$ and $B$ to their triangular echelon forms $U$. Which variables are free?
+            \begin{enumerate}
+                \item $A = \begin{bmatrix}
+                              1 & 2 & 2 & 4 & 6 \\
+                              1 & 2 & 3 & 6 & 9 \\
+                              0 & 0 & 1 & 2 & 3
+                          \end{bmatrix}$
+                \item $B = \begin{bmatrix}
+                              2 & 4 & 2 \\
+                              0 & 4 & 4 \\
+                              0 & 8 & 8
+                          \end{bmatrix}$
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}{Problem 2}
+  \cover{特殊解母题：每个自由变量产生一个零空间基向量。}
+  For the matrices in Problem 1, find a special solution for each free variable. (Set the free variable to 1. Set the other free variables to zero.)
+  
+
+  \item \drill{} \source{Chapter 3: Vector Spaces and Subspaces}{The Nullspace of $A$ : Solving $Ax=0$ and $Rx=0$}{Problem 10}
+  \cover{计数定理 $r+(n-r)=n$，覆盖主元数、自由变量数、零空间维数。}
+  Suppose an $m$ by $n$ matrix has $r$ pivots. The number of special solutions is \underline{\hspace{2cm}}. The nullspace contains only $x = 0$ when $r = $ \underline{\hspace{2cm}}. The column space is all of $\mathbb{R}^m$ when $r = $ \underline{\hspace{2cm}}.
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{The Complete Solution to $Ax=b$}{Problem 1}
+  \cover{完整解母题：列空间、零空间、特解、通解一次完成。}
+  (Recommended) Execute the six steps of Worked Example 3.3 A to describe the column space and nullspace of $A$ and the complete solution to $A\mathbf{x} = \mathbf{b}$:
+            \[
+                A = \begin{bmatrix}
+                    2 & 4 & 6 & 4 \\
+                    2 & 5 & 7 & 6 \\
+                    2 & 3 & 5 & 2
+                \end{bmatrix}, \qquad
+                \mathbf{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+                = \begin{bmatrix} 4 \\ 3 \\ 5 \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 3: Vector Spaces and Subspaces}{The Complete Solution to $Ax=b$}{Problem 2}
+  \cover{秩一矩阵的可解条件，是列空间条件最清楚的特例。}
+  Carry out the same six steps for this matrix $A$ with rank one. You will find \emph{two} conditions on $b_1, b_2, b_3$ for $A\mathbf{x} = \mathbf{b}$ to be solvable. Together these two conditions put $\mathbf{b}$ into the \underline{\hspace{2cm}} space (two planes give a line):
+            \[
+                A = \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix}
+                \begin{bmatrix} 2 & 1 & 3 \end{bmatrix}
+                =
+                \begin{bmatrix}
+                    2 & 1 & 3 \\
+                    6 & 3 & 9 \\
+                    4 & 2 & 6
+                \end{bmatrix},
+                \qquad
+                \mathbf{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+                = \begin{bmatrix} 10 \\ 30 \\ 20 \end{bmatrix}.
+            \]
+
+  \item \drill{} \source{Chapter 3: Vector Spaces and Subspaces}{The Complete Solution to $Ax=b$}{Problem 5}
+  \cover{带参数右端项的可解条件，训练增广矩阵判别。}
+  Under what condition on $b_1, b_2, b_3$ is this system solvable? Include $\mathbf{b}$ as a fourth column in elimination. Find all solutions when that condition holds:
+            \begin{align*}
+                x + 2y - 2z  & = b_1  \\
+                2x + 5y - 4z & = b_2  \\
+                4x + 9y - 8z & = b_3.
+            \end{align*}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{Independence, Basis and Dimension}{Problem 5}
+  \cover{线性相关与无关判断，覆盖向量组是否为基的前置步骤。}
+  Decide the dependence or independence of
+            \begin{enumerate}
+                \item the vectors $(1, 3, 2)$ and $(2, 1, 3)$ and $(3, 2, 1)$
+                \item the vectors $(1, -3, 2)$ and $(2, 1, -3)$ and $(-3, 2, 1)$.
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{Independence, Basis and Dimension}{Problem 16}
+  \cover{给子空间找基和维数，覆盖平面、直线、方程约束型子空间。}
+  Find a basis for each of these subspaces of $\mathbf{R}^4$:
+            \begin{enumerate}
+                \item All vectors whose components are equal.
+                \item All vectors whose components add to zero.
+                \item All vectors that are perpendicular to $(1, 1, 0, 0)$ and $(1, 0, 1, 1)$.
+                \item The column space and the nullspace of $I$ (4 by 4).
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 3: Vector Spaces and Subspaces}{Dimensions of the Four Subspaces}{Problem 2}
+  \cover{四个基本子空间的基与维数，是第三章最核心的综合母题。}
+  Find bases and dimensions for the four subspaces associated with $A$ and $B$:
+            \[
+                A = \begin{bmatrix} 1 & 2 & 4 \\ 2 & 4 & 8 \end{bmatrix} \quad \text{and} \quad
+                B = \begin{bmatrix} 1 & 2 & 4 \\ 2 & 5 & 8 \end{bmatrix}.
+            \]
+  
+
+  \item \challenge{} \source{Chapter 3: Vector Spaces and Subspaces}{Dimensions of the Four Subspaces}{Problem 11}
+  \cover{一般 $m\times n$、秩 $r$ 情形下的可解性与左零空间，是 Fredholm 思想的入口。}
+  (Important) $A$ is an $m$ by $n$ matrix of rank $r$. Suppose there are right sides $\boldsymbol{b}$ for which $A\boldsymbol{x} = \boldsymbol{b}$ has \emph{no solution}.
+            \begin{enumerate}
+                \item What are all inequalities ($<$ or $\le$) that must be true between $m, n$, and $r$?
+                \item How do you know that $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$ has solutions other than $\boldsymbol{y} = \boldsymbol{0}$?
+            \end{enumerate}
+  
+
+\end{enumerate}
+
+\section{Chapter 4: Orthogonality}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 4: Orthogonality}{Orthogonality of the Four Subspaces}{Problem 6}
+  \cover{无解系统中的左零空间证据，覆盖“不相容”的标准证明。}
+  This system of equations $A\boldsymbol{x} = \boldsymbol{b}$ has \emph{no solution} (they lead to $0 = 1$):
+            \begin{align*}
+                x + 2y + 2z  & = 5 \\
+                2x + 2y + 3z & = 5 \\
+                3x + 4y + 5z & = 9
+            \end{align*}
+            Find numbers $y_1, y_2, y_3$ to multiply the equations so they add to $0 = 1$. You have found a vector $\boldsymbol{y}$ in which subspace? Its dot product $\boldsymbol{y}^{\mathrm{T}}\boldsymbol{b}$ is 1, so no solution $\boldsymbol{x}$.
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Orthogonality of the Four Subspaces}{Problem 16}
+  \cover{证明 $N(A^T)$ 垂直于 $C(A)$，四个基本子空间正交关系的母题。}
+  Prove that every $\boldsymbol{y}$ in $\mathbf{N}(A^{\mathrm{T}})$ is perpendicular to every $A\boldsymbol{x}$ in the column space, using the matrix shorthand of equation (2). Start from $A^{\mathrm{T}}\boldsymbol{y} = \boldsymbol{0}$.
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Projections}{Problem 1}
+  \cover{投影到直线：求 $\hat{x}$、$p$、误差 $e$，所有投影题的最小模板。}
+  Project the vector $\boldsymbol{b}$ onto the line through $\boldsymbol{a}$. Check that $\boldsymbol{e}$ is perpendicular to $\boldsymbol{a}$:
+            \[
+                \text{(a)} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \qquad
+                \text{(b)} \quad \boldsymbol{b} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{a} = \begin{bmatrix} -1 \\ -3 \\ -1 \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 4: Orthogonality}{Projections}{Problem 3}
+  \cover{投影矩阵 $P=aa^T/(a^Ta)$，覆盖 $P^2=P$ 和 $Pb=p$。}
+  In Problem 1, find the projection matrix $P = \boldsymbol{a}\boldsymbol{a}^{\mathrm{T}} / \boldsymbol{a}^{\mathrm{T}}\boldsymbol{a}$ onto the line through each vector $\boldsymbol{a}$. Verify in both cases that $P^2 = P$. Multiply $P\boldsymbol{b}$ in each case to compute the projection $\boldsymbol{p}$.
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Projections}{Problem 11}
+  \cover{投影到列空间：解正规方程，连接投影和最小二乘。}
+  Project $\boldsymbol{b}$ onto the column space of $A$ by solving $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$ and $\boldsymbol{p} = A\widehat{\boldsymbol{x}}$:
+            \[
+                \text{(a)} \quad A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix} \qquad
+                \text{(b)} \quad A = \begin{bmatrix} 1 & 1 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} \quad \text{and} \quad \boldsymbol{b} = \begin{bmatrix} 4 \\ 4 \\ 6 \end{bmatrix}.
+            \]
+            Find $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p}$. It should be perpendicular to the columns of $A$.
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Least Squares Approximations}{Problem 1}
+  \cover{最小二乘拟合直线的完整流程：构造 $A$、正规方程、投影和误差。}
+  With $\boldsymbol{b} = (0, 8, 8, 20)$ at $t = 0, 1, 3, 4$, set up and solve the normal equations $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$. For the best straight line in Figure 4.9a, find its four heights $p_i$ and four errors $e_i$. What is the minimum value $E = e_1^2 + e_2^2 + e_3^2 + e_4^2$?
+  
+
+  \item \drill{} \source{Chapter 4: Orthogonality}{Least Squares Approximations}{Problem 4}
+  \cover{从误差平方和求导推出正规方程，覆盖计算型和推导型最小二乘题。}
+  (By calculus) Write down $E = \|A\boldsymbol{x} - \boldsymbol{b}\|^2$ as a sum of four squares---the last one is $(C + 4D - 20)^2$. Find the derivative equations $\partial E/\partial C = 0$ and $\partial E/\partial D = 0$. Divide by 2 to obtain the normal equations $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$.
+  
+
+  \item \drill{} \source{Chapter 4: Orthogonality}{Least Squares Approximations}{Problem 21}
+  \cover{误差向量属于哪个子空间，巩固最小二乘的几何解释。}
+  Which of the four subspaces contains the error vector $\boldsymbol{e}$? Which contains $\boldsymbol{p}$? Which contains $\widehat{\boldsymbol{x}}$? What is the nullspace of $A$?
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Orthonormal Bases and Gram-Schmidt}{Problem 13}
+  \cover{Gram-Schmidt 第一步：减去投影得到正交向量。}
+  What multiple of $\boldsymbol{a} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ should be subtracted from $\boldsymbol{b} = \begin{bmatrix} 4 \\ 0 \end{bmatrix}$ to make the result $\boldsymbol{B}$ orthogonal to $\boldsymbol{a}$? Sketch a figure to show $\boldsymbol{a}, \boldsymbol{b}$, and $\boldsymbol{B}$.
+  
+
+  \item \core{} \source{Chapter 4: Orthogonality}{Orthonormal Bases and Gram-Schmidt}{Problem 14}
+  \cover{完成 Gram-Schmidt 并写出 $QR$，覆盖正交化到分解的完整链条。}
+  Complete the Gram-Schmidt process in Problem 13 by computing $\boldsymbol{q}_1 = \boldsymbol{a} / \|\boldsymbol{a}\|$ and $\boldsymbol{q}_2 = \boldsymbol{B} / \|\boldsymbol{B}\|$ and factoring into $QR$:
+            \[
+                \begin{bmatrix} 1 & 4 \\ 1 & 0 \end{bmatrix} = [\, \boldsymbol{q}_1 \quad \boldsymbol{q}_2 \,] \begin{bmatrix} \|\boldsymbol{a}\| & ? \\ 0 & \|\boldsymbol{B}\| \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 4: Orthogonality}{Orthonormal Bases and Gram-Schmidt}{Problem 7}
+  \cover{当 $Q$ 有正交规范列时，最小二乘直接化为 $Q^Tb$。}
+  If $Q$ has orthonormal columns, what is the least squares solution $\widehat{\boldsymbol{x}}$ to $Q\boldsymbol{x} = \boldsymbol{b}$?
+  
+
+\end{enumerate}
+
+\section{Chapter 5: Determinants}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 5: Determinants}{The Properties of Determinants}{Problem 13}
+  \cover{用消元和主元求行列式，覆盖大多数计算题。}
+  Reduce $A$ to $U$ and find $\det A =$ product of the pivots:
+            \[
+                A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3 \end{bmatrix} \qquad \qquad
+                A = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 2 & 3 \\ 3 & 3 & 3 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 5: Determinants}{The Properties of Determinants}{Problem 28}
+  \cover{行列式性质真假判断，覆盖乘法、转置、逆、行操作等常见变形。}
+  True or false (give a reason if true or a 2 by 2 example if false):
+            \begin{enumerate}
+                \item If $A$ is not invertible then $AB$ is not invertible.
+                \item The determinant of $A$ is always the product of its pivots.
+                \item The determinant of $A - B$ equals $\det A - \det B$.
+                \item $AB$ and $BA$ have the same determinant.
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 5: Determinants}{Permutations and Cofactors}{Problem 1}
+  \cover{按排列的六项公式计算 $3\times3$ 行列式，理解符号来源。}
+  Compute the determinants of $A, B, C$ from six terms. Are their rows independent?
+  
+            \[
+                A = \begin{bmatrix} 1 & 2 & 3 \\ 3 & 1 & 2 \\ 3 & 2 & 1 \end{bmatrix} \qquad
+                B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 4 & 4 \\ 5 & 6 & 7 \end{bmatrix} \qquad
+                C = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 5: Determinants}{Permutations and Cofactors}{Problem 11}
+  \cover{cofactor matrix 与伴随矩阵，覆盖按余子式求逆的前置操作。}
+  Find all cofactors and put them into cofactor matrices $C, D$. Find $AC$ and $\det B$.
+            \[
+                A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \qquad
+                B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 0 & 0 \end{bmatrix} .
+            \]
+  
+  
+
+  \item \core{} \source{Chapter 5: Determinants}{Cramer's Rule, Inverses, and Volumes}{Problem 1}
+  \cover{Cramer 法则母题，覆盖用行列式解线性方程组。}
+  Solve these linear equations by Cramer's Rule $x_j = \det B_j / \det A$:
+            \[
+                \text{(a)} \quad \begin{aligned} 2x_1 + 5x_2 &= 1 \\ x_1 + 4x_2 &= 2 \end{aligned} \qquad\qquad
+                \text{(b)} \quad \begin{aligned} 2x_1 + x_2 \quad &= 1 \\ x_1 + 2x_2 + x_3 &= 0 \\ x_2 + 2x_3 &= 0 \end{aligned}
+            \]
+  
+
+  \item \core{} \source{Chapter 5: Determinants}{Cramer's Rule, Inverses, and Volumes}{Problem 6}
+  \cover{用 cofactor formula 求逆，连接余子式、伴随矩阵和逆矩阵。}
+  Find $A^{-1}$ from the cofactor formula $C^{\text{T}} / \det A$. Use symmetry in part (b).
+            \[
+                \text{(a)} \quad A = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 3 & 0 \\ 0 & 7 & 1 \end{bmatrix} \qquad
+                \text{(b)} \quad A = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2 \end{bmatrix} .
+            \]
+  
+
+  \item \drill{} \source{Chapter 5: Determinants}{Cramer's Rule, Inverses, and Volumes}{Problem 17}
+  \cover{行列式的体积解释，覆盖面积、体积、几何缩放类题。}
+  A box has edges from $(0, 0, 0)$ to $(3, 1, 1)$ and $(1, 3, 1)$ and $(1, 1, 3)$. Find its volume. Also find the area of each parallelogram face using $\|\boldsymbol{u} \times \boldsymbol{v}\|$.
+  
+
+\end{enumerate}
+
+\section{Chapter 6: Eigenvalues and Eigenvectors}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Introduction to Eigenvalues}{Problem 2}
+  \cover{求特征值和特征向量的标准流程。}
+  Find the eigenvalues and the eigenvectors of these two matrices:
+            \[
+                A = \begin{bmatrix} 1 & 4 \\ 2 & 3 \end{bmatrix} \quad \text{and} \quad
+                A + I = \begin{bmatrix} 2 & 4 \\ 2 & 4 \end{bmatrix} .
+            \]
+            $A + I$ has the \underline{\hspace{1cm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{1cm}} by 1.
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Introduction to Eigenvalues}{Problem 10}
+  \cover{Markov 矩阵和稳定状态，覆盖矩阵幂长期行为。}
+  Find the eigenvalues and eigenvectors for both of these Markov matrices $A$ and $A^{\infty}$. Explain from those answers why $A^{100}$ is close to $A^{\infty}$:
+            \[
+                A = \begin{bmatrix} .6 & .2 \\ .4 & .8 \end{bmatrix} \quad \text{and} \quad A^{\infty} = \begin{bmatrix} 1/3 & 1/3 \\ 2/3 & 2/3 \end{bmatrix} .
+            \]
+  
+
+  \item \drill{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Introduction to Eigenvalues}{Problem 16}
+  \cover{行列式等于特征值乘积，连接特征值和行列式。}
+  \textbf{The determinant of $A$ equals the product} $\lambda_1 \lambda_2 \cdots \lambda_n$. Start with the polynomial $\det(A - \lambda I)$ separated into its $n$ factors (always possible). Then set $\lambda = 0$:
+            \[
+                \det(A - \lambda I) = (\lambda_1 - \lambda)(\lambda_2 - \lambda) \cdots (\lambda_n - \lambda) \quad \text{so} \quad \det A = \underline{\hspace{1cm}} .
+            \]
+            Check this rule in Example 1 where the Markov matrix has $\lambda = 1$ and $\frac{1}{2}$.
+  
+
+  \item \drill{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Introduction to Eigenvalues}{Problem 17}
+  \cover{迹等于特征值之和，覆盖快速检查和参数题。}
+  The sum of the diagonal entries (the \textit{trace}) equals the sum of the eigenvalues:
+            \[
+                A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \quad \text{has} \quad \det(A - \lambda I) = \lambda^2 - (a + d)\lambda + ad - bc = 0.
+            \]
+            The quadratic formula gives the eigenvalues $\lambda = (a + d + \sqrt{\hspace{0.5cm}})/2$ and $\lambda = \underline{\hspace{1cm}}$. Their sum is \underline{\hspace{1cm}}. If $A$ has $\lambda_1 = 3$ and $\lambda_2 = 4$ then $\det(A - \lambda I) = \underline{\hspace{1cm}}$.
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Diagonalizing a Matrix}{Problem 8}
+  \cover{对角化并计算矩阵幂，Fibonacci 是典型综合题。}
+  Diagonalize the Fibonacci matrix by completing $X^{-1}$:
+            \[
+                \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \begin{bmatrix} \quad & \quad \\ \quad & \quad \end{bmatrix} .
+            \]
+            Do the multiplication $X \Lambda^k X^{-1} \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ to find its second component. This is the $k$th Fibonacci number $F_k = (\lambda_1^k - \lambda_2^k)/(\lambda_1 - \lambda_2)$.
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Diagonalizing a Matrix}{Problem 14}
+  \cover{重复特征值但不可对角化，是判断对角化失败的母题。}
+  The matrix $A = \begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}$ is not diagonalizable because the rank of $A - 3I$ is \underline{\hspace{1cm}} . Change one entry to make $A$ diagonalizable. Which entries could you change?
+
+  \item \drill{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Diagonalizing a Matrix}{Problem 20}
+  \cover{从 $A=X\Lambda X^{-1}$ 推出行列式性质，训练相似变换思维。}
+  Suppose $A = X \Lambda X^{-1}$. Take determinants to prove $\det A = \det \Lambda = \lambda_1 \lambda_2 \cdots \lambda_n$. This quick proof only works when $A$ can be \underline{\hspace{1cm}} .
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Systems of Differential Equations}{Problem 1}
+  \cover{用 $e^{\lambda t}x$ 解线性微分方程组。}
+  Find two $\lambda$'s and $x$'s so that $u = e^{\lambda t}x$ solves
+            \[
+                \frac{du}{dt} = \begin{bmatrix} 4 & 3 \\ 0 & 1 \end{bmatrix} u.
+            \]
+            What combination $u = c_1 e^{\lambda_1 t}x_1 + c_2 e^{\lambda_2 t}x_2$ starts from $u(0) = (5, -2)$?
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Systems of Differential Equations}{Problem 12}
+  \cover{重复根和第二解，覆盖不可对角化动态系统的入口。}
+  Substitute $y = e^{\lambda t}$ into $y'' = 6y' - 9y$ to show that $\lambda = 3$ is a repeated root. This is trouble; we need a second solution after $e^{3t}$. The matrix equation is
+            \[
+                \frac{d}{dt} \begin{bmatrix} y \\ y' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -9 & 6 \end{bmatrix} \begin{bmatrix} y \\ y' \end{bmatrix} .
+            \]
+            Show that this matrix has $\lambda = 3, 3$ and only one line of eigenvectors. \textit{Trouble here too.} Show that the second solution to $y'' = 6y' - 9y$ is $y = te^{3t}$.
+  
+
+  \item \challenge{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Systems of Differential Equations}{Problem 26}
+  \cover{矩阵指数永远可逆，连接 $e^{At}$、特征值和系统演化。}
+  (Recommended) Give two reasons why the matrix exponential $e^{At}$ is never singular:
+            \begin{enumerate}
+                \item Write down its inverse.
+                \item Why are these eigenvalues nonzero? If $Ax = \lambda x$ then $e^{At}x = \underline{\hspace{1cm}} x$.
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Symmetric Matrices}{Problem 6}
+  \cover{对称矩阵的正交对角化，覆盖 $S=Q\Lambda Q^T$ 的完整算法。}
+  Find an orthogonal matrix $Q$ that diagonalizes $S = \begin{bmatrix} -2 & 6 \\ 6 & 7 \end{bmatrix}$. What is $\Lambda$?
+  
+
+  \item \drill{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Symmetric Matrices}{Problem 20}
+  \cover{对称矩阵不同特征值的特征向量正交，是核心证明题。}
+  \textbf{Another proof that eigenvectors are perpendicular when $S = S^{\mathrm{T}}$.} Two steps:
+            \begin{enumerate}
+                \item Suppose $Sx = \lambda x$ and $Sy = 0y$ and $\lambda \neq 0$. Then $y$ is in the nullspace and $x$ is in the column space. They are perpendicular because \underline{\hspace{1cm}}. Go carefully—why are these subspaces orthogonal?
+                \item If $Sy = \beta y$, apply that argument to $S - \beta I$. One eigenvalue of $S - \beta I$ moves to zero. The eigenvectors $x, y$ stay the same—so they are perpendicular.
+            \end{enumerate}
+  
+
+  \item \challenge{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Symmetric Matrices}{Problem 32}
+  \cover{Rayleigh quotient 最大值，连接对称矩阵、优化和正定性。}
+  If $\lambda_{\max}$ is the largest eigenvalue of a symmetric matrix $S$, no diagonal entry can be larger than $\lambda_{\max}$. What is the first entry $a_{11}$ of $S = Q\Lambda Q^{\mathrm{T}}$? Show why $a_{11} \le \lambda_{\max}$.
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Positive Definite Matrices}{Problem 3}
+  \cover{正定参数题，覆盖 $2\times2$ 判据、主元和 $LDL^T$。}
+  For which numbers $b$ and $c$ are these matrices positive definite?
+            \[
+                S = \begin{bmatrix} 1 & b \\ b & 9 \end{bmatrix} \quad S = \begin{bmatrix} 2 & 4 \\ 4 & c \end{bmatrix} \quad S = \begin{bmatrix} c & b \\ b & c \end{bmatrix}.
+            \]
+            With the pivots in $D$ and multiplier in $L$, factor each $A$ into $LDL^{\mathrm{T}}$.
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Positive Definite Matrices}{Problem 11}
+  \cover{三阶正定判据：左上角主子式、主元和行列式比值。}
+  Compute the three upper left determinants of $S$ to establish positive definiteness. Verify that their ratios give the second and third pivots.
+            \[
+                \text{Pivots} = \text{ratios of determinants} \quad S = \begin{bmatrix} 2 & 2 & 0 \\ 2 & 5 & 3 \\ 0 & 3 & 8 \end{bmatrix}.
+            \]
+  
+
+  \item \drill{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Positive Definite Matrices}{Problem 14}
+  \cover{证明 $S^{-1}$ 正定，覆盖正定性的变换证明。}
+  If $S$ is positive definite then $S^{-1}$ is positive definite. Best proof: The eigenvalues of $S^{-1}$ are positive because \underline{\hspace{1cm}}. Second proof (only for 2 by 2):
+            \[
+                \text{The entries of } S^{-1} = \frac{1}{ac - b^2} \begin{bmatrix} c & -b \\ -b & a \end{bmatrix} \text{ pass the determinant tests \underline{\hspace{1cm}}}.
+            \]
+  
+
+  \item \core{} \source{Chapter 6: Eigenvalues and Eigenvectors}{Positive Definite Matrices}{Problem 25}
+  \cover{Cholesky 分解母题，连接正定矩阵和平方根分解。}
+  With positive pivots in $D$, the factorization $S = LDL^{\mathrm{T}}$ becomes $L\sqrt{D}\sqrt{D}L^{\mathrm{T}}$. (Square roots of the pivots give $D = \sqrt{D}\sqrt{D}$.) Then $C = \sqrt{D}L^{\mathrm{T}}$ yields the \textbf{Cholesky factorization} $A = C^{\mathrm{T}}C$ which is ``symmetrized $LU$'':
+            \[
+                \text{From } C = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \text{ find } S. \quad \text{From } S = \begin{bmatrix} 4 & 8 \\ 8 & 25 \end{bmatrix} \text{ find } C = \textbf{chol}(S).
+            \]
+  
+
+\end{enumerate}
+
+\section{Chapter 7: The Singular Value Decomposition (SVD)}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Image Processing by Linear Algebra}{Problem 1}
+  \cover{秩和秩一分解，SVD 低秩近似的前置母题。}
+  What are the ranks $r$ for these matrices with entries $i$ times $j$ and $i$ plus $j$? Write $A$ and $B$ as the sum of $r$ pieces $\boldsymbol{u}\boldsymbol{v}^{\mathrm{T}}$ of rank one. Not requiring $\boldsymbol{u}_1^{\mathrm{T}}\boldsymbol{u}_2 = \boldsymbol{v}_1^{\mathrm{T}}\boldsymbol{v}_2 = \mathbf{0}$.
+            \[
+                A = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 2 & 4 & 6 & 8 \\ 3 & 6 & 9 & 12 \\ 4 & 8 & 12 & 16 \end{bmatrix} \qquad B = \begin{bmatrix} 2 & 3 & 4 & 5 \\ 3 & 4 & 5 & 6 \\ 4 & 5 & 6 & 7 \\ 5 & 6 & 7 & 8 \end{bmatrix}
+            \]
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Image Processing by Linear Algebra}{Problem 6}
+  \cover{区分 eigenvalues 与 singular values，覆盖 $A^TA$ 的核心作用。}
+  Find the eigenvalues and the singular values of this 2 by 2 matrix $A$.
+            \[
+                A = \begin{bmatrix} 2 & 1 \\ 4 & 2 \end{bmatrix} \qquad \text{with} \quad A^{\mathrm{T}}A = \begin{bmatrix} 20 & 10 \\ 10 & 5 \end{bmatrix} \qquad \text{and} \quad AA^{\mathrm{T}} = \begin{bmatrix} 5 & 10 \\ 10 & 20 \end{bmatrix}.
+            \]
+            The eigenvectors $(1, 2)$ and $(1, -2)$ of $A$ are not orthogonal. How do you know the eigenvectors $\boldsymbol{v}_1, \boldsymbol{v}_2$ of $A^{\mathrm{T}}A$ are orthogonal? Notice that $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ have the same eigenvalues (25 and 0).
+  
+
+  \item \drill{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Image Processing by Linear Algebra}{Problem 7}
+  \cover{从 $A=U\Sigma V^T$ 推出 $AV=U\Sigma$，是计算 SVD 的操作形式。}
+  How does the second form $A\boldsymbol{V} = \boldsymbol{U}\Sigma$ in equation (3) follow from the first form $A = \boldsymbol{U}\Sigma\boldsymbol{V}^{\mathrm{T}}$? That is the most famous form of the SVD.
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 1}
+  \cover{从 $A^TA$ 和 $AA^T$ 构造 SVD 的最小模板。}
+  Find the eigenvalues of these matrices. Then find singular values from $A^{\mathrm{T}}A$:
+            \[
+                A = \begin{bmatrix} 0 & 4 \\ 0 & 0 \end{bmatrix} \qquad A = \begin{bmatrix} 0 & 4 \\ 1 & 0 \end{bmatrix}
+            \]
+            For each $A$, construct $V$ from the eigenvectors of $A^{\mathrm{T}}A$ and $U$ from the eigenvectors of $AA^{\mathrm{T}}$. Check that $A = U\Sigma V^{\mathrm{T}}$.
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 2}
+  \cover{完整 $2\times2$ SVD 计算题，覆盖 $V,\Sigma,U$ 的顺序。}
+  Find $A^{\mathrm{T}}A$ and $V$ and $\Sigma$ and $\boldsymbol{u}_i = A\boldsymbol{v}_i/\sigma_i$ and the full SVD:
+            \[
+                A = \begin{bmatrix} 2 & 2 \\ -1 & 1 \end{bmatrix} = U\Sigma V^{\mathrm{T}}.
+            \]
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 4}
+  \cover{矩形矩阵 SVD，覆盖 $\Sigma$ 形状和非零奇异值。}
+  Compute $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ and their eigenvalues and unit eigenvectors for $V$ and $U$.
+            \[
+                \textbf{Rectangular matrix} \qquad A = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}.
+            \]
+            Check $AV = U\Sigma$ (this decides $\pm$ signs in $U$). $\Sigma$ has the same shape as $A: 2 \times 3$.
+  
+
+  \item \drill{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 6}
+  \cover{证明 $A^TA$ 与 $AA^T$ 非零特征值相同，解释奇异值来源。}
+  Substitute the SVD for $A$ and $A^{\mathrm{T}}$ to show that $A^{\mathrm{T}}A$ has its eigenvalues in $\Sigma^{\mathrm{T}}\Sigma$ and $AA^{\mathrm{T}}$ has its eigenvalues in $\Sigma\Sigma^{\mathrm{T}}$. Since a diagonal $\Sigma^{\mathrm{T}}\Sigma$ has the same nonzeros as $\Sigma\Sigma^{\mathrm{T}}$, we see again that $A^{\mathrm{T}}A$ and $AA^{\mathrm{T}}$ have the same nonzero eigenvalues.
+  
+
+  \item \challenge{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 19}
+  \cover{最近奇异矩阵，覆盖最小奇异值和低秩扰动思想。}
+  Suppose $A$ is invertible (with $\sigma_1 > \sigma_2 > 0$). Change $A$ by \textbf{\textit{as small a matrix as possible}} to produce a singular matrix $A_0$. Hint: $U$ and $V$ do not change:
+            \[
+                \text{From} \qquad A = \begin{bmatrix} \boldsymbol{u}_1 & \boldsymbol{u}_2 \end{bmatrix} \begin{bmatrix} \sigma_1 & \\ & \sigma_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{v}_1 & \boldsymbol{v}_2 \end{bmatrix}^{\mathrm{T}} \qquad \text{find the nearest } A_0.
+            \]
+  
+
+  \item \challenge{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Bases and Matrices in the SVD}{Problem 26}
+  \cover{SVD 的几何解释：圆到椭圆，覆盖旋转、拉伸、再旋转。}
+  Every matrix $A = U\Sigma V^{\mathrm{T}}$ takes \textbf{circles to ellipses}. $A\boldsymbol{V} = U\Sigma$ says that the radius vectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$ of the circle go to the semi-axes $\sigma_1\boldsymbol{u}_1$ and $\sigma_2\boldsymbol{u}_2$ of the ellipse. Draw the circle and the ellipse for $\theta = 30^{\circ}$:
+            \[
+                V = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \qquad U = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \qquad \Sigma = \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}.
+            \]
+            Section 7.4 will start with an important SVD picture for 2 by 2 matrices:
+            \[
+                A = (\textbf{rotate})(\textbf{stretch})(\textbf{rotate}).
+            \]
+            With symmetry
+            \[
+                S = (\textbf{rotate})(\textbf{stretch})(\textbf{rotate back}).
+            \]
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Principal Component Analysis (PCA by the SVD)}{Problem 1}
+  \cover{PCA 完整流程：中心化、协方差、主成分方向。}
+  Suppose $A_0$ holds these 2 measurements of 5 samples:
+            \[
+                A_0 = \begin{bmatrix} 5 & 4 & 3 & 2 & 1 \\ -1 & 1 & 0 & 1 & -1 \end{bmatrix}
+            \]
+            Find the average of each row and subtract it to produce the centered matrix $A$. Compute the sample covariance matrix $S = AA^{\mathrm{T}}/(n - 1)$ and find its eigenvalues $\lambda_1$ and $\lambda_2$. What line through the origin is closest to the 5 samples in columns of $A$?
+  
+
+  \item \drill{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{Principal Component Analysis (PCA by the SVD)}{Problem 5}
+  \cover{从协方差到相关矩阵，覆盖标准化变量的 PCA 前处理。}
+  From this sample covariance matrix $S$, find the correlation matrix $DSD$ with 1's down its main diagonal. $D$ is a positive diagonal matrix that produces those 1's.
+            \[
+                S = \begin{bmatrix} 4 & 2 & 0 \\ 2 & 4 & 1 \\ 0 & 1 & 1 \end{bmatrix}.
+            \]
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{The Geometry of the SVD}{Problem 1}
+  \cover{秩一矩阵完整 SVD，连接零奇异值和四个子空间。}
+            \begin{enumerate}
+                \item Compute $A^{\mathrm{T}}A$ and its eigenvalues and unit eigenvectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. Find $\sigma_1$.
+                      \[
+                          \textbf{Rank one matrix} \quad A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix}
+                      \]
+                \item Compute $AA^{\mathrm{T}}$ and its eigenvalues and unit eigenvectors $\boldsymbol{u}_1$ and $\boldsymbol{u}_2$.
+                \item Verify that $A\boldsymbol{v}_1 = \sigma_1\boldsymbol{u}_1$. Put numbers into $\boldsymbol{A = U\Sigma V^{\mathrm{T}}}$ (this is the SVD).
+            \end{enumerate}
+  
+
+  \item \core{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{The Geometry of the SVD}{Problem 4}
+  \cover{伪逆、投影 $A^+A$ 与 $AA^+$，覆盖欠定/秩亏问题。}
+  Compute the pseudoinverse $A^+ = V\Sigma^+U^{\mathrm{T}}$. The diagonal matrix $\Sigma^+$ contains $1/\sigma_1$. Rename the four subspaces (for $A$) in Figure 7.6 as four subspaces for $A^+$. Compute the projections $A^+A$ and $AA^+$ on the row and column spaces of $A$.
+
+  \item \challenge{} \source{Chapter 7: The Singular Value Decomposition (SVD)}{The Geometry of the SVD}{Problem 16}
+  \cover{最短最小二乘解，是伪逆应用的终点母题。}
+  \textit{The vector $\boldsymbol{x}^+ = A^+\boldsymbol{b}$ is the shortest possible solution to $A^{\mathrm{T}}A\widehat{\boldsymbol{x}} = A^{\mathrm{T}}\boldsymbol{b}$.} \\
+            Reason: The difference $\widehat{\boldsymbol{x}} - \boldsymbol{x}^+$ is in the nullspace of $A^{\mathrm{T}}A$. This is also the nullspace of $A$, orthogonal to $\boldsymbol{x}^+$. Explain how it follows that $\|\widehat{\boldsymbol{x}}\|^2 = \|\boldsymbol{x}^+\|^2 + \|\widehat{\boldsymbol{x}} - \boldsymbol{x}^+\|^2$.
+  
+
+\end{enumerate}
+
+\section*{复习建议}
+\begin{itemize}
+  \item 第一轮只做 \core{}，每题都总结它的“可复用步骤”。
+  \item 第二轮补 \drill{}，检查同一模板换成相邻题型后是否还能用。
+  \item 最后一轮做 \challenge{}，这些题用来确认概念已经能跨章节迁移。
+\end{itemize}
+
+\end{document}

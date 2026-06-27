@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Chapter 1: Introduction to Vectors}{2}{section.1}%
+\contentsline {section}{\numberline {2}Chapter 2: Solving Linear Equations}{4}{section.2}%
+\contentsline {section}{\numberline {3}Chapter 3: Vector Spaces and Subspaces}{8}{section.3}%
+\contentsline {section}{\numberline {4}Chapter 4: Orthogonality}{11}{section.4}%
+\contentsline {section}{\numberline {5}Chapter 5: Determinants}{14}{section.5}%
+\contentsline {section}{\numberline {6}Chapter 6: Eigenvalues and Eigenvectors}{16}{section.6}%
+\contentsline {section}{\numberline {7}Chapter 7: The Singular Value Decomposition (SVD)}{20}{section.7}%

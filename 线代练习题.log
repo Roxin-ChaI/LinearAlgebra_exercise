@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  22 JUN 2026 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.5)  27 JUN 2026 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -834,79 +834,89 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2945.
 
 [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
-Overfull \hbox (3.08594pt too wide) in paragraph at lines 3704--3705
+<pic/Figure4.1_12.png, id=1314, 932.48375pt x 634.37pt>
+File: pic/Figure4.1_12.png Graphic file (type png)
+<use pic/Figure4.1_12.png>
+Package pdftex.def Info: pic/Figure4.1_12.png  used on input line 3694.
+(pdftex.def)             Requested size: 409.71692pt x 278.72679pt.
+<pic/Figure4.1_12_1.png, id=1315, 948.54375pt x 623.32875pt>
+File: pic/Figure4.1_12_1.png Graphic file (type png)
+<use pic/Figure4.1_12_1.png>
+Package pdftex.def Info: pic/Figure4.1_12_1.png  used on input line 3701.
+(pdftex.def)             Requested size: 409.71692pt x 269.24358pt.
+ [52 <./pic/Figure4.1_12.png> <./pic/Figure4.1_12_1.png>]
+Overfull \hbox (3.08594pt too wide) in paragraph at lines 3721--3722
 []\OT1/LibertinusSerif-TLF/b/n/10 If $\OML/cmm/m/it/10 AB \OT1/cmr/m/n/10 = 0$ \OT1/LibertinusSerif-TLF/b/n/10 then the columns of $\OML/cmm/m/it/10 B$ \OT1/LibertinusSerif-TLF/b/n/10 are in the $[]$ of $\OML/cmm/m/it/10 A$\OT1/LibertinusSerif-TLF/b/n/10 . The rows of $\OML/cmm/m/it/10 A$ \OT1/LibertinusSerif-TLF/b/n/10 are in the $[]$
  []
 
-[52]
-Overfull \hbox (1.09088pt too wide) in paragraph at lines 3768--3769
+[53]
+Overfull \hbox (1.09088pt too wide) in paragraph at lines 3785--3786
 []\OT1/LibertinusSerif-TLF/b/n/10 Suppose $\OT1/cmr/bx/n/10 S$ \OT1/LibertinusSerif-TLF/b/n/10 only con-tains two vec-tors $\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)$ \OT1/LibertinusSerif-TLF/b/n/10 and $\OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)$ \OT1/LibertinusSerif-TLF/b/n/10 (not a sub-space). Then $\OT1/cmr/bx/n/10 S[]$ \OT1/LibertinusSerif-TLF/b/n/10 is the nullspace
  []
 
-[53]
-Overfull \hbox (71.11563pt too wide) in paragraph at lines 3810--3811
+[54]
+Overfull \hbox (71.11563pt too wide) in paragraph at lines 3827--3828
 []\OT1/LibertinusSerif-TLF/b/n/10 What are the con-di-tions for those to be bases for the four fun-da-men-tal sub-spaces $\OT1/cmr/bx/n/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/bx/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/bx/n/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/bx/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )$
  []
 
-[54]
-<pic/Figure4.2.png, id=1382, 225.84375pt x 153.57375pt>
+<pic/Figure4.2.png, id=1368, 225.84375pt x 153.57375pt>
 File: pic/Figure4.2.png Graphic file (type png)
 <use pic/Figure4.2.png>
-Package pdftex.def Info: pic/Figure4.2.png  used on input line 3852.
+Package pdftex.def Info: pic/Figure4.2.png  used on input line 3869.
 (pdftex.def)             Requested size: 204.85846pt x 139.31177pt.
-<pic/Figure4.2_1.png, id=1383, 181.42781pt x 147.55125pt>
+<pic/Figure4.2_1.png, id=1369, 181.42781pt x 147.55125pt>
 File: pic/Figure4.2_1.png Graphic file (type png)
 <use pic/Figure4.2_1.png>
-Package pdftex.def Info: pic/Figure4.2_1.png  used on input line 3860.
+Package pdftex.def Info: pic/Figure4.2_1.png  used on input line 3877.
 (pdftex.def)             Requested size: 204.85846pt x 166.61162pt.
- [55 <./pic/Figure4.2.png (PNG copy)> <./pic/Figure4.2_1.png (PNG copy)>] [56]
-<pic/Figure4.3.png, id=1425, 413.29407pt x 172.39406pt>
+[55] [56 <./pic/Figure4.2.png (PNG copy)> <./pic/Figure4.2_1.png (PNG copy)>] [57]
+<pic/Figure4.3.png, id=1434, 413.29407pt x 172.39406pt>
 File: pic/Figure4.3.png Graphic file (type png)
 <use pic/Figure4.3.png>
-Package pdftex.def Info: pic/Figure4.3.png  used on input line 3968.
+Package pdftex.def Info: pic/Figure4.3.png  used on input line 3985.
 (pdftex.def)             Requested size: 364.19667pt x 151.91766pt.
- [57 <./pic/Figure4.3.png (PNG copy)>] [58]
-Overfull \hbox (24.08392pt too wide) in paragraph at lines 4053--4054
+ [58 <./pic/Figure4.3.png (PNG copy)>] [59]
+Overfull \hbox (24.08392pt too wide) in paragraph at lines 4070--4071
 []\OT1/LibertinusSerif-TLF/b/n/10 Usually there will be ex-actly one hy-per-plane in $\OT1/cmr/bx/n/10 R[]$ \OT1/LibertinusSerif-TLF/b/n/10 that con-tains the $\OML/cmm/m/it/10 n$ \OT1/LibertinusSerif-TLF/b/n/10 given points $[] \OT1/cmr/m/n/10 = \OT1/cmr/bx/n/10 0\OML/cmm/m/it/10 ; [][]; [] ; [][]$\OT1/LibertinusSerif-TLF/b/n/10 .
  []
 
-[59] [60] [61] [62] [63] [64] [65] [66] [67]
-<pic/Figure5.2_1.png, id=1644, 621.32124pt x 186.6975pt>
+[60] [61] [62] [63] [64] [65] [66] [67] [68]
+<pic/Figure5.2_1.png, id=1652, 621.32124pt x 186.6975pt>
 File: pic/Figure5.2_1.png Graphic file (type png)
 <use pic/Figure5.2_1.png>
-Package pdftex.def Info: pic/Figure5.2_1.png  used on input line 4640.
+Package pdftex.def Info: pic/Figure5.2_1.png  used on input line 4657.
 (pdftex.def)             Requested size: 364.19667pt x 109.43552pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 4637--4642
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 4654--4659
 []$[]$ 
  []
 
-[68 <./pic/Figure5.2_1.png>] [69] [70]
-Overfull \hbox (1.45436pt too wide) in paragraph at lines 4804--4805
+[69 <./pic/Figure5.2_1.png>] [70] [71]
+Overfull \hbox (1.45436pt too wide) in paragraph at lines 4821--4822
 []\OT1/LibertinusSerif-TLF/b/n/10 An $\OML/cmm/m/it/10 n$\OT1/LibertinusSerif-TLF/b/n/10 -dimensional cube has how many cor-ners? How many edges? How many $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)$\OT1/LibertinusSerif-TLF/b/n/10 -dimensional
  []
 
-[71] [72] [73] [74] [75] [76] [77] [78]
-Overfull \hbox (7.15204pt too wide) in paragraph at lines 5259--5260
+[72] [73] [74] [75] [76] [77] [78] [79]
+Overfull \hbox (7.15204pt too wide) in paragraph at lines 5276--5277
 []\OT1/LibertinusSerif-TLF/b/n/10 Suppose $\OML/cmm/m/it/10 A[]$ \OT1/LibertinusSerif-TLF/b/n/10 and $\OML/cmm/m/it/10 A[]$ \OT1/LibertinusSerif-TLF/b/n/10 are $\OML/cmm/m/it/10 n$ \OT1/LibertinusSerif-TLF/b/n/10 by $\OML/cmm/m/it/10 n$ \OT1/LibertinusSerif-TLF/b/n/10 in-vert-ible ma-tri-ces. What ma-trix $\OML/cmm/m/it/10 B$ \OT1/LibertinusSerif-TLF/b/n/10 shows that $\OML/cmm/m/it/10 A[]A[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]A[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 B[]$\OT1/LibertinusSerif-TLF/b/n/10 ?
  []
 
-[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
-Overfull \hbox (19.67113pt too wide) in paragraph at lines 5870--5897
+[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
+Overfull \hbox (19.67113pt too wide) in paragraph at lines 5887--5914
  [] 
  []
 
-[92] [93]
-Overfull \hbox (0.17044pt too wide) in paragraph at lines 5992--5994
+[93] [94]
+Overfull \hbox (0.17044pt too wide) in paragraph at lines 6009--6011
 \OT1/LibertinusSerif-TLF/b/it/10 Note\OT1/LibertinusSerif-TLF/b/n/10 : The largest sin-gu-lar value of $\OML/cmm/m/it/10 A[]$ \OT1/LibertinusSerif-TLF/b/n/10 is there-fore $\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =^^[[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )$\OT1/LibertinusSerif-TLF/b/n/10 . The largest eigen-value $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j[]$
  []
 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 6038--6039
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 6055--6056
 
  []
 
-[95] [96] [97] [98] (./线代练习题.aux)
+[96] [97] [98] [99] (./线代练习题.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -915,18 +925,18 @@ Package rerunfilecheck Info: File `线代练习题.out' has not changed.
 (rerunfilecheck)             Checksum: 208624769709447F696CC29FB5ED8637;7954.
  ) 
 Here is how much of TeX's memory you used:
- 25335 strings out of 467348
- 454554 string characters out of 5419842
+ 25350 strings out of 467348
+ 454951 string characters out of 5419842
  855222 words of memory out of 5000000
- 52312 multiletter control sequences out of 15000+600000
+ 52326 multiletter control sequences out of 15000+600000
  654591 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,18n,107p,882b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusMono-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-BoldItalic.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 线代练习题.pdf (98 pages, 1144672 bytes).
+Output written on 线代练习题.pdf (99 pages, 1424467 bytes).
 PDF statistics:
- 2660 PDF objects out of 2984 (max. 8388607)
- 2480 compressed objects within 25 object streams
- 1694 named destinations out of 1728 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2668 PDF objects out of 2984 (max. 8388607)
+ 2483 compressed objects within 25 object streams
+ 1695 named destinations out of 1728 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 
